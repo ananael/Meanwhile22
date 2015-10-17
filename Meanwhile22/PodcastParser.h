@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PodcastParser : NSObject
+@interface PodcastParser : NSObject<NSXMLParserDelegate>
+
+@property NSMutableArray *podcastArray;
+
+-(instancetype)initWithArray: (NSMutableArray *)podcastArray;
+
+-(void)parseXMLFile;
+
 
 @end

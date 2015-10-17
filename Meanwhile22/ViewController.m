@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "Podcast.h"
+#import "PodcastParser.h"
 
 @interface ViewController ()
+
+@property NSMutableArray *podcastArray;
+@property NSMutableArray *podcastTitles;
+@property NSMutableArray *podcastSubtitles;
+
 
 @end
 
@@ -17,6 +24,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.podcastArray = [NSMutableArray new];
+    self.podcastTitles = [NSMutableArray new];
+    self.podcastSubtitles = [NSMutableArray new];
+    
+    PodcastParser *episodeParser = [[PodcastParser alloc]initWithArray:self.podcastArray];
+    [episodeParser parseXMLFile];
+    
+    //Iterate through the titles and split the string into 2 parts and add to arrays
+    for (NSInteger i=0; i<[self.podcastArray count]; i++)
+    {
+        Podcast *episode = self.podcastArray[i];
+        NSString *originalTitle = episode.title;
+        
+        //Range is for the first instance of " : "
+        NSRange range = [originalTitle rangeOfString:@":"];
+        
+        //Grabs everything before the range but needs "-1" to remove the " : " from the results
+        NSString *episodeTitle = [originalTitle substringToIndex:NSMaxRange(range)-1];
+        
+        //Grabs everything after the range but needs "+1" to remove the space following " : " from the results
+        NSString *episodeSubtitle = [originalTitle substringFromIndex:NSMaxRange(range)+1];
+        
+        [self.podcastTitles addObject:episodeTitle];
+        [self.podcastSubtitles addObject:episodeSubtitle];
+        
+    }
+    
+    NSLog(@"%@", self.podcastTitles);
+    NSLog(@"%@", self.podcastSubtitles);
+    
+    
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
