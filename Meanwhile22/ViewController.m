@@ -16,6 +16,17 @@
 @property NSMutableArray *podcastTitles;
 @property NSMutableArray *podcastSubtitles;
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (weak, nonatomic) IBOutlet UIView *topContainer;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
+@property (weak, nonatomic) IBOutlet UIView *midContainer;
+@property (weak, nonatomic) IBOutlet UIView *bottomContainer;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+
+- (IBAction)twitterTapped:(id)sender;
+- (IBAction)facebookTapped:(id)sender;
+
 
 @end
 
@@ -24,6 +35,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [[self.twitterButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    [[self.facebookButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     
     self.podcastArray = [NSMutableArray new];
     self.podcastTitles = [NSMutableArray new];
@@ -67,4 +81,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)twitterTapped:(id)sender {
+}
+
+- (IBAction)facebookTapped:(id)sender {
+}
 @end

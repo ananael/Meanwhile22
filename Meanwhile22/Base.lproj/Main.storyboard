@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,100 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2DN-Ug-mwt" userLabel="backImage">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuH-l6-UXd" userLabel="topContainer">
+                                <rect key="frame" x="0.0" y="20" width="600" height="300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="M22 Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="jpY-Js-Z6i" userLabel="M22Logo">
+                                        <rect key="frame" x="150" y="0.0" width="300" height="300"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="jpY-Js-Z6i" secondAttribute="trailing" constant="150" id="6jh-4u-evF"/>
+                                    <constraint firstItem="jpY-Js-Z6i" firstAttribute="centerY" secondItem="uuH-l6-UXd" secondAttribute="centerY" id="952-NG-1Vs"/>
+                                    <constraint firstItem="jpY-Js-Z6i" firstAttribute="leading" relation="lessThanOrEqual" secondItem="uuH-l6-UXd" secondAttribute="leading" constant="150" id="L3X-7U-9c7"/>
+                                    <constraint firstItem="jpY-Js-Z6i" firstAttribute="top" secondItem="uuH-l6-UXd" secondAttribute="top" id="hX1-mP-xSv"/>
+                                    <constraint firstItem="jpY-Js-Z6i" firstAttribute="centerX" secondItem="uuH-l6-UXd" secondAttribute="centerX" id="r63-aO-S7f"/>
+                                    <constraint firstAttribute="bottom" secondItem="jpY-Js-Z6i" secondAttribute="bottom" id="wMg-ci-9JH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yl6-FH-deJ" userLabel="midContainer">
+                                <rect key="frame" x="0.0" y="320" width="600" height="220"/>
+                                <color key="backgroundColor" red="1" green="0.99066370550000005" blue="0.36909538790000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgN-fw-YNE" userLabel="bottomContainer">
+                                <rect key="frame" x="0.0" y="540" width="600" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8B-Pe-cLm" userLabel="facebook">
+                                        <rect key="frame" x="520" y="0.0" width="80" height="40"/>
+                                        <state key="normal" image="facebook logo.png"/>
+                                        <connections>
+                                            <action selector="facebookTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x41-tn-Uej"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sck-dq-dpz" userLabel="twitter">
+                                        <rect key="frame" x="455" y="0.0" width="65" height="40"/>
+                                        <state key="normal" image="twitter logo.png"/>
+                                        <connections>
+                                            <action selector="twitterTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICI-26-14N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="C8B-Pe-cLm" firstAttribute="top" secondItem="rgN-fw-YNE" secondAttribute="top" id="3gJ-NZ-OwA"/>
+                                    <constraint firstItem="Sck-dq-dpz" firstAttribute="width" secondItem="C8B-Pe-cLm" secondAttribute="width" multiplier="0.8" id="71a-cx-yNk"/>
+                                    <constraint firstItem="C8B-Pe-cLm" firstAttribute="leading" secondItem="Sck-dq-dpz" secondAttribute="trailing" id="IrB-qi-Gw8"/>
+                                    <constraint firstItem="Sck-dq-dpz" firstAttribute="leading" relation="lessThanOrEqual" secondItem="rgN-fw-YNE" secondAttribute="leading" constant="455" id="Pvt-Pz-ops"/>
+                                    <constraint firstAttribute="trailing" secondItem="C8B-Pe-cLm" secondAttribute="trailing" id="T7M-o9-Kso"/>
+                                    <constraint firstItem="Sck-dq-dpz" firstAttribute="centerY" secondItem="rgN-fw-YNE" secondAttribute="centerY" id="UF1-AX-NBf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sck-dq-dpz" secondAttribute="bottom" id="d4q-A9-OGo"/>
+                                    <constraint firstItem="C8B-Pe-cLm" firstAttribute="centerY" secondItem="rgN-fw-YNE" secondAttribute="centerY" id="j4s-CY-45f"/>
+                                    <constraint firstAttribute="bottom" secondItem="C8B-Pe-cLm" secondAttribute="bottom" id="oLP-qr-Ss9"/>
+                                    <constraint firstItem="Sck-dq-dpz" firstAttribute="top" secondItem="rgN-fw-YNE" secondAttribute="top" id="yUB-sR-ehO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uuH-l6-UXd" secondAttribute="trailing" id="1ch-nZ-aXw"/>
+                            <constraint firstItem="yl6-FH-deJ" firstAttribute="top" secondItem="uuH-l6-UXd" secondAttribute="bottom" id="3z0-JN-bbp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rgN-fw-YNE" secondAttribute="bottom" constant="20" id="4mE-Oc-bdD"/>
+                            <constraint firstItem="2DN-Ug-mwt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8m3-CT-CMM"/>
+                            <constraint firstAttribute="trailing" secondItem="rgN-fw-YNE" secondAttribute="trailing" id="CJ3-lT-RZ0"/>
+                            <constraint firstItem="rgN-fw-YNE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ipt-Yb-004"/>
+                            <constraint firstItem="rgN-fw-YNE" firstAttribute="top" secondItem="yl6-FH-deJ" secondAttribute="bottom" id="VC8-bg-Pxt"/>
+                            <constraint firstItem="yl6-FH-deJ" firstAttribute="height" secondItem="uuH-l6-UXd" secondAttribute="height" multiplier="0.769231" id="chz-rA-eEO"/>
+                            <constraint firstItem="uuH-l6-UXd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="eNW-IT-XnO"/>
+                            <constraint firstItem="yl6-FH-deJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f66-Qk-FFW"/>
+                            <constraint firstItem="uuH-l6-UXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mNN-H2-q4a"/>
+                            <constraint firstAttribute="trailing" secondItem="yl6-FH-deJ" secondAttribute="trailing" id="shu-cx-rya"/>
+                            <constraint firstItem="rgN-fw-YNE" firstAttribute="height" secondItem="uuH-l6-UXd" secondAttribute="height" multiplier="0.1" id="tQm-qf-gz6"/>
+                            <constraint firstItem="2DN-Ug-mwt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uFG-ym-jcN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2DN-Ug-mwt" secondAttribute="bottom" id="xDI-Wg-AqR"/>
+                            <constraint firstAttribute="trailing" secondItem="2DN-Ug-mwt" secondAttribute="trailing" id="ya9-YF-Ijo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="2DN-Ug-mwt" id="iJM-bF-FPV"/>
+                        <outlet property="bottomContainer" destination="rgN-fw-YNE" id="PfE-zD-KZ5"/>
+                        <outlet property="facebookButton" destination="C8B-Pe-cLm" id="Nqu-BJ-O2z"/>
+                        <outlet property="logoImage" destination="jpY-Js-Z6i" id="cy0-UG-en0"/>
+                        <outlet property="midContainer" destination="yl6-FH-deJ" id="gf7-IP-Meu"/>
+                        <outlet property="topContainer" destination="uuH-l6-UXd" id="o2b-LC-XNV"/>
+                        <outlet property="twitterButton" destination="Sck-dq-dpz" id="tmX-Gu-cZT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="394" y="360"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="M22 Logo.png" width="486" height="486"/>
+        <image name="facebook logo.png" width="36" height="36"/>
+        <image name="twitter logo.png" width="50" height="41"/>
+    </resources>
 </document>

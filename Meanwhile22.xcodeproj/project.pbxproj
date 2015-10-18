@@ -18,6 +18,9 @@
 		D2FEEABC1BD2BF4C00FADE89 /* Meanwhile22UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FEEABB1BD2BF4C00FADE89 /* Meanwhile22UITests.m */; };
 		D2FEEACB1BD2BF6500FADE89 /* Podcast.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FEEACA1BD2BF6500FADE89 /* Podcast.m */; settings = {ASSET_TAGS = (); }; };
 		D2FEEACE1BD2C3AD00FADE89 /* PodcastParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FEEACD1BD2C3AD00FADE89 /* PodcastParser.m */; settings = {ASSET_TAGS = (); }; };
+		D2FEEAD01BD359D100FADE89 /* M22 Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2FEEACF1BD359D100FADE89 /* M22 Logo@2x.png */; settings = {ASSET_TAGS = (); }; };
+		D2FEEAD41BD361C200FADE89 /* twitter logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2FEEAD21BD361C200FADE89 /* twitter logo@2x.png */; settings = {ASSET_TAGS = (); }; };
+		D2FEEAD51BD361C200FADE89 /* facebook logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2FEEAD31BD361C200FADE89 /* facebook logo@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		D2FEEACA1BD2BF6500FADE89 /* Podcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Podcast.m; sourceTree = "<group>"; };
 		D2FEEACC1BD2C3AD00FADE89 /* PodcastParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastParser.h; sourceTree = "<group>"; };
 		D2FEEACD1BD2C3AD00FADE89 /* PodcastParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastParser.m; sourceTree = "<group>"; };
+		D2FEEACF1BD359D100FADE89 /* M22 Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M22 Logo@2x.png"; sourceTree = "<group>"; };
+		D2FEEAD21BD361C200FADE89 /* twitter logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter logo@2x.png"; sourceTree = "<group>"; };
+		D2FEEAD31BD361C200FADE89 /* facebook logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook logo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 				D2FEEA9A1BD2BF4C00FADE89 /* ViewController.m */,
 				D2FEEA9C1BD2BF4C00FADE89 /* Main.storyboard */,
 				D2FEEAA21BD2BF4C00FADE89 /* Assets.xcassets */,
+				D2FEEAD11BD359DB00FADE89 /* Assets */,
 				D2FEEAA41BD2BF4C00FADE89 /* LaunchScreen.storyboard */,
 				D2FEEAA71BD2BF4C00FADE89 /* Info.plist */,
 				D2FEEA9F1BD2BF4C00FADE89 /* Meanwhile22.xcdatamodeld */,
@@ -151,6 +158,16 @@
 				D2FEEABD1BD2BF4C00FADE89 /* Info.plist */,
 			);
 			path = Meanwhile22UITests;
+			sourceTree = "<group>";
+		};
+		D2FEEAD11BD359DB00FADE89 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D2FEEACF1BD359D100FADE89 /* M22 Logo@2x.png */,
+				D2FEEAD21BD361C200FADE89 /* twitter logo@2x.png */,
+				D2FEEAD31BD361C200FADE89 /* facebook logo@2x.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +273,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FEEAD41BD361C200FADE89 /* twitter logo@2x.png in Resources */,
 				D2FEEAA61BD2BF4C00FADE89 /* LaunchScreen.storyboard in Resources */,
 				D2FEEAA31BD2BF4C00FADE89 /* Assets.xcassets in Resources */,
+				D2FEEAD01BD359D100FADE89 /* M22 Logo@2x.png in Resources */,
+				D2FEEAD51BD361C200FADE89 /* facebook logo@2x.png in Resources */,
 				D2FEEA9E1BD2BF4C00FADE89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
