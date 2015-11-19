@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D25B8A4A1BF05F7500D77331 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25B8A491BF05F7500D77331 /* AVKit.framework */; };
+		D28855191BFBD1F500151BE4 /* vault of episodes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */; };
+		D288551F1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D288551E1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png */; };
+		D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28855211BFBF65700151BE4 /* EpisodeListViewController.m */; };
+		D28855241BFBF69900151BE4 /* vault banner FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */; };
+		D28855271BFCD6E900151BE4 /* EpisodeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28855261BFCD6E900151BE4 /* EpisodeListTableViewCell.m */; };
 		D2CAF6381BFAFC50004693D3 /* M22 Logo FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */; };
 		D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5601BFAF06E004BD66B /* paper texture A.png */; };
 		D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5621BFAF5B2004BD66B /* paper texture B.png */; };
@@ -46,6 +51,13 @@
 
 /* Begin PBXFileReference section */
 		D25B8A491BF05F7500D77331 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vault of episodes@2x.png"; sourceTree = "<group>"; };
+		D288551E1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quiz smasher FX lite@2x.png"; sourceTree = "<group>"; };
+		D28855201BFBF65700151BE4 /* EpisodeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeListViewController.h; sourceTree = "<group>"; };
+		D28855211BFBF65700151BE4 /* EpisodeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeListViewController.m; sourceTree = "<group>"; };
+		D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vault banner FX lite@2x.png"; sourceTree = "<group>"; };
+		D28855251BFCD6E900151BE4 /* EpisodeListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeListTableViewCell.h; sourceTree = "<group>"; };
+		D28855261BFCD6E900151BE4 /* EpisodeListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeListTableViewCell.m; sourceTree = "<group>"; };
 		D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M22 Logo FX lite@2x.png"; sourceTree = "<group>"; };
 		D2F0C5601BFAF06E004BD66B /* paper texture A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture A.png"; sourceTree = "<group>"; };
 		D2F0C5621BFAF5B2004BD66B /* paper texture B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture B.png"; sourceTree = "<group>"; };
@@ -140,8 +152,12 @@
 				D2FEEACA1BD2BF6500FADE89 /* Podcast.m */,
 				D2FEEACC1BD2C3AD00FADE89 /* PodcastParser.h */,
 				D2FEEACD1BD2C3AD00FADE89 /* PodcastParser.m */,
+				D28855251BFCD6E900151BE4 /* EpisodeListTableViewCell.h */,
+				D28855261BFCD6E900151BE4 /* EpisodeListTableViewCell.m */,
 				D2FEEA991BD2BF4C00FADE89 /* ViewController.h */,
 				D2FEEA9A1BD2BF4C00FADE89 /* ViewController.m */,
+				D28855201BFBF65700151BE4 /* EpisodeListViewController.h */,
+				D28855211BFBF65700151BE4 /* EpisodeListViewController.m */,
 				D2FEEA9C1BD2BF4C00FADE89 /* Main.storyboard */,
 				D2FEEAA21BD2BF4C00FADE89 /* Assets.xcassets */,
 				D2FEEAD11BD359DB00FADE89 /* Assets */,
@@ -188,6 +204,9 @@
 				D2F0C5601BFAF06E004BD66B /* paper texture A.png */,
 				D2F0C5621BFAF5B2004BD66B /* paper texture B.png */,
 				D2F0C5631BFAF5B2004BD66B /* paper texture C.png */,
+				D288551E1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png */,
+				D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */,
+				D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -299,10 +318,13 @@
 				D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */,
 				D2FEEAA61BD2BF4C00FADE89 /* LaunchScreen.storyboard in Resources */,
 				D2F0C5651BFAF5B2004BD66B /* paper texture C.png in Resources */,
+				D288551F1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png in Resources */,
 				D2FEEAA31BD2BF4C00FADE89 /* Assets.xcassets in Resources */,
 				D2CAF6381BFAFC50004693D3 /* M22 Logo FX lite@2x.png in Resources */,
 				D2FEEAD51BD361C200FADE89 /* facebook logo@2x.png in Resources */,
 				D2FEEA9E1BD2BF4C00FADE89 /* Main.storyboard in Resources */,
+				D28855191BFBD1F500151BE4 /* vault of episodes@2x.png in Resources */,
+				D28855241BFBF69900151BE4 /* vault banner FX lite@2x.png in Resources */,
 				D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,7 +353,9 @@
 				D2FEEACB1BD2BF6500FADE89 /* Podcast.m in Sources */,
 				D2FEEACE1BD2C3AD00FADE89 /* PodcastParser.m in Sources */,
 				D2FEEA9B1BD2BF4C00FADE89 /* ViewController.m in Sources */,
+				D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */,
 				D2FEEA981BD2BF4C00FADE89 /* AppDelegate.m in Sources */,
+				D28855271BFCD6E900151BE4 /* EpisodeListTableViewCell.m in Sources */,
 				D2FEEAA11BD2BF4C00FADE89 /* Meanwhile22.xcdatamodeld in Sources */,
 				D2FEEA951BD2BF4C00FADE89 /* main.m in Sources */,
 			);

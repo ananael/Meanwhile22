@@ -7,18 +7,10 @@
 //
 
 #import "ViewController.h"
-#import <AVKit/AVKit.h>
-#import <AVFoundation/AVFoundation.h>
-#import "Podcast.h"
-#import "PodcastParser.h"
 
 @interface ViewController ()
 
-@property NSMutableArray *podcastArray;
-@property NSMutableArray *podcastTitles;
-@property NSMutableArray *podcastSubtitles;
-@property NSMutableArray *podcastURLs;
-
+@property (weak, nonatomic) IBOutlet UIView *ambienceContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UIView *topContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
@@ -46,55 +38,24 @@
     [[self.twitterButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     [[self.facebookButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     
+    //TODO: remove
+//    self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
+//    self.ambienceContainer.layer.borderWidth = 2.0;
+//    self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    
     self.logoImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.logoImage.layer.borderWidth = 2.0;
     
     self.episodeButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.episodeButton.layer.borderWidth = 2.0;
+    [[self.episodeButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    
     self.quizButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.quizButton.layer.borderWidth = 2.0;
+    [[self.quizButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    
     self.hostButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.hostButton.layer.borderWidth = 2.0;
-    
-    self.podcastArray = [NSMutableArray new];
-    self.podcastTitles = [NSMutableArray new];
-    self.podcastSubtitles = [NSMutableArray new];
-    self.podcastURLs = [NSMutableArray new];
-    
-    PodcastParser *episodeParser = [[PodcastParser alloc]initWithArray:self.podcastArray];
-    [episodeParser parseXMLFile];
-    
-    NSLog(@"%@", self.podcastArray);
-    
-    //Iterate through the titles and split the string into 2 parts and add to arrays
-    for (NSInteger i=0; i<[self.podcastArray count]; i++)
-    {
-        Podcast *episode = self.podcastArray[i];
-        NSString *stringURL = episode.podcastURL;
-        NSString *originalTitle = episode.title;
-        
-        //Range is for the first instance of " : "
-        NSRange range = [originalTitle rangeOfString:@":"];
-        
-        //Grabs everything before the range but needs "-1" to remove the " : " from the results
-        NSString *episodeTitle = [originalTitle substringToIndex:NSMaxRange(range)-1];
-        
-        //Grabs everything after the range but needs "+1" to remove the space following " : " from the results
-        NSString *episodeSubtitle = [originalTitle substringFromIndex:NSMaxRange(range)+1];
-        
-        [self.podcastURLs addObject:stringURL];
-        [self.podcastTitles addObject:episodeTitle];
-        [self.podcastSubtitles addObject:episodeSubtitle];
-        
-        //NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSubtitles[i]);
-        NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastURLs[i]);
-        
-    }
-    
-    //NSLog(@"%@", self.podcastTitles);
-    //NSLog(@"%@", self.podcastSubtitles);
-    
-    
     
     
     
@@ -106,9 +67,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)twitterTapped:(id)sender {
+- (IBAction)twitterTapped:(id)sender
+{
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/hashtag/meanwhile22pageslater"]];
+    
 }
 
-- (IBAction)facebookTapped:(id)sender {
+- (IBAction)facebookTapped:(id)sender
+{
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/meanwhille22pageslater/"]];
+    
 }
 @end
