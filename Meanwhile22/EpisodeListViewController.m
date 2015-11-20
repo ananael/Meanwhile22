@@ -18,7 +18,10 @@
 @property NSMutableArray *podcastArray;
 @property NSMutableArray *podcastTitles;
 @property NSMutableArray *podcastSubtitles;
+@property NSMutableArray *podcastSummaries;
 @property NSMutableArray *podcastURLs;
+
+@property Podcast *episode;
 
 @property (weak, nonatomic) IBOutlet UIView *ambienceContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
@@ -60,6 +63,7 @@
     self.podcastArray = [NSMutableArray new];
     self.podcastTitles = [NSMutableArray new];
     self.podcastSubtitles = [NSMutableArray new];
+    self.podcastSummaries = [NSMutableArray new];
     self.podcastURLs = [NSMutableArray new];
     
     //Initializes the parser and puts the data in an array
@@ -72,9 +76,10 @@
     //Iterates through the episode titles and split the string into 2 parts ("title" and "subtitle") and adds to arrays
     for (NSInteger i=0; i<[self.podcastArray count]; i++)
     {
-        Podcast *episode = self.podcastArray[i];
-        NSString *stringURL = episode.podcastURL;
-        NSString *originalTitle = episode.title;
+        self.episode = self.podcastArray[i];
+        NSString *episodeSummary = self.episode.itunesSummary;
+        NSString *stringURL = self.episode.podcastURL;
+        NSString *originalTitle = self.episode.title;
         
         //Range is for the first instance of " : "
         NSRange range = [originalTitle rangeOfString:@":"];
@@ -88,9 +93,10 @@
         [self.podcastURLs addObject:stringURL];
         [self.podcastTitles addObject:episodeTitle];
         [self.podcastSubtitles addObject:episodeSubtitle];
+        [self.podcastSummaries addObject:episodeSummary];
         
 //        NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSubtitles[i]);
-        NSLog(@"%@ : %li", self.podcastTitles[i], (long)episode.itunesDuration);
+        NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSubtitles[i]);
         
     }
     
@@ -154,6 +160,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+ 
+ 
+ 
+ 
 }
 */
 

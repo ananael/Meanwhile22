@@ -210,15 +210,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if7-rs-yPR">
-                                                    <rect key="frame" x="6" y="8" width="548" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if7-rs-yPR">
+                                                    <rect key="frame" x="6" y="8" width="548" height="21.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Detail" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTX-Sy-fEO">
-                                                    <rect key="frame" x="6" y="35" width="548" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTX-Sy-fEO">
+                                                    <rect key="frame" x="6" y="35" width="548" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -307,10 +307,10 @@
             </objects>
             <point key="canvasLocation" x="2699" y="360"/>
         </scene>
-        <!--View Controller-->
+        <!--Episode Player View Controller-->
         <scene sceneID="lKo-pV-XmS">
             <objects>
-                <viewController id="EQf-dw-cei" sceneMemberID="viewController">
+                <viewController id="EQf-dw-cei" customClass="EpisodePlayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yqu-ts-byf"/>
                         <viewControllerLayoutGuide type="bottom" id="zR5-r7-L2j"/>
@@ -318,8 +318,31 @@
                     <view key="view" contentMode="scaleToFill" id="5t2-3e-DEE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper texture A.png" translatesAutoresizingMaskIntoConstraints="NO" id="hWP-he-eRM" userLabel="backImage">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cf-0i-RGe" userLabel="ambienceContainer">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DZc-2A-ZBK">
+                                        <rect key="frame" x="5" y="5" width="550" height="175"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hWP-he-eRM" secondAttribute="trailing" id="PRs-q8-bxQ"/>
+                            <constraint firstItem="zR5-r7-L2j" firstAttribute="top" secondItem="hWP-he-eRM" secondAttribute="bottom" id="QDS-Zn-aYW"/>
+                            <constraint firstItem="hWP-he-eRM" firstAttribute="leading" secondItem="5t2-3e-DEE" secondAttribute="leading" id="emx-Bp-4f8"/>
+                            <constraint firstItem="hWP-he-eRM" firstAttribute="top" secondItem="5t2-3e-DEE" secondAttribute="top" id="puD-g6-sNr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7d-ff-9aF" userLabel="First Responder" sceneMemberID="firstResponder"/>

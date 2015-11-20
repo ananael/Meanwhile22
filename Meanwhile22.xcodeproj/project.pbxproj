@@ -13,6 +13,7 @@
 		D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28855211BFBF65700151BE4 /* EpisodeListViewController.m */; };
 		D28855241BFBF69900151BE4 /* vault banner FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */; };
 		D28855271BFCD6E900151BE4 /* EpisodeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28855261BFCD6E900151BE4 /* EpisodeListTableViewCell.m */; };
+		D288552C1BFDA0C600151BE4 /* EpisodePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D288552B1BFDA0C600151BE4 /* EpisodePlayerViewController.m */; };
 		D2CAF6381BFAFC50004693D3 /* M22 Logo FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */; };
 		D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5601BFAF06E004BD66B /* paper texture A.png */; };
 		D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5621BFAF5B2004BD66B /* paper texture B.png */; };
@@ -58,6 +59,8 @@
 		D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vault banner FX lite@2x.png"; sourceTree = "<group>"; };
 		D28855251BFCD6E900151BE4 /* EpisodeListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeListTableViewCell.h; sourceTree = "<group>"; };
 		D28855261BFCD6E900151BE4 /* EpisodeListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeListTableViewCell.m; sourceTree = "<group>"; };
+		D288552A1BFDA0C600151BE4 /* EpisodePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodePlayerViewController.h; sourceTree = "<group>"; };
+		D288552B1BFDA0C600151BE4 /* EpisodePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodePlayerViewController.m; sourceTree = "<group>"; };
 		D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M22 Logo FX lite@2x.png"; sourceTree = "<group>"; };
 		D2F0C5601BFAF06E004BD66B /* paper texture A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture A.png"; sourceTree = "<group>"; };
 		D2F0C5621BFAF5B2004BD66B /* paper texture B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture B.png"; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				D2FEEA9A1BD2BF4C00FADE89 /* ViewController.m */,
 				D28855201BFBF65700151BE4 /* EpisodeListViewController.h */,
 				D28855211BFBF65700151BE4 /* EpisodeListViewController.m */,
+				D288552A1BFDA0C600151BE4 /* EpisodePlayerViewController.h */,
+				D288552B1BFDA0C600151BE4 /* EpisodePlayerViewController.m */,
 				D2FEEA9C1BD2BF4C00FADE89 /* Main.storyboard */,
 				D2FEEAA21BD2BF4C00FADE89 /* Assets.xcassets */,
 				D2FEEAD11BD359DB00FADE89 /* Assets */,
@@ -358,6 +363,7 @@
 				D28855271BFCD6E900151BE4 /* EpisodeListTableViewCell.m in Sources */,
 				D2FEEAA11BD2BF4C00FADE89 /* Meanwhile22.xcdatamodeld in Sources */,
 				D2FEEA951BD2BF4C00FADE89 /* main.m in Sources */,
+				D288552C1BFDA0C600151BE4 /* EpisodePlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
