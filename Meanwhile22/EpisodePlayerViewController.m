@@ -14,7 +14,17 @@
 @property (weak, nonatomic) IBOutlet UIView *backButtonContainer;
 @property (weak, nonatomic) IBOutlet UIButton *previousButton;
 @property (weak, nonatomic) IBOutlet UIView *ambienceContainer;
+@property (weak, nonatomic) IBOutlet UIView *topContainer;
+@property (weak, nonatomic) IBOutlet UIImageView *avImage;
+@property (weak, nonatomic) IBOutlet UIImageView *timerImage;
+@property (weak, nonatomic) IBOutlet UIView *middleContainer;
+@property (weak, nonatomic) IBOutlet UIButton *pauseButton;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton;
+@property (weak, nonatomic) IBOutlet UIButton *backward30;
+@property (weak, nonatomic) IBOutlet UIButton *forward30;
 
+@property (weak, nonatomic) IBOutlet UIView *bottomContainer;
 @property (weak, nonatomic) IBOutlet UILabel *episodeDetail;
 
 @property AVPlayerViewController *videoPlayerController;
@@ -25,6 +35,12 @@
 @property NSTimer *timeRemaining;
 
 - (IBAction)previousTapped:(id)sender;
+- (IBAction)pauseTapped:(id)sender;
+- (IBAction)playTapped:(id)sender;
+- (IBAction)stopTapped:(id)sender;
+- (IBAction)backward30Tapped:(id)sender;
+- (IBAction)forward30Tapped:(id)sender;
+
 
 
 
@@ -39,12 +55,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
+    self.ambienceContainer.layer.borderWidth = 2.0;
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+    
+    self.bottomContainer.layer.borderColor = [UIColor blackColor].CGColor;
+    self.bottomContainer.layer.borderWidth = 2.0;
+    
+    [self createImageBorder:2.0 forArray:[self imageViewArray]];
+    [self createButtonBorder:2.0 forArray:[self buttonArray]];
+    
+//    self.previousButton.layer.borderColor = [UIColor blackColor].CGColor;
+//    self.previousButton.layer.borderWidth = 2.0;
     
     [self showMissingSummaries];
     
     self.episodeDetail.text = [NSString stringWithFormat:@"%@\n\n%@", self.self.episodeTitle, self.episode.itunesSummary];
+    self.episodeDetail.numberOfLines = 5.0;
+    self.episodeDetail.minimumScaleFactor = 0.5;
+    self.episodeDetail.adjustsFontSizeToFitWidth = YES;
     
+    
+    NSURL *podcastURL = [NSURL URLWithString:self.episode.podcastURL];
+    self.playerItem = [[AVPlayerItem alloc]initWithURL:podcastURL];
+    self.player = [[AVPlayer alloc]initWithPlayerItem:self.playerItem];
     
     
     
@@ -55,6 +89,92 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+-(void)createButtonBorder:(NSInteger)width forArray:(NSArray *)array
+{
+    for (UIButton *button in array)
+    {
+        button.layer.borderWidth = 2.0;
+        button.layer.borderColor = [UIColor blackColor].CGColor;
+        
+    }
+    
+}
+
+-(void)createImageBorder:(NSInteger)width forArray:(NSArray *)array
+{
+    for (UIImageView *image in array)
+    {
+        image.layer.borderWidth = 2.0;
+        image.layer.borderColor = [UIColor blackColor].CGColor;
+        
+    }
+    
+}
+
+-(NSArray *)buttonArray
+{
+    NSArray *buttons = @[self.previousButton, self.pauseButton, self.playButton, self.stopButton, self.backward30, self.forward30];
+    return buttons;
+    
+}
+
+-(NSArray *)imageViewArray
+{
+    NSArray *images = @[self.avImage, self.timerImage];
+    return images;
+    
+}
+
+
+- (IBAction)previousTapped:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+- (IBAction)pauseTapped:(id)sender
+{
+    NSLog(@"Pause!");
+    
+}
+
+- (IBAction)playTapped:(id)sender
+{
+    NSLog(@"Play!");
+    
+}
+
+- (IBAction)stopTapped:(id)sender
+{
+    NSLog(@"STOP!");
+    
+}
+
+- (IBAction)backward30Tapped:(id)sender
+{
+    NSLog(@"BACK 30!");
+    
+}
+
+- (IBAction)forward30Tapped:(id)sender
+{
+    NSLog(@"AHEAD 30!");
+    
 }
 
 
@@ -159,19 +279,23 @@
     
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
-- (IBAction)previousTapped:(id)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
-    
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end
