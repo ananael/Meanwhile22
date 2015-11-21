@@ -12,6 +12,7 @@
 #import "Podcast.h"
 #import "PodcastParser.h"
 #import "EpisodeListTableViewCell.h"
+#import "EpisodePlayerViewController.h"
 
 @interface EpisodeListViewController ()
 
@@ -28,7 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bannerImage;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (weak, nonatomic) IBOutlet UIView *buttonContainer;
+@property (weak, nonatomic) IBOutlet UIView *backButtonContainer;
 @property (weak, nonatomic) IBOutlet UIButton *previousButton;
 
 - (IBAction)previousTapped:(id)sender;
@@ -96,7 +97,7 @@
         [self.podcastSummaries addObject:episodeSummary];
         
 //        NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSubtitles[i]);
-        NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSubtitles[i]);
+        NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSummaries[i]);
         
     }
     
@@ -153,28 +154,29 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"episodePlayerSegue"])
+    {
+        EpisodePlayerViewController *playerVC = segue.destinationViewController;
+        NSIndexPath *selectedPath = [self.tableView indexPathForSelectedRow];
+        
+        playerVC.episode = self.podcastArray[selectedPath.row];
+        playerVC.episodeTitle = self.podcastTitles[selectedPath.row];
+        playerVC.episodeSubtitle = self.podcastSubtitles[selectedPath.row];
+        
+    }
  
  
  
  
 }
-*/
-
-
-
-
-
-
-
-
-
 
 
 - (IBAction)previousTapped:(id)sender

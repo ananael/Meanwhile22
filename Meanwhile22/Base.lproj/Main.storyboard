@@ -207,21 +207,21 @@
                                         <rect key="frame" x="0.0" y="28" width="560" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZEp-4R-NZH" id="HRS-FX-sHm">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if7-rs-yPR">
-                                                    <rect key="frame" x="6" y="8" width="548" height="21.5"/>
+                                                    <rect key="frame" x="6" y="8" width="548" height="22"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTX-Sy-fEO">
-                                                    <rect key="frame" x="6" y="35" width="548" height="20.5"/>
+                                                    <rect key="frame" x="6" y="35" width="548" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -240,11 +240,12 @@
                                         <connections>
                                             <outlet property="detailLabel" destination="vTX-Sy-fEO" id="ONq-ry-rOi"/>
                                             <outlet property="titleLabel" destination="if7-rs-yPR" id="Kc6-vX-ulf"/>
+                                            <segue destination="EQf-dw-cei" kind="show" identifier="episodePlayerSegue" id="daJ-5t-oCo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyJ-Bn-UKw" userLabel="buttonContainer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyJ-Bn-UKw" userLabel="backButtonContainer">
                                 <rect key="frame" x="0.0" y="20" width="600" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBU-l7-r46" userLabel="backButton">
@@ -296,9 +297,9 @@
                     </view>
                     <connections>
                         <outlet property="ambienceContainer" destination="qf6-ND-Xev" id="yfa-l8-iuq"/>
+                        <outlet property="backButtonContainer" destination="hyJ-Bn-UKw" id="ygq-D1-Zc4"/>
                         <outlet property="backgroundImage" destination="M7Q-H0-R7F" id="MB1-US-kSo"/>
                         <outlet property="bannerImage" destination="xRs-FL-C3x" id="KPJ-ZS-wOs"/>
-                        <outlet property="buttonContainer" destination="hyJ-Bn-UKw" id="ov7-AV-wnf"/>
                         <outlet property="previousButton" destination="rBU-l7-r46" id="tGd-MK-yP7"/>
                         <outlet property="tableView" destination="Swf-Yx-dfj" id="heQ-0P-QY2"/>
                     </connections>
@@ -323,27 +324,71 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cf-0i-RGe" userLabel="ambienceContainer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cf-0i-RGe" userLabel="ambienceContainer">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DZc-2A-ZBK">
-                                        <rect key="frame" x="5" y="5" width="550" height="175"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eec-3E-v6j" userLabel="episodeDetail">
+                                        <rect key="frame" x="8" y="303" width="540" height="40"/>
                                         <animations/>
-                                    </imageView>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.95294117649999999" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDp-IE-TrS" userLabel="backButtonContainer">
+                                <rect key="frame" x="0.0" y="20" width="600" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSB-31-wH4" userLabel="backButton">
+                                        <rect key="frame" x="5" y="0.0" width="77" height="30"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.59676557480000003" blue="0.19917109569999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="13"/>
+                                        <state key="normal" title="previously...">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="previousTapped:" destination="EQf-dw-cei" eventType="touchUpInside" id="dAM-4M-T6j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="GSB-31-wH4" firstAttribute="leading" secondItem="nDp-IE-TrS" secondAttribute="leading" constant="5" id="5qp-x8-tNC"/>
+                                    <constraint firstItem="GSB-31-wH4" firstAttribute="top" secondItem="nDp-IE-TrS" secondAttribute="top" id="FCv-Fc-lPS"/>
+                                    <constraint firstAttribute="bottom" secondItem="GSB-31-wH4" secondAttribute="bottom" id="IUw-du-DcF"/>
+                                    <constraint firstItem="GSB-31-wH4" firstAttribute="centerY" secondItem="nDp-IE-TrS" secondAttribute="centerY" id="e2x-Zm-yXC"/>
+                                    <constraint firstAttribute="width" secondItem="nDp-IE-TrS" secondAttribute="height" multiplier="20:1" id="hxh-yv-PzQ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7cf-0i-RGe" firstAttribute="top" secondItem="5t2-3e-DEE" secondAttribute="top" constant="20" id="4xc-dU-vlS"/>
+                            <constraint firstAttribute="trailing" secondItem="7cf-0i-RGe" secondAttribute="trailing" constant="20" id="Iwo-78-WKh"/>
+                            <constraint firstItem="nDp-IE-TrS" firstAttribute="leading" secondItem="5t2-3e-DEE" secondAttribute="leading" id="J6O-ax-uTF"/>
                             <constraint firstAttribute="trailing" secondItem="hWP-he-eRM" secondAttribute="trailing" id="PRs-q8-bxQ"/>
                             <constraint firstItem="zR5-r7-L2j" firstAttribute="top" secondItem="hWP-he-eRM" secondAttribute="bottom" id="QDS-Zn-aYW"/>
+                            <constraint firstItem="7cf-0i-RGe" firstAttribute="leading" secondItem="5t2-3e-DEE" secondAttribute="leading" constant="20" id="Y9e-Vn-L4A"/>
+                            <constraint firstAttribute="trailing" secondItem="nDp-IE-TrS" secondAttribute="trailing" id="c3h-B4-KVZ"/>
+                            <constraint firstItem="7cf-0i-RGe" firstAttribute="centerX" secondItem="5t2-3e-DEE" secondAttribute="centerX" id="cg0-Wz-mGA"/>
                             <constraint firstItem="hWP-he-eRM" firstAttribute="leading" secondItem="5t2-3e-DEE" secondAttribute="leading" id="emx-Bp-4f8"/>
+                            <constraint firstItem="7cf-0i-RGe" firstAttribute="centerY" secondItem="5t2-3e-DEE" secondAttribute="centerY" id="lGo-MU-69l"/>
                             <constraint firstItem="hWP-he-eRM" firstAttribute="top" secondItem="5t2-3e-DEE" secondAttribute="top" id="puD-g6-sNr"/>
+                            <constraint firstItem="nDp-IE-TrS" firstAttribute="top" secondItem="5t2-3e-DEE" secondAttribute="top" constant="20" id="tHc-hR-cJS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ambienceContainer" destination="7cf-0i-RGe" id="oAo-qZ-Y2x"/>
+                        <outlet property="backButtonContainer" destination="nDp-IE-TrS" id="T8y-Ls-fGj"/>
+                        <outlet property="episodeDetail" destination="Eec-3E-v6j" id="Kcw-vJ-R93"/>
+                        <outlet property="previousButton" destination="GSB-31-wH4" id="1lj-op-dhF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7d-ff-9aF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

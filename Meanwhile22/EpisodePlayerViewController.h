@@ -11,9 +11,13 @@
 #import <AVFoundation/AVFoundation.h>
 #import "EpisodeListViewController.h"
 #import "Podcast.h"
+#import "PodcastParser.h"
 
 @interface EpisodePlayerViewController : UIViewController
 
-
+@property Podcast *episode;
+@property NSString *episodeTitle;
+@property NSString *episodeSubtitle;
+@property NSArray *podcastArray;
 
 @end
