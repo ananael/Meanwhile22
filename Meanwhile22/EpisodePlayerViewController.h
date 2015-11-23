@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVKit/AVKit.h>
-#import <AVFoundation/AVFoundation.h>
 #import "EpisodeListViewController.h"
 #import "Podcast.h"
-#import "PodcastParser.h"
+
 
 @interface EpisodePlayerViewController : UIViewController
 

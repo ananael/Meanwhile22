@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Podcast.h"
 
 @interface PodcastParser : NSObject<NSXMLParserDelegate>
 

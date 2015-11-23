@@ -7,7 +7,10 @@
 //
 
 #import "EpisodePlayerViewController.h"
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "MissingEpisodeSummaries.h"
+#import "PodcastParser.h"
 
 @interface EpisodePlayerViewController ()
 
@@ -16,6 +19,10 @@
 @property (weak, nonatomic) IBOutlet UIView *ambienceContainer;
 @property (weak, nonatomic) IBOutlet UIView *topContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *avImage;
+@property (weak, nonatomic) IBOutlet UIView *timeContainer;
+@property (weak, nonatomic) IBOutlet UILabel *elapsedTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *durationLabel;
+
 @property (weak, nonatomic) IBOutlet UIImageView *timerImage;
 @property (weak, nonatomic) IBOutlet UIView *middleContainer;
 @property (weak, nonatomic) IBOutlet UIButton *pauseButton;
@@ -65,21 +72,34 @@
     [self createImageBorder:2.0 forArray:[self imageViewArray]];
     [self createButtonBorder:2.0 forArray:[self buttonArray]];
     
-//    self.previousButton.layer.borderColor = [UIColor blackColor].CGColor;
-//    self.previousButton.layer.borderWidth = 2.0;
-    
     [self showMissingSummaries];
     
-    self.episodeDetail.text = [NSString stringWithFormat:@"%@\n\n%@", self.self.episodeTitle, self.episode.itunesSummary];
-    self.episodeDetail.numberOfLines = 5.0;
-    self.episodeDetail.minimumScaleFactor = 0.5;
-    self.episodeDetail.adjustsFontSizeToFitWidth = YES;
+    self.episodeDetail.text = [NSString stringWithFormat:@"%@\n\n%@", self.episodeTitle, self.episode.itunesSummary];
     
     
-    NSURL *podcastURL = [NSURL URLWithString:self.episode.podcastURL];
-    self.playerItem = [[AVPlayerItem alloc]initWithURL:podcastURL];
+    NSURL *episodeURL = [NSURL URLWithString:self.episode.podcastURL];
+    self.playerItem = [[AVPlayerItem alloc]initWithURL:episodeURL];
     self.player = [[AVPlayer alloc]initWithPlayerItem:self.playerItem];
     
+    [self.player play];
+    
+    //relates to the time labels
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playerItemDidReachEnd:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:[self.player currentItem]];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01
+                                                  target:self
+                                                selector:@selector(displayCurrentTime:)
+                                                userInfo:nil
+                                                 repeats:YES];
+    
+    self.timeRemaining = [NSTimer scheduledTimerWithTimeInterval:0.01
+                                                          target:self
+                                                        selector:@selector(displayTimeRemaining)
+                                                        userInfo:nil
+                                                         repeats:YES];
     
     
     
@@ -140,39 +160,126 @@
     
 }
 
+// *** Shown in elapsedTimeLabel ***
+- (void)displayCurrentTime:(NSTimer *)timer
+{
+    NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
+    
+    NSString *currentTime = [self formattedTime:dur];
+    self.elapsedTimeLabel.text = currentTime;
+    
+}
+
+// *** Shown in durationLabel ***
+-(void)displayTimeRemaining
+{
+    NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
+    NSInteger remaining = (self.episode.itunesDuration - dur);
+    
+    NSString *remainingTime = [self formattedTime:remaining];
+    self.durationLabel.text = remainingTime;
+    
+}
+
+- (void)playerItemDidReachEnd:(NSNotification *)notification
+{
+    [self.timer invalidate];
+    self.timer = nil;
+    
+    [self.player seekToTime:kCMTimeZero];
+    
+    NSLog(@"End of Audio Detected");
+}
+
+- (void)updateTime:(NSTimer *)timer
+{
+    //to don't update every second. When scrubber is mouseDown the the slider will not set
+    
+    NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
+    
+    self.elapsedTimeLabel.text = [self formattedTime:dur];
+    
+    [self displayTimeRemaining];
+    
+}
+
+- (NSString *)formattedTime:(NSInteger)duration
+{
+    //Asks recorder for current time
+    //The number returned is actually a double, but this stores it as an NSUinteger
+    
+    NSInteger time = duration;
+    
+    NSInteger hours = (time/3600);
+    NSInteger minutes = (time/60) % 60;
+    NSInteger seconds = time % 60;
+    
+    NSString *format = @"%02i:%02i:%02i";
+    
+    return [NSString stringWithFormat:format, hours, minutes, seconds];
+}
+
 
 - (IBAction)previousTapped:(id)sender
 {
+    [self.player pause];
+    [self.player seekToTime:kCMTimeZero];
+    self.player = nil;
     [self.navigationController popViewControllerAnimated:YES];
     
 }
 
 - (IBAction)pauseTapped:(id)sender
 {
+    [self.player pause];
     NSLog(@"Pause!");
     
 }
 
 - (IBAction)playTapped:(id)sender
 {
-    NSLog(@"Play!");
+    
+    [self.player play];
+    
+    NSLog(@"Play!: %@", self.episode.podcastURL);
     
 }
 
 - (IBAction)stopTapped:(id)sender
 {
+    [self.player pause];
+    
+    [self.player seekToTime:kCMTimeZero];
+    
     NSLog(@"STOP!");
     
 }
 
 - (IBAction)backward30Tapped:(id)sender
 {
+    [self.player pause];
+    
+    NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
+    
+    CMTime backTime = CMTimeMakeWithSeconds(dur-30, 1);
+    
+    [self.player seekToTime:backTime];
+    [self.player play];
     NSLog(@"BACK 30!");
     
 }
 
 - (IBAction)forward30Tapped:(id)sender
 {
+    [self.player pause];
+    
+    NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
+    //Float64 seconds = -30.0;
+    
+    CMTime backTime = CMTimeMakeWithSeconds(dur+30, 1);
+    
+    [self.player seekToTime:backTime];
+    [self.player play];
     NSLog(@"AHEAD 30!");
     
 }

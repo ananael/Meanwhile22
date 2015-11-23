@@ -38,24 +38,14 @@
     [[self.twitterButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     [[self.facebookButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     
-    //TODO: remove
-//    self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
-//    self.ambienceContainer.layer.borderWidth = 2.0;
-//    self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
-    
+    self.logoImage.image = [UIImage imageNamed:@"M22 Logo FX lite"];
     self.logoImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.logoImage.layer.borderWidth = 2.0;
     
-    self.episodeButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.episodeButton.layer.borderWidth = 2.0;
-    [[self.episodeButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    [self.episodeButton setBackgroundImage:[UIImage imageNamed:@"vault of episodes"] forState:UIControlStateNormal];
+    [self.quizButton setBackgroundImage:[UIImage imageNamed:@"quiz smasher FX lite"] forState:UIControlStateNormal];
+    [self createButtonBorder:2.0 forArray:[self buttonArray]];
     
-    self.quizButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.quizButton.layer.borderWidth = 2.0;
-    [[self.quizButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
-    
-    self.hostButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.hostButton.layer.borderWidth = 2.0;
     
     
     
@@ -65,6 +55,24 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)createButtonBorder:(NSInteger)width forArray:(NSArray *)array
+{
+    for (UIButton *button in array)
+    {
+        button.layer.borderWidth = 2.0;
+        button.layer.borderColor = [UIColor blackColor].CGColor;
+        
+    }
+    
+}
+
+-(NSArray *)buttonArray
+{
+    NSArray *buttons = @[self.episodeButton, self.quizButton, self.hostButton];
+    return buttons;
+    
 }
 
 - (IBAction)twitterTapped:(id)sender

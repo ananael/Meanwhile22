@@ -60,6 +60,8 @@
     self.previousButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.previousButton.layer.borderWidth = 1.0;
     
+    self.bannerImage.image = [UIImage imageNamed:@"vault banner FX lite"];
+    
     //Initializing data arrays
     self.podcastArray = [NSMutableArray new];
     self.podcastTitles = [NSMutableArray new];
@@ -96,8 +98,8 @@
         [self.podcastSubtitles addObject:episodeSubtitle];
         [self.podcastSummaries addObject:episodeSummary];
         
-//        NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSubtitles[i]);
-        NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSummaries[i]);
+        //NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSubtitles[i]);
+        //NSLog(@"%@ : %@", self.podcastTitles[i], self.podcastSummaries[i]);
         
     }
     

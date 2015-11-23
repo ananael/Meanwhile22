@@ -7,7 +7,6 @@
 //
 
 #import "PodcastParser.h"
-#import "Podcast.h"
 
 @interface PodcastParser ()
 
