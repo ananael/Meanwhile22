@@ -17,13 +17,14 @@
 @property (weak, nonatomic) IBOutlet UIView *backButtonContainer;
 @property (weak, nonatomic) IBOutlet UIButton *previousButton;
 @property (weak, nonatomic) IBOutlet UIView *ambienceContainer;
+
 @property (weak, nonatomic) IBOutlet UIView *topContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *avImage;
 @property (weak, nonatomic) IBOutlet UIView *timeContainer;
 @property (weak, nonatomic) IBOutlet UILabel *elapsedTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
-
 @property (weak, nonatomic) IBOutlet UIImageView *timerImage;
+
 @property (weak, nonatomic) IBOutlet UIView *middleContainer;
 @property (weak, nonatomic) IBOutlet UIButton *pauseButton;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
@@ -32,7 +33,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *forward30;
 
 @property (weak, nonatomic) IBOutlet UIView *bottomContainer;
-@property (weak, nonatomic) IBOutlet UILabel *episodeDetail;
+@property (weak, nonatomic) IBOutlet UIView *titleContainer;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *soFarLabel;
+@property (weak, nonatomic) IBOutlet UIView *scrollContainer;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UILabel *summaryLabel;
 
 @property AVPlayerViewController *videoPlayerController;
 @property AVPlayerItem *playerItem;
@@ -69,12 +76,18 @@
     self.bottomContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.bottomContainer.layer.borderWidth = 2.0;
     
+    self.soFarLabel.layer.borderColor = [UIColor blackColor].CGColor;
+    self.soFarLabel.layer.borderWidth = 2.0;
+    
     [self createImageBorder:2.0 forArray:[self imageViewArray]];
     [self createButtonBorder:2.0 forArray:[self buttonArray]];
     
     [self showMissingSummaries];
     
-    self.episodeDetail.text = [NSString stringWithFormat:@"%@\n\n%@", self.episodeTitle, self.episode.itunesSummary];
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    
+    self.titleLabel.text = self.episodeTitle;
+    self.summaryLabel.text = [NSString stringWithFormat:@"\n%@", self.episode.itunesSummary];
     
     
     NSURL *episodeURL = [NSURL URLWithString:self.episode.podcastURL];
@@ -191,18 +204,6 @@
     NSLog(@"End of Audio Detected");
 }
 
-- (void)updateTime:(NSTimer *)timer
-{
-    //to don't update every second. When scrubber is mouseDown the the slider will not set
-    
-    NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
-    
-    self.elapsedTimeLabel.text = [self formattedTime:dur];
-    
-    [self displayTimeRemaining];
-    
-}
-
 - (NSString *)formattedTime:(NSInteger)duration
 {
     //Asks recorder for current time
@@ -259,9 +260,9 @@
 {
     [self.player pause];
     
-    NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
+    NSInteger current = CMTimeGetSeconds([self.player currentTime]);
     
-    CMTime backTime = CMTimeMakeWithSeconds(dur-30, 1);
+    CMTime backTime = CMTimeMakeWithSeconds(current-30, 1);
     
     [self.player seekToTime:backTime];
     [self.player play];
@@ -273,10 +274,9 @@
 {
     [self.player pause];
     
-    NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
-    //Float64 seconds = -30.0;
+    NSInteger current = CMTimeGetSeconds([self.player currentTime]);
     
-    CMTime backTime = CMTimeMakeWithSeconds(dur+30, 1);
+    CMTime backTime = CMTimeMakeWithSeconds(current+30, 1);
     
     [self.player seekToTime:backTime];
     [self.player play];
