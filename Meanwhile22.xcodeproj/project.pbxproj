@@ -31,6 +31,9 @@
 		D2BF3ED01C04C41D00388747 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EC11C04C41D00388747 /* iTunesArtwork */; };
 		D2BF3ED11C04C41D00388747 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EC21C04C41D00388747 /* iTunesArtwork@2x */; };
 		D2BF3ED21C04C41D00388747 /* M22 Logo template.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EC31C04C41D00388747 /* M22 Logo template.png */; };
+		D2BF3F641C0952DA00388747 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3F631C0952DA00388747 /* QuizViewController.m */; };
+		D2BF3F671C097E9400388747 /* TimeVortexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3F661C097E9400388747 /* TimeVortexViewController.m */; };
+		D2BF3F6A1C097EA500388747 /* Deadly100ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3F691C097EA500388747 /* Deadly100ViewController.m */; };
 		D2CAF6381BFAFC50004693D3 /* M22 Logo FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */; };
 		D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5601BFAF06E004BD66B /* paper texture A.png */; };
 		D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5621BFAF5B2004BD66B /* paper texture B.png */; };
@@ -96,6 +99,12 @@
 		D2BF3EC11C04C41D00388747 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		D2BF3EC21C04C41D00388747 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		D2BF3EC31C04C41D00388747 /* M22 Logo template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M22 Logo template.png"; sourceTree = "<group>"; };
+		D2BF3F621C0952DA00388747 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		D2BF3F631C0952DA00388747 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
+		D2BF3F651C097E9400388747 /* TimeVortexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeVortexViewController.h; sourceTree = "<group>"; };
+		D2BF3F661C097E9400388747 /* TimeVortexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeVortexViewController.m; sourceTree = "<group>"; };
+		D2BF3F681C097EA500388747 /* Deadly100ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deadly100ViewController.h; sourceTree = "<group>"; };
+		D2BF3F691C097EA500388747 /* Deadly100ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deadly100ViewController.m; sourceTree = "<group>"; };
 		D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M22 Logo FX lite@2x.png"; sourceTree = "<group>"; };
 		D2F0C5601BFAF06E004BD66B /* paper texture A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture A.png"; sourceTree = "<group>"; };
 		D2F0C5621BFAF5B2004BD66B /* paper texture B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture B.png"; sourceTree = "<group>"; };
@@ -224,6 +233,12 @@
 				D28855211BFBF65700151BE4 /* EpisodeListViewController.m */,
 				D288552A1BFDA0C600151BE4 /* EpisodePlayerViewController.h */,
 				D288552B1BFDA0C600151BE4 /* EpisodePlayerViewController.m */,
+				D2BF3F621C0952DA00388747 /* QuizViewController.h */,
+				D2BF3F631C0952DA00388747 /* QuizViewController.m */,
+				D2BF3F651C097E9400388747 /* TimeVortexViewController.h */,
+				D2BF3F661C097E9400388747 /* TimeVortexViewController.m */,
+				D2BF3F681C097EA500388747 /* Deadly100ViewController.h */,
+				D2BF3F691C097EA500388747 /* Deadly100ViewController.m */,
 				D2FEEA9C1BD2BF4C00FADE89 /* Main.storyboard */,
 				D2FEEAA21BD2BF4C00FADE89 /* Assets.xcassets */,
 				D2FEEAD11BD359DB00FADE89 /* Assets */,
@@ -433,11 +448,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2FEEACB1BD2BF6500FADE89 /* Podcast.m in Sources */,
+				D2BF3F6A1C097EA500388747 /* Deadly100ViewController.m in Sources */,
 				D2FEEACE1BD2C3AD00FADE89 /* PodcastParser.m in Sources */,
 				D2FEEA9B1BD2BF4C00FADE89 /* ViewController.m in Sources */,
 				D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */,
 				D2FEEA981BD2BF4C00FADE89 /* AppDelegate.m in Sources */,
 				D28855271BFCD6E900151BE4 /* EpisodeListTableViewCell.m in Sources */,
+				D2BF3F641C0952DA00388747 /* QuizViewController.m in Sources */,
+				D2BF3F671C097E9400388747 /* TimeVortexViewController.m in Sources */,
 				D2FEEAA11BD2BF4C00FADE89 /* Meanwhile22.xcdatamodeld in Sources */,
 				D2FEEA951BD2BF4C00FADE89 /* main.m in Sources */,
 				D288552C1BFDA0C600151BE4 /* EpisodePlayerViewController.m in Sources */,

@@ -35,6 +35,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.backgroundImage.image = [UIImage imageNamed:@"paper texture B"];
+    
     [[self.twitterButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     [[self.facebookButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     

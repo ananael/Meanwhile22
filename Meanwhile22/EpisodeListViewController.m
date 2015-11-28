@@ -52,6 +52,8 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 200.0;
     
+    self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
+    
     //The border aorund the banner and tableView
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.ambienceContainer.layer.borderWidth = 2.0;

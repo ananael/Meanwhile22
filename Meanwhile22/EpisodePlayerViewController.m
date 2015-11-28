@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *backButtonContainer;
 @property (weak, nonatomic) IBOutlet UIButton *previousButton;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UIView *ambienceContainer;
 
 @property (weak, nonatomic) IBOutlet UIView *topContainer;
@@ -69,6 +70,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
+    
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.ambienceContainer.layer.borderWidth = 2.0;
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
@@ -79,8 +82,8 @@
     self.soFarLabel.layer.borderColor = [UIColor blackColor].CGColor;
     self.soFarLabel.layer.borderWidth = 2.0;
     
-    [self createImageBorder:2.0 forArray:[self imageViewArray]];
-    [self createButtonBorder:2.0 forArray:[self buttonArray]];
+    [self createImageBorderWidth:2.0 forArray:[self imageViewArray]];
+    [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     
     [self showMissingSummaries];
     
@@ -137,7 +140,7 @@
 }
 */
 
--(void)createButtonBorder:(NSInteger)width forArray:(NSArray *)array
+-(void)createButtonBorderWidth:(NSInteger)width forArray:(NSArray *)array
 {
     for (UIButton *button in array)
     {
@@ -148,7 +151,7 @@
     
 }
 
--(void)createImageBorder:(NSInteger)width forArray:(NSArray *)array
+-(void)createImageBorderWidth:(NSInteger)width forArray:(NSArray *)array
 {
     for (UIImageView *image in array)
     {
