@@ -34,6 +34,7 @@
 		D2BF3F641C0952DA00388747 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3F631C0952DA00388747 /* QuizViewController.m */; };
 		D2BF3F671C097E9400388747 /* TimeVortexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3F661C097E9400388747 /* TimeVortexViewController.m */; };
 		D2BF3F6A1C097EA500388747 /* Deadly100ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3F691C097EA500388747 /* Deadly100ViewController.m */; };
+		D2BF3FAC1C0D073F00388747 /* TimeVortexGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3FAB1C0D073F00388747 /* TimeVortexGameViewController.m */; };
 		D2CAF6381BFAFC50004693D3 /* M22 Logo FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */; };
 		D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5601BFAF06E004BD66B /* paper texture A.png */; };
 		D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5621BFAF5B2004BD66B /* paper texture B.png */; };
@@ -105,6 +106,8 @@
 		D2BF3F661C097E9400388747 /* TimeVortexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeVortexViewController.m; sourceTree = "<group>"; };
 		D2BF3F681C097EA500388747 /* Deadly100ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deadly100ViewController.h; sourceTree = "<group>"; };
 		D2BF3F691C097EA500388747 /* Deadly100ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deadly100ViewController.m; sourceTree = "<group>"; };
+		D2BF3FAA1C0D073F00388747 /* TimeVortexGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeVortexGameViewController.h; sourceTree = "<group>"; };
+		D2BF3FAB1C0D073F00388747 /* TimeVortexGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeVortexGameViewController.m; sourceTree = "<group>"; };
 		D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M22 Logo FX lite@2x.png"; sourceTree = "<group>"; };
 		D2F0C5601BFAF06E004BD66B /* paper texture A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture A.png"; sourceTree = "<group>"; };
 		D2F0C5621BFAF5B2004BD66B /* paper texture B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture B.png"; sourceTree = "<group>"; };
@@ -237,6 +240,8 @@
 				D2BF3F631C0952DA00388747 /* QuizViewController.m */,
 				D2BF3F651C097E9400388747 /* TimeVortexViewController.h */,
 				D2BF3F661C097E9400388747 /* TimeVortexViewController.m */,
+				D2BF3FAA1C0D073F00388747 /* TimeVortexGameViewController.h */,
+				D2BF3FAB1C0D073F00388747 /* TimeVortexGameViewController.m */,
 				D2BF3F681C097EA500388747 /* Deadly100ViewController.h */,
 				D2BF3F691C097EA500388747 /* Deadly100ViewController.m */,
 				D2FEEA9C1BD2BF4C00FADE89 /* Main.storyboard */,
@@ -448,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2FEEACB1BD2BF6500FADE89 /* Podcast.m in Sources */,
+				D2BF3FAC1C0D073F00388747 /* TimeVortexGameViewController.m in Sources */,
 				D2BF3F6A1C097EA500388747 /* Deadly100ViewController.m in Sources */,
 				D2FEEACE1BD2C3AD00FADE89 /* PodcastParser.m in Sources */,
 				D2FEEA9B1BD2BF4C00FADE89 /* ViewController.m in Sources */,

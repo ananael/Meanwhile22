@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //This code prevents an audio app from being silenced by iPhone Ring/Silent toggle or lock screen activation
+    //If this code does not achieve this effect, open Project-Info.plist
+    //Find "Required backgound modes" dropdown and choose "App plays audio... using AirPlay"
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    NSError *error;
+    if (![session setCategory:AVAudioSessionCategoryPlayback error:&error])
+    {
+        NSLog(@"Category Error: %@", [error localizedDescription]);
+    }
+    if (![session setActive:YES error:&error])
+    {
+        NSLog(@"Activation Error: %@", [error localizedDescription]);
+    }
+    
     return YES;
 }
 
