@@ -75,9 +75,6 @@ BOOL GameInProgress;
     
     
     self.topContainer.backgroundColor = [UIColor clearColor];
-    self.topContainer.layer.borderColor = [UIColor yellowColor].CGColor;
-    self.topContainer.layer.borderWidth = 2.0;
-    self.topContainer.layer.cornerRadius = 8.0;
     
     self.middleContainer.backgroundColor = [UIColor clearColor];
     self.middleContainer.layer.borderColor = [UIColor yellowColor].CGColor;
@@ -87,6 +84,8 @@ BOOL GameInProgress;
     [self buttonBackgroundColor:[self buttonArray]];
     [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     [self buttonCornerRadius:8.0 forArray:[self buttonArray]];
+    [self centerButtonText:[self buttonArray]];
+    
     
     //Set these BOOLs to "NO" so that you only have to change the correct answer BOOL in the Category methods.
     Answer1Correct = NO;
@@ -158,6 +157,15 @@ BOOL GameInProgress;
     
 }
 
+-(void)centerButtonText:(NSArray *)array
+{
+    for (UIButton *button in array)
+    {
+        button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    
+}
+
 -(NSArray *)buttonArray
 {
     NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button];
@@ -207,9 +215,11 @@ BOOL GameInProgress;
     
     if (self.openingSeconds == 0)
     {
+        
         [self.openingTimer invalidate];
         self.overlayContainer.hidden = YES;
         
+        [self gameTime];
     }
     
 }
@@ -219,25 +229,26 @@ BOOL GameInProgress;
 {
     self.gameSeconds --;
     
-    self.scoreLabel.text = [NSString stringWithFormat:@"%li", (long)self.gameSeconds];
+    self.timerLabel.text = [NSString stringWithFormat:@"%li", (long)self.gameSeconds];
     
     
     if (self.gameSeconds == 30)
     {
-        self.scoreLabel.textColor = [UIColor yellowColor];
+        self.timerLabel.textColor = [UIColor yellowColor];
         
     }
     
     if (self.gameSeconds == 15)
     {
-        self.scoreLabel.textColor = [UIColor redColor];
+        self.timerLabel.textColor = [UIColor redColor];
         
     }
     
     if (self.gameSeconds == 0)
     {
         [self.gameTimer invalidate];
-        self.scoreLabel.text = @"TIME'S\nUP!";
+        self.timerLabel.adjustsFontSizeToFitWidth = YES;
+        self.timerLabel.text = @"TIME'S UP!";
         NSLog(@"DONE!!");
     }
     
@@ -245,13 +256,13 @@ BOOL GameInProgress;
 
 - (void)gameTime
 {
-    self.gameSeconds = 90;
-    
     self.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
                                            selector:@selector(gameCountdown)
                                            userInfo:nil
                                             repeats:YES];
+    
+    self.gameSeconds = 90;
     
 }
 
