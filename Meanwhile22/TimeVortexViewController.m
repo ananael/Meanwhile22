@@ -166,25 +166,25 @@
 
 - (IBAction)comicTapped:(id)sender
 {
-    
+    [[NSUserDefaults standardUserDefaults]setInteger:1 forKey:@"CategorySaved"];
     
 }
 
 - (IBAction)movieTapped:(id)sender
 {
-    
+    [[NSUserDefaults standardUserDefaults]setInteger:2 forKey:@"CategorySaved"];
     
 }
 
 - (IBAction)tvTapped:(id)sender
 {
-    
+    [[NSUserDefaults standardUserDefaults]setInteger:3 forKey:@"CategorySaved"];
     
 }
 
 - (IBAction)gameTapped:(id)sender
 {
-    
+    [[NSUserDefaults standardUserDefaults]setInteger:4 forKey:@"CategorySaved"];
     
 }
 
