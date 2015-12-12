@@ -872,27 +872,27 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9M-qz-Ewg">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <animations/>
+                                        <color key="backgroundColor" red="0.23921568630000001" green="0.28627450980000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrm-Yx-m6N" userLabel="resultContainer">
-                                        <rect key="frame" x="20" y="20" width="560" height="186.5"/>
+                                        <rect key="frame" x="20" y="20" width="560" height="187"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORRECT!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aa-TY-aCN" userLabel="correctLabel">
-                                                <rect key="frame" x="210" y="140" width="140" height="46.5"/>
+                                                <rect key="frame" x="210" y="140" width="140" height="47"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.99215686270000003" green="0.8980392157" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP2-aS-09b" userLabel="scoreLabel">
                                                 <rect key="frame" x="210" y="0.0" width="140" height="140"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="90"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.99215686270000003" green="0.8980392157" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="0aa-TY-aCN" secondAttribute="bottom" id="2Dy-hC-CVz"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="oP2-aS-09b" secondAttribute="trailing" constant="210" id="8L7-yr-ok4"/>
@@ -908,18 +908,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFd-4A-Qtt" userLabel="startContainer">
-                                        <rect key="frame" x="20" y="206.5" width="560" height="187"/>
+                                        <rect key="frame" x="20" y="207" width="560" height="187"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtW-am-E5E">
                                                 <rect key="frame" x="80" y="6" width="400" height="175"/>
                                                 <animations/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="80"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="60"/>
+                                                <color key="textColor" red="0.99215686270000003" green="0.8980392157" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.99215686270000003" green="0.8980392157" blue="0.27058823529999998" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="RtW-am-E5E" firstAttribute="centerY" secondItem="TFd-4A-Qtt" secondAttribute="centerY" id="3bx-CB-Zsv"/>
                                             <constraint firstItem="RtW-am-E5E" firstAttribute="leading" relation="lessThanOrEqual" secondItem="TFd-4A-Qtt" secondAttribute="leading" constant="80" id="FYN-lF-kNw"/>
@@ -928,7 +927,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8q-1Y-dsP" userLabel="overlayButtonContainer">
-                                        <rect key="frame" x="20" y="393.5" width="560" height="186.5"/>
+                                        <rect key="frame" x="20" y="394" width="560" height="186"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uIF-aX-8gV">
                                                 <rect key="frame" x="20" y="43" width="100" height="101"/>
@@ -958,7 +957,6 @@
                                             </button>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="74c-bx-eTP" secondAttribute="bottom" constant="42" id="8wq-zP-psc"/>
                                             <constraint firstItem="uIF-aX-8gV" firstAttribute="top" secondItem="m8q-1Y-dsP" secondAttribute="top" constant="43" id="CCv-fI-uqC"/>
@@ -975,7 +973,6 @@
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.53367552009999997" blue="0.51704722579999995" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="rrm-Yx-m6N" firstAttribute="height" secondItem="m8q-1Y-dsP" secondAttribute="height" id="1U7-oR-nPV"/>
                                     <constraint firstItem="TFd-4A-Qtt" firstAttribute="centerX" secondItem="xYP-Th-YpE" secondAttribute="centerX" id="46Z-A8-vRQ"/>

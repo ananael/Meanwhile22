@@ -8,15 +8,6 @@
 
 #import "TimeVortexGameViewController.h"
 
-//The "Answer" BOOLs work by setting the correct anser to "Yes"
-//And the others will default to "No", once enabled as "No" in ViewDidLoad
-BOOL Answer1Correct;
-BOOL Answer2Correct;
-BOOL Answer3Correct;
-BOOL Answer4Correct;
-
-BOOL GameInProgress;
-
 @interface TimeVortexGameViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
@@ -50,6 +41,15 @@ BOOL GameInProgress;
 @property NSTimer *gameTimer;
 @property NSInteger gameSeconds;
 
+@property NSInteger scoreNumber;
+
+//The "Answer" BOOLs work by setting the correct anser to "Yes"
+//And the others will default to "No", once enabled as "No" in ViewDidLoad
+@property BOOL Answer1Correct;
+@property BOOL Answer2Correct;
+@property BOOL Answer3Correct;
+@property BOOL Answer4Correct;
+
 //@property NSMutableArray *questionArray;
 //@property NSMutableArray *usedQuestionArray;
 @property NSMutableArray *comicsArray;
@@ -60,6 +60,7 @@ BOOL GameInProgress;
 @property NSMutableArray *usedTVArray;
 @property NSMutableArray *gamesArray;
 @property NSMutableArray *usedGamesArray;
+
 @property NSInteger randomIndex;
 @property NSInteger categoryLoaded;
 
@@ -92,22 +93,23 @@ BOOL GameInProgress;
     [self buttonCornerRadius:8.0 forArray:[self buttonArray]];
     [self centerButtonText:[self buttonArray]];
     
+    self.scoreLabel.hidden = YES;
+    self.correctLabel.hidden = YES;
+    self.playAgainButton.hidden = YES;
+    self.nextCategoryButton.hidden = YES;
     
     
     //Set these BOOLs to "NO" so that you only have to change the correct answer BOOL in the Category methods.
-    Answer1Correct = NO;
-    Answer2Correct = NO;
-    Answer3Correct = NO;
-    Answer4Correct = NO;
+    self.Answer1Correct = NO;
+    self.Answer2Correct = NO;
+    self.Answer3Correct = NO;
+    self.Answer4Correct = NO;
     
+    self.scoreNumber = 0;
+    self.startLabel.adjustsFontSizeToFitWidth = YES;
     self.startLabel.text = @"START!";
     
-    self.openingSeconds = 4;
-    self.openingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                  target:self
-                                                selector:@selector(labelCountdown)
-                                                userInfo:nil
-                                                 repeats:YES];
+    [self launchScreenTimer];
     
     self.comicsArray = [NSMutableArray new];
     self.usedComicsArray = [NSMutableArray new];
@@ -123,19 +125,13 @@ BOOL GameInProgress;
     self.tvArray = [NSMutableArray arrayWithArray:[self convertedTVArray]];
     self.gamesArray = [NSMutableArray arrayWithArray:[self convertedGameArray]];
     
-    //CategorySaved represents which button was pressed in the TimeVortex
+    //CategorySaved represents the category button pressed in the TimeVortex
     self.categoryLoaded = [[NSUserDefaults standardUserDefaults]integerForKey:@"CategorySaved"];
     
     NSLog(@"CATEGORY SELECTED: %li", self.categoryLoaded);
     
-//    Comics *questions = [[Comics alloc]initWithArray:self.comicsArray];
-//    [questions arrayItems];
-//    self.comicsArray = [NSMutableArray arrayWithArray:questions.comicsArray];
-//    NSLog(@"THIS IS PULLED FROM - Comics Class: %@", [self.comicsArray objectAtIndex:1]);
     
-    
-    
-    
+        
 }
 
 - (void)didReceiveMemoryWarning {
@@ -195,7 +191,7 @@ BOOL GameInProgress;
 
 -(NSArray *)buttonArray
 {
-    NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button];
+    NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button, self.playAgainButton, self.nextCategoryButton];
     return buttons;
     
 }
@@ -214,6 +210,17 @@ BOOL GameInProgress;
     
 }
 
+-(void)launchScreenTimer
+{
+    self.openingSeconds = 4;
+    self.openingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                         target:self
+                                                       selector:@selector(labelCountdown)
+                                                       userInfo:nil
+                                                        repeats:YES];
+    
+}
+
 -(void)labelCountdown
 {
     
@@ -228,6 +235,7 @@ BOOL GameInProgress;
     
     if (self.openingSeconds == 2)
     {
+        self.startLabel.adjustsFontSizeToFitWidth = YES;
         self.startLabel.text = @"THE!";
         self.startLabel.alpha = 1;
         [self labelFade];
@@ -235,6 +243,7 @@ BOOL GameInProgress;
     
     if (self.openingSeconds == 1)
     {
+        self.startLabel.adjustsFontSizeToFitWidth = YES;
         self.startLabel.text = @"VORTEX!";
         self.startLabel.alpha = 1;
         [self labelFade];
@@ -251,18 +260,16 @@ BOOL GameInProgress;
         switch (self.categoryLoaded)
         {
             case 1:
-                [self randomComicsQuestion];
-                NSLog(@"HEY GIRL!!!!!!!");
+                [self randomComicQuestion];
                 break;
             case 2:
-                //[self randomMoviesQuestion];
-                NSLog(@"SELECTING 2 WORKS!");
+                [self randomMovieQuestion];
                 break;
             case 3:
                 [self randomTVQuestion];
                 break;
             case 4:
-                [self randomGamesQuestion];
+                [self randomGameQuestion];
                 break;
                 
             default:
@@ -283,21 +290,28 @@ BOOL GameInProgress;
     if (self.gameSeconds == 30)
     {
         self.timerLabel.textColor = [UIColor yellowColor];
-        
     }
     
     if (self.gameSeconds == 15)
     {
         self.timerLabel.textColor = [UIColor redColor];
-        
     }
     
     if (self.gameSeconds == 0)
     {
-        [self.gameTimer invalidate];
         self.timerLabel.adjustsFontSizeToFitWidth = YES;
         self.timerLabel.text = @"TIME'S UP!";
+    }
+    
+    if (self.gameSeconds == -1)
+    {
+        [self.gameTimer invalidate];
+        self.timerLabel.adjustsFontSizeToFitWidth = YES;
+        
+        //Intentionally restated the text to prevent "-1" from showing in the label.
+        self.timerLabel.text = @"TIME'S UP!";
         NSLog(@"DONE!!");
+        [self gameOver];
     }
     
 }
@@ -310,14 +324,57 @@ BOOL GameInProgress;
                                            userInfo:nil
                                             repeats:YES];
     
-    self.gameSeconds = 90;
+    self.gameSeconds = 30;
     
 }
 
+-(void)gameOver
+{
+    self.scoreLabel.text = [NSString stringWithFormat:@"%li", (long)self.scoreNumber];
+    self.startLabel.adjustsFontSizeToFitWidth = YES;
+    self.startLabel.text = @"GAME OVER!";
+    self.startLabel.alpha = 1.0;
+    self.overlayContainer.hidden = NO;
+    self.timerLabel.text = @"60"; //Make sure this matches the game start seconds
+    self.scoreLabel.hidden = NO;
+    self.correctLabel.hidden = NO;
+    self.startLabel.hidden = NO;
+    self.playAgainButton.hidden = NO;
+    self.nextCategoryButton.hidden = NO;
+    
+}
+
+-(void)rightAnswer
+{
+    self.scoreNumber = self.scoreNumber + 1;
+    
+    //Resetting the BOOLs after each answer seems to fix incorrect score glitch.
+    self.Answer1Correct = NO;
+    self.Answer2Correct = NO;
+    self.Answer3Correct = NO;
+    self.Answer4Correct = NO;
+    
+}
+
+-(void)wrongAnswer
+{
+    self.scoreNumber = self.scoreNumber + 0;
+    
+    //Resetting the BOOLs after each answer seems to fix incorrect score glitch.
+    self.Answer1Correct = NO;
+    self.Answer2Correct = NO;
+    self.Answer3Correct = NO;
+    self.Answer4Correct = NO;
+    
+}
+
+/*
+//For some reason, when using this method, the info does not refresh after array1 is repopulated by array2
 -(void)randomQuestion:(NSMutableArray *)array1 disposedTo:(NSMutableArray *)array2
 {
     //If array1 has more than "zero" items, a random index number is selected
     //The random object is placed in array2 and REMOVED from array1
+    
     if ([array1 count] > 0)
     {
         self.randomIndex = arc4random() %[array1 count];
@@ -348,9 +405,9 @@ BOOL GameInProgress;
     }
     
 }
+*/
 
-
--(void)randomComicsQuestion
+-(void)randomComicQuestion
 {
     //If self.questionArray has more than "zero" items, a random item is selected
     //The random item is placed in self.usedQuestionArray and REMOVED from self.questionArray
@@ -369,8 +426,6 @@ BOOL GameInProgress;
         [self.usedComicsArray addObject:[self.comicsArray objectAtIndex:self.randomIndex]];
         [self.comicsArray removeObjectAtIndex:self.randomIndex];
         
-        //NSLog(@"Array Now Contains: %@", self.letterArray);
-        
         //If self.letterArray has "zero" items, it is repopulated by the itmes in self.usedLetterArray
         if ([self.comicsArray count] == 0)
         {
@@ -387,7 +442,7 @@ BOOL GameInProgress;
     
 }
 
--(void)randomMoviesQuestion
+-(void)randomMovieQuestion
 {
     //If self.questionArray has more than "zero" items, a random item is selected
     //The random item is placed in self.usedQuestionArray and REMOVED from self.questionArray
@@ -406,8 +461,6 @@ BOOL GameInProgress;
         [self.usedMoviesArray addObject:[self.moviesArray objectAtIndex:self.randomIndex]];
         [self.moviesArray removeObjectAtIndex:self.randomIndex];
         
-        //NSLog(@"Array Now Contains: %@", self.letterArray);
-        
         //If self.letterArray has "zero" items, it is repopulated by the itmes in self.usedLetterArray
         if ([self.moviesArray count] == 0)
         {
@@ -423,6 +476,7 @@ BOOL GameInProgress;
     //[self randomQuestion:self.moviesArray disposedTo:self.usedMoviesArray];
     
 }
+
 
 -(void)randomTVQuestion
 {
@@ -441,8 +495,6 @@ BOOL GameInProgress;
         
         [self.usedTVArray addObject:[self.tvArray objectAtIndex:self.randomIndex]];
         [self.tvArray removeObjectAtIndex:self.randomIndex];
-        
-        //NSLog(@"Array Now Contains: %@", self.letterArray);
 
         if ([self.tvArray count] == 0)
         {
@@ -457,7 +509,7 @@ BOOL GameInProgress;
     
 }
 
--(void)randomGamesQuestion
+-(void)randomGameQuestion
 {
     
     if ([self.gamesArray count] > 0)
@@ -474,8 +526,6 @@ BOOL GameInProgress;
         
         [self.usedGamesArray addObject:[self.gamesArray objectAtIndex:self.randomIndex]];
         [self.gamesArray removeObjectAtIndex:self.randomIndex];
-        
-        //NSLog(@"Array Now Contains: %@", self.letterArray);
         
         if ([self.gamesArray count] == 0)
         {
@@ -494,20 +544,27 @@ BOOL GameInProgress;
 - (IBAction)answer1Tapped:(id)sender
 {
     //Do a "switch" in all buttons using "Category Loaded"
+    if (self.Answer1Correct == YES)
+    {
+        [self rightAnswer];
+    } else
+    {
+        [self wrongAnswer];
+    }
     
     switch (self.categoryLoaded)
     {
         case 1:
-            [self randomComicsQuestion];
+            [self randomComicQuestion];
             break;
         case 2:
-            [self randomMoviesQuestion];
+            [self randomMovieQuestion];
             break;
         case 3:
             [self randomTVQuestion];
             break;
         case 4:
-            [self randomGamesQuestion];
+            [self randomGameQuestion];
             break;
             
         default:
@@ -518,19 +575,27 @@ BOOL GameInProgress;
 
 - (IBAction)answer2Tapped:(id)sender
 {
+    if (self.Answer2Correct == YES)
+    {
+        [self rightAnswer];
+    } else
+    {
+        [self wrongAnswer];
+    }
+    
     switch (self.categoryLoaded)
     {
         case 1:
-            [self randomComicsQuestion];
+            [self randomComicQuestion];
             break;
         case 2:
-            [self randomMoviesQuestion];
+            [self randomMovieQuestion];
             break;
         case 3:
             [self randomTVQuestion];
             break;
         case 4:
-            [self randomGamesQuestion];
+            [self randomGameQuestion];
             break;
             
         default:
@@ -541,19 +606,27 @@ BOOL GameInProgress;
 
 - (IBAction)answer3Tapped:(id)sender
 {
+    if (self.Answer3Correct == YES)
+    {
+        [self rightAnswer];
+    } else
+    {
+        [self wrongAnswer];
+    }
+    
     switch (self.categoryLoaded)
     {
         case 1:
-            [self randomComicsQuestion];
+            [self randomComicQuestion];
             break;
         case 2:
-            [self randomMoviesQuestion];
+            [self randomMovieQuestion];
             break;
         case 3:
             [self randomTVQuestion];
             break;
         case 4:
-            [self randomGamesQuestion];
+            [self randomGameQuestion];
             break;
             
         default:
@@ -564,19 +637,27 @@ BOOL GameInProgress;
 
 - (IBAction)answer4Tapped:(id)sender
 {
+    if (self.Answer4Correct == YES)
+    {
+        [self rightAnswer];
+    } else
+    {
+        [self wrongAnswer];
+    }
+    
     switch (self.categoryLoaded)
     {
         case 1:
-            [self randomComicsQuestion];
+            [self randomComicQuestion];
             break;
         case 2:
-            [self randomMoviesQuestion];
+            [self randomMovieQuestion];
             break;
         case 3:
             [self randomTVQuestion];
             break;
         case 4:
-            [self randomGamesQuestion];
+            [self randomGameQuestion];
             break;
             
         default:
@@ -587,7 +668,13 @@ BOOL GameInProgress;
 
 - (IBAction)playAgainTapped:(id)sender
 {
-    
+    [self launchScreenTimer];
+    self.scoreNumber = 0;
+    self.scoreLabel.hidden = YES;
+    self.correctLabel.hidden = YES;
+    self.startLabel.text = @"START!";
+    self.playAgainButton.hidden = YES;
+    self.nextCategoryButton.hidden = YES;
     
 }
 
@@ -669,6 +756,8 @@ BOOL GameInProgress;
 
 #pragma mark - Questions
 
+// **** New questions must be added to its "converted array method" AND the mutable array within ****
+
 //Comics ***********
 
 -(void)comic_1
@@ -678,7 +767,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Amazing Stories #15" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Action Comics #1" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Superman #1" forState:UIControlStateNormal];
-    Answer3Correct = YES;
+    self.Answer3Correct = YES;
     
 }
 
@@ -689,7 +778,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"1977" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"1980" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"1988" forState:UIControlStateNormal];
-    Answer1Correct = YES;
+    self.Answer1Correct = YES;
     
 }
 
@@ -700,7 +789,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Starfire" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Speedy" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Superman" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -711,7 +800,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Arthur Curry" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"George Finn" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Glenn King" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
@@ -722,7 +811,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Kraven the Hunter" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Deadshot" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Lone Ranger" forState:UIControlStateNormal];
-    Answer1Correct = YES;
+    self.Answer1Correct = YES;
     
 }
 
@@ -733,7 +822,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Catwoman" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Penguin" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Riddler" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -744,7 +833,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Stryfe" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Juggernaut" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Sebastian Shaw" forState:UIControlStateNormal];
-    Answer3Correct = YES;
+    self.Answer3Correct = YES;
     
 }
 
@@ -755,7 +844,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Roniie Raymand and Martin Stein" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Johnny Storm and Angelica Jones" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Bruce Wayne and Clark Kent" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
@@ -766,7 +855,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Batman" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Doctor Fate" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Booster Gold" forState:UIControlStateNormal];
-    Answer1Correct = YES;
+    self.Answer1Correct = YES;
     
 }
 
@@ -777,10 +866,11 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Head trauma" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"AIDS complications" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Cancer" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
+// **** New questions must be added to its "converted array method" AND the mutable array within ****
 
 //Movies ***********
 
@@ -791,7 +881,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Dinosaurs" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Night" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Money" forState:UIControlStateNormal];
-    Answer1Correct = YES;
+    self.Answer1Correct = YES;
     
 }
 
@@ -802,7 +892,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Dog" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Sled" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Vodka Brand" forState:UIControlStateNormal];
-    Answer3Correct = YES;
+    self.Answer3Correct = YES;
     
 }
 
@@ -813,7 +903,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Marilyn Monroe" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Norma Desmond" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Judy Garland" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -824,7 +914,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Next" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Jack Reacher" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Risky Business" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
@@ -835,7 +925,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"3" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"6" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"4" forState:UIControlStateNormal];
-    Answer1Correct = YES;
+    self.Answer1Correct = YES;
     
 }
 
@@ -846,7 +936,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"A bird" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"His mother" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"A wolf" forState:UIControlStateNormal];
-    Answer3Correct = YES;
+    self.Answer3Correct = YES;
     
 }
 
@@ -857,7 +947,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Ben Harp" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Angelo Pappas" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Johnny Utah" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -868,7 +958,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Platoon" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Black Rain" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Prometheus" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
@@ -879,7 +969,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"George R. R. Martin" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Edward E. Nigma" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Rufus T. Firefly" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -890,10 +980,11 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Sam Raimi" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Zack Snyder" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Ed Wood" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
+// **** New questions must be added to its "converted array method" AND the mutable array within ****
 
 //TV Shows ***********
 
@@ -904,7 +995,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Arrow" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Buffy the Vampire Slayer" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Constantine" forState:UIControlStateNormal];
-    Answer1Correct = YES;
+    self.Answer1Correct = YES;
     
 }
 
@@ -915,7 +1006,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Smallville" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Greatest American Hero" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Manimal" forState:UIControlStateNormal];
-    Answer3Correct = YES;
+    self.Answer3Correct = YES;
     
 }
 
@@ -926,7 +1017,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Archie Bunker's Place" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"The Bamboo Lounge" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Cheers" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -937,7 +1028,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"West Philadelphia" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"East Bronx" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"West Hollywood" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
@@ -948,7 +1039,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Moonlighting" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"The Mentalist" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Jake and the Fatman" forState:UIControlStateNormal];
-    Answer1Correct = YES;
+    self.Answer1Correct = YES;
     
 }
 
@@ -959,7 +1050,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Junk yard" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Department store" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Doctor's office" forState:UIControlStateNormal];
-    Answer3Correct = YES;
+    self.Answer3Correct = YES;
     
 }
 
@@ -970,7 +1061,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Bam!" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Boppity-boop!" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Bazinga!" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -981,7 +1072,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Lynda Carter" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Lee Merriwether" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Julie Newmar" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
@@ -992,7 +1083,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Theodore" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Titan" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Tiberius" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -1003,10 +1094,11 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Futurama" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"American Dad" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"The PJ's" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
+// **** New questions must be added to its "converted array method" AND the mutable array within ****
 
 //Games ***********
 
@@ -1017,7 +1109,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Hitman" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Resident Evil" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Portal" forState:UIControlStateNormal];
-    Answer1Correct = YES;
+    self.Answer1Correct = YES;
     
 }
 
@@ -1028,7 +1120,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Centipede" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Pong" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Space Invaders" forState:UIControlStateNormal];
-    Answer3Correct = YES;
+    self.Answer3Correct = YES;
     
 }
 
@@ -1039,7 +1131,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Siri" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Cortana" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Hal" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -1050,7 +1142,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Donkey Kong" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"The Legend of Zelda" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Gauntlet" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
@@ -1061,7 +1153,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Skull sword" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Flailgun" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Metal Chocobo" forState:UIControlStateNormal];
-    Answer1Correct = YES;
+    self.Answer1Correct = YES;
     
 }
 
@@ -1072,7 +1164,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"3" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"4" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"6" forState:UIControlStateNormal];
-    Answer3Correct = YES;
+    self.Answer3Correct = YES;
     
 }
 
@@ -1083,7 +1175,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Draw Two" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Reverse" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Wild Draw Three" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -1094,7 +1186,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"64" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"48" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"56" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
@@ -1105,7 +1197,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"Monte Moneybags" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"The Tax Man" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Rich Uncle Pennybags" forState:UIControlStateNormal];
-    Answer4Correct = YES;
+    self.Answer4Correct = YES;
     
 }
 
@@ -1116,7 +1208,7 @@ BOOL GameInProgress;
     [self.answer2Button setTitle:@"28" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"32" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"44" forState:UIControlStateNormal];
-    Answer2Correct = YES;
+    self.Answer2Correct = YES;
     
 }
 
