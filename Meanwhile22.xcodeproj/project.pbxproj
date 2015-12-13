@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D22621771C1DF7090065D4F5 /* Deadly100GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */; };
 		D25305681C000FA7004ADB0F /* MissingEpisodeSummaries.m in Sources */ = {isa = PBXBuildFile; fileRef = D25305671C000FA7004ADB0F /* MissingEpisodeSummaries.m */; };
 		D25B8A4A1BF05F7500D77331 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25B8A491BF05F7500D77331 /* AVKit.framework */; };
 		D28855191BFBD1F500151BE4 /* vault of episodes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */; };
@@ -72,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D22621751C1DF7090065D4F5 /* Deadly100GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deadly100GameViewController.h; sourceTree = "<group>"; };
+		D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deadly100GameViewController.m; sourceTree = "<group>"; };
 		D25305661C000FA7004ADB0F /* MissingEpisodeSummaries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingEpisodeSummaries.h; sourceTree = "<group>"; };
 		D25305671C000FA7004ADB0F /* MissingEpisodeSummaries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissingEpisodeSummaries.m; sourceTree = "<group>"; };
 		D25B8A491BF05F7500D77331 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -244,6 +247,8 @@
 				D2BF3FAB1C0D073F00388747 /* TimeVortexGameViewController.m */,
 				D2BF3F681C097EA500388747 /* Deadly100ViewController.h */,
 				D2BF3F691C097EA500388747 /* Deadly100ViewController.m */,
+				D22621751C1DF7090065D4F5 /* Deadly100GameViewController.h */,
+				D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */,
 				D2FEEA9C1BD2BF4C00FADE89 /* Main.storyboard */,
 				D2FEEAA21BD2BF4C00FADE89 /* Assets.xcassets */,
 				D2FEEAD11BD359DB00FADE89 /* Assets */,
@@ -455,6 +460,7 @@
 				D2FEEACB1BD2BF6500FADE89 /* Podcast.m in Sources */,
 				D2BF3FAC1C0D073F00388747 /* TimeVortexGameViewController.m in Sources */,
 				D2BF3F6A1C097EA500388747 /* Deadly100ViewController.m in Sources */,
+				D22621771C1DF7090065D4F5 /* Deadly100GameViewController.m in Sources */,
 				D2FEEACE1BD2C3AD00FADE89 /* PodcastParser.m in Sources */,
 				D2FEEA9B1BD2BF4C00FADE89 /* ViewController.m in Sources */,
 				D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */,

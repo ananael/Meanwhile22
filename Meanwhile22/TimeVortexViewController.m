@@ -87,7 +87,7 @@
     //If it is the first time the user loads this screen OR did NOT click "Do Not Show Again" button,
     //the instruction screen will appear.
     //However, if user did click "Do Not Show Again" button, the instruction screen will not show again.
-    if ([[NSUserDefaults standardUserDefaults]boolForKey:@"doNotShowAgain"])
+    if ([[NSUserDefaults standardUserDefaults]boolForKey:@"doNotShowVortex"])
     {
         self.overlayContainer.hidden = YES;
         
@@ -199,7 +199,7 @@
     self.overlayContainer.hidden = YES;
     
     //Sets the BOOL to "YES" and activates the ELSE Statement in ViewDidLoad
-    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"doNotShowAgain"];
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"doNotShowVortex"];
     [[NSUserDefaults standardUserDefaults]synchronize];
     
 }

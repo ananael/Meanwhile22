@@ -348,7 +348,8 @@
 {
     self.scoreNumber = self.scoreNumber + 1;
     
-    //Resetting the BOOLs after each answer seems to fix incorrect score glitch.
+    //The BOOLs need to be reset after each question.
+    //If not, when a correct answer is pressed, that button stays as "YES".
     self.Answer1Correct = NO;
     self.Answer2Correct = NO;
     self.Answer3Correct = NO;
@@ -360,7 +361,8 @@
 {
     self.scoreNumber = self.scoreNumber + 0;
     
-    //Resetting the BOOLs after each answer seems to fix incorrect score glitch.
+    //The BOOLs need to be reset after each question.
+    //If not, when a correct answer is pressed, that button stays as "YES".
     self.Answer1Correct = NO;
     self.Answer2Correct = NO;
     self.Answer3Correct = NO;
