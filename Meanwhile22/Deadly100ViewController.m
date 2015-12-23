@@ -45,6 +45,7 @@
     // Do any additional setup after loading the view.
     
     self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
+    self.bannerImage.image = [UIImage imageNamed:@"deadly 100 banner"];
     
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.ambienceContainer.layer.borderWidth = 2.0;

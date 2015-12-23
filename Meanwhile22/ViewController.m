@@ -45,7 +45,7 @@
     self.logoImage.layer.borderWidth = 2.0;
     
     [self.episodeButton setBackgroundImage:[UIImage imageNamed:@"vault of episodes"] forState:UIControlStateNormal];
-    [self.quizButton setBackgroundImage:[UIImage imageNamed:@"quiz smasher FX lite"] forState:UIControlStateNormal];
+    [self.quizButton setBackgroundImage:[UIImage imageNamed:@"quiz smasher button"] forState:UIControlStateNormal];
     [self createButtonBorder:2.0 forArray:[self buttonArray]];
     
     

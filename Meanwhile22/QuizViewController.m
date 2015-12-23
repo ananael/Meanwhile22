@@ -42,13 +42,20 @@
     // Do any additional setup after loading the view.
     
     self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
+    self.bannerImage.image = [UIImage imageNamed:@"quiz smasher banner"];
     
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.ambienceContainer.layer.borderWidth = 2.0;
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     
+    self.bannerImage.layer.borderColor = [UIColor blackColor].CGColor;
+    self.bannerImage.layer.borderWidth = 2.0;
+    
     self.middleContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.middleContainer.layer.borderWidth = 2.0;
+    
+    [self.timeVortexButton setBackgroundImage:[UIImage imageNamed:@"time vortex"] forState:UIControlStateNormal];
+    [self.deadly100Button setBackgroundImage:[UIImage imageNamed:@"deadly 100 button"] forState:UIControlStateNormal];
     
     [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     

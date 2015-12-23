@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20C0B1B1C2A315C00F6C5D1 /* deadly 100 button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */; };
+		D20C0B1D1C2A385400F6C5D1 /* deadly 100 banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */; };
 		D22621771C1DF7090065D4F5 /* Deadly100GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */; };
 		D25305681C000FA7004ADB0F /* MissingEpisodeSummaries.m in Sources */ = {isa = PBXBuildFile; fileRef = D25305671C000FA7004ADB0F /* MissingEpisodeSummaries.m */; };
+		D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */; };
+		D2568DE21C28DF9800DA237F /* quiz smasher button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */; };
 		D25B8A4A1BF05F7500D77331 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25B8A491BF05F7500D77331 /* AVKit.framework */; };
 		D28855191BFBD1F500151BE4 /* vault of episodes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */; };
-		D288551F1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D288551E1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png */; };
 		D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28855211BFBF65700151BE4 /* EpisodeListViewController.m */; };
 		D28855241BFBF69900151BE4 /* vault banner FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */; };
 		D28855271BFCD6E900151BE4 /* EpisodeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28855261BFCD6E900151BE4 /* EpisodeListTableViewCell.m */; };
 		D288552C1BFDA0C600151BE4 /* EpisodePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D288552B1BFDA0C600151BE4 /* EpisodePlayerViewController.m */; };
 		D2ADEDC81C026B660035CC3C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2ADEDC71C026B660035CC3C /* AVFoundation.framework */; };
+		D2BAD0851C23DBE700668E13 /* time vortex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BAD0841C23DBE700668E13 /* time vortex@2x.png */; };
+		D2BAD0871C23DFE500668E13 /* quiz smasher banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */; };
+		D2BAD0891C23E37A00668E13 /* time vortex banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */; };
 		D2BF3EC41C04C41D00388747 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EB51C04C41D00388747 /* Icon-60.png */; };
 		D2BF3EC51C04C41D00388747 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EB61C04C41D00388747 /* Icon-60@2x.png */; };
 		D2BF3EC61C04C41D00388747 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EB71C04C41D00388747 /* Icon-60@3x.png */; };
@@ -73,13 +79,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly 100 button@2x.png"; sourceTree = "<group>"; };
+		D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly 100 banner@2x.png"; sourceTree = "<group>"; };
 		D22621751C1DF7090065D4F5 /* Deadly100GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deadly100GameViewController.h; sourceTree = "<group>"; };
 		D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deadly100GameViewController.m; sourceTree = "<group>"; };
 		D25305661C000FA7004ADB0F /* MissingEpisodeSummaries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingEpisodeSummaries.h; sourceTree = "<group>"; };
 		D25305671C000FA7004ADB0F /* MissingEpisodeSummaries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissingEpisodeSummaries.m; sourceTree = "<group>"; };
+		D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
+		D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quiz smasher button@2x.png"; sourceTree = "<group>"; };
 		D25B8A491BF05F7500D77331 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vault of episodes@2x.png"; sourceTree = "<group>"; };
-		D288551E1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quiz smasher FX lite@2x.png"; sourceTree = "<group>"; };
 		D28855201BFBF65700151BE4 /* EpisodeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeListViewController.h; sourceTree = "<group>"; };
 		D28855211BFBF65700151BE4 /* EpisodeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeListViewController.m; sourceTree = "<group>"; };
 		D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vault banner FX lite@2x.png"; sourceTree = "<group>"; };
@@ -88,6 +97,9 @@
 		D288552A1BFDA0C600151BE4 /* EpisodePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodePlayerViewController.h; sourceTree = "<group>"; };
 		D288552B1BFDA0C600151BE4 /* EpisodePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodePlayerViewController.m; sourceTree = "<group>"; };
 		D2ADEDC71C026B660035CC3C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D2BAD0841C23DBE700668E13 /* time vortex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time vortex@2x.png"; sourceTree = "<group>"; };
+		D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quiz smasher banner@2x.png"; sourceTree = "<group>"; };
+		D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time vortex banner@2x.png"; sourceTree = "<group>"; };
 		D2BF3EB51C04C41D00388747 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
 		D2BF3EB61C04C41D00388747 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		D2BF3EB71C04C41D00388747 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
@@ -192,6 +204,7 @@
 				D2BF3EBE1C04C41D00388747 /* Icon-Spotlight-40.png */,
 				D2BF3EBF1C04C41D00388747 /* Icon-Spotlight-40@2x.png */,
 				D2BF3EC01C04C41D00388747 /* Icon-Spotlight-40@3x.png */,
+				D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */,
 				D2BF3EC11C04C41D00388747 /* iTunesArtwork */,
 				D2BF3EC21C04C41D00388747 /* iTunesArtwork@2x */,
 				D2BF3EC31C04C41D00388747 /* M22 Logo template.png */,
@@ -292,11 +305,16 @@
 				D2BF3EB41C04C40000388747 /* icons */,
 				D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */,
 				D2FEEAD21BD361C200FADE89 /* twitter logo@2x.png */,
+				D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */,
+				D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */,
 				D2FEEAD31BD361C200FADE89 /* facebook logo@2x.png */,
 				D2F0C5601BFAF06E004BD66B /* paper texture A.png */,
 				D2F0C5621BFAF5B2004BD66B /* paper texture B.png */,
 				D2F0C5631BFAF5B2004BD66B /* paper texture C.png */,
-				D288551E1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png */,
+				D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */,
+				D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */,
+				D2BAD0841C23DBE700668E13 /* time vortex@2x.png */,
+				D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */,
 				D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */,
 				D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */,
 			);
@@ -415,24 +433,30 @@
 				D2BF3EC51C04C41D00388747 /* Icon-60@2x.png in Resources */,
 				D2F0C5651BFAF5B2004BD66B /* paper texture C.png in Resources */,
 				D2BF3EC81C04C41D00388747 /* Icon-76@2x.png in Resources */,
-				D288551F1BFBEAC200151BE4 /* quiz smasher FX lite@2x.png in Resources */,
+				D2BAD0851C23DBE700668E13 /* time vortex@2x.png in Resources */,
 				D2BF3EC61C04C41D00388747 /* Icon-60@3x.png in Resources */,
 				D2BF3ECD1C04C41D00388747 /* Icon-Spotlight-40.png in Resources */,
 				D2FEEAA31BD2BF4C00FADE89 /* Assets.xcassets in Resources */,
+				D2BAD0871C23DFE500668E13 /* quiz smasher banner@2x.png in Resources */,
 				D2BF3ECA1C04C41D00388747 /* Icon-Small.png in Resources */,
 				D2BF3ECE1C04C41D00388747 /* Icon-Spotlight-40@2x.png in Resources */,
 				D2CAF6381BFAFC50004693D3 /* M22 Logo FX lite@2x.png in Resources */,
 				D2BF3ECC1C04C41D00388747 /* Icon-Small@3x.png in Resources */,
 				D2BF3EC91C04C41D00388747 /* Icon-76@3x.png in Resources */,
+				D20C0B1D1C2A385400F6C5D1 /* deadly 100 banner@2x.png in Resources */,
 				D2BF3ECB1C04C41D00388747 /* Icon-Small@2x.png in Resources */,
 				D2BF3EC41C04C41D00388747 /* Icon-60.png in Resources */,
+				D20C0B1B1C2A315C00F6C5D1 /* deadly 100 button@2x.png in Resources */,
 				D2FEEAD51BD361C200FADE89 /* facebook logo@2x.png in Resources */,
+				D2568DE21C28DF9800DA237F /* quiz smasher button@2x.png in Resources */,
 				D2BF3ECF1C04C41D00388747 /* Icon-Spotlight-40@3x.png in Resources */,
 				D2BF3ED21C04C41D00388747 /* M22 Logo template.png in Resources */,
 				D2FEEA9E1BD2BF4C00FADE89 /* Main.storyboard in Resources */,
 				D28855191BFBD1F500151BE4 /* vault of episodes@2x.png in Resources */,
+				D2BAD0891C23E37A00668E13 /* time vortex banner@2x.png in Resources */,
 				D28855241BFBF69900151BE4 /* vault banner FX lite@2x.png in Resources */,
 				D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */,
+				D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

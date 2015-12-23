@@ -60,6 +60,7 @@
     [self createViewBorderWidth:2.0 forArray:[self containerArray]];
     [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     
+    self.bannerImage.image = [UIImage imageNamed:@"time vortex banner"];
     self.bannerImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.bannerImage.layer.borderWidth = 2.0;
     
