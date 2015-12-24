@@ -94,9 +94,7 @@
         
     } else
     {
-        
         self.overlayContainer.hidden = NO;
-        
     }
     
     
