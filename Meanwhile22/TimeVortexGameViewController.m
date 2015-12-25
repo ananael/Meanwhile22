@@ -371,8 +371,6 @@
 
 -(void)wrongAnswer
 {
-    self.scoreNumber = self.scoreNumber + 0;
-    
     //The BOOLs need to be reset after each question.
     //If not, when a correct answer is pressed, that button stays as "YES".
     self.Answer1Correct = NO;

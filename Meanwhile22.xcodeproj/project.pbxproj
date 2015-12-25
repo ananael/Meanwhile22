@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D20C0B1B1C2A315C00F6C5D1 /* deadly 100 button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */; };
 		D20C0B1D1C2A385400F6C5D1 /* deadly 100 banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */; };
+		D22309831C2D006A00491F37 /* DeadlyQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = D22309821C2D006A00491F37 /* DeadlyQuestions.m */; };
 		D22621771C1DF7090065D4F5 /* Deadly100GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */; };
 		D25305681C000FA7004ADB0F /* MissingEpisodeSummaries.m in Sources */ = {isa = PBXBuildFile; fileRef = D25305671C000FA7004ADB0F /* MissingEpisodeSummaries.m */; };
 		D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */; };
@@ -81,6 +82,8 @@
 /* Begin PBXFileReference section */
 		D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly 100 button@2x.png"; sourceTree = "<group>"; };
 		D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly 100 banner@2x.png"; sourceTree = "<group>"; };
+		D22309811C2D006A00491F37 /* DeadlyQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeadlyQuestions.h; sourceTree = "<group>"; };
+		D22309821C2D006A00491F37 /* DeadlyQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeadlyQuestions.m; sourceTree = "<group>"; };
 		D22621751C1DF7090065D4F5 /* Deadly100GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deadly100GameViewController.h; sourceTree = "<group>"; };
 		D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deadly100GameViewController.m; sourceTree = "<group>"; };
 		D25305661C000FA7004ADB0F /* MissingEpisodeSummaries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingEpisodeSummaries.h; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 				D2FEEACD1BD2C3AD00FADE89 /* PodcastParser.m */,
 				D25305661C000FA7004ADB0F /* MissingEpisodeSummaries.h */,
 				D25305671C000FA7004ADB0F /* MissingEpisodeSummaries.m */,
+				D22309811C2D006A00491F37 /* DeadlyQuestions.h */,
+				D22309821C2D006A00491F37 /* DeadlyQuestions.m */,
 				D28855251BFCD6E900151BE4 /* EpisodeListTableViewCell.h */,
 				D28855261BFCD6E900151BE4 /* EpisodeListTableViewCell.m */,
 				D2FEEA991BD2BF4C00FADE89 /* ViewController.h */,
@@ -491,6 +496,7 @@
 				D2FEEA981BD2BF4C00FADE89 /* AppDelegate.m in Sources */,
 				D28855271BFCD6E900151BE4 /* EpisodeListTableViewCell.m in Sources */,
 				D2BF3F641C0952DA00388747 /* QuizViewController.m in Sources */,
+				D22309831C2D006A00491F37 /* DeadlyQuestions.m in Sources */,
 				D2BF3F671C097E9400388747 /* TimeVortexViewController.m in Sources */,
 				D2FEEAA11BD2BF4C00FADE89 /* Meanwhile22.xcdatamodeld in Sources */,
 				D2FEEA951BD2BF4C00FADE89 /* main.m in Sources */,

@@ -197,7 +197,7 @@
 {
     self.overlayContainer.hidden = YES;
     
-    //Sets the BOOL to "YES" and activates the ELSE Statement in ViewDidLoad
+    //Sets the BOOL to "YES" and activates the IF Statement in ViewDidLoad
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"doNotShowVortex"];
     [[NSUserDefaults standardUserDefaults]synchronize];
     
