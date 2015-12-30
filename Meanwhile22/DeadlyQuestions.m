@@ -17,6 +17,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 
+@property NSMutableArray *questionArray;
+@property NSMutableArray *usedQuestionArray;
+@property NSInteger randomIndex;
+
 @property BOOL Answer1Correct;
 @property BOOL Answer2Correct;
 @property BOOL Answer3Correct;
@@ -33,6 +37,43 @@
     // Drawing code
 }
 */
+
+-(void)randomQuestion
+{
+    //If self.questionArray has more than "zero" items, a random item is selected
+    //The random item is placed in self.usedQuestionArray and REMOVED from self.questionArray
+    
+    self.questionArray = [NSMutableArray new];
+    self.questionArray = [self convertedQuestionArray];
+    
+    if ([self.questionArray count] > 0)
+    {
+        self.randomIndex = arc4random() %[self.questionArray count];
+        
+        NSLog(@"Random Index: %li", (long)self.randomIndex);
+        NSLog(@"Initial Count: %li", (unsigned long)[self.questionArray count]);
+        
+        SEL selector = [[self.questionArray objectAtIndex:self.randomIndex] pointerValue];
+        IMP imp = [self methodForSelector:selector];
+        void (*func)(id, SEL) = (void *)imp;
+        func(self, selector);
+        
+        [self.usedQuestionArray addObject:[self.questionArray objectAtIndex:self.randomIndex]];
+        [self.questionArray removeObjectAtIndex:self.randomIndex];
+        
+        //If self.questionArray has "zero" items, it is repopulated by the itmes in self.usedQuestionArray
+        if ([self.questionArray count] == 0)
+        {
+            //The self.questionArray is populated with the items in self.usedQuestionArray
+            self.questionArray = [NSMutableArray arrayWithArray:self.usedQuestionArray];
+            
+            //Then self.usedQuestionArray is cleaned out and ready to be repopulated by self.questionArray
+            [self.usedQuestionArray removeAllObjects];
+        }
+        NSLog(@"New Count: %li", (unsigned long)[self.questionArray count]);
+    }
+    
+}
 
 -(NSMutableArray *)convertedQuestionArray
 {

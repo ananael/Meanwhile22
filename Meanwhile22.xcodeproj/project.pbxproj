@@ -15,6 +15,10 @@
 		D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */; };
 		D2568DE21C28DF9800DA237F /* quiz smasher button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */; };
 		D25B8A4A1BF05F7500D77331 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25B8A491BF05F7500D77331 /* AVKit.framework */; };
+		D25C46461C325A2F00638DC5 /* warrior large.png in Resources */ = {isa = PBXBuildFile; fileRef = D25C46441C325A2F00638DC5 /* warrior large.png */; };
+		D26175941C33382500E772E3 /* deadly background.png in Resources */ = {isa = PBXBuildFile; fileRef = D26175931C33382500E772E3 /* deadly background.png */; };
+		D26175981C33468300E772E3 /* shield small.png in Resources */ = {isa = PBXBuildFile; fileRef = D26175971C33468300E772E3 /* shield small.png */; };
+		D261759A1C3355E300E772E3 /* gun shot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D26175991C3355E300E772E3 /* gun shot.mp3 */; };
 		D28855191BFBD1F500151BE4 /* vault of episodes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */; };
 		D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28855211BFBF65700151BE4 /* EpisodeListViewController.m */; };
 		D28855241BFBF69900151BE4 /* vault banner FX lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */; };
@@ -91,6 +95,10 @@
 		D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
 		D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quiz smasher button@2x.png"; sourceTree = "<group>"; };
 		D25B8A491BF05F7500D77331 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		D25C46441C325A2F00638DC5 /* warrior large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warrior large.png"; sourceTree = "<group>"; };
+		D26175931C33382500E772E3 /* deadly background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly background.png"; sourceTree = "<group>"; };
+		D26175971C33468300E772E3 /* shield small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shield small.png"; sourceTree = "<group>"; };
+		D26175991C3355E300E772E3 /* gun shot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "gun shot.mp3"; sourceTree = "<group>"; };
 		D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vault of episodes@2x.png"; sourceTree = "<group>"; };
 		D28855201BFBF65700151BE4 /* EpisodeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeListViewController.h; sourceTree = "<group>"; };
 		D28855211BFBF65700151BE4 /* EpisodeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeListViewController.m; sourceTree = "<group>"; };
@@ -307,21 +315,25 @@
 		D2FEEAD11BD359DB00FADE89 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D26175991C3355E300E772E3 /* gun shot.mp3 */,
 				D2BF3EB41C04C40000388747 /* icons */,
 				D2CAF6371BFAFC50004693D3 /* M22 Logo FX lite@2x.png */,
 				D2FEEAD21BD361C200FADE89 /* twitter logo@2x.png */,
 				D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */,
 				D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */,
+				D26175931C33382500E772E3 /* deadly background.png */,
 				D2FEEAD31BD361C200FADE89 /* facebook logo@2x.png */,
 				D2F0C5601BFAF06E004BD66B /* paper texture A.png */,
 				D2F0C5621BFAF5B2004BD66B /* paper texture B.png */,
 				D2F0C5631BFAF5B2004BD66B /* paper texture C.png */,
 				D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */,
 				D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */,
+				D26175971C33468300E772E3 /* shield small.png */,
 				D2BAD0841C23DBE700668E13 /* time vortex@2x.png */,
 				D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */,
 				D28855231BFBF69900151BE4 /* vault banner FX lite@2x.png */,
 				D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */,
+				D25C46441C325A2F00638DC5 /* warrior large.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -435,8 +447,10 @@
 				D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */,
 				D2BF3ED01C04C41D00388747 /* iTunesArtwork in Resources */,
 				D2FEEAA61BD2BF4C00FADE89 /* LaunchScreen.storyboard in Resources */,
+				D261759A1C3355E300E772E3 /* gun shot.mp3 in Resources */,
 				D2BF3EC51C04C41D00388747 /* Icon-60@2x.png in Resources */,
 				D2F0C5651BFAF5B2004BD66B /* paper texture C.png in Resources */,
+				D26175941C33382500E772E3 /* deadly background.png in Resources */,
 				D2BF3EC81C04C41D00388747 /* Icon-76@2x.png in Resources */,
 				D2BAD0851C23DBE700668E13 /* time vortex@2x.png in Resources */,
 				D2BF3EC61C04C41D00388747 /* Icon-60@3x.png in Resources */,
@@ -453,6 +467,7 @@
 				D2BF3EC41C04C41D00388747 /* Icon-60.png in Resources */,
 				D20C0B1B1C2A315C00F6C5D1 /* deadly 100 button@2x.png in Resources */,
 				D2FEEAD51BD361C200FADE89 /* facebook logo@2x.png in Resources */,
+				D25C46461C325A2F00638DC5 /* warrior large.png in Resources */,
 				D2568DE21C28DF9800DA237F /* quiz smasher button@2x.png in Resources */,
 				D2BF3ECF1C04C41D00388747 /* Icon-Spotlight-40@3x.png in Resources */,
 				D2BF3ED21C04C41D00388747 /* M22 Logo template.png in Resources */,
@@ -462,6 +477,7 @@
 				D28855241BFBF69900151BE4 /* vault banner FX lite@2x.png in Resources */,
 				D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */,
 				D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */,
+				D26175981C33468300E772E3 /* shield small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

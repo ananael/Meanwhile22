@@ -7,6 +7,7 @@
 //
 
 #import "Deadly100GameViewController.h"
+#import <AVFoundation/AVFoundation.h>
 #import "DeadlyQuestions.h"
 
 @interface Deadly100GameViewController ()
@@ -44,6 +45,7 @@
 @property NSTimer *timer;
 @property NSInteger seconds;
 
+@property AVAudioPlayer *audioPlayer;
 
 //The "Answer" BOOLs work by setting the correct anser to "Yes"
 //And the others will default to "No", once enabled as "No" in ViewDidLoad
@@ -82,21 +84,34 @@
         self.gameInProgress = YES;
     }
     
+    self.backgroundImage.image = [UIImage imageNamed:@"deadly background"];
+    
+    self.life1.image = [UIImage imageNamed:@"shield small"];
+    self.life2.image = [UIImage imageNamed:@"shield small"];
+    self.life3.image = [UIImage imageNamed:@"shield small"];
+    self.life4.image = [UIImage imageNamed:@"shield small"];
+    self.life5.image = [UIImage imageNamed:@"shield small"];
+    self.life6.image = [UIImage imageNamed:@"shield small"];
+    
+    self.middleContainer.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
+    self.scoreLabel.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
+    
     //Creates top border for self.middleContainer
     CGFloat borderWidth = 2;
     UIView *topBorder = [UIView new];
-    topBorder.backgroundColor = [UIColor blackColor];
+    topBorder.backgroundColor = [UIColor whiteColor];
     [topBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin];
     topBorder.frame = CGRectMake(0, 0, self.middleContainer.frame.size.width, borderWidth);
     [self.middleContainer addSubview:topBorder];
     
     //Creates bottom border for self.middleContainer
     UIView *bottomBorder = [UIView new];
-    bottomBorder.backgroundColor = [UIColor blackColor];
+    bottomBorder.backgroundColor = [UIColor whiteColor];
     [bottomBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
     bottomBorder.frame = CGRectMake(0, self.middleContainer.frame.size.height, self.middleContainer.frame.size.width, borderWidth);
     [self.middleContainer addSubview:bottomBorder];
     
+    //[self createImageViewBorderWidth:1.0 forArray:[self imageViewArray]];
     [self buttonBackgroundColor:[self buttonArray]];
     [self createButtonBorderWidth:1.0 forArray:[self buttonArray]];
     [self buttonCornerRadius:8.0 forArray:[self buttonArray]];
@@ -104,6 +119,13 @@
     
     self.saveButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.saveButton.layer.borderWidth = 1;
+    //3 lines below: Text fits in button space for different phone sizes
+    self.saveButton.titleLabel.numberOfLines = 1;
+    self.saveButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.saveButton.titleLabel.lineBreakMode = NSLineBreakByClipping;
+    
+    self.quitButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.quitButton.layer.borderWidth = 1;
     
     self.saveButton.layer.cornerRadius = 10;
     self.quitButton.layer.cornerRadius = 10;
@@ -119,7 +141,7 @@
     self.questionArray = [NSMutableArray new];
     self.usedQuestionArray = [NSMutableArray new];
     
-    //DeadlyQuestions *deadly = [DeadlyQuestions new];
+    //self.deadly = [DeadlyQuestions new];
     //self.questionArray = [NSMutableArray arrayWithArray:[deadly convertedQuestionArray]];
     
     self.questionArray = [NSMutableArray arrayWithArray:[self convertedQuestionArray]];
@@ -152,7 +174,7 @@
 {
     for (UIButton *button in array)
     {
-        button.backgroundColor = [UIColor clearColor];
+        button.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
         
     }
     
@@ -162,8 +184,8 @@
 {
     for (UIButton *button in array)
     {
-        button.layer.borderWidth = 2.0;
-        button.layer.borderColor = [UIColor yellowColor].CGColor;
+        button.layer.borderWidth = width;
+        button.layer.borderColor = [UIColor whiteColor].CGColor;
     }
 }
 
@@ -181,6 +203,23 @@
     {
         button.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
+}
+
+-(void)createImageViewBorderWidth:(NSInteger)width forArray:(NSArray *)array
+{
+    for (UIImageView *view in array)
+    {
+        view.layer.borderWidth = width;
+        view.layer.borderColor = [UIColor blackColor].CGColor;
+    }
+    
+}
+
+-(NSArray *)imageViewArray
+{
+    NSArray *views = @[self.life1, self.life2, self.life3, self.life4, self.life5, self.life6];
+    return views;
+    
 }
 
 -(NSArray *)buttonArray
@@ -210,6 +249,7 @@
     }
     
 }
+
 
 -(void)randomQuestion
 {
@@ -244,6 +284,7 @@
     
 }
 
+ 
 -(void)rightAnswer
 {
     self.scoreNumber = self.scoreNumber + 1;
@@ -262,12 +303,51 @@
 {
     self.livesNumber = self.livesNumber - 1;
     
+    [self gunShot];
+    
     //The BOOLs need to be reset after each question.
     //If not, when a correct answer is pressed, that button stays as "YES".
     self.Answer1Correct = NO;
     self.Answer2Correct = NO;
     self.Answer3Correct = NO;
     self.Answer4Correct = NO;
+    
+    if (self.livesNumber == 5)
+    {
+        self.life1.hidden = YES;
+    }
+    if (self.livesNumber == 4)
+    {
+        self.life2.hidden = YES;
+    }
+    if (self.livesNumber == 3)
+    {
+        self.life3.hidden = YES;
+    }
+    if (self.livesNumber == 2)
+    {
+        self.life4.hidden = YES;
+    }
+    if (self.livesNumber == 1)
+    {
+        self.life5.hidden = YES;
+    }
+    if (self.livesNumber == 0)
+    {
+        self.life6.hidden = YES;
+    }
+    
+}
+
+-(void)gunShot
+{
+    // Construct URL to sound file
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"gun shot"
+                                              withExtension:@"mp3"];
+    // Create audio player object and initialize with URL to sound
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    
+    [self.audioPlayer play];
     
 }
 
@@ -448,7 +528,7 @@
 {
     self.questionLabel.text = @"The first incarnation of Firestorm consisted of … ?";
     [self.answer1Button setTitle:@"Hank Hall and Don Hall" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Roniie Raymand and Martin Stein" forState:UIControlStateNormal];
+    [self.answer2Button setTitle:@"Ronnie Raymand and Martin Stein" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Johnny Storm and Angelica Jones" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Bruce Wayne and Clark Kent" forState:UIControlStateNormal];
     self.Answer2Correct = YES;

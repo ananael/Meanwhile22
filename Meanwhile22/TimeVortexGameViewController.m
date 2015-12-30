@@ -175,7 +175,7 @@
 {
     for (UIButton *button in array)
     {
-        button.layer.borderWidth = 2.0;
+        button.layer.borderWidth = width;
         button.layer.borderColor = [UIColor yellowColor].CGColor;
         
     }
@@ -853,7 +853,7 @@
 {
     self.questionLabel.text = @"The first incarnation of Firestorm consisted of … ?";
     [self.answer1Button setTitle:@"Hank Hall and Don Hall" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Roniie Raymand and Martin Stein" forState:UIControlStateNormal];
+    [self.answer2Button setTitle:@"Ronnie Raymand and Martin Stein" forState:UIControlStateNormal];
     [self.answer3Button setTitle:@"Johnny Storm and Angelica Jones" forState:UIControlStateNormal];
     [self.answer4Button setTitle:@"Bruce Wayne and Clark Kent" forState:UIControlStateNormal];
     self.Answer2Correct = YES;

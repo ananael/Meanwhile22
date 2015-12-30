@@ -46,6 +46,7 @@
     
     self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
     self.bannerImage.image = [UIImage imageNamed:@"deadly 100 banner"];
+    self.overlayImage.image = [UIImage imageNamed:@"warrior large"];
     
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.ambienceContainer.layer.borderWidth = 2.0;
