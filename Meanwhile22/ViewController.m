@@ -37,18 +37,17 @@
     
     self.backgroundImage.image = [UIImage imageNamed:@"paper texture B"];
     
-    [[self.twitterButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
-    [[self.facebookButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
-    
-    self.logoImage.image = [UIImage imageNamed:@"M22 Logo FX lite"];
+    self.logoImage.image = [UIImage imageNamed:@"M22 Logo 2016"];
     self.logoImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.logoImage.layer.borderWidth = 2.0;
+    
     
     [self.episodeButton setBackgroundImage:[UIImage imageNamed:@"vault of episodes"] forState:UIControlStateNormal];
     [self.quizButton setBackgroundImage:[UIImage imageNamed:@"quiz smasher button"] forState:UIControlStateNormal];
     [self createButtonBorder:2.0 forArray:[self buttonArray]];
     
-    
+    [[self.twitterButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    [[self.facebookButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     
     
     

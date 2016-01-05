@@ -71,6 +71,11 @@
     // Do any additional setup after loading the view.
     
     self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
+    [self.pauseButton setBackgroundImage:[UIImage imageNamed:@"pause button@2X"] forState:UIControlStateNormal];
+    [self.playButton setBackgroundImage:[UIImage imageNamed:@"play button"] forState:UIControlStateNormal];
+    [self.stopButton setBackgroundImage:[UIImage imageNamed:@"stop button@2X"] forState:UIControlStateNormal];
+    [self.backward30 setBackgroundImage:[UIImage imageNamed:@"time back button"] forState:UIControlStateNormal];
+    [self.forward30 setBackgroundImage:[UIImage imageNamed:@"time forward button"] forState:UIControlStateNormal];
     
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.ambienceContainer.layer.borderWidth = 2.0;

@@ -96,6 +96,12 @@
     self.middleContainer.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
     self.scoreLabel.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
     
+    //Fixes self.scoreLabel font problem on iPhone 4s.
+    if (self.view.frame.size.width == 320)
+    {
+        [self.scoreLabel setFont:[UIFont fontWithName:@"AvenirNext-Medium" size:25.0]];
+    }
+    
     //Creates top border for self.middleContainer
     CGFloat borderWidth = 2;
     UIView *topBorder = [UIView new];
