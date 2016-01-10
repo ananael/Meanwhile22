@@ -14,6 +14,12 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
+@property (weak, nonatomic) IBOutlet UIView *overlayView;
+@property (weak, nonatomic) IBOutlet UIImageView *overlayImage;
+@property (weak, nonatomic) IBOutlet UIView *overlayButtonContainer;
+@property (weak, nonatomic) IBOutlet UIButton *fightAgainButton;
+@property (weak, nonatomic) IBOutlet UIButton *fallBackButton;
+
 @property (weak, nonatomic) IBOutlet UIView *topContainer;
 @property (weak, nonatomic) IBOutlet UIView *livesContainer1;
 @property (weak, nonatomic) IBOutlet UIImageView *life1;
@@ -37,6 +43,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *answer2Button;
 @property (weak, nonatomic) IBOutlet UIButton *answer3Button;
 @property (weak, nonatomic) IBOutlet UIButton *answer4Button;
+- (IBAction)fightAgainTapped:(id)sender;
+- (IBAction)fallBackTapped:(id)sender;
 
 @property NSInteger scoreNumber;
 @property NSInteger livesNumber;
@@ -44,6 +52,8 @@
 
 @property NSTimer *timer;
 @property NSInteger seconds;
+@property NSTimer *slideTimer;
+@property NSInteger slideSeconds;
 
 @property AVAudioPlayer *audioPlayer;
 
@@ -58,6 +68,7 @@
 
 @property NSMutableArray *questionArray;
 @property NSMutableArray *usedQuestionArray;
+@property NSMutableArray *randomIndexArray;
 
 - (IBAction)answer1Tapped:(id)sender;
 - (IBAction)answer2Tapped:(id)sender;
@@ -75,9 +86,55 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.questionArray = [NSMutableArray new];
+    self.usedQuestionArray = [NSMutableArray new];
+    self.randomIndexArray = [NSMutableArray new];
+    
+    self.questionArray = [NSMutableArray arrayWithArray:[self convertedQuestionArray]];
+    
     //This will set/reset the game back to the beginning state of 6 lives and "0" score
     //Creating the IF Statement here prevents the game from constantly resetting while playing
-    if (self.gameInProgress == NO)
+    if ([[NSUserDefaults standardUserDefaults]boolForKey:@"savedGame"])
+    {
+        self.scoreNumber = [[NSUserDefaults standardUserDefaults]integerForKey:@"savedScore"];
+        self.scoreLabel.text = [NSString stringWithFormat:@"%li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"savedScore"]];
+        self.livesNumber = [[NSUserDefaults standardUserDefaults]integerForKey:@"savedLives"];
+        [self lifeImagesRemaining];
+        
+        NSArray *tempArray = [NSArray arrayWithArray:[self readArrayWithCustomObjFromUserDefaults:@"usedIndexNumber"]];
+        NSArray *descendingTempArray = [[[tempArray sortedArrayUsingSelector:@selector(compare:)]reverseObjectEnumerator]allObjects];
+        NSLog(@"Used Index Numbers: %@", descendingTempArray);
+        
+//        for (NSInteger i=0; i<[descendingTempArray count]; i++)
+//        {
+//            NSNumber *indexNumber = [descendingTempArray objectAtIndex:i];
+//            [self.usedQuestionArray addObject:[self.questionArray objectAtIndex:[indexNumber integerValue]]];
+//            [self.questionArray removeObjectAtIndex:[indexNumber integerValue]];
+//        }
+        //TODO: Change code below back to the uncommented above oncwe more than 100 questions have been coded for game
+        if ([descendingTempArray count] < [self.questionArray count])
+        {
+            for (NSInteger i=0; i<[descendingTempArray count]; i++)
+            {
+                NSNumber *indexNumber = [descendingTempArray objectAtIndex:i];
+                [self.usedQuestionArray addObject:[self.questionArray objectAtIndex:[indexNumber integerValue]]];
+                [self.questionArray removeObjectAtIndex:[indexNumber integerValue]];
+            }
+        } else
+        {
+            [self randomQuestion];
+        }
+        
+        NSLog(@"New Question Count: %li", (unsigned long)[self.questionArray count]);
+        
+        
+    } else if ([[NSUserDefaults standardUserDefaults]boolForKey:@"newGame"])
+    {
+        self.livesNumber = 6;
+        self.scoreNumber = 0;
+        self.gameInProgress = YES;
+        
+    } else if (self.gameInProgress == NO)
     {
         self.livesNumber = 6;
         self.scoreNumber = 0;
@@ -85,6 +142,11 @@
     }
     
     self.backgroundImage.image = [UIImage imageNamed:@"deadly background"];
+    self.overlayView.backgroundColor = [UIColor blackColor];
+    self.overlayImage.image = [UIImage imageNamed:@"weapons one"];
+    self.overlayButtonContainer.hidden = YES;
+    [self.fightAgainButton setTitle:@"FIGHT\nAGAIN" forState:UIControlStateNormal];
+    [self.fallBackButton setTitle:@"FALL\nBACK" forState:UIControlStateNormal];
     
     self.life1.image = [UIImage imageNamed:@"shield small"];
     self.life2.image = [UIImage imageNamed:@"shield small"];
@@ -143,15 +205,6 @@
     self.Answer4Correct = NO;
     
     [self roundTimer];
-
-    self.questionArray = [NSMutableArray new];
-    self.usedQuestionArray = [NSMutableArray new];
-    
-    //self.deadly = [DeadlyQuestions new];
-    //self.questionArray = [NSMutableArray arrayWithArray:[deadly convertedQuestionArray]];
-    
-    self.questionArray = [NSMutableArray arrayWithArray:[self convertedQuestionArray]];
-    
     
     
     
@@ -230,9 +283,10 @@
 
 -(NSArray *)buttonArray
 {
-    NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button];
+    NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button, self.fightAgainButton, self.fallBackButton];
     return buttons;
 }
+
 
 -(void)roundTimer
 {
@@ -249,13 +303,45 @@
 {
     self.seconds --;
     
+    self.overlayImage.image = [UIImage imageNamed:@"weapons one"];
+    
     if (self.seconds == 0)
     {
         [self randomQuestion];
+        
+        self.overlayView.alpha = 1.0;
+        [self overlayFadeOut];
     }
     
 }
 
+-(void)overlayFadeOut
+{
+    [UIView animateWithDuration:0.75
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         self.overlayView.alpha = 0;
+                         
+                     }
+                     completion:nil];
+    
+}
+
+-(void)overlayFadeIn
+{
+    [UIView animateWithDuration:0.75
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         self.overlayView.alpha = 1;
+                         
+                     }
+                     completion:nil];
+    
+}
 
 -(void)randomQuestion
 {
@@ -273,6 +359,7 @@
         void (*func)(id, SEL) = (void *)imp;
         func(self, selector);
         
+        [self.randomIndexArray addObject:[NSNumber numberWithInteger:self.randomIndex]];
         [self.usedQuestionArray addObject:[self.questionArray objectAtIndex:self.randomIndex]];
         [self.questionArray removeObjectAtIndex:self.randomIndex];
         
@@ -290,6 +377,49 @@
     
 }
 
+-(void)lifeImagesRemaining
+{
+    if (self.livesNumber == 5)
+    {
+        self.life1.hidden = YES;
+    }
+    if (self.livesNumber == 4)
+    {
+        self.life1.hidden = YES;
+        self.life2.hidden = YES;
+    }
+    if (self.livesNumber == 3)
+    {
+        self.life1.hidden = YES;
+        self.life2.hidden = YES;
+        self.life3.hidden = YES;
+    }
+    if (self.livesNumber == 2)
+    {
+        self.life1.hidden = YES;
+        self.life2.hidden = YES;
+        self.life3.hidden = YES;
+        self.life4.hidden = YES;
+    }
+    if (self.livesNumber == 1)
+    {
+        self.life1.hidden = YES;
+        self.life2.hidden = YES;
+        self.life3.hidden = YES;
+        self.life4.hidden = YES;
+        self.life5.hidden = YES;
+    }
+}
+
+-(void)restoreLives
+{
+    self.life1.hidden = NO;
+    self.life2.hidden = NO;
+    self.life3.hidden = NO;
+    self.life4.hidden = NO;
+    self.life5.hidden = NO;
+    self.life6.hidden = NO;
+}
  
 -(void)rightAnswer
 {
@@ -341,6 +471,8 @@
     if (self.livesNumber == 0)
     {
         self.life6.hidden = YES;
+        [self overlayFadeIn];
+        self.overlayButtonContainer.hidden = NO;
     }
     
 }
@@ -414,16 +546,78 @@
     
 }
 
+//An NSArray (especially an NSMutableArray) cannot be directly saved to NSUserdefaults
+//The NSCoding protocol must be implemented
+-(void)writeArrayWithCustomObjToUserDefaults:(NSString *)keyName withArray:(NSArray *)myArray
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:myArray];
+    [defaults setObject:data forKey:keyName];
+    [defaults synchronize];
+}
+
+-(NSArray *)readArrayWithCustomObjFromUserDefaults:(NSString *)keyName
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [defaults objectForKey:keyName];
+    NSArray *myArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    [defaults synchronize];
+    return myArray;
+}
+
 - (IBAction)saveTapped:(id)sender
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setBool:YES forKey:@"savedGame"];
+    [defaults setInteger:self.scoreNumber forKey:@"savedScore"];
+    [defaults setInteger:self.livesNumber forKey:@"savedLives"];
+    
+    //Converts the contents of the mutableArray to an immutable array
+    NSArray *usedIndex = [self.randomIndexArray copy];
+    
+    //Uses the method to hold the contents of the NSArray in NSUserDefaults
+    [self writeArrayWithCustomObjToUserDefaults:@"usedIndexNumber" withArray:usedIndex];
+    
     [self.navigationController popViewControllerAnimated:YES];
     
 }
 
 - (IBAction)quitTapped:(id)sender
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"newGame"];
+    [defaults setBool:NO forKey:@"savedGame"];
+    
     [self.navigationController popViewControllerAnimated:YES];
     
+}
+
+- (IBAction)fightAgainTapped:(id)sender
+{
+    self.overlayButtonContainer.hidden = YES;
+    [self overlayFadeOut];
+    [self roundCountdown];
+    self.livesNumber = 6;
+    self.scoreNumber = 0;
+    self.scoreLabel.text = [NSString stringWithFormat:@"%li", (long)self.scoreNumber];
+    [self restoreLives];
+    self.gameInProgress = YES;
+    
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    [defaults setBool:YES forKey:@"newGame"];
+//    [defaults setBool:NO forKey:@"savedGame"];
+    
+    
+}
+
+- (IBAction)fallBackTapped:(id)sender
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"newGame"];
+    [defaults setBool:NO forKey:@"savedGame"];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -562,6 +756,7 @@
     self.Answer4Correct = YES;
     
 }
+
 
 
 

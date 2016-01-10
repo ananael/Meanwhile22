@@ -109,6 +109,8 @@
     self.correctLabel.hidden = YES;
     self.playAgainButton.hidden = YES;
     self.nextCategoryButton.hidden = YES;
+    [self.playAgainButton setTitle:@"PLAY\nAGAIN" forState:UIControlStateNormal];
+    [self.nextCategoryButton setTitle:@"NEW\nCATEGORY" forState:UIControlStateNormal];
     
     
     //Set these BOOLs to "NO" so that you only have to change the correct answer BOOL in the Category methods.
@@ -336,7 +338,7 @@
                                            userInfo:nil
                                             repeats:YES];
     
-    self.gameSeconds = 30;
+    self.gameSeconds = 60;
     
 }
 
