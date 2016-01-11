@@ -16,6 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *overlayView;
 @property (weak, nonatomic) IBOutlet UIImageView *overlayImage;
+@property (weak, nonatomic) IBOutlet UIImageView *gameLostImage;
+@property (weak, nonatomic) IBOutlet UIImageView *gameWonImage;
 @property (weak, nonatomic) IBOutlet UIView *overlayButtonContainer;
 @property (weak, nonatomic) IBOutlet UIButton *fightAgainButton;
 @property (weak, nonatomic) IBOutlet UIButton *fallBackButton;
@@ -43,8 +45,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *answer2Button;
 @property (weak, nonatomic) IBOutlet UIButton *answer3Button;
 @property (weak, nonatomic) IBOutlet UIButton *answer4Button;
-- (IBAction)fightAgainTapped:(id)sender;
-- (IBAction)fallBackTapped:(id)sender;
 
 @property NSInteger scoreNumber;
 @property NSInteger livesNumber;
@@ -76,7 +76,8 @@
 - (IBAction)answer4Tapped:(id)sender;
 - (IBAction)saveTapped:(id)sender;
 - (IBAction)quitTapped:(id)sender;
-
+- (IBAction)fightAgainTapped:(id)sender;
+- (IBAction)fallBackTapped:(id)sender;
 
 @end
 
@@ -144,9 +145,15 @@
     self.backgroundImage.image = [UIImage imageNamed:@"deadly background"];
     self.overlayView.backgroundColor = [UIColor blackColor];
     self.overlayImage.image = [UIImage imageNamed:@"weapons one"];
+    self.gameLostImage.image = [UIImage imageNamed:@"battle lost"];
+    self.gameLostImage.hidden = YES;
+    self.gameWonImage.image = [UIImage imageNamed:@"game won"];
+    self.gameWonImage.hidden = YES;
     self.overlayButtonContainer.hidden = YES;
     [self.fightAgainButton setTitle:@"FIGHT\nAGAIN" forState:UIControlStateNormal];
     [self.fallBackButton setTitle:@"FALL\nBACK" forState:UIControlStateNormal];
+    
+    //[self swordSwipe];
     
     self.life1.image = [UIImage imageNamed:@"shield small"];
     self.life2.image = [UIImage imageNamed:@"shield small"];
@@ -276,8 +283,8 @@
 
 -(NSArray *)imageViewArray
 {
-    NSArray *views = @[self.life1, self.life2, self.life3, self.life4, self.life5, self.life6];
-    return views;
+    NSArray *lives = @[self.life1, self.life2, self.life3, self.life4, self.life5, self.life6];
+    return lives;
     
 }
 
@@ -286,7 +293,6 @@
     NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button, self.fightAgainButton, self.fallBackButton];
     return buttons;
 }
-
 
 -(void)roundTimer
 {
@@ -305,6 +311,10 @@
     
     self.overlayImage.image = [UIImage imageNamed:@"weapons one"];
     
+    if (self.seconds == 1)
+    {
+        [self swordSwipe];
+    }
     if (self.seconds == 0)
     {
         [self randomQuestion];
@@ -331,6 +341,36 @@
 
 -(void)overlayFadeIn
 {
+    [UIView animateWithDuration:0.75
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         self.overlayView.alpha = 1;
+                         
+                     }
+                     completion:nil];
+    
+}
+
+-(void)gameLostFadeIn
+{
+    self.gameLostImage.hidden = NO;
+    [UIView animateWithDuration:0.75
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         self.overlayView.alpha = 1;
+                         
+                     }
+                     completion:nil];
+    
+}
+
+-(void)gameWonFadeIn
+{
+    self.gameWonImage.hidden = NO;
     [UIView animateWithDuration:0.75
                           delay:0
                         options:UIViewAnimationOptionCurveEaseIn
@@ -433,6 +473,16 @@
     self.Answer3Correct = NO;
     self.Answer4Correct = NO;
     
+    if (self.scoreNumber == 2)
+    {
+        self.overlayImage.hidden = YES;
+        self.gameLostImage.hidden = YES;
+        [self gameWonFadeIn];
+        [self crowdCheering];
+        
+        self.overlayButtonContainer.hidden = NO;
+    }
+    
 }
 
 -(void)wrongAnswer
@@ -471,7 +521,11 @@
     if (self.livesNumber == 0)
     {
         self.life6.hidden = YES;
-        [self overlayFadeIn];
+        self.overlayImage.hidden = YES;
+        self.gameWonImage.hidden = YES;
+        [self gameLostFadeIn];
+        [self maleScreaming];
+
         self.overlayButtonContainer.hidden = NO;
     }
     
@@ -481,6 +535,42 @@
 {
     // Construct URL to sound file
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"gun shot"
+                                              withExtension:@"mp3"];
+    // Create audio player object and initialize with URL to sound
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    
+    [self.audioPlayer play];
+    
+}
+
+-(void)swordSwipe
+{
+    // Construct URL to sound file
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"sword swipe"
+                                              withExtension:@"mp3"];
+    // Create audio player object and initialize with URL to sound
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    
+    [self.audioPlayer play];
+    
+}
+
+-(void)crowdCheering
+{
+    // Construct URL to sound file
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"crowd cheering"
+                                              withExtension:@"mp3"];
+    // Create audio player object and initialize with URL to sound
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    
+    [self.audioPlayer play];
+    
+}
+
+-(void)maleScreaming
+{
+    // Construct URL to sound file
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"male pain scream"
                                               withExtension:@"mp3"];
     // Create audio player object and initialize with URL to sound
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
@@ -602,12 +692,8 @@
     self.scoreNumber = 0;
     self.scoreLabel.text = [NSString stringWithFormat:@"%li", (long)self.scoreNumber];
     [self restoreLives];
+    [self.audioPlayer stop];
     self.gameInProgress = YES;
-    
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    [defaults setBool:YES forKey:@"newGame"];
-//    [defaults setBool:NO forKey:@"savedGame"];
-    
     
 }
 
@@ -616,6 +702,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:YES forKey:@"newGame"];
     [defaults setBool:NO forKey:@"savedGame"];
+    [self.audioPlayer stop];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

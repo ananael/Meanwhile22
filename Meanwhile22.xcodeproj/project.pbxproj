@@ -55,6 +55,11 @@
 		D2D0BAFA1C3B44F40022A01B /* pause button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D0BAF91C3B44F40022A01B /* pause button@2x.png */; };
 		D2EA641A1C40E25E00A27478 /* weapons two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64191C40E25E00A27478 /* weapons two@2x.png */; };
 		D2EA641C1C40E4A600A27478 /* weapons one@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA641B1C40E4A600A27478 /* weapons one@2x.png */; };
+		D2EA64611C42F9D700A27478 /* battle lost@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64601C42F9D700A27478 /* battle lost@2x.png */; };
+		D2EA64631C4319AF00A27478 /* sword swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64621C4319AF00A27478 /* sword swipe.mp3 */; };
+		D2EA64651C4385E200A27478 /* game won@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64641C4385E200A27478 /* game won@2x.png */; };
+		D2EA64671C438A9800A27478 /* crowd cheering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64661C438A9800A27478 /* crowd cheering.mp3 */; };
+		D2EA64691C438C4900A27478 /* male pain scream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64681C438C4900A27478 /* male pain scream.mp3 */; };
 		D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5601BFAF06E004BD66B /* paper texture A.png */; };
 		D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5621BFAF5B2004BD66B /* paper texture B.png */; };
 		D2F0C5651BFAF5B2004BD66B /* paper texture C.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5631BFAF5B2004BD66B /* paper texture C.png */; };
@@ -149,6 +154,11 @@
 		D2D0BAF91C3B44F40022A01B /* pause button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause button@2x.png"; sourceTree = "<group>"; };
 		D2EA64191C40E25E00A27478 /* weapons two@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weapons two@2x.png"; sourceTree = "<group>"; };
 		D2EA641B1C40E4A600A27478 /* weapons one@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weapons one@2x.png"; sourceTree = "<group>"; };
+		D2EA64601C42F9D700A27478 /* battle lost@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battle lost@2x.png"; sourceTree = "<group>"; };
+		D2EA64621C4319AF00A27478 /* sword swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sword swipe.mp3"; sourceTree = "<group>"; };
+		D2EA64641C4385E200A27478 /* game won@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game won@2x.png"; sourceTree = "<group>"; };
+		D2EA64661C438A9800A27478 /* crowd cheering.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crowd cheering.mp3"; sourceTree = "<group>"; };
+		D2EA64681C438C4900A27478 /* male pain scream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "male pain scream.mp3"; sourceTree = "<group>"; };
 		D2F0C5601BFAF06E004BD66B /* paper texture A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture A.png"; sourceTree = "<group>"; };
 		D2F0C5621BFAF5B2004BD66B /* paper texture B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture B.png"; sourceTree = "<group>"; };
 		D2F0C5631BFAF5B2004BD66B /* paper texture C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture C.png"; sourceTree = "<group>"; };
@@ -269,12 +279,26 @@
 		D2D0BAF41C3B38A50022A01B /* backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				D2EA64601C42F9D700A27478 /* battle lost@2x.png */,
 				D26175931C33382500E772E3 /* deadly background.png */,
 				D2F0C5601BFAF06E004BD66B /* paper texture A.png */,
 				D2F0C5621BFAF5B2004BD66B /* paper texture B.png */,
 				D2F0C5631BFAF5B2004BD66B /* paper texture C.png */,
+				D2EA641B1C40E4A600A27478 /* weapons one@2x.png */,
+				D2EA64191C40E25E00A27478 /* weapons two@2x.png */,
 			);
 			name = backgrounds;
+			sourceTree = "<group>";
+		};
+		D2EA646A1C4390F000A27478 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D2EA64661C438A9800A27478 /* crowd cheering.mp3 */,
+				D26175991C3355E300E772E3 /* gun shot.mp3 */,
+				D2EA64681C438C4900A27478 /* male pain scream.mp3 */,
+				D2EA64621C4319AF00A27478 /* sword swipe.mp3 */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 		D2FEEA871BD2BF4C00FADE89 = {
@@ -369,16 +393,15 @@
 		D2FEEAD11BD359DB00FADE89 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				D26175991C3355E300E772E3 /* gun shot.mp3 */,
+				D2EA646A1C4390F000A27478 /* sounds */,
 				D2D0BAF41C3B38A50022A01B /* backgrounds */,
 				D2D0BAF31C3B388F0022A01B /* banners */,
 				D2D0BAF21C3B38680022A01B /* buttons */,
 				D2BF3EB41C04C40000388747 /* icons */,
 				D2D0BAF51C3B39EE0022A01B /* M22 Logo 2016@2x.png */,
+				D2EA64641C4385E200A27478 /* game won@2x.png */,
 				D26175971C33468300E772E3 /* shield small.png */,
 				D26175A51C336A0200E772E3 /* warrior large.png */,
-				D2EA641B1C40E4A600A27478 /* weapons one@2x.png */,
-				D2EA64191C40E25E00A27478 /* weapons two@2x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -506,6 +529,7 @@
 				D26175A61C336A0200E772E3 /* warrior large.png in Resources */,
 				D2FEEAA31BD2BF4C00FADE89 /* Assets.xcassets in Resources */,
 				D2BAD0871C23DFE500668E13 /* quiz smasher banner@2x.png in Resources */,
+				D2EA64671C438A9800A27478 /* crowd cheering.mp3 in Resources */,
 				D2BF3ECA1C04C41D00388747 /* Icon-Small.png in Resources */,
 				D2D0BAF61C3B39EE0022A01B /* M22 Logo 2016@2x.png in Resources */,
 				D2BF3ECE1C04C41D00388747 /* Icon-Spotlight-40@2x.png in Resources */,
@@ -516,9 +540,11 @@
 				D2D0BAF11C3B35620022A01B /* time forward button@2x.png in Resources */,
 				D2BF3ECB1C04C41D00388747 /* Icon-Small@2x.png in Resources */,
 				D2BF3EC41C04C41D00388747 /* Icon-60.png in Resources */,
+				D2EA64611C42F9D700A27478 /* battle lost@2x.png in Resources */,
 				D20C0B1B1C2A315C00F6C5D1 /* deadly 100 button@2x.png in Resources */,
 				D2FEEAD51BD361C200FADE89 /* facebook logo@2x.png in Resources */,
 				D2D0BAF01C3B35620022A01B /* time back button@2x.png in Resources */,
+				D2EA64651C4385E200A27478 /* game won@2x.png in Resources */,
 				D2568DE21C28DF9800DA237F /* quiz smasher button@2x.png in Resources */,
 				D2EA641C1C40E4A600A27478 /* weapons one@2x.png in Resources */,
 				D2BF3ECF1C04C41D00388747 /* Icon-Spotlight-40@3x.png in Resources */,
@@ -527,9 +553,11 @@
 				D28855191BFBD1F500151BE4 /* vault of episodes@2x.png in Resources */,
 				D2BAD0891C23E37A00668E13 /* time vortex banner@2x.png in Resources */,
 				D2D0BAFA1C3B44F40022A01B /* pause button@2x.png in Resources */,
+				D2EA64631C4319AF00A27478 /* sword swipe.mp3 in Resources */,
 				D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */,
 				D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */,
 				D26175981C33468300E772E3 /* shield small.png in Resources */,
+				D2EA64691C438C4900A27478 /* male pain scream.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

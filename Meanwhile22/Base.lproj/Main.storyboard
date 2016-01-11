@@ -1481,12 +1481,26 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kmg-j2-uuh">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PrV-MQ-qVn" userLabel="gameLostImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wo9-BD-7jV" userLabel="gameWonImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Wo9-BD-7jV" secondAttribute="bottom" id="9A1-ze-JXD"/>
                                     <constraint firstAttribute="bottom" secondItem="kmg-j2-uuh" secondAttribute="bottom" id="Kd7-op-eFI"/>
                                     <constraint firstAttribute="trailing" secondItem="kmg-j2-uuh" secondAttribute="trailing" id="PIy-N8-jvK"/>
+                                    <constraint firstItem="PrV-MQ-qVn" firstAttribute="top" secondItem="fpW-qh-dZN" secondAttribute="top" id="RHK-eW-Vjm"/>
+                                    <constraint firstAttribute="bottom" secondItem="PrV-MQ-qVn" secondAttribute="bottom" id="YIG-UP-26Y"/>
                                     <constraint firstItem="kmg-j2-uuh" firstAttribute="leading" secondItem="fpW-qh-dZN" secondAttribute="leading" id="djm-I9-co6"/>
                                     <constraint firstItem="kmg-j2-uuh" firstAttribute="top" secondItem="fpW-qh-dZN" secondAttribute="top" id="f7J-Ej-Rep"/>
+                                    <constraint firstItem="Wo9-BD-7jV" firstAttribute="leading" secondItem="fpW-qh-dZN" secondAttribute="leading" id="iji-i1-zzr"/>
+                                    <constraint firstAttribute="trailing" secondItem="PrV-MQ-qVn" secondAttribute="trailing" id="nDe-hY-b4f"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wo9-BD-7jV" secondAttribute="trailing" id="nMg-Jz-jdS"/>
+                                    <constraint firstItem="Wo9-BD-7jV" firstAttribute="top" secondItem="fpW-qh-dZN" secondAttribute="top" id="oj8-wh-lAD"/>
+                                    <constraint firstItem="PrV-MQ-qVn" firstAttribute="leading" secondItem="fpW-qh-dZN" secondAttribute="leading" id="zcU-kx-p8K"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-Fg-q2e" userLabel="overlayButtonContainer">
@@ -1574,6 +1588,8 @@
                         <outlet property="bottomContainer" destination="EWC-nH-1EO" id="tCi-6F-sS7"/>
                         <outlet property="fallBackButton" destination="kNw-eN-niW" id="1HU-TJ-q1L"/>
                         <outlet property="fightAgainButton" destination="tKf-jZ-wj3" id="D8T-cU-BfQ"/>
+                        <outlet property="gameLostImage" destination="PrV-MQ-qVn" id="eiF-ZW-ti7"/>
+                        <outlet property="gameWonImage" destination="Wo9-BD-7jV" id="1M4-B3-42b"/>
                         <outlet property="life1" destination="C0E-sF-Obc" id="X3u-zL-P3k"/>
                         <outlet property="life2" destination="cez-20-61g" id="8iA-P9-Pjc"/>
                         <outlet property="life3" destination="Y6r-hV-H05" id="4H2-6t-x5a"/>
