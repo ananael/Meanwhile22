@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @property (weak, nonatomic) IBOutlet UIView *overlayContainer;
+@property (weak, nonatomic) IBOutlet UIImageView *overlayFinalImage;
 @property (weak, nonatomic) IBOutlet UIImageView *overlayImage;
 @property (weak, nonatomic) IBOutlet UIView *resultContainer;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
@@ -80,10 +81,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    self.backgroundImage.image = [UIImage imageNamed:@"vortex background"];
     self.topContainer.backgroundColor = [UIColor clearColor];
     
-    self.middleContainer.backgroundColor = [UIColor clearColor];
+    self.middleContainer.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
     
     //Creates top border for self.middleContainer
     CGFloat borderWidth = 2;
@@ -111,6 +112,11 @@
     self.nextCategoryButton.hidden = YES;
     [self.playAgainButton setTitle:@"PLAY\nAGAIN" forState:UIControlStateNormal];
     [self.nextCategoryButton setTitle:@"NEW\nCATEGORY" forState:UIControlStateNormal];
+    
+    self.overlayImage.animationImages = [self animationArray];
+    self.overlayImage.animationDuration = 1.5;
+    self.overlayImage.animationRepeatCount = 0;
+    [self.overlayImage startAnimating];
     
     
     //Set these BOOLs to "NO" so that you only have to change the correct answer BOOL in the Category methods.
@@ -167,7 +173,8 @@
 {
     for (UIButton *button in array)
     {
-        button.backgroundColor = [UIColor clearColor];
+        //button.backgroundColor = [UIColor clearColor];
+        button.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
         
     }
     
@@ -200,6 +207,13 @@
     {
         button.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
+    
+}
+
+-(NSArray *)animationArray
+{
+    NSArray *images = @[[UIImage imageNamed:@"swirl 1"], [UIImage imageNamed:@"swirl 2"], [UIImage imageNamed:@"swirl 3"], [UIImage imageNamed:@"swirl 4"], [UIImage imageNamed:@"swirl 5"], [UIImage imageNamed:@"swirl 6"], [UIImage imageNamed:@"swirl 7"], [UIImage imageNamed:@"swirl 8"], [UIImage imageNamed:@"swirl 9"], [UIImage imageNamed:@"swirl 10"], [UIImage imageNamed:@"swirl 11"], [UIImage imageNamed:@"swirl 12"], [UIImage imageNamed:@"swirl 13"], [UIImage imageNamed:@"swirl 14"], [UIImage imageNamed:@"swirl 15"], [UIImage imageNamed:@"swirl 16"], [UIImage imageNamed:@"swirl 17"], [UIImage imageNamed:@"swirl 18"], [UIImage imageNamed:@"swirl 19"], [UIImage imageNamed:@"swirl 20"], [UIImage imageNamed:@"swirl 21"], [UIImage imageNamed:@"swirl 22"], [UIImage imageNamed:@"swirl 23"]];
+    return  images;
     
 }
 
@@ -237,7 +251,6 @@
 
 -(void)labelCountdown
 {
-    
     self.openingSeconds --;
     
     if (self.openingSeconds == 3)
@@ -267,6 +280,7 @@
     {
         
         [self.openingTimer invalidate];
+        [self.overlayImage stopAnimating];
         self.overlayContainer.hidden = YES;
         
         [self gameTime];
@@ -303,7 +317,7 @@
     
     if (self.gameSeconds == 30)
     {
-        self.timerLabel.textColor = [UIColor yellowColor];
+        self.timerLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:215.0/255.0 blue:0.0 alpha:1.0];
     }
     
     if (self.gameSeconds == 15)
@@ -344,6 +358,8 @@
 
 -(void)gameOver
 {
+    self.overlayFinalImage.image = [UIImage imageNamed:@"vortex gray background"];
+    self.overlayImage.hidden = YES;
     self.scoreLabel.text = [NSString stringWithFormat:@"%li", (long)self.scoreNumber];
     self.startLabel.adjustsFontSizeToFitWidth = YES;
     self.startLabel.text = @"GAME OVER!";
@@ -682,6 +698,9 @@
 
 - (IBAction)playAgainTapped:(id)sender
 {
+    self.overlayImage.hidden = NO;
+    [self.overlayImage startAnimating];
+    self.timerLabel.textColor = [UIColor colorWithRed:0.0/255.0 green:128.0/255.0 blue:0.0/255.0 alpha:1.0];
     [self launchScreenTimer];
     self.scoreNumber = 0;
     self.scoreLabel.hidden = YES;

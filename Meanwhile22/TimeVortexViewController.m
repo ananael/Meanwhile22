@@ -60,9 +60,15 @@
     [self createViewBorderWidth:2.0 forArray:[self containerArray]];
     [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     
-    self.bannerImage.image = [UIImage imageNamed:@"time vortex banner"];
+    self.bannerImage.animationImages = [self animationArray];
+    self.bannerImage.animationDuration = 1.5;
+    self.bannerImage.animationRepeatCount = 0;
+    [self.bannerImage startAnimating];
+    
     self.bannerImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.bannerImage.layer.borderWidth = 2.0;
+    
+    self.overlayImage.image = [UIImage imageNamed:@"science nerd"];
     
     self.overlayImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.overlayImage.layer.borderWidth = 2.0;
@@ -76,11 +82,16 @@
     self.noShowButton.layer.cornerRadius = 8.0;
     self.closeButton.layer.cornerRadius = 8.0;
     
+    [self.comicButton setBackgroundImage:[UIImage imageNamed:@"comics button"] forState:UIControlStateNormal];
+    [self.gameButton setBackgroundImage:[UIImage imageNamed:@"games button"] forState:UIControlStateNormal];
+    [self.movieButton setBackgroundImage:[UIImage imageNamed:@"movies button"] forState:UIControlStateNormal];
+    [self.tvButton setBackgroundImage:[UIImage imageNamed:@"tv button"] forState:UIControlStateNormal];
+    
     NSString *one = @"I'm a Nerd Genius.";
     NSString *two = @"Are you?";
     NSString *three = @"Select a Category.";
     NSString *four = @"Answer as many questions as you can.";
-    NSString *five = @"You only have 90 seconds...";
+    NSString *five = @"You only have 60 seconds...";
     NSString *six = @"Don't get lost in the Time Vortex!";
     
     self.infoLabel.text = [NSString stringWithFormat:@"%@\n%@\n\n%@\n\n%@\n%@\n%@", one, two, three, four, five, six];
@@ -140,6 +151,13 @@
         view.layer.borderColor = [UIColor blackColor].CGColor;
         
     }
+    
+}
+
+-(NSArray *)animationArray
+{
+    NSArray *images = @[[UIImage imageNamed:@"banner swirl 01"], [UIImage imageNamed:@"banner swirl 02"], [UIImage imageNamed:@"banner swirl 03"], [UIImage imageNamed:@"banner swirl 04"], [UIImage imageNamed:@"banner swirl 05"], [UIImage imageNamed:@"banner swirl 06"], [UIImage imageNamed:@"banner swirl 07"], [UIImage imageNamed:@"banner swirl 08"], [UIImage imageNamed:@"banner swirl 09"], [UIImage imageNamed:@"banner swirl 10"], [UIImage imageNamed:@"banner swirl 11"], [UIImage imageNamed:@"banner swirl 12"], [UIImage imageNamed:@"banner swirl 13"], [UIImage imageNamed:@"banner swirl 14"], [UIImage imageNamed:@"banner swirl 15"], [UIImage imageNamed:@"banner swirl 16"], [UIImage imageNamed:@"banner swirl 17"], [UIImage imageNamed:@"banner swirl 18"], [UIImage imageNamed:@"banner swirl 19"], [UIImage imageNamed:@"banner swirl 20"], [UIImage imageNamed:@"banner swirl 21"], [UIImage imageNamed:@"banner swirl 22"],[UIImage imageNamed:@"banner swirl 23"], [UIImage imageNamed:@"banner swirl 24"]];
+    return images;
     
 }
 

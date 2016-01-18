@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *ambienceContainer;
 
 @property (weak, nonatomic) IBOutlet UIView *topContainer;
+@property (weak, nonatomic) IBOutlet UIImageView *bannerImage;
 @property (weak, nonatomic) IBOutlet UIImageView *avImage;
 @property (weak, nonatomic) IBOutlet UIView *timeContainer;
 @property (weak, nonatomic) IBOutlet UILabel *elapsedTimeLabel;
@@ -76,6 +77,12 @@
     [self.stopButton setBackgroundImage:[UIImage imageNamed:@"stop button@2X"] forState:UIControlStateNormal];
     [self.backward30 setBackgroundImage:[UIImage imageNamed:@"time back button"] forState:UIControlStateNormal];
     [self.forward30 setBackgroundImage:[UIImage imageNamed:@"time forward button"] forState:UIControlStateNormal];
+    
+    self.bannerImage.image = [UIImage imageNamed:@"robot banner"];
+    self.avImage.animationImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"wave 1"], [UIImage imageNamed:@"wave 2"], [UIImage imageNamed:@"wave 3"], [UIImage imageNamed:@"wave 4"], [UIImage imageNamed:@"wave 5"], [UIImage imageNamed:@"wave 6"], [UIImage imageNamed:@"wave 7"], [UIImage imageNamed:@"wave 8"], nil];
+    self.avImage.animationDuration = 1.5;
+    self.avImage.animationRepeatCount = 0;
+    [self.avImage startAnimating];
     
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.ambienceContainer.layer.borderWidth = 2.0;
@@ -176,7 +183,7 @@
 
 -(NSArray *)imageViewArray
 {
-    NSArray *images = @[self.avImage, self.timerImage];
+    NSArray *images = @[self.bannerImage, self.avImage, self.timerImage];
     return images;
     
 }
@@ -234,6 +241,7 @@
     [self.player pause];
     [self.player seekToTime:kCMTimeZero];
     self.player = nil;
+    [self.avImage stopAnimating];
     [self.navigationController popViewControllerAnimated:YES];
     
 }
@@ -241,6 +249,7 @@
 - (IBAction)pauseTapped:(id)sender
 {
     [self.player pause];
+    [self.avImage stopAnimating];
     NSLog(@"Pause!");
     
 }
@@ -249,6 +258,7 @@
 {
     
     [self.player play];
+    [self.avImage startAnimating];
     
     NSLog(@"Play!: %@", self.episode.podcastURL);
     
@@ -259,6 +269,7 @@
     [self.player pause];
     
     [self.player seekToTime:kCMTimeZero];
+    [self.avImage stopAnimating];
     
     NSLog(@"STOP!");
     
