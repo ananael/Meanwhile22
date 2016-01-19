@@ -122,6 +122,7 @@
 		D2EA65351C4CBE4200A27478 /* swirl 23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA651E1C4CBE4200A27478 /* swirl 23@2x.png */; };
 		D2EA65371C4D65CE00A27478 /* vortex background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65361C4D65CE00A27478 /* vortex background@2x.png */; };
 		D2EA65391C4D6E3400A27478 /* vortex gray background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65381C4D6E3400A27478 /* vortex gray background@2x.png */; };
+		D2EA653B1C4EC3AB00A27478 /* deadly start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */; };
 		D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5601BFAF06E004BD66B /* paper texture A.png */; };
 		D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5621BFAF5B2004BD66B /* paper texture B.png */; };
 		D2F0C5651BFAF5B2004BD66B /* paper texture C.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5631BFAF5B2004BD66B /* paper texture C.png */; };
@@ -283,6 +284,7 @@
 		D2EA651E1C4CBE4200A27478 /* swirl 23@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 23@2x.png"; sourceTree = "<group>"; };
 		D2EA65361C4D65CE00A27478 /* vortex background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex background@2x.png"; sourceTree = "<group>"; };
 		D2EA65381C4D6E3400A27478 /* vortex gray background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex gray background@2x.png"; sourceTree = "<group>"; };
+		D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly start@2x.png"; sourceTree = "<group>"; };
 		D2F0C5601BFAF06E004BD66B /* paper texture A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture A.png"; sourceTree = "<group>"; };
 		D2F0C5621BFAF5B2004BD66B /* paper texture B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture B.png"; sourceTree = "<group>"; };
 		D2F0C5631BFAF5B2004BD66B /* paper texture C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture C.png"; sourceTree = "<group>"; };
@@ -609,6 +611,7 @@
 				D2D0BAF21C3B38680022A01B /* buttons */,
 				D2BF3EB41C04C40000388747 /* icons */,
 				D2D0BAF51C3B39EE0022A01B /* M22 Logo 2016@2x.png */,
+				D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */,
 				D2EA64D31C4C90AD00A27478 /* science nerd@2x.png */,
 				D26175971C33468300E772E3 /* shield small.png */,
 				D26175A51C336A0200E772E3 /* warrior large.png */,
@@ -768,6 +771,7 @@
 				D2FEEAA31BD2BF4C00FADE89 /* Assets.xcassets in Resources */,
 				D2BAD0871C23DFE500668E13 /* quiz smasher banner@2x.png in Resources */,
 				D2EA64F71C4CB8DC00A27478 /* banner swirl 08@2x.png in Resources */,
+				D2EA653B1C4EC3AB00A27478 /* deadly start@2x.png in Resources */,
 				D2EA64671C438A9800A27478 /* crowd cheering.mp3 in Resources */,
 				D2EA65031C4CB8DC00A27478 /* banner swirl 20@2x.png in Resources */,
 				D2BF3ECA1C04C41D00388747 /* Icon-Small.png in Resources */,

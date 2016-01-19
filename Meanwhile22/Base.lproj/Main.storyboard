@@ -1050,14 +1050,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="550" height="370"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vO0-PP-1Mf" userLabel="gameButton">
-                                                <rect key="frame" x="225" y="135" width="100" height="100"/>
-                                                <color key="backgroundColor" red="1" green="0.44166286500000002" blue="0.42139028280000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="vO0-PP-1Mf" secondAttribute="height" multiplier="1:1" id="arz-y8-55j"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="FIGHT!">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="frame" x="25" y="280" width="500" height="70"/>
+                                                <color key="backgroundColor" red="0.43137254901960786" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="60"/>
+                                                <state key="normal" title="START">
+                                                    <color key="titleColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="gameTapped:" destination="07n-sA-BTv" eventType="touchUpInside" id="fd2-yE-oA8"/>
@@ -1067,14 +1064,16 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.32156863810000003" green="0.43921571970000001" blue="0.67450982329999998" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
-                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="top" relation="lessThanOrEqual" secondItem="nfo-cv-e6T" secondAttribute="top" constant="135" id="Bpa-qT-Ykj"/>
+                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nfo-cv-e6T" secondAttribute="leading" constant="25" id="4Or-iE-IKv"/>
                                             <constraint firstItem="kWl-T8-vYz" firstAttribute="centerY" secondItem="nfo-cv-e6T" secondAttribute="centerY" id="DrV-Vt-SMH"/>
-                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="centerY" secondItem="nfo-cv-e6T" secondAttribute="centerY" id="PQV-71-Yjn"/>
+                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="centerX" secondItem="nfo-cv-e6T" secondAttribute="centerX" id="EDr-eP-5Mm"/>
+                                            <constraint firstAttribute="bottom" secondItem="vO0-PP-1Mf" secondAttribute="bottom" constant="20" id="Kkd-kp-Jgs"/>
                                             <constraint firstItem="kWl-T8-vYz" firstAttribute="centerX" secondItem="nfo-cv-e6T" secondAttribute="centerX" id="dQz-WO-g3Q"/>
                                             <constraint firstItem="kWl-T8-vYz" firstAttribute="top" secondItem="nfo-cv-e6T" secondAttribute="top" id="eGd-E6-Lcw"/>
-                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="centerX" secondItem="nfo-cv-e6T" secondAttribute="centerX" id="hy3-vY-AIl"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="vO0-PP-1Mf" secondAttribute="trailing" constant="25" id="kbC-ld-83B"/>
+                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="width" secondItem="nfo-cv-e6T" secondAttribute="width" multiplier="0.9091" id="kt2-HC-fg6"/>
+                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="height" secondItem="nfo-cv-e6T" secondAttribute="height" multiplier="0.1892" id="mOr-Mi-Sy1"/>
                                             <constraint firstItem="kWl-T8-vYz" firstAttribute="leading" secondItem="nfo-cv-e6T" secondAttribute="leading" id="myg-GN-iau"/>
-                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nfo-cv-e6T" secondAttribute="leading" constant="225" id="xUX-GW-ouA"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLB-la-9Yw" userLabel="overlayContainer">

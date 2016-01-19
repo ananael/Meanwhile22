@@ -47,6 +47,7 @@
     self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
     self.bannerImage.image = [UIImage imageNamed:@"deadly 100 banner"];
     self.overlayImage.image = [UIImage imageNamed:@"warrior large"];
+    self.gameImage.image = [UIImage imageNamed:@"deadly start"];
     
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.ambienceContainer.layer.borderWidth = 2.0;
@@ -65,8 +66,9 @@
     self.noShowButton.layer.cornerRadius = 8.0;
     self.closeButton.layer.cornerRadius = 8.0;
     
-    
-    
+    self.gameButton.layer.borderColor = [UIColor colorWithRed:110.0/255.0 green:0.0 blue:0.0 alpha:1.0].CGColor;
+    self.gameButton.layer.borderWidth = 2.0;
+    self.gameButton.layer.cornerRadius = 8.0;
     
     //If it is the first time the user loads this screen OR did NOT click "Do Not Show Again" button,
     //the instruction screen will appear.
