@@ -91,7 +91,7 @@
     self.usedQuestionArray = [NSMutableArray new];
     self.randomIndexArray = [NSMutableArray new];
     
-    self.questionArray = [NSMutableArray arrayWithArray:[self convertedQuestionArray]];
+    self.questionArray = [NSMutableArray arrayWithArray:[self questionStringArray]];
     
     //This will set/reset the game back to the beginning state of 6 lives and "0" score
     //Creating the IF Statement here prevents the game from constantly resetting while playing
@@ -102,6 +102,9 @@
         self.livesNumber = [[NSUserDefaults standardUserDefaults]integerForKey:@"savedLives"];
         [self lifeImagesRemaining];
         
+        //To remove the previously used questions from a saved game
+        //The array of randomly chosen index numbers in arranged in descending order
+        //Then the questions are removed from the questionArray
         NSArray *tempArray = [NSArray arrayWithArray:[self readArrayWithCustomObjFromUserDefaults:@"usedIndexNumber"]];
         NSArray *descendingTempArray = [[[tempArray sortedArrayUsingSelector:@selector(compare:)]reverseObjectEnumerator]allObjects];
         NSLog(@"Used Index Numbers: %@", descendingTempArray);
@@ -112,7 +115,7 @@
 //            [self.usedQuestionArray addObject:[self.questionArray objectAtIndex:[indexNumber integerValue]]];
 //            [self.questionArray removeObjectAtIndex:[indexNumber integerValue]];
 //        }
-        //TODO: Change code below back to the uncommented above oncwe more than 100 questions have been coded for game
+        //TODO: Change code below back to the uncommented above once more than 100 questions have been coded for game
         if ([descendingTempArray count] < [self.questionArray count])
         {
             for (NSInteger i=0; i<[descendingTempArray count]; i++)
@@ -152,8 +155,6 @@
     self.overlayButtonContainer.hidden = YES;
     [self.fightAgainButton setTitle:@"FIGHT\nAGAIN" forState:UIControlStateNormal];
     [self.fallBackButton setTitle:@"FALL\nBACK" forState:UIControlStateNormal];
-    
-    //[self swordSwipe];
     
     self.life1.image = [UIImage imageNamed:@"shield small"];
     self.life2.image = [UIImage imageNamed:@"shield small"];
@@ -226,15 +227,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// ***** UPDATE THIS ARRAY whenever new questions are added to DeadlyQuestions class *****
+-(NSArray *)questionStringArray
+{
+    NSArray *questions = @[@"question001", @"question002", @"question003", @"question004", @"question005", @"question006", @"question007", @"question008", @"question009", @"question010"];
+    return questions;
 }
-*/
 
 -(void)buttonBackgroundColor:(NSArray *)array
 {
@@ -387,6 +386,9 @@
 {
     //If self.questionArray has more than "zero" items, a random item is selected
     //The random item is placed in self.usedQuestionArray and REMOVED from self.questionArray
+    
+    DeadlyQuestions *question = [DeadlyQuestions new];
+    
     if ([self.questionArray count] > 0)
     {
         self.randomIndex = arc4random() %[self.questionArray count];
@@ -394,10 +396,35 @@
         NSLog(@"Random Index: %li", (long)self.randomIndex);
         NSLog(@"Initial Count: %li", (unsigned long)[self.questionArray count]);
         
-        SEL selector = [[self.questionArray objectAtIndex:self.randomIndex] pointerValue];
-        IMP imp = [self methodForSelector:selector];
+        //SEL selector = [[self.questionArray objectAtIndex:self.randomIndex] pointerValue];
+        SEL selector = NSSelectorFromString([self.questionArray objectAtIndex:self.randomIndex]);
+        IMP imp = [question methodForSelector:selector];
         void (*func)(id, SEL) = (void *)imp;
-        func(self, selector);
+        func(question, selector);
+        
+        self.questionLabel.text = question.question;
+        [self.answer1Button setTitle:question.buttonA forState:UIControlStateNormal];
+        [self.answer2Button setTitle:question.buttonB forState:UIControlStateNormal];
+        [self.answer3Button setTitle:question.buttonC forState:UIControlStateNormal];
+        [self.answer4Button setTitle:question.buttonD forState:UIControlStateNormal];
+        
+        if ([question.correctAnswer isEqualToString:@"A"])
+        {
+            self.Answer1Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"B"])
+        {
+            self.Answer2Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"C"])
+        {
+            self.Answer3Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"D"])
+        {
+            self.Answer4Correct = YES;
+            
+        }
         
         [self.randomIndexArray addObject:[NSNumber numberWithInteger:self.randomIndex]];
         [self.usedQuestionArray addObject:[self.questionArray objectAtIndex:self.randomIndex]];
@@ -465,13 +492,8 @@
 {
     self.scoreNumber = self.scoreNumber + 1;
     self.scoreLabel.text = [NSString stringWithFormat:@"%li", (long)self.scoreNumber];
-    
-    //The BOOLs need to be reset after each question.
-    //If not, when a correct answer is pressed, that button stays as "YES".
-    self.Answer1Correct = NO;
-    self.Answer2Correct = NO;
-    self.Answer3Correct = NO;
-    self.Answer4Correct = NO;
+
+    [self answerBoolsReset];
     
     if (self.scoreNumber == 2)
     {
@@ -491,12 +513,7 @@
     
     [self gunShot];
     
-    //The BOOLs need to be reset after each question.
-    //If not, when a correct answer is pressed, that button stays as "YES".
-    self.Answer1Correct = NO;
-    self.Answer2Correct = NO;
-    self.Answer3Correct = NO;
-    self.Answer4Correct = NO;
+    [self answerBoolsReset];
     
     if (self.livesNumber == 5)
     {
@@ -529,6 +546,16 @@
         self.overlayButtonContainer.hidden = NO;
     }
     
+}
+
+-(void)answerBoolsReset
+{
+    //The BOOLs need to be reset after each question.
+    //If not, when a correct answer is pressed, that button stays as "YES".
+    self.Answer1Correct = NO;
+    self.Answer2Correct = NO;
+    self.Answer3Correct = NO;
+    self.Answer4Correct = NO;
 }
 
 -(void)gunShot
@@ -706,144 +733,6 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-
-
-#pragma mark - Question Arrays
-
--(NSMutableArray *)convertedQuestionArray
-{
-    NSValue *question1 = [NSValue valueWithPointer:@selector(question_1)];
-    NSValue *question2 = [NSValue valueWithPointer:@selector(question_2)];
-    NSValue *question3 = [NSValue valueWithPointer:@selector(question_3)];
-    NSValue *question4 = [NSValue valueWithPointer:@selector(question_4)];
-    NSValue *question5 = [NSValue valueWithPointer:@selector(question_5)];
-    NSValue *question6 = [NSValue valueWithPointer:@selector(question_6)];
-    NSValue *question7 = [NSValue valueWithPointer:@selector(question_7)];
-    NSValue *question8 = [NSValue valueWithPointer:@selector(question_8)];
-    NSValue *question9 = [NSValue valueWithPointer:@selector(question_9)];
-    NSValue *question10 = [NSValue valueWithPointer:@selector(question_10)];
-    
-    NSMutableArray *array = [NSMutableArray arrayWithObjects:question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, nil];
-    return array;
-}
-
-#pragma mark - Questions
-
-// **** New questions must be added to its "converted array method" AND the mutable array within ****
-
-//Comics ***********
-
--(void)question_1
-{
-    self.questionLabel.text = @"What is comic has the first appearance of Superman?";
-    [self.answer1Button setTitle:@"Detective Comics #32" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Amazing Stories #15" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"Action Comics #1" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"Superman #1" forState:UIControlStateNormal];
-    self.Answer3Correct = YES;
-    
-}
-
--(void)question_2
-{
-    self.questionLabel.text = @"In what year did Dick Grayson take up the code name Nightwing?";
-    [self.answer1Button setTitle:@"1984" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"1977" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"1980" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"1988" forState:UIControlStateNormal];
-    self.Answer1Correct = YES;
-    
-}
-
--(void)question_3
-{
-    self.questionLabel.text = @"In Post-Crisis storytelling, who inspired Dick Grayson to take the code name Nightwing?";
-    [self.answer1Button setTitle:@"Batman" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Starfire" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"Speedy" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"Superman" forState:UIControlStateNormal];
-    self.Answer4Correct = YES;
-    
-}
-
--(void)question_4
-{
-    self.questionLabel.text = @"Aquaman’s civilian name is … ?";
-    [self.answer1Button setTitle:@"Adam Strange" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Arthur Curry" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"George Finn" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"Glenn King" forState:UIControlStateNormal];
-    self.Answer2Correct = YES;
-    
-}
-
--(void)question_5
-{
-    self.questionLabel.text = @"Hunter Rose was the first person to assume which code name?";
-    [self.answer1Button setTitle:@"Grendel" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Kraven the Hunter" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"Deadshot" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"Lone Ranger" forState:UIControlStateNormal];
-    self.Answer1Correct = YES;
-    
-}
-
--(void)question_6
-{
-    self.questionLabel.text = @"Detective Comics #140 was the first appearance of which character?";
-    [self.answer1Button setTitle:@"Joker" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Catwoman" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"Penguin" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"Riddler" forState:UIControlStateNormal];
-    self.Answer4Correct = YES;
-    
-}
-
--(void)question_7
-{
-    self.questionLabel.text = @"Which X-Men villain is not a mutant?";
-    [self.answer1Button setTitle:@"Magneto" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Stryfe" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"Juggernaut" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"Sebastian Shaw" forState:UIControlStateNormal];
-    self.Answer3Correct = YES;
-    
-}
-
--(void)question_8
-{
-    self.questionLabel.text = @"The first incarnation of Firestorm consisted of … ?";
-    [self.answer1Button setTitle:@"Hank Hall and Don Hall" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Ronnie Raymand and Martin Stein" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"Johnny Storm and Angelica Jones" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"Bruce Wayne and Clark Kent" forState:UIControlStateNormal];
-    self.Answer2Correct = YES;
-    
-}
-
--(void)question_9
-{
-    self.questionLabel.text = @"Mirror Master is an arch-enemy of which DC superhero?";
-    [self.answer1Button setTitle:@"Flash" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Batman" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"Doctor Fate" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"Booster Gold" forState:UIControlStateNormal];
-    self.Answer1Correct = YES;
-    
-}
-
--(void)question_10
-{
-    self.questionLabel.text = @"Marvel Comics’ Captain Marvel died from … ?";
-    [self.answer1Button setTitle:@"Vampire bite" forState:UIControlStateNormal];
-    [self.answer2Button setTitle:@"Head trauma" forState:UIControlStateNormal];
-    [self.answer3Button setTitle:@"AIDS complications" forState:UIControlStateNormal];
-    [self.answer4Button setTitle:@"Cancer" forState:UIControlStateNormal];
-    self.Answer4Correct = YES;
-    
-}
-
 
 
 
