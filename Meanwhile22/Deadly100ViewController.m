@@ -44,7 +44,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper A"];
     self.bannerImage.image = [UIImage imageNamed:@"deadly 100 banner"];
     self.overlayImage.image = [UIImage imageNamed:@"warrior large"];
     self.gameImage.image = [UIImage imageNamed:@"deadly start"];
@@ -71,11 +71,12 @@
     self.gameButton.layer.cornerRadius = 8.0;
     
     NSString *one = @"The Apostles of the Sphinx are attacking!";
-    NSString *two = @"Their questions are deadly.";
+    NSString *two = @"And their questions are deadly.";
     NSString *three = @"You have 6 chances to survive 100 questions.";
     NSString *four = @"You must not fail us ...";
     
-    self.infoLabel.text = [NSString stringWithFormat:@"%@\n\n%@\n\n%@\n\n%@", one, two, three, four];
+    
+    self.infoLabel.text = [NSString stringWithFormat:@"%@\n%@\n\n%@\n\n%@", one, two, three, four];
     
     //If it is the first time the user loads this screen OR did NOT click "Do Not Show Again" button,
     //the instruction screen will appear.
@@ -124,7 +125,7 @@
 
 -(NSArray *)containerArray
 {
-    NSArray *containers = @[self.ambienceContainer, self.overlayContainer, self.infoContainer];
+    NSArray *containers = @[self.ambienceContainer, self.topContainer, self.bottomContainer, self.overlayContainer, self.infoContainer];
     return containers;
     
 }

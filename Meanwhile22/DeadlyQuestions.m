@@ -13,115 +13,146 @@
 
 -(void)question001
 {
-    self.question = @"What is comic has the first appearance of Superman?";
-    self.buttonA = @"Detective Comics #32";
-    self.buttonB = @"Amazing Stories #15";
-    self.buttonC = @"Action Comics #1";
-    self.buttonD = @"Superman #1";
+    self.question = @"What film was NOT directed by Quentin Tarantino?";
+    self.buttonA = @"Reservoir Dogs";
+    self.buttonB = @"Django Unchained";
+    self.buttonC = @"From Dusk Till Dawn";
+    self.buttonD = @"Jackie Brown";
     self.correctAnswer = @"C";
     
 }
 
 -(void)question002
 {
-    self.question = @"In what year did Dick Grayson take up the code name Nightwing?";
-    self.buttonA = @"1984";
-    self.buttonB = @"1977";
-    self.buttonC = @"1980";
-    self.buttonD = @"1988";
+    self.question = @"What was the real name of Uma Thurman’s character in \"Kill Bill\"?";
+    self.buttonA = @"Beatrice Kiddo";
+    self.buttonB = @"Mia Wallace";
+    self.buttonC = @"Vernita Green";
+    self.buttonD = @"Sofie Fatale";
     self.correctAnswer = @"A";
     
 }
 
 -(void)question003
 {
-    self.question = @"In Post-Crisis storytelling, who inspired Dick Grayson to take the code name Nightwing?";
-    self.buttonA = @"Batman";
-    self.buttonB = @"Starfire";
-    self.buttonC = @"Speedy";
-    self.buttonD = @"Superman";
+    self.question = @"Who was the first member of the Deadly Viper Assassination Squad to be killed by The Bride in \"Kill Bill, Vol. 1\"?";
+    self.buttonA = @"Bud";
+    self.buttonB = @"Vernita Green";
+    self.buttonC = @"Elle Driver";
+    self.buttonD = @"O-Ren Ishii";
     self.correctAnswer = @"D";
     
 }
 
 -(void)question004
 {
-    self.question = @"Aquaman’s civilian name is … ?";
-    self.buttonA = @"Adam Strange";
-    self.buttonB = @"Arthur Curry";
-    self.buttonC = @"George Finn";
-    self.buttonD = @"Glenn King";
+    self.question = @"What actor portrayed Sidewinder in the \"Kill Bill\" movies?";
+    self.buttonA = @"Vivica A. Fox";
+    self.buttonB = @"Michael Madsen";
+    self.buttonC = @"Daryl Hannah";
+    self.buttonD = @"David Carradine";
     self.correctAnswer = @"B";
     
 }
 
 -(void)question005
 {
-    self.question = @"Hunter Rose was the first person to assume which code name?";
-    self.buttonA = @"Grendel";
-    self.buttonB = @"Kraven the Hunter";
-    self.buttonC = @"Deadshot";
-    self.buttonD = @"Lone Ranger";
+    self.question = @"The katanas in \"Kill Bill\" were forged by what fictional, legendary sword maker?";
+    self.buttonA = @"Hattori Hanzo";
+    self.buttonB = @"Gin Su";
+    self.buttonC = @"O-Ren Ishii";
+    self.buttonD = @"Mako";
     self.correctAnswer = @"A";
     
 }
 
 -(void)question006
 {
-    self.question = @"Detective Comics #140 was the first appearance of which character?";
-    self.buttonA = @"Joker";
-    self.buttonB = @"Catwoman";
-    self.buttonC = @"Penguin";
-    self.buttonD = @"Riddler";
+    self.question = @"What is the name of the Chinese martial arts master that trained Elle Driver in the \"Kill Bill\" film series?";
+    self.buttonA = @"Snake Charmer";
+    self.buttonB = @"Chang Cheh";
+    self.buttonC = @"Shang Chi";
+    self.buttonD = @"Pai Mei";
     self.correctAnswer = @"D";
     
 }
 
 -(void)question007
 {
-    self.question = @"Which X-Men villain is not a mutant?";
-    self.buttonA = @"Magneto";
-    self.buttonB = @"Stryfe";
-    self.buttonC = @"Juggernaut";
-    self.buttonD = @"Sebastian Shaw";
+    self.question = @"Vernita Green’s Deadly Viper Assassination Squad codename was ... ?";
+    self.buttonA = @"Sidewinder";
+    self.buttonB = @"Black Mamba";
+    self.buttonC = @"Copperhead";
+    self.buttonD = @"Asp";
     self.correctAnswer = @"C";
     
 }
 
 -(void)question008
 {
-    self.question = @"The first incarnation of Firestorm consisted of … ?";
-    self.buttonA = @"Hank Hall and Don Hall";
-    self.buttonB = @"Ronnie Raymand and Martin Stein";
-    self.buttonC = @"Johnny Storm and Angelica Jones" ;
-    self.buttonD = @"Bruce Wayne and Clark Kent";
+    self.question = @"Snake Charmer was the codename of which person in the \"Kill Bill\" film series?";
+    self.buttonA = @"O-Ren Ishii";
+    self.buttonB = @"Bill";
+    self.buttonC = @"Pai Mei" ;
+    self.buttonD = @"Bud";
     self.correctAnswer = @"B";
     
 }
 
 -(void)question009
 {
-    self.question = @"Mirror Master is an arch-enemy of which DC superhero?";
-    self.buttonA = @"Flash";
-    self.buttonB = @"Batman";
-    self.buttonC = @"Doctor Fate";
-    self.buttonD = @"Booster Gold";
+    self.question = @"Who was NOT a member of the criminal group in 1992's \"Reservoir Dogs\"?";
+    self.buttonA = @"Mr. Red";
+    self.buttonB = @"Mr. White";
+    self.buttonC = @"Mr. Pink";
+    self.buttonD = @"Mr. Blonde";
     self.correctAnswer = @"A";
     
 }
 
 -(void)question010
 {
-    self.question = @"Marvel Comics’ Captain Marvel died from … ?";
-    self.buttonA = @"Vampire bite";
-    self.buttonB = @"Head trauma";
-    self.buttonC = @"AIDS complications";
-    self.buttonD = @"Cancer";
+    self.question = @"In \"Reservoir Dogs\", what actor played Mr. Pink?";
+    self.buttonA = @"Harvey Keitel";
+    self.buttonB = @"Michael Madsen";
+    self.buttonC = @"Quentin Tarantino";
+    self.buttonD = @"Steve Buscemi";
     self.correctAnswer = @"D";
     
 }
 
+-(void)question011
+{
+    self.question = @"Sam J. Jones made an appearance in \"Ted\", but he is better known as what hero?";
+    self.buttonA = @"Spawn";
+    self.buttonB = @"The Punisher";
+    self.buttonC = @"The Phantom";
+    self.buttonD = @"Flash Gordon";
+    self.correctAnswer = @"D";
+    
+}
 
+-(void)question012
+{
+    self.question = @"A large teddy bear comes to life and befriends Mark Wahlberg in what 2012 film?";
+    self.buttonA = @"Jungle Book";
+    self.buttonB = @"Jumanji";
+    self.buttonC = @"Ted";
+    self.buttonD = @"Clifford";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question013
+{
+    self.question = @"The first Superman home video game was released by what company?";
+    self.buttonA = @"Nintendo";
+    self.buttonB = @"Atari";
+    self.buttonC = @"Colecovision" ;
+    self.buttonD = @"Sega";
+    self.correctAnswer = @"B";
+    
+}
 
 
 

@@ -41,7 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper A"];
     self.bannerImage.image = [UIImage imageNamed:@"quiz smasher banner"];
     
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;

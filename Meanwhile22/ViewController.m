@@ -35,7 +35,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper texture B"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper B"];
     
     self.logoImage.image = [UIImage imageNamed:@"M22 Logo 2016"];
     self.logoImage.layer.borderColor = [UIColor blackColor].CGColor;
@@ -44,6 +44,7 @@
     
     [self.episodeButton setBackgroundImage:[UIImage imageNamed:@"vault of episodes"] forState:UIControlStateNormal];
     [self.quizButton setBackgroundImage:[UIImage imageNamed:@"quiz smasher button"] forState:UIControlStateNormal];
+    [self.hostButton setBackgroundImage:[UIImage imageNamed:@"heroic hosts button"] forState:UIControlStateNormal];
     [self createButtonBorder:2.0 forArray:[self buttonArray]];
     
     [[self.twitterButton imageView] setContentMode:UIViewContentModeScaleAspectFit];

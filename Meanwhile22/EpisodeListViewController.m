@@ -52,7 +52,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 200.0;
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper A"];
     self.bannerImage.image = [UIImage imageNamed:@"vault banner"];
     
     //The border aorund the banner and tableView
@@ -61,7 +61,7 @@
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     
     self.previousButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.previousButton.layer.borderWidth = 1.0;
+    self.previousButton.layer.borderWidth = 2.0;
     
     
     //Initializing data arrays

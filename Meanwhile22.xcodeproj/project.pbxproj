@@ -23,6 +23,13 @@
 		D28855271BFCD6E900151BE4 /* EpisodeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28855261BFCD6E900151BE4 /* EpisodeListTableViewCell.m */; };
 		D288552C1BFDA0C600151BE4 /* EpisodePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D288552B1BFDA0C600151BE4 /* EpisodePlayerViewController.m */; };
 		D2ADEDC81C026B660035CC3C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2ADEDC71C026B660035CC3C /* AVFoundation.framework */; };
+		D2AF71321C50C58A001E3AB1 /* heroic hosts button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2AF71311C50C58A001E3AB1 /* heroic hosts button@2x.png */; };
+		D2AF71351C5134CF001E3AB1 /* HeroicHostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AF71341C5134CF001E3AB1 /* HeroicHostsViewController.m */; };
+		D2AF713A1C514BAE001E3AB1 /* coming soon.png in Resources */ = {isa = PBXBuildFile; fileRef = D2AF71391C514BAE001E3AB1 /* coming soon.png */; };
+		D2AF713E1C514D4C001E3AB1 /* paper A@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2AF713B1C514D4C001E3AB1 /* paper A@2x.png */; };
+		D2AF713F1C514D4C001E3AB1 /* paper C@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2AF713C1C514D4C001E3AB1 /* paper C@2x.png */; };
+		D2AF71421C514D6C001E3AB1 /* paper B@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2AF71411C514D6C001E3AB1 /* paper B@2x.png */; };
+		D2AF71471C5150C5001E3AB1 /* heroic banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2AF71461C5150C5001E3AB1 /* heroic banner@2x.png */; };
 		D2BAD0851C23DBE700668E13 /* time vortex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BAD0841C23DBE700668E13 /* time vortex@2x.png */; };
 		D2BAD0871C23DFE500668E13 /* quiz smasher banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */; };
 		D2BAD0891C23E37A00668E13 /* time vortex banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */; };
@@ -127,9 +134,6 @@
 		D2EA65861C5044CC00A27478 /* VortexMovieQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA65851C5044CC00A27478 /* VortexMovieQuestions.m */; };
 		D2EA65891C50450900A27478 /* VortexTvQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA65881C50450900A27478 /* VortexTvQuestions.m */; };
 		D2EA658C1C50453200A27478 /* VortexGameQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA658B1C50453200A27478 /* VortexGameQuestions.m */; };
-		D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5601BFAF06E004BD66B /* paper texture A.png */; };
-		D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5621BFAF5B2004BD66B /* paper texture B.png */; };
-		D2F0C5651BFAF5B2004BD66B /* paper texture C.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5631BFAF5B2004BD66B /* paper texture C.png */; };
 		D2FEEA951BD2BF4C00FADE89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FEEA941BD2BF4C00FADE89 /* main.m */; };
 		D2FEEA981BD2BF4C00FADE89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FEEA971BD2BF4C00FADE89 /* AppDelegate.m */; };
 		D2FEEA9B1BD2BF4C00FADE89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FEEA9A1BD2BF4C00FADE89 /* ViewController.m */; };
@@ -184,6 +188,14 @@
 		D288552A1BFDA0C600151BE4 /* EpisodePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodePlayerViewController.h; sourceTree = "<group>"; };
 		D288552B1BFDA0C600151BE4 /* EpisodePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodePlayerViewController.m; sourceTree = "<group>"; };
 		D2ADEDC71C026B660035CC3C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D2AF71311C50C58A001E3AB1 /* heroic hosts button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heroic hosts button@2x.png"; sourceTree = "<group>"; };
+		D2AF71331C5134CF001E3AB1 /* HeroicHostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroicHostsViewController.h; sourceTree = "<group>"; };
+		D2AF71341C5134CF001E3AB1 /* HeroicHostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroicHostsViewController.m; sourceTree = "<group>"; };
+		D2AF71391C514BAE001E3AB1 /* coming soon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coming soon.png"; sourceTree = "<group>"; };
+		D2AF713B1C514D4C001E3AB1 /* paper A@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper A@2x.png"; sourceTree = "<group>"; };
+		D2AF713C1C514D4C001E3AB1 /* paper C@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper C@2x.png"; sourceTree = "<group>"; };
+		D2AF71411C514D6C001E3AB1 /* paper B@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper B@2x.png"; sourceTree = "<group>"; };
+		D2AF71461C5150C5001E3AB1 /* heroic banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heroic banner@2x.png"; sourceTree = "<group>"; };
 		D2BAD0841C23DBE700668E13 /* time vortex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time vortex@2x.png"; sourceTree = "<group>"; };
 		D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quiz smasher banner@2x.png"; sourceTree = "<group>"; };
 		D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time vortex banner@2x.png"; sourceTree = "<group>"; };
@@ -297,9 +309,6 @@
 		D2EA65881C50450900A27478 /* VortexTvQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VortexTvQuestions.m; sourceTree = "<group>"; };
 		D2EA658A1C50453200A27478 /* VortexGameQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VortexGameQuestions.h; sourceTree = "<group>"; };
 		D2EA658B1C50453200A27478 /* VortexGameQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VortexGameQuestions.m; sourceTree = "<group>"; };
-		D2F0C5601BFAF06E004BD66B /* paper texture A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture A.png"; sourceTree = "<group>"; };
-		D2F0C5621BFAF5B2004BD66B /* paper texture B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture B.png"; sourceTree = "<group>"; };
-		D2F0C5631BFAF5B2004BD66B /* paper texture C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture C.png"; sourceTree = "<group>"; };
 		D2FEEA901BD2BF4C00FADE89 /* Meanwhile22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meanwhile22.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FEEA941BD2BF4C00FADE89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D2FEEA961BD2BF4C00FADE89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -362,6 +371,30 @@
 			path = Meanwhile22;
 			sourceTree = "<group>";
 		};
+		D2AF71361C513F4B001E3AB1 /* vortex game buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D2EA648E1C486B4E00A27478 /* comics button@2x.png */,
+				D2EA64901C48754400A27478 /* games button@2x.png */,
+				D2EA64921C487BB300A27478 /* movies button@2x.png */,
+				D2EA64941C4883D200A27478 /* tv button@2x.png */,
+			);
+			name = "vortex game buttons";
+			sourceTree = "<group>";
+		};
+		D2AF71431C514F68001E3AB1 /* other images */ = {
+			isa = PBXGroup;
+			children = (
+				D2D0BAF51C3B39EE0022A01B /* M22 Logo 2016@2x.png */,
+				D2AF71391C514BAE001E3AB1 /* coming soon.png */,
+				D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */,
+				D2EA64D31C4C90AD00A27478 /* science nerd@2x.png */,
+				D26175971C33468300E772E3 /* shield small.png */,
+				D26175A51C336A0200E772E3 /* warrior large.png */,
+			);
+			name = "other images";
+			sourceTree = "<group>";
+		};
 		D2BF3EB41C04C40000388747 /* icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,12 +421,9 @@
 		D2D0BAF21C3B38680022A01B /* buttons */ = {
 			isa = PBXGroup;
 			children = (
-				D2EA648E1C486B4E00A27478 /* comics button@2x.png */,
-				D2EA64901C48754400A27478 /* games button@2x.png */,
-				D2EA64921C487BB300A27478 /* movies button@2x.png */,
-				D2EA64941C4883D200A27478 /* tv button@2x.png */,
 				D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */,
 				D2FEEAD31BD361C200FADE89 /* facebook logo@2x.png */,
+				D2AF71311C50C58A001E3AB1 /* heroic hosts button@2x.png */,
 				D2D0BAF91C3B44F40022A01B /* pause button@2x.png */,
 				D2D0BAE41C3AF4BB0022A01B /* play button@2x.png */,
 				D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */,
@@ -403,6 +433,7 @@
 				D2BAD0841C23DBE700668E13 /* time vortex@2x.png */,
 				D2FEEAD21BD361C200FADE89 /* twitter logo@2x.png */,
 				D28855181BFBD1F500151BE4 /* vault of episodes@2x.png */,
+				D2AF71361C513F4B001E3AB1 /* vortex game buttons */,
 			);
 			name = buttons;
 			sourceTree = "<group>";
@@ -410,12 +441,13 @@
 		D2D0BAF31C3B388F0022A01B /* banners */ = {
 			isa = PBXGroup;
 			children = (
-				D2EA64D71C4CB8C100A27478 /* vortex banner swirls */,
 				D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */,
+				D2AF71461C5150C5001E3AB1 /* heroic banner@2x.png */,
 				D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */,
 				D2EA64771C48576600A27478 /* robot banner@2x.png */,
 				D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */,
 				D2D0BAF71C3B3CE00022A01B /* vault banner@2x.png */,
+				D2EA64D71C4CB8C100A27478 /* vortex banner swirls */,
 				D2EA64891C485F0C00A27478 /* wave pattens */,
 			);
 			name = banners;
@@ -427,9 +459,9 @@
 				D2EA64601C42F9D700A27478 /* battle lost@2x.png */,
 				D26175931C33382500E772E3 /* deadly background.png */,
 				D2EA64641C4385E200A27478 /* game won@2x.png */,
-				D2F0C5601BFAF06E004BD66B /* paper texture A.png */,
-				D2F0C5621BFAF5B2004BD66B /* paper texture B.png */,
-				D2F0C5631BFAF5B2004BD66B /* paper texture C.png */,
+				D2AF713B1C514D4C001E3AB1 /* paper A@2x.png */,
+				D2AF71411C514D6C001E3AB1 /* paper B@2x.png */,
+				D2AF713C1C514D4C001E3AB1 /* paper C@2x.png */,
 				D2EA65361C4D65CE00A27478 /* vortex background@2x.png */,
 				D2EA65381C4D6E3400A27478 /* vortex gray background@2x.png */,
 				D2EA64C41C4895DF00A27478 /* vortex swirls */,
@@ -585,6 +617,8 @@
 				D2BF3F691C097EA500388747 /* Deadly100ViewController.m */,
 				D22621751C1DF7090065D4F5 /* Deadly100GameViewController.h */,
 				D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */,
+				D2AF71331C5134CF001E3AB1 /* HeroicHostsViewController.h */,
+				D2AF71341C5134CF001E3AB1 /* HeroicHostsViewController.m */,
 				D2FEEA9C1BD2BF4C00FADE89 /* Main.storyboard */,
 				D2FEEAA21BD2BF4C00FADE89 /* Assets.xcassets */,
 				D2FEEAD11BD359DB00FADE89 /* Assets */,
@@ -625,16 +659,12 @@
 		D2FEEAD11BD359DB00FADE89 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				D2EA646A1C4390F000A27478 /* sounds */,
 				D2D0BAF41C3B38A50022A01B /* backgrounds */,
 				D2D0BAF31C3B388F0022A01B /* banners */,
 				D2D0BAF21C3B38680022A01B /* buttons */,
 				D2BF3EB41C04C40000388747 /* icons */,
-				D2D0BAF51C3B39EE0022A01B /* M22 Logo 2016@2x.png */,
-				D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */,
-				D2EA64D31C4C90AD00A27478 /* science nerd@2x.png */,
-				D26175971C33468300E772E3 /* shield small.png */,
-				D26175A51C336A0200E772E3 /* warrior large.png */,
+				D2AF71431C514F68001E3AB1 /* other images */,
+				D2EA646A1C4390F000A27478 /* sounds */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -746,11 +776,11 @@
 				D2BF3EC71C04C41D00388747 /* Icon-76.png in Resources */,
 				D2EA64881C48578000A27478 /* wave 5@2x.png in Resources */,
 				D2D0BADF1C3AEA060022A01B /* stop button@2X.png in Resources */,
+				D2AF713E1C514D4C001E3AB1 /* paper A@2x.png in Resources */,
 				D2BF3ED11C04C41D00388747 /* iTunesArtwork@2x in Resources */,
 				D2EA65211C4CBE4200A27478 /* swirl 3@2x.png in Resources */,
 				D2EA652C1C4CBE4200A27478 /* swirl 14@2x.png in Resources */,
 				D2EA64911C48754400A27478 /* games button@2x.png in Resources */,
-				D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */,
 				D2EA64F11C4CB8DC00A27478 /* banner swirl 02@2x.png in Resources */,
 				D2EA65231C4CBE4200A27478 /* swirl 5@2x.png in Resources */,
 				D2EA65201C4CBE4200A27478 /* swirl 2@2x.png in Resources */,
@@ -764,9 +794,9 @@
 				D2EA64D41C4C90AD00A27478 /* science nerd@2x.png in Resources */,
 				D261759A1C3355E300E772E3 /* gun shot.mp3 in Resources */,
 				D2EA65021C4CB8DC00A27478 /* banner swirl 19@2x.png in Resources */,
+				D2AF71421C514D6C001E3AB1 /* paper B@2x.png in Resources */,
 				D2D0BAF81C3B3CE00022A01B /* vault banner@2x.png in Resources */,
 				D2BF3EC51C04C41D00388747 /* Icon-60@2x.png in Resources */,
-				D2F0C5651BFAF5B2004BD66B /* paper texture C.png in Resources */,
 				D26175941C33382500E772E3 /* deadly background.png in Resources */,
 				D2BF3EC81C04C41D00388747 /* Icon-76@2x.png in Resources */,
 				D2EA64801C48577100A27478 /* wave 1@2x.png in Resources */,
@@ -798,7 +828,9 @@
 				D2D0BAF61C3B39EE0022A01B /* M22 Logo 2016@2x.png in Resources */,
 				D2EA64F51C4CB8DC00A27478 /* banner swirl 06@2x.png in Resources */,
 				D2EA64FB1C4CB8DC00A27478 /* banner swirl 12@2x.png in Resources */,
+				D2AF713A1C514BAE001E3AB1 /* coming soon.png in Resources */,
 				D2EA651F1C4CBE4200A27478 /* swirl 1@2x.png in Resources */,
+				D2AF71321C50C58A001E3AB1 /* heroic hosts button@2x.png in Resources */,
 				D2EA647D1C48577100A27478 /* wave 4@2x.png in Resources */,
 				D2BF3ECE1C04C41D00388747 /* Icon-Spotlight-40@2x.png in Resources */,
 				D2EA64851C48578000A27478 /* wave 8@2x.png in Resources */,
@@ -828,12 +860,14 @@
 				D2EA64931C487BB300A27478 /* movies button@2x.png in Resources */,
 				D2568DE21C28DF9800DA237F /* quiz smasher button@2x.png in Resources */,
 				D2EA641C1C40E4A600A27478 /* weapons one@2x.png in Resources */,
+				D2AF71471C5150C5001E3AB1 /* heroic banner@2x.png in Resources */,
 				D2EA647F1C48577100A27478 /* wave 2@2x.png in Resources */,
 				D2EA652D1C4CBE4200A27478 /* swirl 15@2x.png in Resources */,
 				D2EA64FF1C4CB8DC00A27478 /* banner swirl 16@2x.png in Resources */,
 				D2BF3ECF1C04C41D00388747 /* Icon-Spotlight-40@3x.png in Resources */,
 				D2EA65071C4CB8DC00A27478 /* banner swirl 24@2x.png in Resources */,
 				D2EA64F31C4CB8DC00A27478 /* banner swirl 04@2x.png in Resources */,
+				D2AF713F1C514D4C001E3AB1 /* paper C@2x.png in Resources */,
 				D2EA65341C4CBE4200A27478 /* swirl 22@2x.png in Resources */,
 				D2EA64F61C4CB8DC00A27478 /* banner swirl 07@2x.png in Resources */,
 				D2BF3ED21C04C41D00388747 /* M22 Logo template.png in Resources */,
@@ -849,7 +883,6 @@
 				D2D0BAFA1C3B44F40022A01B /* pause button@2x.png in Resources */,
 				D2EA652B1C4CBE4200A27478 /* swirl 13@2x.png in Resources */,
 				D2EA64631C4319AF00A27478 /* sword swipe.mp3 in Resources */,
-				D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */,
 				D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */,
 				D26175981C33468300E772E3 /* shield small.png in Resources */,
 				D2EA64F41C4CB8DC00A27478 /* banner swirl 05@2x.png in Resources */,
@@ -884,6 +917,7 @@
 				D2BF3F6A1C097EA500388747 /* Deadly100ViewController.m in Sources */,
 				D22621771C1DF7090065D4F5 /* Deadly100GameViewController.m in Sources */,
 				D2EA658C1C50453200A27478 /* VortexGameQuestions.m in Sources */,
+				D2AF71351C5134CF001E3AB1 /* HeroicHostsViewController.m in Sources */,
 				D2FEEACE1BD2C3AD00FADE89 /* PodcastParser.m in Sources */,
 				D2FEEA9B1BD2BF4C00FADE89 /* ViewController.m in Sources */,
 				D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */,

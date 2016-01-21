@@ -55,7 +55,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper texture A"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper A"];
     
     [self createViewBorderWidth:2.0 forArray:[self containerArray]];
     [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
@@ -89,11 +89,10 @@
     
     NSString *one = @"I'm a Nerd Genius.";
     NSString *two = @"Are you?";
-    NSString *three = @"Correctly answer as many questions as you can.";
-    NSString *four = @"You only have 60 seconds...";
-    NSString *five = @"Don't get lost in the Time Vortex!";
+    NSString *three = @"Correctly answer as many questions as you can in 60 seconds.";
+    NSString *four = @"Don't get lost in the Time Vortex!";
     
-    self.infoLabel.text = [NSString stringWithFormat:@"%@\n%@\n\n%@\n\n%@\n%@", one, two, three, four, five];
+    self.infoLabel.text = [NSString stringWithFormat:@"%@\n%@\n\n%@\n\n%@", one, two, three, four];
     
     //If it is the first time the user loads this screen OR did NOT click "Do Not Show Again" button,
     //the instruction screen will appear.
