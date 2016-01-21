@@ -123,6 +123,10 @@
 		D2EA65391C4D6E3400A27478 /* vortex gray background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65381C4D6E3400A27478 /* vortex gray background@2x.png */; };
 		D2EA653B1C4EC3AB00A27478 /* deadly start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */; };
 		D2EA65801C5039AD00A27478 /* DeadlyQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA657F1C5039AD00A27478 /* DeadlyQuestions.m */; };
+		D2EA65831C50445600A27478 /* VortexComicQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA65821C50445600A27478 /* VortexComicQuestions.m */; };
+		D2EA65861C5044CC00A27478 /* VortexMovieQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA65851C5044CC00A27478 /* VortexMovieQuestions.m */; };
+		D2EA65891C50450900A27478 /* VortexTvQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA65881C50450900A27478 /* VortexTvQuestions.m */; };
+		D2EA658C1C50453200A27478 /* VortexGameQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA658B1C50453200A27478 /* VortexGameQuestions.m */; };
 		D2F0C5611BFAF06E004BD66B /* paper texture A.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5601BFAF06E004BD66B /* paper texture A.png */; };
 		D2F0C5641BFAF5B2004BD66B /* paper texture B.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5621BFAF5B2004BD66B /* paper texture B.png */; };
 		D2F0C5651BFAF5B2004BD66B /* paper texture C.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F0C5631BFAF5B2004BD66B /* paper texture C.png */; };
@@ -285,6 +289,14 @@
 		D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly start@2x.png"; sourceTree = "<group>"; };
 		D2EA657E1C5039AD00A27478 /* DeadlyQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeadlyQuestions.h; sourceTree = "<group>"; };
 		D2EA657F1C5039AD00A27478 /* DeadlyQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeadlyQuestions.m; sourceTree = "<group>"; };
+		D2EA65811C50445600A27478 /* VortexComicQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VortexComicQuestions.h; sourceTree = "<group>"; };
+		D2EA65821C50445600A27478 /* VortexComicQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VortexComicQuestions.m; sourceTree = "<group>"; };
+		D2EA65841C5044CC00A27478 /* VortexMovieQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VortexMovieQuestions.h; sourceTree = "<group>"; };
+		D2EA65851C5044CC00A27478 /* VortexMovieQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VortexMovieQuestions.m; sourceTree = "<group>"; };
+		D2EA65871C50450900A27478 /* VortexTvQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VortexTvQuestions.h; sourceTree = "<group>"; };
+		D2EA65881C50450900A27478 /* VortexTvQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VortexTvQuestions.m; sourceTree = "<group>"; };
+		D2EA658A1C50453200A27478 /* VortexGameQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VortexGameQuestions.h; sourceTree = "<group>"; };
+		D2EA658B1C50453200A27478 /* VortexGameQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VortexGameQuestions.m; sourceTree = "<group>"; };
 		D2F0C5601BFAF06E004BD66B /* paper texture A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture A.png"; sourceTree = "<group>"; };
 		D2F0C5621BFAF5B2004BD66B /* paper texture B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture B.png"; sourceTree = "<group>"; };
 		D2F0C5631BFAF5B2004BD66B /* paper texture C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper texture C.png"; sourceTree = "<group>"; };
@@ -543,6 +555,14 @@
 				D2FEEACA1BD2BF6500FADE89 /* Podcast.m */,
 				D2FEEACC1BD2C3AD00FADE89 /* PodcastParser.h */,
 				D2FEEACD1BD2C3AD00FADE89 /* PodcastParser.m */,
+				D2EA65811C50445600A27478 /* VortexComicQuestions.h */,
+				D2EA65821C50445600A27478 /* VortexComicQuestions.m */,
+				D2EA65841C5044CC00A27478 /* VortexMovieQuestions.h */,
+				D2EA65851C5044CC00A27478 /* VortexMovieQuestions.m */,
+				D2EA65871C50450900A27478 /* VortexTvQuestions.h */,
+				D2EA65881C50450900A27478 /* VortexTvQuestions.m */,
+				D2EA658A1C50453200A27478 /* VortexGameQuestions.h */,
+				D2EA658B1C50453200A27478 /* VortexGameQuestions.m */,
 				D2EA657E1C5039AD00A27478 /* DeadlyQuestions.h */,
 				D2EA657F1C5039AD00A27478 /* DeadlyQuestions.m */,
 				D25305661C000FA7004ADB0F /* MissingEpisodeSummaries.h */,
@@ -860,14 +880,18 @@
 			files = (
 				D2FEEACB1BD2BF6500FADE89 /* Podcast.m in Sources */,
 				D2BF3FAC1C0D073F00388747 /* TimeVortexGameViewController.m in Sources */,
+				D2EA65861C5044CC00A27478 /* VortexMovieQuestions.m in Sources */,
 				D2BF3F6A1C097EA500388747 /* Deadly100ViewController.m in Sources */,
 				D22621771C1DF7090065D4F5 /* Deadly100GameViewController.m in Sources */,
+				D2EA658C1C50453200A27478 /* VortexGameQuestions.m in Sources */,
 				D2FEEACE1BD2C3AD00FADE89 /* PodcastParser.m in Sources */,
 				D2FEEA9B1BD2BF4C00FADE89 /* ViewController.m in Sources */,
 				D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */,
 				D2FEEA981BD2BF4C00FADE89 /* AppDelegate.m in Sources */,
 				D28855271BFCD6E900151BE4 /* EpisodeListTableViewCell.m in Sources */,
+				D2EA65891C50450900A27478 /* VortexTvQuestions.m in Sources */,
 				D2BF3F641C0952DA00388747 /* QuizViewController.m in Sources */,
+				D2EA65831C50445600A27478 /* VortexComicQuestions.m in Sources */,
 				D2EA65801C5039AD00A27478 /* DeadlyQuestions.m in Sources */,
 				D2BF3F671C097E9400388747 /* TimeVortexViewController.m in Sources */,
 				D2FEEAA11BD2BF4C00FADE89 /* Meanwhile22.xcdatamodeld in Sources */,

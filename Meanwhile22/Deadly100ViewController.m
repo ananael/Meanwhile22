@@ -70,6 +70,13 @@
     self.gameButton.layer.borderWidth = 2.0;
     self.gameButton.layer.cornerRadius = 8.0;
     
+    NSString *one = @"The Apostles of the Sphinx are attacking!";
+    NSString *two = @"Their questions are deadly.";
+    NSString *three = @"You have 6 chances to survive 100 questions.";
+    NSString *four = @"You must not fail us ...";
+    
+    self.infoLabel.text = [NSString stringWithFormat:@"%@\n\n%@\n\n%@\n\n%@", one, two, three, four];
+    
     //If it is the first time the user loads this screen OR did NOT click "Do Not Show Again" button,
     //the instruction screen will appear.
     //However, if user did click "Do Not Show Again" button, the instruction screen will not show again.

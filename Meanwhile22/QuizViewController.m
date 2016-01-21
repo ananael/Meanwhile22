@@ -59,11 +59,11 @@
     
     [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     
-    NSString *one = @"Think you know more than the Meanwhile 22 Pages Later hosts?";
+    NSString *one = @"Think you know more than the hosts of Meanwhile 22 Pages Later?";
     NSString *two = @"Are you the Ultimate Know-It-All?";
     NSString *three = @"Choose Time Vortex and see how many questions you can answer in 60 seconds.";
     NSString *four = @"Or, try your luck with The Deadly 100, where every wrong answer costs you a life.";
-    self.instructionLabel.text = [NSString stringWithFormat:@"%@\n\n%@\n\n%@\n\n%@", one, two, three, four];
+    self.instructionLabel.text = [NSString stringWithFormat:@"%@\n%@\n\n%@\n\n%@", one, two, three, four];
     
     self.scrollView.showsVerticalScrollIndicator = NO;
     

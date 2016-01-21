@@ -7,6 +7,10 @@
 //
 
 #import "TimeVortexGameViewController.h"
+#import "VortexComicQuestions.h"
+#import "VortexMovieQuestions.h"
+#import "VortexTvQuestions.h"
+#import "VortexGameQuestions.h"
 
 @interface TimeVortexGameViewController ()
 
@@ -140,10 +144,10 @@
     self.gamesArray = [NSMutableArray new];
     self.usedGamesArray = [NSMutableArray new];
     
-    self.comicsArray = [NSMutableArray arrayWithArray:[self convertedComicArray]];
-    self.moviesArray = [NSMutableArray arrayWithArray:[self convertedMovieArray]];
-    self.tvArray = [NSMutableArray arrayWithArray:[self convertedTVArray]];
-    self.gamesArray = [NSMutableArray arrayWithArray:[self convertedGameArray]];
+    self.comicsArray = [NSMutableArray arrayWithArray:[self comicStringArray]];
+    self.moviesArray = [NSMutableArray arrayWithArray:[self movieStringArray]];
+    self.tvArray = [NSMutableArray arrayWithArray:[self tvStringArray]];
+    self.gamesArray = [NSMutableArray arrayWithArray:[self gameStringArray]];
     
     //CategorySaved represents the category button pressed in the TimeVortexVC
     self.categoryLoaded = [[NSUserDefaults standardUserDefaults]integerForKey:@"CategorySaved"];
@@ -222,6 +226,31 @@
     NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button, self.playAgainButton, self.nextCategoryButton];
     return buttons;
     
+}
+
+// ***** UPDATE THESE ARRAYS whenever new questions are added to their respective classes *****
+-(NSArray *)comicStringArray
+{
+    NSArray *comics = @[@"comic001", @"comic002", @"comic003", @"comic004", @"comic005", @"comic006", @"comic007", @"comic008", @"comic009", @"comic010"];
+    return comics;
+}
+
+-(NSArray *)movieStringArray
+{
+    NSArray *movies = @[@"movie001", @"movie002", @"movie003", @"movie004", @"movie005", @"movie006", @"movie007", @"movie008", @"movie009", @"movie010"];
+    return movies;
+}
+
+-(NSArray *)tvStringArray
+{
+    NSArray *tvShows = @[@"tv001", @"tv002", @"tv003", @"tv004", @"tv005", @"tv006", @"tv007", @"tv008", @"tv009", @"tv010"];
+    return tvShows;
+}
+
+-(NSArray *)gameStringArray
+{
+    NSArray *games = @[@"game001", @"game002", @"game003", @"game004", @"game005", @"game006", @"game007", @"game008", @"game009", @"game010"];
+    return games;
 }
 
 -(void)labelFade
@@ -441,6 +470,9 @@
 {
     //If self.questionArray has more than "zero" items, a random item is selected
     //The random item is placed in self.usedQuestionArray and REMOVED from self.questionArray
+    
+    VortexComicQuestions *question = [VortexComicQuestions new];
+    
     if ([self.comicsArray count] > 0)
     {
         self.randomIndex = arc4random() %[self.comicsArray count];
@@ -448,10 +480,38 @@
         NSLog(@"Random Index: %li", (long)self.randomIndex);
         NSLog(@"Initial Count: %li", (unsigned long)[self.comicsArray count]);
         
-        SEL selector = [[self.comicsArray objectAtIndex:self.randomIndex] pointerValue];
-        IMP imp = [self methodForSelector:selector];
+//        SEL selector = [[self.comicsArray objectAtIndex:self.randomIndex] pointerValue];
+//        IMP imp = [self methodForSelector:selector];
+//        void (*func)(id, SEL) = (void *)imp;
+//        func(self, selector);
+        SEL selector = NSSelectorFromString([self.comicsArray objectAtIndex:self.randomIndex]);
+        IMP imp = [question methodForSelector:selector];
         void (*func)(id, SEL) = (void *)imp;
-        func(self, selector);
+        func(question, selector);
+        
+        self.questionLabel.text = question.question;
+        [self.answer1Button setTitle:question.buttonA forState:UIControlStateNormal];
+        [self.answer2Button setTitle:question.buttonB forState:UIControlStateNormal];
+        [self.answer3Button setTitle:question.buttonC forState:UIControlStateNormal];
+        [self.answer4Button setTitle:question.buttonD forState:UIControlStateNormal];
+        
+        if ([question.correctAnswer isEqualToString:@"A"])
+        {
+            self.Answer1Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"B"])
+        {
+            self.Answer2Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"C"])
+        {
+            self.Answer3Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"D"])
+        {
+            self.Answer4Correct = YES;
+            
+        }
         
         [self.usedComicsArray addObject:[self.comicsArray objectAtIndex:self.randomIndex]];
         [self.comicsArray removeObjectAtIndex:self.randomIndex];
@@ -476,6 +536,9 @@
 {
     //If self.questionArray has more than "zero" items, a random item is selected
     //The random item is placed in self.usedQuestionArray and REMOVED from self.questionArray
+    
+    VortexMovieQuestions *question = [VortexMovieQuestions new];
+    
     if ([self.moviesArray count] > 0)
     {
         self.randomIndex = arc4random() %[self.moviesArray count];
@@ -483,10 +546,38 @@
         NSLog(@"Random Index: %li", (long)self.randomIndex);
         NSLog(@"Initial Count: %li", (unsigned long)[self.moviesArray count]);
         
-        SEL selector = [[self.moviesArray objectAtIndex:self.randomIndex] pointerValue];
-        IMP imp = [self methodForSelector:selector];
+//        SEL selector = [[self.moviesArray objectAtIndex:self.randomIndex] pointerValue];
+//        IMP imp = [self methodForSelector:selector];
+//        void (*func)(id, SEL) = (void *)imp;
+//        func(self, selector);
+        SEL selector = NSSelectorFromString([self.moviesArray objectAtIndex:self.randomIndex]);
+        IMP imp = [question methodForSelector:selector];
         void (*func)(id, SEL) = (void *)imp;
-        func(self, selector);
+        func(question, selector);
+        
+        self.questionLabel.text = question.question;
+        [self.answer1Button setTitle:question.buttonA forState:UIControlStateNormal];
+        [self.answer2Button setTitle:question.buttonB forState:UIControlStateNormal];
+        [self.answer3Button setTitle:question.buttonC forState:UIControlStateNormal];
+        [self.answer4Button setTitle:question.buttonD forState:UIControlStateNormal];
+        
+        if ([question.correctAnswer isEqualToString:@"A"])
+        {
+            self.Answer1Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"B"])
+        {
+            self.Answer2Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"C"])
+        {
+            self.Answer3Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"D"])
+        {
+            self.Answer4Correct = YES;
+            
+        }
         
         [self.usedMoviesArray addObject:[self.moviesArray objectAtIndex:self.randomIndex]];
         [self.moviesArray removeObjectAtIndex:self.randomIndex];
@@ -510,7 +601,8 @@
 
 -(void)randomTVQuestion
 {
-
+    VortexTvQuestions *question = [VortexTvQuestions new];
+    
     if ([self.tvArray count] > 0)
     {
         self.randomIndex = arc4random() %[self.tvArray count];
@@ -518,10 +610,38 @@
         NSLog(@"Random Index: %li", (long)self.randomIndex);
         NSLog(@"Initial Count: %li", (unsigned long)[self.tvArray count]);
         
-        SEL selector = [[self.tvArray objectAtIndex:self.randomIndex] pointerValue];
-        IMP imp = [self methodForSelector:selector];
+//        SEL selector = [[self.tvArray objectAtIndex:self.randomIndex] pointerValue];
+//        IMP imp = [self methodForSelector:selector];
+//        void (*func)(id, SEL) = (void *)imp;
+//        func(self, selector);
+        SEL selector = NSSelectorFromString([self.tvArray objectAtIndex:self.randomIndex]);
+        IMP imp = [question methodForSelector:selector];
         void (*func)(id, SEL) = (void *)imp;
-        func(self, selector);
+        func(question, selector);
+        
+        self.questionLabel.text = question.question;
+        [self.answer1Button setTitle:question.buttonA forState:UIControlStateNormal];
+        [self.answer2Button setTitle:question.buttonB forState:UIControlStateNormal];
+        [self.answer3Button setTitle:question.buttonC forState:UIControlStateNormal];
+        [self.answer4Button setTitle:question.buttonD forState:UIControlStateNormal];
+        
+        if ([question.correctAnswer isEqualToString:@"A"])
+        {
+            self.Answer1Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"B"])
+        {
+            self.Answer2Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"C"])
+        {
+            self.Answer3Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"D"])
+        {
+            self.Answer4Correct = YES;
+            
+        }
         
         [self.usedTVArray addObject:[self.tvArray objectAtIndex:self.randomIndex]];
         [self.tvArray removeObjectAtIndex:self.randomIndex];
@@ -541,6 +661,7 @@
 
 -(void)randomGameQuestion
 {
+    VortexGameQuestions *question = [VortexGameQuestions new];
     
     if ([self.gamesArray count] > 0)
     {
@@ -549,10 +670,38 @@
         NSLog(@"Random Index: %li", (long)self.randomIndex);
         NSLog(@"Initial Count: %li", (unsigned long)[self.gamesArray count]);
         
-        SEL selector = [[self.gamesArray objectAtIndex:self.randomIndex] pointerValue];
-        IMP imp = [self methodForSelector:selector];
+//        SEL selector = [[self.gamesArray objectAtIndex:self.randomIndex] pointerValue];
+//        IMP imp = [self methodForSelector:selector];
+//        void (*func)(id, SEL) = (void *)imp;
+//        func(self, selector);
+        SEL selector = NSSelectorFromString([self.gamesArray objectAtIndex:self.randomIndex]);
+        IMP imp = [question methodForSelector:selector];
         void (*func)(id, SEL) = (void *)imp;
-        func(self, selector);
+        func(question, selector);
+        
+        self.questionLabel.text = question.question;
+        [self.answer1Button setTitle:question.buttonA forState:UIControlStateNormal];
+        [self.answer2Button setTitle:question.buttonB forState:UIControlStateNormal];
+        [self.answer3Button setTitle:question.buttonC forState:UIControlStateNormal];
+        [self.answer4Button setTitle:question.buttonD forState:UIControlStateNormal];
+        
+        if ([question.correctAnswer isEqualToString:@"A"])
+        {
+            self.Answer1Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"B"])
+        {
+            self.Answer2Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"C"])
+        {
+            self.Answer3Correct = YES;
+            
+        } else if ([question.correctAnswer isEqualToString:@"D"])
+        {
+            self.Answer4Correct = YES;
+            
+        }
         
         [self.usedGamesArray addObject:[self.gamesArray objectAtIndex:self.randomIndex]];
         [self.gamesArray removeObjectAtIndex:self.randomIndex];
@@ -716,7 +865,7 @@
     [self.navigationController popViewControllerAnimated:YES];
     
 }
-
+/*
 #pragma mark - Question Arrays
 
 -(NSMutableArray *)convertedComicArray
@@ -1244,7 +1393,7 @@
     self.Answer2Correct = YES;
     
 }
-
+*/
 
 
 

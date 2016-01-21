@@ -89,12 +89,11 @@
     
     NSString *one = @"I'm a Nerd Genius.";
     NSString *two = @"Are you?";
-    NSString *three = @"Select a Category.";
-    NSString *four = @"Answer as many questions as you can.";
-    NSString *five = @"You only have 60 seconds...";
-    NSString *six = @"Don't get lost in the Time Vortex!";
+    NSString *three = @"Correctly answer as many questions as you can.";
+    NSString *four = @"You only have 60 seconds...";
+    NSString *five = @"Don't get lost in the Time Vortex!";
     
-    self.infoLabel.text = [NSString stringWithFormat:@"%@\n%@\n\n%@\n\n%@\n%@\n%@", one, two, three, four, five, six];
+    self.infoLabel.text = [NSString stringWithFormat:@"%@\n%@\n\n%@\n\n%@\n%@", one, two, three, four, five];
     
     //If it is the first time the user loads this screen OR did NOT click "Do Not Show Again" button,
     //the instruction screen will appear.

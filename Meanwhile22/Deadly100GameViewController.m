@@ -396,7 +396,6 @@
         NSLog(@"Random Index: %li", (long)self.randomIndex);
         NSLog(@"Initial Count: %li", (unsigned long)[self.questionArray count]);
         
-        //SEL selector = [[self.questionArray objectAtIndex:self.randomIndex] pointerValue];
         SEL selector = NSSelectorFromString([self.questionArray objectAtIndex:self.randomIndex]);
         IMP imp = [question methodForSelector:selector];
         void (*func)(id, SEL) = (void *)imp;
