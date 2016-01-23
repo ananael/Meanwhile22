@@ -231,25 +231,25 @@
 // ***** UPDATE THESE ARRAYS whenever new questions are added to their respective classes *****
 -(NSArray *)comicStringArray
 {
-    NSArray *comics = @[@"comic001", @"comic002", @"comic003", @"comic004", @"comic005", @"comic006", @"comic007", @"comic008", @"comic009", @"comic010"];
+    NSArray *comics = @[@"comic001", @"comic002", @"comic003", @"comic004", @"comic005", @"comic006", @"comic007", @"comic008", @"comic009", @"comic010", @"comic011", @"comic012", @"comic013", @"comic014", @"comic015",  @"comic016",  @"comic017",  @"comic018",  @"comic019",  @"comic020",  @"comic021",  @"comic022",  @"comic023",  @"comic024",  @"comic025",  @"comic026",  @"comic027",  @"comic028",  @"comic029",  @"comic030"];
     return comics;
 }
 
 -(NSArray *)movieStringArray
 {
-    NSArray *movies = @[@"movie001", @"movie002", @"movie003", @"movie004", @"movie005", @"movie006", @"movie007", @"movie008", @"movie009", @"movie010"];
+    NSArray *movies = @[@"movie001", @"movie002", @"movie003", @"movie004", @"movie005", @"movie006", @"movie007", @"movie008", @"movie009", @"movie010", @"movie011", @"movie012", @"movie013", @"movie014", @"movie015",  @"movie016",  @"movie017",  @"movie018",  @"movie019",  @"movie020",  @"movie021",  @"movie022",  @"movie023",  @"movie024",  @"movie025",  @"movie026",  @"movie027",  @"movie028",  @"movie029",  @"movie030"];
     return movies;
 }
 
 -(NSArray *)tvStringArray
 {
-    NSArray *tvShows = @[@"tv001", @"tv002", @"tv003", @"tv004", @"tv005", @"tv006", @"tv007", @"tv008", @"tv009", @"tv010"];
+    NSArray *tvShows = @[@"tv001", @"tv002", @"tv003", @"tv004", @"tv005", @"tv006", @"tv007", @"tv008", @"tv009", @"tv010", @"tv011", @"tv012", @"tv013", @"tv014", @"tv015",  @"tv016",  @"tv017",  @"tv018",  @"tv019",  @"tv020",  @"tv021",  @"tv022",  @"tv023",  @"tv024",  @"tv025",  @"tv026",  @"tv027",  @"tv028",  @"tv029",  @"tv030"];
     return tvShows;
 }
 
 -(NSArray *)gameStringArray
 {
-    NSArray *games = @[@"game001", @"game002", @"game003", @"game004", @"game005", @"game006", @"game007", @"game008", @"game009", @"game010"];
+    NSArray *games = @[@"game001", @"game002", @"game003", @"game004", @"game005", @"game006", @"game007", @"game008", @"game009", @"game010", @"game011", @"game012", @"game013", @"game014", @"game015",  @"game016",  @"game017",  @"game018",  @"game019",  @"game020",  @"game021",  @"game022",  @"game023",  @"game024",  @"game025",  @"game026",  @"game027",  @"game028",  @"game029",  @"game030"];
     return games;
 }
 

@@ -231,7 +231,7 @@
 // ***** UPDATE THIS ARRAY whenever new questions are added to DeadlyQuestions class *****
 -(NSArray *)questionStringArray
 {
-    NSArray *questions = @[@"question001", @"question002", @"question003", @"question004", @"question005", @"question006", @"question007", @"question008", @"question009", @"question010"];
+    NSArray *questions = @[@"question001", @"question002", @"question003", @"question004", @"question005", @"question006", @"question007", @"question008", @"question009", @"question010",  @"question011",  @"question012",  @"question013",  @"question014",  @"question015",  @"question016",  @"question017",  @"question018",  @"question019",  @"question020",  @"question021",  @"question022",  @"question023",  @"question024",  @"question025",  @"question026",  @"question027",  @"question028",  @"question029",  @"question030"];
     return questions;
 }
 
