@@ -278,9 +278,9 @@
 -(void)question025
 {
     self.question = @"Who was the temporary Herald of Galactus after Nova?";
-    self.buttonA = @"Dazzler";
-    self.buttonB = @"Firelord";
-    self.buttonC = @"Terrax the Tamer";
+    self.buttonA = @"Mary Jane Watson";
+    self.buttonB = @"Johnny Storm";
+    self.buttonC = @"Danny Rand";
     self.buttonD = @"Aunt May Parker";
     self.correctAnswer = @"D";
     
@@ -340,6 +340,345 @@
     self.correctAnswer = @"C";
     
 }
+
+-(void)question031
+{
+    self.question = @"Who was the first Puerto Rican superhero in comic book history?";
+    self.buttonA = @"Blue Beetle";
+    self.buttonB = @"White Tiger";
+    self.buttonC = @"Estraño" ;
+    self.buttonD = @"El Dorado";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question032
+{
+    self.question = @"\"Young Frankenstein\"’s Frau Blucher was played by which actress?";
+    self.buttonA = @"Cloris Leachman";
+    self.buttonB = @"Teri Garr";
+    self.buttonC = @"Madeline Kahn";
+    self.buttonD = @"Betty White";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question033
+{
+    self.question = @"Who played Wadsworth in 1985’s \"Clue\"?";
+    self.buttonA = @"Martin Moll";
+    self.buttonB = @"Christopher Lloyd";
+    self.buttonC = @"Michael McKean";
+    self.buttonD = @"Tim Curry";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question034
+{
+    self.question = @"In \"Young Frankenstein\", the Doctor and the Monster sing and dance to what song?";
+    self.buttonA = @"Singing in the Rain";
+    self.buttonB = @"The Monster Mash";
+    self.buttonC = @"Puttin' On the Ritz";
+    self.buttonD = @"Me and My Shadow";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question035
+{
+    self.question = @"Inga, the Doctor’s assistant in \"Young Frankenstein\", was played by who?";
+    self.buttonA = @"Madeline Kahn";
+    self.buttonB = @"Teri Garr";
+    self.buttonC = @"Cloris Leachman" ;
+    self.buttonD = @"Betty White";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question036
+{
+    self.question = @"In Mel Brooks’ \"Young Frankenstein\", the Monster was played by ... ?";
+    self.buttonA = @"Peter Boyle";
+    self.buttonB = @"Mel Brooks";
+    self.buttonC = @"Gene Wilder";
+    self.buttonD = @"Marty Feldman";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question037
+{
+    self.question = @"Bram Stoker’s \"Count Dracula\" was inspired by what real life ruler?";
+    self.buttonA = @"Leopold II of Belgium";
+    self.buttonB = @"Alexander the Great";
+    self.buttonC = @"Ivan the Terrible";
+    self.buttonD = @"Vlad the Impaler";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question038
+{
+    self.question = @"1974’s \"Young Frankenstein\" was directed by ... ?";
+    self.buttonA = @"Neil Simon";
+    self.buttonB = @"Gene Wilder";
+    self.buttonC = @"Mel Brooks";
+    self.buttonD = @"Jonathan Lynn";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question039
+{
+    self.question = @"In the movie \"Clue\", who was the blackmailer?";
+    self.buttonA = @"Mr. Green";
+    self.buttonB = @"Mr. Boddy";
+    self.buttonC = @"Professor Plum" ;
+    self.buttonD = @"Wadsworth";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question040
+{
+    self.question = @"1974’s \"Young Frankenstein\" was by Mel Brooks and ... ?";
+    self.buttonA = @"Gene Wilder";
+    self.buttonB = @"Mel Brooks";
+    self.buttonC = @"Peter Boyle";
+    self.buttonD = @"Marty Feldman";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question041
+{
+    self.question = @"Eileen Brennan played which character in 1985’s \"Clue\"?";
+    self.buttonA = @"Mrs. White";
+    self.buttonB = @"Yvette";
+    self.buttonC = @"Miss Scarlet";
+    self.buttonD = @"Mrs. Peacock";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question042
+{
+    self.question = @"Who played Miss Scarlet in\"Clue\"?";
+    self.buttonA = @"Colleen Camp";
+    self.buttonB = @"Madeline Kahn";
+    self.buttonC = @"Lesley Ann Warren";
+    self.buttonD = @"Eileen Brennan";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question043
+{
+    self.question = @"Betty and Veronica are high school girls that fight for the attention of what red-haired comic book boy?";
+    self.buttonA = @"Ralph Dibny";
+    self.buttonB = @"Archie Andrews";
+    self.buttonC = @"Jimmy Olsen" ;
+    self.buttonD = @"Sean Cassidy";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question044
+{
+    self.question = @"Who is Archie Andrew’s best friend?";
+    self.buttonA = @"Jughead Jones";
+    self.buttonB = @"Reggie Mantle";
+    self.buttonC = @"Moose Mason";
+    self.buttonD = @"Dilton Doiley";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question045
+{
+    self.question = @"\"Batman vs. Predator\" was an intracompany crossover between DC Comics and what other publisher?";
+    self.buttonA = @"Top Cow Productions";
+    self.buttonB = @"Marvel Comics";
+    self.buttonC = @"Dynamite Comics";
+    self.buttonD = @"Dark Horse Comics";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question046
+{
+    self.question = @"DC Comics joined with which publisher for the intracompany crossover \"JLA/Witchblade\"?";
+    self.buttonA = @"Marvel Comics";
+    self.buttonB = @"Comico: The Comic Company";
+    self.buttonC = @"Top Cow Productions";
+    self.buttonD = @"WildStorm Productions";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question047
+{
+    self.question = @"Detective Sara Spezzini wielded what supernatural, sentient artifact?";
+    self.buttonA = @"The Orb of Agamotto";
+    self.buttonB = @"The Witchblade";
+    self.buttonC = @"The Serpent Crown" ;
+    self.buttonD = @"The Ruby of Life";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question048
+{
+    self.question = @"In the live-action TV series \"Witchblade\", Sara Pezzini was played by which actress?";
+    self.buttonA = @"Yancy Butler";
+    self.buttonB = @"Summer Glau";
+    self.buttonC = @"Jennifer Garner";
+    self.buttonD = @"Lena Headey";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question049
+{
+    self.question = @"What comic book publisher produced these crossover events: \"Legends\", \"Millennium\", and  \"Invasion\"?";
+    self.buttonA = @"Marvel Comics";
+    self.buttonB = @"Dark Horse Comics";
+    self.buttonC = @"Image Comics";
+    self.buttonD = @"DC Comics";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question050
+{
+    self.question = @"What comic book publisher produced the following crossover events: \"Wraith War\", \"Inferno\", and \"Acts of Vengeance\"?";
+    self.buttonA = @"DC Comics";
+    self.buttonB = @"Image Comics";
+    self.buttonC = @"Marvel Comics";
+    self.buttonD = @"Dynamite Comics";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question051
+{
+    self.question = @"In 1979, Ridley Scott directed what iconic science-fiction horror film?";
+    self.buttonA = @"The Abyss";
+    self.buttonB = @"Alien";
+    self.buttonC = @"Leviathan" ;
+    self.buttonD = @"2001: A Space Odyssey";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question052
+{
+    self.question = @"The creatures from the \"Alien\" franchise were created by which surrealist artist?";
+    self.buttonA = @"H. R. Giger";
+    self.buttonB = @"F. W. Murnau";
+    self.buttonC = @"Salvador Dalí";
+    self.buttonD = @"Robert Wiene";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question053
+{
+    self.question = @"What was the name of the first African-American Bond girl to be romantically involved with 007 ?";
+    self.buttonA = @"Pussy Galore";
+    self.buttonB = @"Jinx Johnson";
+    self.buttonC = @"Honey Rider";
+    self.buttonD = @"Rosie Carver";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question054
+{
+    self.question = @"Before starring in \"Alien\", Yaphet Kotto was the main villain in which James Bond film?";
+    self.buttonA = @"A View To A Kill";
+    self.buttonB = @"Diamonds Are Forever";
+    self.buttonC = @"Live and Let Die";
+    self.buttonD = @"Goldfinger";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question055
+{
+    self.question = @"Both Corporal Dwayne Hicks and Sergeant Kyle Reese were played by which actor?";
+    self.buttonA = @"Tom Skerritt";
+    self.buttonB = @"Michael Biehn";
+    self.buttonC = @"Robert Patrick" ;
+    self.buttonD = @"Lance Henriksen";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question056
+{
+    self.question = @"Sigourney Weaver became the first major female action-adventure star playing which character?";
+    self.buttonA = @"Ellen Ripley";
+    self.buttonB = @"Buffy Summers";
+    self.buttonC = @"Cherry Darling";
+    self.buttonD = @"Sarah Connor";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question057
+{
+    self.question = @"\"Ghostbusters\" star, Sigourney Weaver, shocked audiences when she shaved her head for what film?";
+    self.buttonA = @"Barbarella";
+    self.buttonB = @"Star Trek: The Movie";
+    self.buttonC = @"Galaxy Quest";
+    self.buttonD = @"Aliens 3";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question058
+{
+    self.question = @"The powerful Phoenix first appeared in \"X-Men\" issue ... ?";
+    self.buttonA = @"99";
+    self.buttonB = @"100";
+    self.buttonC = @"101";
+    self.buttonD = @"102";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question059
+{
+    self.question = @"Sebastian Shaw was the leader of what villainous group?";
+    self.buttonA = @"The Legion of Doom";
+    self.buttonB = @"The Hellfire Club";
+    self.buttonC = @"The Serpent Society" ;
+    self.buttonD = @"Hydra";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question060
+{
+    self.question = @"As the Flash, Barry Allen sacrificed his life to save the multiverse in what crossover event?";
+    self.buttonA = @"Crisis on Infinite Earths";
+    self.buttonB = @"Millennium";
+    self.buttonC = @"The Flashpoint Paradox";
+    self.buttonD = @"Final Crisis";
+    self.correctAnswer = @"A";
+    
+}
+
+
+
+
+
+
+
+
+
 
 
 

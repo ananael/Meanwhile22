@@ -356,6 +356,10 @@
     
     if (self.gameSeconds == 0)
     {
+        self.answer1Button.enabled = NO;
+        self.answer2Button.enabled = NO;
+        self.answer3Button.enabled = NO;
+        self.answer4Button.enabled = NO;
         self.timerLabel.adjustsFontSizeToFitWidth = YES;
         self.timerLabel.text = @"TIME'S UP!";
     }
@@ -857,6 +861,10 @@
     self.startLabel.text = @"START!";
     self.playAgainButton.hidden = YES;
     self.nextCategoryButton.hidden = YES;
+    self.answer1Button.enabled = YES;
+    self.answer2Button.enabled = YES;
+    self.answer3Button.enabled = YES;
+    self.answer4Button.enabled = YES;
     
 }
 
