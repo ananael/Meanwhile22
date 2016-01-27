@@ -671,6 +671,446 @@
     
 }
 
+-(void)question061
+{
+    self.question = @"What was the name of the theme song for the TV series \"Charmed\"?";
+    self.buttonA = @"It's Witchcraft!";
+    self.buttonB = @"I Am Human";
+    self.buttonC = @"That Old Black Magic";
+    self.buttonD = @"How Soon Is Now?";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question062
+{
+    self.question = @"In \"Friday the 13th Part 2\", Jason Voorhees kills while wearing what to cover his face?";
+    self.buttonA = @"Hockey mask";
+    self.buttonB = @"Pantyhose";
+    self.buttonC = @"Burlap sack";
+    self.buttonD = @"Scarf";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question063
+{
+    self.question = @"Who was the title of the first live-action pilot featuring Wonder Woman?";
+    self.buttonA = @"Female Force";
+    self.buttonB = @"Who's Afraid of Diana Prince?";
+    self.buttonC = @"Amazon in America" ;
+    self.buttonD = @"Wonder Woman Lives";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question064
+{
+    self.question = @"In the 1974 live-action TV movie \"Wonder Woman\", who played the title character?";
+    self.buttonA = @"Cathy Lee Crosby";
+    self.buttonB = @"Lynda Carter";
+    self.buttonC = @"Barbara Eden";
+    self.buttonD = @"Susan Anton";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question065
+{
+    self.question = @"The first broadcast appearance of Wonder Woman was on what animated spin-off show?";
+    self.buttonA = @"Mission: Magic!";
+    self.buttonB = @"The Jackson 5ive";
+    self.buttonC = @"The New Scooby-Doo Movies";
+    self.buttonD = @"The Brady Kids";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question066
+{
+    self.question = @"Who voiced Bruce Wayne on \"Batman: The Animated Series\"?";
+    self.buttonA = @"Casey Kasem";
+    self.buttonB = @"Adam West";
+    self.buttonC = @"Kevin Conroy";
+    self.buttonD = @"Patrick Warburton";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question067
+{
+    self.question = @"In the classic version of Trivial Pursuit, the \"blue\" category is ... ?";
+    self.buttonA = @"History";
+    self.buttonB = @"Geography";
+    self.buttonC = @"Entertainment" ;
+    self.buttonD = @"Science & Nature";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question068
+{
+    self.question = @"In the classic version of Trivial Pursuit, the \"yellow\" category is ... ?";
+    self.buttonA = @"History";
+    self.buttonB = @"Geography";
+    self.buttonC = @"Entertainment";
+    self.buttonD = @"Science & Nature";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question069
+{
+    self.question = @"In the classic version of Trivial Pursuit, the \"green\" category is ... ?";
+    self.buttonA = @"History";
+    self.buttonB = @"Geography";
+    self.buttonC = @"Entertainment";
+    self.buttonD = @"Science & Nature";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question070
+{
+    self.question = @"On traditional six-sided dice, the 4 is opposite what number?";
+    self.buttonA = @"1";
+    self.buttonB = @"6";
+    self.buttonC = @"3";
+    self.buttonD = @"5";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question071
+{
+    self.question = @"The original Playstation 2 console was released in what year?";
+    self.buttonA = @"1999";
+    self.buttonB = @"2000";
+    self.buttonC = @"2001" ;
+    self.buttonD = @"2002";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question072
+{
+    self.question = @"This highly-popular fantasy tabletop role-playing game was published in 1974.";
+    self.buttonA = @"Dungeons & Dragons";
+    self.buttonB = @"Starships & Spacemen";
+    self.buttonC = @"Magic: The Gathering";
+    self.buttonD = @"Blackmoor";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question073
+{
+    self.question = @"Red, Chuck, and Matilda are characters in what highly-addictive game app?";
+    self.buttonA = @"Flappy Bird";
+    self.buttonB = @"Helix";
+    self.buttonC = @"Skylanders Trap Team";
+    self.buttonD = @"Angry Birds";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question074
+{
+    self.question = @"Which was NOT a herald of Marvel Comics’ world-eater Galactus?";
+    self.buttonA = @"Fire-Lord";
+    self.buttonB = @"Silver Surfer";
+    self.buttonC = @"The Stranger";
+    self.buttonD = @"Nova";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question075
+{
+    self.question = @"Before becoming the Silver Surfer his name was ... ?";
+    self.buttonA = @"Shalla-Bal";
+    self.buttonB = @"Norrin Radd";
+    self.buttonC = @"Mar-vell" ;
+    self.buttonD = @"Owen Reese";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question076
+{
+    self.question = @"The Silver Surfer became Galactus’ herald to spare his home world.  What was the Silver Surfer’s planet called?";
+    self.buttonA = @"Zenn-La";
+    self.buttonB = @"Oa";
+    self.buttonC = @"Ego";
+    self.buttonD = @"Alderaan";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question077
+{
+    self.question = @"The Silver Surfer’s first appearance was in what comic book?";
+    self.buttonA = @"Adventure Comics #50";
+    self.buttonB = @"Tales To Astonish #11";
+    self.buttonC = @"Amazing Stories #15";
+    self.buttonD = @"The Fantastic Four #48";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question078
+{
+    self.question = @"\"The Fantastic Four\" #48 marked the first appearance of ... ?";
+    self.buttonA = @"The Inhumans";
+    self.buttonB = @"Black Panther";
+    self.buttonC = @"Galactus";
+    self.buttonD = @"H.E.R.B.I.E.";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question079
+{
+    self.question = @"\"Fantastic Four\" #52 was the first appearance of what Marvel character?";
+    self.buttonA = @"Namor";
+    self.buttonB = @"Black Panther";
+    self.buttonC = @"Galactus" ;
+    self.buttonD = @"H.E.R.B.I.E.";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question080
+{
+    self.question = @"Marvel Comics’ original, horror comic book \"The Tomb of Dracula\" was drawn by ... ?";
+    self.buttonA = @"Gene Colan";
+    self.buttonB = @"Jim Lee";
+    self.buttonC = @"Neal Adams";
+    self.buttonD = @"Chris Claremont";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question081
+{
+    self.question = @"Who was NOT a member when the Teen Titans appeared in \"The Brave and the Bold\" #60?";
+    self.buttonA = @"Kid Flash";
+    self.buttonB = @"Wonder Girl";
+    self.buttonC = @"Aqualad";
+    self.buttonD = @"Speedy";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question082
+{
+    self.question = @"Who wrote the 2007 \"Halloween\" remake?";
+    self.buttonA = @"Tobe Hooper";
+    self.buttonB = @"Wes Craven";
+    self.buttonC = @"Rob Zombie";
+    self.buttonD = @"John Carpenter";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question083
+{
+    self.question = @"Who played Leatherface in the 1974 \"Texas Chainsaw Massacre\" film?";
+    self.buttonA = @"Kane Hodder";
+    self.buttonB = @"Gunnar Hansen";
+    self.buttonC = @"Dick Durock" ;
+    self.buttonD = @"Tobe Hooper";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question084
+{
+    self.question = @"Who directed the 1974 \"Texas Chainsaw Massacre\" film?";
+    self.buttonA = @"Tobe Hooper";
+    self.buttonB = @"Wes Craven";
+    self.buttonC = @"Rob Zombie";
+    self.buttonD = @"John Carpenter";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question085
+{
+    self.question = @"A computer hacker is abducted into a digital world and forced to participate in gladiatorial games in what film?";
+    self.buttonA = @"Videodrome";
+    self.buttonB = @"The Last Starfighter";
+    self.buttonC = @"Videoman";
+    self.buttonD = @"Tron";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question086
+{
+    self.question = @"Marvel Comics’ 1963 \"The Avengers\" line-up consisted of: Iron Man, Thor, Hulk, Wasp, and ... ?";
+    self.buttonA = @"Captain America";
+    self.buttonB = @"Black Widow";
+    self.buttonC = @"Ant-Man";
+    self.buttonD = @"Hawkeye";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question087
+{
+    self.question = @"\"Battle of the Planets\" is the American adaptation of what Japanese anime series?";
+    self.buttonA = @"Voltron";
+    self.buttonB = @"Science Ninja Team Gatchaman";
+    self.buttonC = @"G-Force" ;
+    self.buttonD = @"Thundercats";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question088
+{
+    self.question = @"Mark, Jason, and Keyop are characters from what 1978 animated series?";
+    self.buttonA = @"Battle of the Planets";
+    self.buttonB = @"G-Force";
+    self.buttonC = @"Speed Racer";
+    self.buttonD = @"Eagle Riders";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question089
+{
+    self.question = @"What actor brought Harvey Bullock to the small screen in the TV series \"Gotham\"?";
+    self.buttonA = @"Ben McKenzie";
+    self.buttonB = @"Eric Meyers";
+    self.buttonC = @"David Mazouz";
+    self.buttonD = @"Donal Logue";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question090
+{
+    self.question = @"Robin Lord Taylor played which iconic villain on the TV series \"Gotham\"?";
+    self.buttonA = @"Two-Face";
+    self.buttonB = @"Riddler";
+    self.buttonC = @"Penguin";
+    self.buttonD = @"Joker";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question091
+{
+    self.question = @"Former James Bond movies alumni Timothy Dalton and Eva Green starred in what British-American horror drama TV series?";
+    self.buttonA = @"The Fall";
+    self.buttonB = @"Penny Dreadful";
+    self.buttonC = @"Black Mirror" ;
+    self.buttonD = @"Murdoch Mysteries";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question092
+{
+    self.question = @"This science fiction TV series follows two US Secret Service Agents assigned to retrieve supernatural artifacts.";
+    self.buttonA = @"Warehouse 13";
+    self.buttonB = @"Friday the 13th: The Series";
+    self.buttonC = @"The X-Files";
+    self.buttonD = @"Special Unit 2";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question093
+{
+    self.question = @"Who played Steve Jinks on the science fiction TV series \"Warehouse 13\"?";
+    self.buttonA = @"Simon Reynolds";
+    self.buttonB = @"Saul Rubinek";
+    self.buttonC = @"Eddie McClintock";
+    self.buttonD = @"Aaron Ashmore";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question094
+{
+    self.question = @"Who played US Secret Service Agent Pete Lattimer on the science fiction TV series \"Warehouse 13\"?";
+    self.buttonA = @"Simon Reynolds";
+    self.buttonB = @"Saul Rubinek";
+    self.buttonC = @"Eddie McClintock";
+    self.buttonD = @"Aaron Ashmore";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question095
+{
+    self.question = @"Natasha Romanoff is better known to comic book fans as ... ?";
+    self.buttonA = @"Wasp";
+    self.buttonB = @"Black Widow";
+    self.buttonC = @"Scarlet Witch" ;
+    self.buttonD = @"Ms. Marvel";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question096
+{
+    self.question = @"Mary, Freddy, and Uncle Dudley are part of what famous DC Comics family?";
+    self.buttonA = @"The Marvel Family";
+    self.buttonB = @"The Batman Family";
+    self.buttonC = @"The Superman Family";
+    self.buttonD = @"The Green Lantern Corps";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question097
+{
+    self.question = @"Which god/goddess is NOT one of the names that composes Captain Marvel’s magic word \"SHAZAM\"?";
+    self.buttonA = @"Achilles";
+    self.buttonB = @"Atlas";
+    self.buttonC = @"Mercury";
+    self.buttonD = @"Athena";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question098
+{
+    self.question = @"Who directed the \"Alien\" sequel \"Aliens\"?";
+    self.buttonA = @"Zack Snyder";
+    self.buttonB = @"Michael Bay";
+    self.buttonC = @"James Cameron";
+    self.buttonD = @"Ridley Scott";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question099
+{
+    self.question = @"Which pulp hero had the tagline \"Who knows what evil lurks in the hearts of men\"?";
+    self.buttonA = @"Zorro";
+    self.buttonB = @"The Shadow";
+    self.buttonC = @"The Phantom" ;
+    self.buttonD = @"Flash Gordon";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question100
+{
+    self.question = @"Lamont Cranston and Kent Allard are aliases used by what vigilante of the night?";
+    self.buttonA = @"Zorro";
+    self.buttonB = @"The Shadow";
+    self.buttonC = @"The Phantom" ;
+    self.buttonD = @"Nightman";
+    self.correctAnswer = @"A";
+    
+}
+
 
 
 
