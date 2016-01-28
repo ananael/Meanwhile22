@@ -341,6 +341,336 @@
     
 }
 
+-(void)movie031
+{
+    self.question = @"Dominic Loretto and Brian O’Conner are major characters from which franchise?";
+    self.buttonA = @"The Fast and the Furious";
+    self.buttonB = @"Boondock Saints";
+    self.buttonC = @"The Terminator";
+    self.buttonD = @"The Godfather";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)movie032
+{
+    self.question = @"Roman Pearce was introduced in which film of \"The Fast and the Furious\" franchise?";
+    self.buttonA = @"The Fast and the Furious: Tokyo Drift";
+    self.buttonB = @"Fast & Furious";
+    self.buttonC = @"2 Fast 2 Furious";
+    self.buttonD = @"Fast Five";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)movie033
+{
+    self.question = @"Michelle Rodriguez plays which character in \"The Fast and the Furious\" franchise?";
+    self.buttonA = @"Giselle";
+    self.buttonB = @"Mia Toretto";
+    self.buttonC = @"Monica Fuentes";
+    self.buttonD = @"Letty Ortiz";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)movie034
+{
+    self.question = @"What Terminator model was sent to kill John Connor in \"Terminator 3: Rise of the Machines\"?";
+    self.buttonA = @"T-800";
+    self.buttonB = @"T-X";
+    self.buttonC = @"T-1000";
+    self.buttonD = @"T-V";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)movie035
+{
+    self.question = @"Tetsuo and Kaneda have a destructive battle in what Japanese animated film?";
+    self.buttonA = @"Akira";
+    self.buttonB = @"Death Note";
+    self.buttonC = @"One Punch Man";
+    self.buttonD = @"Ghost in the Machine";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)movie036
+{
+    self.question = @"The Japanese animated sci-fi film \"Akira\" was released in what year?";
+    self.buttonA = @"1986";
+    self.buttonB = @"1987";
+    self.buttonC = @"1988";
+    self.buttonD = @"1989";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)movie037
+{
+    self.question = @"Who directed the Japanese animated science fiction, action film \"Akira\"?";
+    self.buttonA = @"John Woo";
+    self.buttonB = @"Akira Kurosawa";
+    self.buttonC = @"Ishirō Honda";
+    self.buttonD = @"Katsuhiro Otomo";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)movie038
+{
+    self.question = @"This American live-action, straight-to-video adaptation of a popular manga starred Gary Daniels and Costas Mandylor.";
+    self.buttonA = @"Gatchaman";
+    self.buttonB = @"Fist of the North Star";
+    self.buttonC = @"Death Note";
+    self.buttonD = @"Kite";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)movie039
+{
+    self.question = @"The psychological thriller \"Dolores Claiborne\" was based on the novel by what writer?";
+    self.buttonA = @"Stephen King";
+    self.buttonB = @"Robert Bloch";
+    self.buttonC = @"James Patterson";
+    self.buttonD = @"Dean Koontz";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)movie040
+{
+    self.question = @"The title character of \"Dolores Claiborne\" was played by what Oscar winning actress?";
+    self.buttonA = @"Jessica Tandy";
+    self.buttonB = @"Sigourney Weaver";
+    self.buttonC = @"Kathy Bates";
+    self.buttonD = @"Meryl Streep";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)movie041
+{
+    self.question = @"Famed novelist Paul Sheldon was hobbled with a sledgehammer by his \"number one fan\" in what movie adaptation?";
+    self.buttonA = @"Thinner";
+    self.buttonB = @"Dolores Claiborne";
+    self.buttonC = @"The Mangler";
+    self.buttonD = @"Misery";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)movie042
+{
+    self.question = @"Who is the killer in the original \"Friday the 13th\"?";
+    self.buttonA = @"Norman Bates";
+    self.buttonB = @"Pamela Voorhees";
+    self.buttonC = @"Jason";
+    self.buttonD = @"Michael Myers";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)movie043
+{
+    self.question = @"Who directed the original \"Friday the 13th\" film?";
+    self.buttonA = @"Sean S. Cunningham";
+    self.buttonB = @"John Carpenter";
+    self.buttonC = @"Wes Craven";
+    self.buttonD = @"Rob Zombie";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)movie044
+{
+    self.question = @"Who directed the original \"Halloween\" film?";
+    self.buttonA = @"Sean S. Cunningham";
+    self.buttonB = @"Wes Craven";
+    self.buttonC = @"John Carpenter";
+    self.buttonD = @"Rob Zombie";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)movie045
+{
+    self.question = @"Who is the killer in \"Halloween II\"?";
+    self.buttonA = @"Samuel Loomis";
+    self.buttonB = @"Tommy Doyle";
+    self.buttonC = @"Conal Cochran";
+    self.buttonD = @"Michael Myers";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)movie046
+{
+    self.question = @"Jason Voorhees receives his trademark hockey mask in which film of the original \"Friday the 13th\" franchise?";
+    self.buttonA = @"Friday the 13th Part 2";
+    self.buttonB = @"Friday the 13th Part III";
+    self.buttonC = @"Friday the 13th: The Final Chapter";
+    self.buttonD = @"Friday the 13th: A New Beginning";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)movie047
+{
+    self.question = @"This scream queen starred in \"The Fog\", \"Prom Night\", and \"Terror Train\".";
+    self.buttonA = @"Jamie Lee Curtis";
+    self.buttonB = @"Emma Roberts";
+    self.buttonC = @"Heather Langenkamp";
+    self.buttonD = @"Kate Beckinsale";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)movie048
+{
+    self.question = @"The 1987 film \"Robocop\" takes place in a dystopian version of what US city?";
+    self.buttonA = @"Los Angeles";
+    self.buttonB = @"Chicago";
+    self.buttonC = @"Detroit";
+    self.buttonD = @"New York";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)movie049
+{
+    self.question = @"What business controls the police force in the original \"Robocop\" film franchise?";
+    self.buttonA = @"Tyrell Corporation";
+    self.buttonB = @"Umbrella Corporation";
+    self.buttonC = @"Multi-National United";
+    self.buttonD = @"Omni Consumer Products";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)movie050
+{
+    self.question = @"What is the name of the police officer that becomes \"Robocop\" in the original movie?";
+    self.buttonA = @"Victor Stone";
+    self.buttonB = @"Alex Murphy";
+    self.buttonC = @"Rick Deckard";
+    self.buttonD = @"Max Headroom";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)movie051
+{
+    self.question = @"Who played \"Robocop\" in the 2014 reboot?";
+    self.buttonA = @"Joel Kinnaman";
+    self.buttonB = @"Peter Weller";
+    self.buttonC = @"Clarence Boddicker";
+    self.buttonD = @"Gary Oldman";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)movie052
+{
+    self.question = @"What actor played Dr. Loomis in \"Halloween 5: The Revenge of Michael Myers\"?";
+    self.buttonA = @"Lance Henriksen";
+    self.buttonB = @"Malcolm McDowell";
+    self.buttonC = @"Donald Pleasence";
+    self.buttonD = @"Dan O'Herlihy";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)movie053
+{
+    self.question = @"Who played James Bond villain Ernst Stavro Blofeld in \"On Her Majesty’s Secret Service\"?";
+    self.buttonA = @"Max von Sydow";
+    self.buttonB = @"Donald Pleasence";
+    self.buttonC = @"Christoph Waltz";
+    self.buttonD = @"Telly Savalas";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)movie054
+{
+    self.question = @"Who directed \"Pacific Rim\"?";
+    self.buttonA = @"Michael Bay";
+    self.buttonB = @"Guillermo del Toro";
+    self.buttonC = @"Zack Snyder";
+    self.buttonD = @"Gareth Edwards";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)movie055
+{
+    self.question = @"What do the world governments create to battle the Kaijus in the sci-fi film \"Pacific Rim\"?";
+    self.buttonA = @"Jaegers";
+    self.buttonB = @"Voltron";
+    self.buttonC = @"Terminators";
+    self.buttonD = @"Transformers";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)movie056
+{
+    self.question = @"Guillermo del Toro directed this movie based on a comic book character created by Mike Mignola.";
+    self.buttonA = @"300";
+    self.buttonB = @"Pacific Rim";
+    self.buttonC = @"Hellboy";
+    self.buttonD = @"The Spirit";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)movie057
+{
+    self.question = @"Selma Blair returns as Liz Sherman in what sequel?";
+    self.buttonA = @"Terminator 3: Rise of the Machines";
+    self.buttonB = @"Mission: Impossible II";
+    self.buttonC = @"Transformers: Revenge of the Fallen";
+    self.buttonD = @"Hellboy II: The Golden Army";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)movie058
+{
+    self.question = @"In the M. Night Shyamalan movie \"Signs\", what common substance can kill the aliens?";
+    self.buttonA = @"Oxygen";
+    self.buttonB = @"Water";
+    self.buttonC = @"Lead";
+    self.buttonD = @"Salt";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)movie059
+{
+    self.question = @"The epic fantasy film \"300\" was a fictionalized retelling of what historic fight?";
+    self.buttonA = @"Battle of Thermopylae";
+    self.buttonB = @"Battle of Salamis";
+    self.buttonC = @"Battle of Artemisium";
+    self.buttonD = @"Battle of Plataea";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)movie060
+{
+    self.question = @"Who directed the box-office hit \"300\"?";
+    self.buttonA = @"Michael Bay";
+    self.buttonB = @"Frank Miller";
+    self.buttonC = @"Zack Snyder";
+    self.buttonD = @"Tarsem Singh";
+    self.correctAnswer = @"C";
+    
+}
+
 
 
 
