@@ -109,24 +109,11 @@
         NSArray *descendingTempArray = [[[tempArray sortedArrayUsingSelector:@selector(compare:)]reverseObjectEnumerator]allObjects];
         NSLog(@"Used Index Numbers: %@", descendingTempArray);
         
-//        for (NSInteger i=0; i<[descendingTempArray count]; i++)
-//        {
-//            NSNumber *indexNumber = [descendingTempArray objectAtIndex:i];
-//            [self.usedQuestionArray addObject:[self.questionArray objectAtIndex:[indexNumber integerValue]]];
-//            [self.questionArray removeObjectAtIndex:[indexNumber integerValue]];
-//        }
-        //TODO: Change code below back to the uncommented above once more than 100 questions have been coded for game
-        if ([descendingTempArray count] < [self.questionArray count])
+        for (NSInteger i=0; i<[descendingTempArray count]; i++)
         {
-            for (NSInteger i=0; i<[descendingTempArray count]; i++)
-            {
-                NSNumber *indexNumber = [descendingTempArray objectAtIndex:i];
-                [self.usedQuestionArray addObject:[self.questionArray objectAtIndex:[indexNumber integerValue]]];
-                [self.questionArray removeObjectAtIndex:[indexNumber integerValue]];
-            }
-        } else
-        {
-            [self randomQuestion];
+            NSNumber *indexNumber = [descendingTempArray objectAtIndex:i];
+            [self.usedQuestionArray addObject:[self.questionArray objectAtIndex:[indexNumber integerValue]]];
+            [self.questionArray removeObjectAtIndex:[indexNumber integerValue]];
         }
         
         NSLog(@"New Question Count: %li", (unsigned long)[self.questionArray count]);

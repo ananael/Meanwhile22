@@ -1103,8 +1103,8 @@
 -(void)question100
 {
     self.question = @"Lamont Cranston and Kent Allard are aliases used by what vigilante of the night?";
-    self.buttonA = @"Zorro";
-    self.buttonB = @"The Shadow";
+    self.buttonA = @"The Shadow";
+    self.buttonB = @"Zorro";
     self.buttonC = @"The Phantom" ;
     self.buttonD = @"Nightman";
     self.correctAnswer = @"A";
