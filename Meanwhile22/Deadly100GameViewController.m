@@ -494,7 +494,7 @@
 
     [self answerBoolsReset];
     
-    if (self.scoreNumber == 5)
+    if (self.scoreNumber == 20)
     {
         self.overlayImage.hidden = YES;
         self.gameLostImage.hidden = YES;

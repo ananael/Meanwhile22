@@ -231,7 +231,7 @@
 // ***** UPDATE THESE ARRAYS whenever new questions are added to their respective classes *****
 -(NSArray *)comicStringArray
 {
-    NSArray *comics = @[@"comic001", @"comic002", @"comic003", @"comic004", @"comic005", @"comic006", @"comic007", @"comic008", @"comic009", @"comic010", @"comic011", @"comic012", @"comic013", @"comic014", @"comic015",  @"comic016",  @"comic017",  @"comic018",  @"comic019",  @"comic020",  @"comic021",  @"comic022",  @"comic023",  @"comic024",  @"comic025",  @"comic026",  @"comic027",  @"comic028",  @"comic029",  @"comic030"];
+    NSArray *comics = @[@"comic001", @"comic002", @"comic003", @"comic004", @"comic005", @"comic006", @"comic007", @"comic008", @"comic009", @"comic010", @"comic011", @"comic012", @"comic013", @"comic014", @"comic015",  @"comic016",  @"comic017",  @"comic018",  @"comic019",  @"comic020",  @"comic021",  @"comic022",  @"comic023",  @"comic024",  @"comic025",  @"comic026",  @"comic027",  @"comic028",  @"comic029",  @"comic030", @"comic031", @"comic032", @"comic033", @"comic034", @"comic035", @"comic036", @"comic037", @"comic038", @"comic039", @"comic040", @"comic041", @"comic042", @"comic043", @"comic044", @"comic045", @"comic046", @"comic047", @"comic048", @"comic049", @"comic050", @"comic051", @"comic052", @"comic053", @"comic054", @"comic055", @"comic056", @"comic057", @"comic058", @"comic059", @"comic060"];
     return comics;
 }
 

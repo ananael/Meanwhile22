@@ -93,7 +93,7 @@
     self.question = @"The first incarnation of Firestorm consisted of … ?";
     self.buttonA = @"Hank Hall and Don Hall";
     self.buttonB = @"Ronnie Raymand and Martin Stein";
-    self.buttonC = @"Johnny Storm and Angelica Jones" ;
+    self.buttonC = @"Johnny Storm and Angelica Jones";
     self.buttonD = @"Bruce Wayne and Clark Kent";
     self.correctAnswer = @"B";
     
@@ -159,7 +159,7 @@
     self.question = @"The first appearance of Aquaman was in which issue?";
     self.buttonA = @"Timely Comics #14";
     self.buttonB = @"More Fun Comics #73";
-    self.buttonC = @"Tales To Astonish #1" ;
+    self.buttonC = @"Tales To Astonish #1";
     self.buttonD = @"Atlantis Adventures #64";
     self.correctAnswer = @"B";
     
@@ -214,7 +214,7 @@
     self.question = @"What superhero comes from the fictional nation of Wakanda?";
     self.buttonA = @"The Phantom";
     self.buttonB = @"Black Panther";
-    self.buttonC = @"White Tiger" ;
+    self.buttonC = @"White Tiger";
     self.buttonD = @"Black Goliath";
     self.correctAnswer = @"B";
     
@@ -258,7 +258,7 @@
     self.question = @"Who is the Daily Planet’s editor?";
     self.buttonA = @"Randolph Hearst";
     self.buttonB = @"Perry White";
-    self.buttonC = @"J. Jonah Jameson" ;
+    self.buttonC = @"J. Jonah Jameson";
     self.buttonD = @"Carol Danvers";
     self.correctAnswer = @"B";
     
@@ -302,7 +302,7 @@
     self.question = @"In the 616 Marvel Comics Universe, Jarvis is Tony Stark’s ... ?";
     self.buttonA = @"Bodyguard";
     self.buttonB = @"Butler";
-    self.buttonC = @"A.I." ;
+    self.buttonC = @"A.I.";
     self.buttonD = @"Government liaison";
     self.correctAnswer = @"B";
     
@@ -310,7 +310,7 @@
 
 -(void)comic028
 {
-    self.question = @"What actor played Lex Luthor in Superman 2?";
+    self.question = @"What actor played Lex Luthor in \"Superman 2\"?";
     self.buttonA = @"Gene Hackman";
     self.buttonB = @"Michael Rosenbaum";
     self.buttonC = @"Kevin Spacey";
@@ -338,6 +338,337 @@
     self.buttonC = @"Abin Sur";
     self.buttonD = @"Simon Baz";
     self.correctAnswer = @"C";
+    
+}
+
+-(void)comic031
+{
+    self.question = @"As the Sorcerer Supreme, Stephen Strange wears what powerful mystical item?";
+    self.buttonA = @"Amulet of Anubis";
+    self.buttonB = @"Eye of Agamotto";
+    self.buttonC = @"Evil Eye of Avalon";
+    self.buttonD = @"Cloak of Destiny";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)comic032
+{
+    self.question = @"What is the name of Doctor Strange’s personal servant?";
+    self.buttonA = @"Wong";
+    self.buttonB = @"Shang-Chi";
+    self.buttonC = @"Jarvis";
+    self.buttonD = @"Fang";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)comic033
+{
+    self.question = @"What Marvel Comics villain was ruler of the Dark Dimension?";
+    self.buttonA = @"Lord Nekron";
+    self.buttonB = @"Satannish";
+    self.buttonC = @"Daimon Hellstrom";
+    self.buttonD = @"Dormammu";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)comic034
+{
+    self.question = @"Who is Marvel Comics’ \"Master of Kung Fu\"?";
+    self.buttonA = @"Bronze Tiger";
+    self.buttonB = @"Danny Rand";
+    self.buttonC = @"Shang-Chi";
+    self.buttonD = @"Richard Dragon";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)comic035
+{
+    self.question = @"Iron Fist gains his training and powers while living in what mystical city?";
+    self.buttonA = @"Azarath";
+    self.buttonB = @"K'un-L'un";
+    self.buttonC = @"Utopia";
+    self.buttonD = @"Zenn-La";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)comic036
+{
+    self.question = @"Power Man and Iron Fist were partners in what business?";
+    self.buttonA = @"Heroes for Hire";
+    self.buttonB = @"Damage Control";
+    self.buttonC = @"Dial \"H\" for Hero";
+    self.buttonD = @"X-Factor Investigations";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)comic037
+{
+    self.question = @"Misty Knight and Colleen Wing were the original duo to be called ... ?";
+    self.buttonA = @"Fire and Ice";
+    self.buttonB = @"Hawk And Dove";
+    self.buttonC = @"Duo Damsel";
+    self.buttonD = @"Daughters of the Dragon";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)comic038
+{
+    self.question = @"DC Comics’ Hawk and Dove were originally which family members?";
+    self.buttonA = @"Bruce and Damian Wayne";
+    self.buttonB = @"Holly and Dawn Granger";
+    self.buttonC = @"Hank and Don Hall";
+    self.buttonD = @"Alex and Katie Power";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)comic039
+{
+    self.question = @"Wonder Woman’s first appearance was in ... ?";
+    self.buttonA = @"More Fun Comics #103";
+    self.buttonB = @"All Star Comics #8";
+    self.buttonC = @"Justice League of America #1";
+    self.buttonD = @"Amazing Fantasy #15";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)comic040
+{
+    self.question = @"Who was originally chosen as Hal Jordan’s back-up as Green Lantern?";
+    self.buttonA = @"Guy Gardner";
+    self.buttonB = @"John Stewart";
+    self.buttonC = @"Kyle Rayner";
+    self.buttonD = @"Alan Scott";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)comic041
+{
+    self.question = @"DC Comics’ Guardians of the Universe lived on what planet?";
+    self.buttonA = @"Krypton";
+    self.buttonB = @"Qward";
+    self.buttonC = @"Zenn-La";
+    self.buttonD = @"Oa";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)comic042
+{
+    self.question = @"The Green Lantern John Stewart’s debuted in what issue?";
+    self.buttonA = @"Adventure Comics #101";
+    self.buttonB = @"Brave and the Bold #46";
+    self.buttonC = @"Green Lantern #87";
+    self.buttonD = @"Action Comics #75";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)comic043
+{
+    self.question = @"It was not until \"Superman\" #61 that it was revealed that the Man of Steel had a weakness to what?";
+    self.buttonA = @"Electricity";
+    self.buttonB = @"Kryptonite";
+    self.buttonC = @"Magic";
+    self.buttonD = @"Red sun rays";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)comic044
+{
+    self.question = @"The first appearance of Superboy was in what issue?";
+    self.buttonA = @"More Fun Comics #101";
+    self.buttonB = @"Superman #100";
+    self.buttonC = @"Superboy #1";
+    self.buttonD = @"World's Finest # 5";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)comic045
+{
+    self.question = @"Lex Luthor was introduced to the Superman mythology in what issue?";
+    self.buttonA = @"Adventure Comics #3";
+    self.buttonB = @"Superman Family #2";
+    self.buttonC = @"Action Comics #1";
+    self.buttonD = @"Superman #4";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)comic046
+{
+    self.question = @"The super-heroine Black Canary was introduced in ... ?";
+    self.buttonA = @"Green Lantern #87";
+    self.buttonB = @"Superman #44";
+    self.buttonC = @"Flash Comics #86";
+    self.buttonD = @"Detective Comics #75";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)comic047
+{
+    self.question = @"Juggernaut is Professor X’s ... ?";
+    self.buttonA = @"Nephew";
+    self.buttonB = @"Step-brother";
+    self.buttonC = @"Uncle";
+    self.buttonD = @"Son";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)comic048
+{
+    self.question = @"Kara Zor-El is the cousin of which DC Comic character?";
+    self.buttonA = @"Kal-El";
+    self.buttonB = @"Zod";
+    self.buttonC = @"Shalla-Bal";
+    self.buttonD = @"Jor-El";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)comic049
+{
+    self.question = @"The Earth-2 Huntress is the daughter of Bruce Wayne and ... ?";
+    self.buttonA = @"Harleen Quinzel";
+    self.buttonB = @"Diana Prince";
+    self.buttonC = @"Pamela Isley";
+    self.buttonD = @"Selina Kyle";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)comic050
+{
+    self.question = @"In the post-Crisis retcon, Huntress’ civilian identity was ... ?";
+    self.buttonA = @"Lyta Trevor";
+    self.buttonB = @"Cassandra Cain";
+    self.buttonC = @"Helena Bertinelli";
+    self.buttonD = @"Stephanie Brown";
+    self.correctAnswer = @"C";
+    
+}
+
+
+-(void)comic051
+{
+    self.question = @"In the Top Cow Productions’ comic book, mafia hitman Jackie Estacado wields the power of ... ?";
+    self.buttonA = @"Nephew";
+    self.buttonB = @"The Darkness";
+    self.buttonC = @"The Witchblade";
+    self.buttonD = @"Cyttorak";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)comic052
+{
+    self.question = @"This group of superheroes literally died before obtaining powers of water, earth, fire, and air.";
+    self.buttonA = @"The Elementals";
+    self.buttonB = @"The New Gods";
+    self.buttonC = @"The Inhumans";
+    self.buttonD = @"The Tomorrow People";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)comic053
+{
+    self.question = @"What is the Tick’s battlecry?";
+    self.buttonA = @"It's Clobbering Time!";
+    self.buttonB = @"Tick Tock!";
+    self.buttonC = @"Bazinga!";
+    self.buttonD = @"Spoon!";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)comic054
+{
+    self.question = @"Chairface Chippendale, Man-Eating Cow, and Barry Hubris were all characters of what comic book series?";
+    self.buttonA = @"Super Chicken";
+    self.buttonB = @"The Justice Friends";
+    self.buttonC = @"The Tick";
+    self.buttonD = @"Megaton Man";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)comic055
+{
+    self.question = @"The original Grendel’s main nemesis was a Native American man-wolf known by what name?";
+    self.buttonA = @"Proudstar";
+    self.buttonB = @"Argent";
+    self.buttonC = @"Kemosabe";
+    self.buttonD = @"Talbot";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)comic056
+{
+    self.question = @"Thomas Elliot is a genius, world-class surgeon that has tried to kill the Dark Knight several times under what codename?";
+    self.buttonA = @"Hush";
+    self.buttonB = @"Dollmaker";
+    self.buttonC = @"Professor Pyg";
+    self.buttonD = @"Flamingo";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)comic057
+{
+    self.question = @"DC Comics’ first Spectre was a murdered policeman named ... ?";
+    self.buttonA = @"Harvey Bullock";
+    self.buttonB = @"Crispus Allen";
+    self.buttonC = @"Hal Jordan";
+    self.buttonD = @"Jim Corrigan";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)comic058
+{
+    self.question = @"Who was NOT an original member of Justice Society of America?";
+    self.buttonA = @"Sandman";
+    self.buttonB = @"Atom";
+    self.buttonC = @"Superman";
+    self.buttonD = @"Flash";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)comic059
+{
+    self.question = @"What was the name of the first African-American comic book hero to headline his own series?";
+    self.buttonA = @"Cheetah";
+    self.buttonB = @"Lobo";
+    self.buttonC = @"Drake";
+    self.buttonD = @"Power Man";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)comic060
+{
+    self.question = @"What is the name of DC Comics’ cigar-smoking, interstellar bounty hunter?";
+    self.buttonA = @"Lobo";
+    self.buttonB = @"Wolverine";
+    self.buttonC = @"Nick Fury";
+    self.buttonD = @"Adam Strange";
+    self.correctAnswer = @"A";
     
 }
 
