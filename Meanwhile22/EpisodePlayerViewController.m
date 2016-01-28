@@ -139,28 +139,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 -(void)createButtonBorderWidth:(NSInteger)width forArray:(NSArray *)array
 {
     for (UIButton *button in array)
     {
         button.layer.borderWidth = 2.0;
         button.layer.borderColor = [UIColor blackColor].CGColor;
-        
     }
-    
 }
 
 -(void)createImageBorderWidth:(NSInteger)width forArray:(NSArray *)array
@@ -169,16 +154,13 @@
     {
         image.layer.borderWidth = 2.0;
         image.layer.borderColor = [UIColor blackColor].CGColor;
-        
     }
-    
 }
 
 -(NSArray *)buttonArray
 {
     NSArray *buttons = @[self.previousButton, self.pauseButton, self.playButton, self.stopButton, self.backward30, self.forward30];
     return buttons;
-    
 }
 
 -(NSArray *)imageViewArray
@@ -404,23 +386,6 @@
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -71,11 +71,11 @@
     self.podcastSummaries = [NSMutableArray new];
     self.podcastURLs = [NSMutableArray new];
     
+    [self networkCheck];
+    
     //Initializes the parser and puts the data in an array
     PodcastParser *episodeParser = [[PodcastParser alloc]initWithArray:self.podcastArray];
     [episodeParser parseXMLFile];
-    
-//    NSLog(@"%@", self.podcastArray);
     
     //Iterates through the episodes and puts podcast URL into array
     //Iterates through the episode titles and split the string into 2 parts ("title" and "subtitle") and adds to arrays
@@ -111,6 +111,23 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)networkCheck
+{
+    NSURL *xmlPath = [[NSURL alloc]initWithString:@"https://feeds.audiometric.io/1574314397"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:xmlPath];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    [[session dataTaskWithRequest:request
+                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                    if (!data)
+                    {
+                        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Connection NOT Found" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+                        UIAlertAction *networkDefault = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                        [alert addAction:networkDefault];
+                        [self presentViewController:alert animated:YES completion:nil];
+                    }
+                }] resume];
 }
 
 
@@ -176,9 +193,6 @@
         playerVC.episodeSubtitle = self.podcastSubtitles[selectedPath.row];
         
     }
- 
- 
- 
  
 }
 

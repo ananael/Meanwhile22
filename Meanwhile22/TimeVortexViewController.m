@@ -119,16 +119,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 
 -(void)createButtonBorderWidth:(NSInteger)width forArray:(NSArray *)array
 {
@@ -136,9 +126,7 @@
     {
         button.layer.borderWidth = 2.0;
         button.layer.borderColor = [UIColor blackColor].CGColor;
-        
     }
-    
 }
 
 -(void)createViewBorderWidth:(NSInteger)width forArray:(NSArray *)array
@@ -147,9 +135,7 @@
     {
         view.layer.borderWidth = 2.0;
         view.layer.borderColor = [UIColor blackColor].CGColor;
-        
     }
-    
 }
 
 -(NSArray *)animationArray
@@ -163,50 +149,42 @@
 {
     NSArray *buttons = @[self.previousButton, self.comicButton, self.movieButton, self.tvButton, self.gameButton];
     return buttons;
-    
 }
 
 -(NSArray *)containerArray
 {
     NSArray *containers = @[self.ambienceContainer, self.middleContainer, self.overlayContainer, self.infoContainer];
     return containers;
-    
 }
 
 - (IBAction)previousTapped:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
-    
 }
 
 - (IBAction)comicTapped:(id)sender
 {
     [[NSUserDefaults standardUserDefaults]setInteger:1 forKey:@"CategorySaved"];
-    
 }
 
 - (IBAction)movieTapped:(id)sender
 {
     [[NSUserDefaults standardUserDefaults]setInteger:2 forKey:@"CategorySaved"];
-    
 }
 
 - (IBAction)tvTapped:(id)sender
 {
     [[NSUserDefaults standardUserDefaults]setInteger:3 forKey:@"CategorySaved"];
-    
 }
 
 - (IBAction)gameTapped:(id)sender
 {
     [[NSUserDefaults standardUserDefaults]setInteger:4 forKey:@"CategorySaved"];
-    
 }
 
 - (IBAction)closeTapped:(id)sender
 {
     self.overlayContainer.hidden = YES;
-    
 }
 
 - (IBAction)noShowTapped:(id)sender
@@ -216,7 +194,6 @@
     //Sets the BOOL to "YES" and activates the IF Statement in ViewDidLoad
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"doNotShowVortex"];
     [[NSUserDefaults standardUserDefaults]synchronize];
-    
 }
 
 

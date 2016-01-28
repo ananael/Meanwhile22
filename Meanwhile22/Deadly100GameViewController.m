@@ -668,6 +668,43 @@
     return myArray;
 }
 
+-(void)saveAlert
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"PROGRESSED SAVED!" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }];
+    
+    [alert addAction:defaultAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(void)quitAlert
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Continue without saving?" message:@"Progress will be lost." preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *first = [UIAlertAction actionWithTitle:@"Continue" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+    {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setBool:YES forKey:@"newGame"];
+        [defaults setBool:NO forKey:@"savedGame"];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    UIAlertAction *second = [UIAlertAction actionWithTitle:@"Go Back" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:first];
+    [alert addAction:second];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
+
 - (IBAction)saveTapped:(id)sender
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -682,18 +719,14 @@
     //Uses the method to hold the contents of the NSArray in NSUserDefaults
     [self writeArrayWithCustomObjToUserDefaults:@"usedIndexNumber" withArray:usedIndex];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self saveAlert];
+    
     
 }
 
 - (IBAction)quitTapped:(id)sender
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:YES forKey:@"newGame"];
-    [defaults setBool:NO forKey:@"savedGame"];
-    
-    [self.navigationController popViewControllerAnimated:YES];
-    
+    [self quitAlert];
 }
 
 - (IBAction)fightAgainTapped:(id)sender

@@ -65,7 +65,6 @@
     {
         button.layer.borderWidth = 2.0;
         button.layer.borderColor = [UIColor blackColor].CGColor;
-        
     }
     
 }
@@ -74,19 +73,16 @@
 {
     NSArray *buttons = @[self.episodeButton, self.quizButton, self.hostButton];
     return buttons;
-    
 }
 
 - (IBAction)twitterTapped:(id)sender
 {
-    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/hashtag/meanwhile22pageslater"]];
     
 }
 
 - (IBAction)facebookTapped:(id)sender
 {
-    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/meanwhille22pageslater/"]];
     
 }
