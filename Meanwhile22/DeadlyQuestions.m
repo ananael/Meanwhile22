@@ -1111,6 +1111,2207 @@
     
 }
 
+-(void)question101
+{
+    self.question = @"What comic has the first appearance of Superman?";
+    self.buttonA = @"Detective Comics #32";
+    self.buttonB = @"Amazing Stories #15";
+    self.buttonC = @"Action Comics #1";
+    self.buttonD = @"Superman #1";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question102
+{
+    self.question = @"In what year did Dick Grayson take up the code name Nightwing?";
+    self.buttonA = @"1984";
+    self.buttonB = @"1977";
+    self.buttonC = @"1980";
+    self.buttonD = @"1988";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question103
+{
+    self.question = @"In Post-Crisis storytelling, who inspired Dick Grayson to take the code name Nightwing?";
+    self.buttonA = @"Batman";
+    self.buttonB = @"Starfire";
+    self.buttonC = @"Speedy";
+    self.buttonD = @"Superman";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question104
+{
+    self.question = @"Aquaman’s civilian name is … ?";
+    self.buttonA = @"Adam Strange";
+    self.buttonB = @"Arthur Curry";
+    self.buttonC = @"George Finn";
+    self.buttonD = @"Glenn King";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question105
+{
+    self.question = @"Hunter Rose was the first person to assume which code name?";
+    self.buttonA = @"Grendel";
+    self.buttonB = @"Kraven the Hunter";
+    self.buttonC = @"Deadshot";
+    self.buttonD = @"Lone Ranger";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question106
+{
+    self.question = @"Detective Comics #140 was the first appearance of which character?";
+    self.buttonA = @"Joker";
+    self.buttonB = @"Catwoman";
+    self.buttonC = @"Penguin";
+    self.buttonD = @"Riddler";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question107
+{
+    self.question = @"Which X-Men villain is not a mutant?";
+    self.buttonA = @"Magneto";
+    self.buttonB = @"Stryfe";
+    self.buttonC = @"Juggernaut";
+    self.buttonD = @"Sebastian Shaw";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question108
+{
+    self.question = @"The first incarnation of Firestorm consisted of … ?";
+    self.buttonA = @"Hank Hall and Don Hall";
+    self.buttonB = @"Ronnie Raymand and Martin Stein";
+    self.buttonC = @"Johnny Storm and Angelica Jones";
+    self.buttonD = @"Bruce Wayne and Clark Kent";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question109
+{
+    self.question = @"Mirror Master is an arch-enemy of which DC superhero?";
+    self.buttonA = @"Flash";
+    self.buttonB = @"Batman";
+    self.buttonC = @"Doctor Fate";
+    self.buttonD = @"Booster Gold";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question110
+{
+    self.question = @"Marvel Comics’ Captain Marvel died from … ?";
+    self.buttonA = @"Vampire bite";
+    self.buttonB = @"Head trauma";
+    self.buttonC = @"AIDS complications";
+    self.buttonD = @"Cancer";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question111
+{
+    self.question = @"Marvel Comic’s Thor was originally bound to a mortal named ... ?";
+    self.buttonA = @"Donald Blake";
+    self.buttonB = @"Steve Rogers";
+    self.buttonC = @"James MacDonald Hudson";
+    self.buttonD = @"Sebastian Shaw";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question112
+{
+    self.question = @"In the pages of Marvel Comics, Vision’s personality was based on which person’s brain pattern?";
+    self.buttonA = @"Tony Stark";
+    self.buttonB = @"Hank Pym";
+    self.buttonC = @"Marc Spectre";
+    self.buttonD = @"Simon Williams";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question113
+{
+    self.question = @"Which comic has the first appearance of Robin, the Boy Wonder?";
+    self.buttonA = @"Amazing Stories #15";
+    self.buttonB = @"Batman #2";
+    self.buttonC = @"Detective Comics #38";
+    self.buttonD = @"Action Comics #103";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question114
+{
+    self.question = @"The first appearance of Aquaman was in which issue?";
+    self.buttonA = @"Timely Comics #14";
+    self.buttonB = @"More Fun Comics #73";
+    self.buttonC = @"Tales To Astonish #1";
+    self.buttonD = @"Atlantis Adventures #64";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question115
+{
+    self.question = @"The original X-Men were Cyclops, Marvel Girl, Iceman, Angel, and ... ?";
+    self.buttonA = @"Beast";
+    self.buttonB = @"Mimic";
+    self.buttonC = @"Jubilee";
+    self.buttonD = @"Storm";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question116
+{
+    self.question = @"Who played Two-Face in \"Batman Forever\"?";
+    self.buttonA = @"Arnold Schwarzenegger";
+    self.buttonB = @"Jim Carey";
+    self.buttonC = @"Tommy Lee Jones";
+    self.buttonD = @"Jack Nicholson";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question117
+{
+    self.question = @"Val Kilmer played Batman in which film?";
+    self.buttonA = @"Returns";
+    self.buttonB = @"Begins";
+    self.buttonC = @"Beyond";
+    self.buttonD = @"Forever";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question118
+{
+    self.question = @"The movie \"Fargo\" took place primarily in what U.S. state?";
+    self.buttonA = @"Texas";
+    self.buttonB = @"North Dakota";
+    self.buttonC = @"Montana";
+    self.buttonD = @"Vermont";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question119
+{
+    self.question = @"How many times is Selena Kyle referred to as Catwoman in \"The Dark Knight Rises\"?";
+    self.buttonA = @"0";
+    self.buttonB = @"1";
+    self.buttonC = @"2";
+    self.buttonD = @"3";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question120
+{
+    self.question = @"What movie had the tag line \"You’ll believe a man can fly\"?";
+    self.buttonA = @"Starman";
+    self.buttonB = @"The Rocketeer";
+    self.buttonC = @"Superman";
+    self.buttonD = @"E.T. the Extra-Terrestrial";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question121
+{
+    self.question = @"Who voiced Marvin the Paranoid Android in 2005’s \"The Hitchhiker’s Guide to the Galaxy\"?";
+    self.buttonA = @"Martin Freeman";
+    self.buttonB = @"Patrick Stewart";
+    self.buttonC = @"Mos Def";
+    self.buttonD = @"Alan Rickman";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question122
+{
+    self.question = @"Who starred as Detective John McClane?";
+    self.buttonA = @"Jason Statham";
+    self.buttonB = @"Bruce Willis";
+    self.buttonC = @"Keanu Reeves";
+    self.buttonD = @"Matt Damon";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question123
+{
+    self.question = @"Apollo Creed was killed in the ring fighting which boxer?";
+    self.buttonA = @"Ivan Drago";
+    self.buttonB = @"Clubber Lang";
+    self.buttonC = @"Rocky Balboa";
+    self.buttonD = @"Crusher Creel";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question124
+{
+    self.question = @"What actor voiced video game character \"Wreck It Ralph\" in the movie of the same name?";
+    self.buttonA = @"Dan Castellaneta";
+    self.buttonB = @"John Goodman";
+    self.buttonC = @"John C. Reilly";
+    self.buttonD = @"Hank Azaria";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question125
+{
+    self.question = @"Which actor played Legolas Greenleaf in the \"Lord of the Rings\" trilogy?";
+    self.buttonA = @"Martin Freeman";
+    self.buttonB = @"Viggo Mortensen";
+    self.buttonC = @"Jude Law";
+    self.buttonD = @"Orlando Bloom";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question126
+{
+    self.question = @"What was the name of Leonardo DiCaprio’s character in \"Titanic\"?";
+    self.buttonA = @"Jack Sparrow";
+    self.buttonB = @"Jack Dawson";
+    self.buttonC = @"Richard Dawson";
+    self.buttonD = @"Dominick Cobb";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question127
+{
+    self.question = @"What actor played the title character in 2012’s \"Dredd\"?";
+    self.buttonA = @"Karl Urban";
+    self.buttonB = @"Jason Statham";
+    self.buttonC = @"Maurice Dean Wint";
+    self.buttonD = @"Sylvester Stallone";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question128
+{
+    self.question = @"Who played James Bond in \"On Her Majesty's Secret Service\"?";
+    self.buttonA = @"Sean Connery";
+    self.buttonB = @"Timothy Dalton";
+    self.buttonC = @"George Lazenby";
+    self.buttonD = @"Roger Moore";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question129
+{
+    self.question = @"Rocky Balboa fought Ivan Drago in which \"Rocky\" movie?";
+    self.buttonA = @"I";
+    self.buttonB = @"II";
+    self.buttonC = @"III";
+    self.buttonD = @"IV";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question130
+{
+    self.question = @"Marlin and Cora are the parents of which Pixar animated character?";
+    self.buttonA = @"Merida";
+    self.buttonB = @"Nemo";
+    self.buttonC = @"Remy";
+    self.buttonD = @"Flik";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question131
+{
+    self.question = @"The theme song to \"Charmed\" titled \"How Soon Is Now?\" was performed by what group?";
+    self.buttonA = @"Pearl Jam";
+    self.buttonB = @"The Smiths";
+    self.buttonC = @"The Smashing Pumpkins";
+    self.buttonD = @"Love Spit Love";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question132
+{
+    self.question = @"The 2002 revival of \"The Twilight Zone\" was hosted by what famous actor?";
+    self.buttonA = @"Patrick Stewart";
+    self.buttonB = @"Forest Whitaker";
+    self.buttonC = @"Rod Serling";
+    self.buttonD = @"LeVar Burton";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question133
+{
+    self.question = @"Three sisters from Asgard with magical powers are the focus of what TV series?";
+    self.buttonA = @"Witches of East End";
+    self.buttonB = @"The Tomorrow People";
+    self.buttonC = @"Charmed";
+    self.buttonD = @"Tucker's Witch";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question134
+{
+    self.question = @"Prue, Piper, and Phoebe make up the \"Power of Three\" in what long-running television show?";
+    self.buttonA = @"Buffy the Vampire Slayer";
+    self.buttonB = @"Witches of East End";
+    self.buttonC = @"Charmed";
+    self.buttonD = @"Dark Angel";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question135
+{
+    self.question = @"Rose McGowan joined \"Charmed\" to replace which actress?";
+    self.buttonA = @"Alyssa Milano";
+    self.buttonB = @"Holly Marie Combs";
+    self.buttonC = @"Kaley Cuoco";
+    self.buttonD = @"Shannon Doherty";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question136
+{
+    self.question = @"This actor starred as Clark Kent in the hit series \"Smallville\".";
+    self.buttonA = @"Henry Cavill";
+    self.buttonB = @"Tom Welling";
+    self.buttonC = @"Dean Cain";
+    self.buttonD = @"Kirk Alyn";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question137
+{
+    self.question = @"Michael Rosenbaum played what iconic character on the series \"Smallville\"?";
+    self.buttonA = @"Lex Luthor";
+    self.buttonB = @"Clark Kent";
+    self.buttonC = @"Oliver Queen";
+    self.buttonD = @"Arthur Curry";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question138
+{
+    self.question = @"Before he played Jonathan Kent in \"Smallville\", John Schneider played cousin Bo in what television series?";
+    self.buttonA = @"Happy Days";
+    self.buttonB = @"Mork and Mindy";
+    self.buttonC = @"The Dukes of Hazzard";
+    self.buttonD = @"Supernatural";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question139
+{
+    self.question = @"What actress was cast as Lois Lane in \"Smallville\"?";
+    self.buttonA = @"Laura Vandervoort";
+    self.buttonB = @"Allison Mack";
+    self.buttonC = @"Kristin Kreuk";
+    self.buttonD = @"Erica Durance";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question140
+{
+    self.question = @"What actress played intrepid reporter Lois Lane in \"Lois & Clark: The New Adventures of Superman\"?";
+    self.buttonA = @"Annette O'Toole";
+    self.buttonB = @"Teri Hatcher";
+    self.buttonC = @"Erica Durance";
+    self.buttonD = @"Kristin Kreuk";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question141
+{
+    self.question = @"Which actor has NOT played Superman in a TV series?";
+    self.buttonA = @"Brandon Routh";
+    self.buttonB = @"Dean Cain";
+    self.buttonC = @"George Reeves";
+    self.buttonD = @"Tom Welling";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question142
+{
+    self.question = @"What was the first live-action television series to feature Superman?";
+    self.buttonA = @"Smallville";
+    self.buttonB = @"Legion of Super Heroes";
+    self.buttonC = @"Adventures of Superman";
+    self.buttonD = @"The Batman-Superman Hour";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question143
+{
+    self.question = @"Who played the Man of Steel in \"Adventures of Superman\"?";
+    self.buttonA = @"Christopher Reeve";
+    self.buttonB = @"Kirk Alyn";
+    self.buttonC = @"Brandon Routh";
+    self.buttonD = @"George Reeves";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question144
+{
+    self.question = @"The live-action \"Superboy\" starred what actor as the title character in Season 1?";
+    self.buttonA = @"Dean Cain";
+    self.buttonB = @"John Haymes Newton";
+    self.buttonC = @"Tom Welling";
+    self.buttonD = @"Gerard Christopher";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question145
+{
+    self.question = @"This long-running sires popularized the saying, \"I Want To Believe\".";
+    self.buttonA = @"The X-Files";
+    self.buttonB = @"Supernatural";
+    self.buttonC = @"Buffy the Vampire Slayer";
+    self.buttonD = @"Battlestar Galactica";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question146
+{
+    self.question = @"How many colored and numbered pockets are on the European roulette wheel?";
+    self.buttonA = @"30";
+    self.buttonB = @"36";
+    self.buttonC = @"39";
+    self.buttonD = @"37";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question147
+{
+    self.question = @"The board game \"The Game of Life\" was originally released in 1860 under what name?";
+    self.buttonA = @"That's Life";
+    self.buttonB = @"The Checkered Game of Life";
+    self.buttonC = @"Look to the Future";
+    self.buttonD = @"Life and Country";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question148
+{
+    self.question = @"How many \"blank\" tiles are included in an official Scrabble game?";
+    self.buttonA = @"2";
+    self.buttonB = @"3";
+    self.buttonC = @"4";
+    self.buttonD = @"5";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question149
+{
+    self.question = @"This popular word game has been described as \"Charades for artists\".";
+    self.buttonA = @"Balderdash";
+    self.buttonB = @"Scattegories";
+    self.buttonC = @"Pictionary";
+    self.buttonD = @"Parchisi";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question150
+{
+    self.question = @"This Parker Brothers game takes its name from a Swahili word meaning \"to build\".";
+    self.buttonA = @"Tafl";
+    self.buttonB = @"Mancala";
+    self.buttonC = @"Parcheesi";
+    self.buttonD = @"Jenga";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question151
+{
+    self.question = @"Jenga is played with how many wooden blocks?";
+    self.buttonA = @"48";
+    self.buttonB = @"54";
+    self.buttonC = @"60";
+    self.buttonD = @"72";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question152
+{
+    self.question = @"Known in different countries as \"Svarte Petter\", \"Sorteper\", and \"Vieux Garçon\", the US/ UK version of this card game is called ... ?";
+    self.buttonA = @"Old Maid";
+    self.buttonB = @"Spades";
+    self.buttonC = @"Black Peter";
+    self.buttonD = @"Poker";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question153
+{
+    self.question = @"This strategy board game was actually invented by Oscar winning French film director Albert Lamorisse.";
+    self.buttonA = @"Trivial Pursuit";
+    self.buttonB = @"Parcheesi";
+    self.buttonC = @"Risk";
+    self.buttonD = @"Parchisi";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question154
+{
+    self.question = @"This board game was originally called \"La Conquête du Monde\", but Parker Brothers renamed it ... ?";
+    self.buttonA = @"Trivial Pursuit";
+    self.buttonB = @"Parcheesi";
+    self.buttonC = @"Monopoly";
+    self.buttonD = @"Risk";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question155
+{
+    self.question = @"On traditional six-sided dice, the 2 is opposite what number?";
+    self.buttonA = @"3";
+    self.buttonB = @"5";
+    self.buttonC = @"6";
+    self.buttonD = @"4";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question156
+{
+    self.question = @"The historic version of this game was filled with morality lessons of virtues and vices.";
+    self.buttonA = @"Snakes and Ladders";
+    self.buttonB = @"Parcheesi";
+    self.buttonC = @"Backgammon";
+    self.buttonD = @"Risk";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question157
+{
+    self.question = @"Milton Bradley’s Chutes and Ladders was based on an ancient game from what country?";
+    self.buttonA = @"China";
+    self.buttonB = @"Sweden";
+    self.buttonC = @"India";
+    self.buttonD = @"Germany";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question158
+{
+    self.question = @"This board game was originally played by royalty using servants in colorful costumes as game pieces on large outdoor boards.";
+    self.buttonA = @"Snakes and Ladders";
+    self.buttonB = @"Risk";
+    self.buttonC = @"Chess";
+    self.buttonD = @"Parcheesi";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question159
+{
+    self.question = @"Knowledge is power in this Canadian created board game of pop culture and general facts.";
+    self.buttonA = @"Balderdash";
+    self.buttonB = @"Trivial Pursuit";
+    self.buttonC = @"Pictionary";
+    self.buttonD = @"Scattergories";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question160
+{
+    self.question = @"In the classic version of Trivial Pursuit, the \"orange\" category is ... ?";
+    self.buttonA = @"Sports & Leisure";
+    self.buttonB = @"Arts & Literaure";
+    self.buttonC = @"History";
+    self.buttonD = @"Entertainment";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question161
+{
+    self.question = @"Earth-2 Green Lantern had a weakness to what?";
+    self.buttonA = @"Wood";
+    self.buttonB = @"Kryptonite";
+    self.buttonC = @"Yellow";
+    self.buttonD = @"Iron";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question162
+{
+    self.question = @"Rorschach is a pivotal character in what comic book?";
+    self.buttonA = @"Hush";
+    self.buttonB = @"Fear Agent";
+    self.buttonC = @"The Killing Joke";
+    self.buttonD = @"Watchmen";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question163
+{
+    self.question = @"What was Daredevil’s father’s profession?";
+    self.buttonA = @"Plumber";
+    self.buttonB = @"Doctor";
+    self.buttonC = @"Boxer";
+    self.buttonD = @"Lawyer";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question164
+{
+    self.question = @"What superhero comes from the fictional nation of Wakanda?";
+    self.buttonA = @"The Phantom";
+    self.buttonB = @"Black Panther";
+    self.buttonC = @"White Tiger";
+    self.buttonD = @"Black Goliath";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question165
+{
+    self.question = @"Who is the Daily Bugle’s editor?";
+    self.buttonA = @"J. Jonah Jameson";
+    self.buttonB = @"Jimmy Olsen";
+    self.buttonC = @"Perry White";
+    self.buttonD = @"Ben Urich";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question166
+{
+    self.question = @"The Fantastic Four’s headquarters is in a which building?";
+    self.buttonA = @"Stark Tower";
+    self.buttonB = @"Trump Tower";
+    self.buttonC = @"Future Tower";
+    self.buttonD = @"Baxter Tower";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question167
+{
+    self.question = @"Peter Parker’s Aunt’s name is ... ?";
+    self.buttonA = @"Clara";
+    self.buttonB = @"Ethel";
+    self.buttonC = @"May";
+    self.buttonD = @"Jemima";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question168
+{
+    self.question = @"Who is the Daily Planet’s editor?";
+    self.buttonA = @"Randolph Hearst";
+    self.buttonB = @"Perry White";
+    self.buttonC = @"J. Jonah Jameson";
+    self.buttonD = @"Carol Danvers";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question169
+{
+    self.question = @"What is the name of Superman’s dog?";
+    self.buttonA = @"Krypto";
+    self.buttonB = @"Streaky";
+    self.buttonC = @"K-9";
+    self.buttonD = @"Comet";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question170
+{
+    self.question = @"What is the secret identity of the 2nd teenage boy to become Robin?";
+    self.buttonA = @"Dick Grayson";
+    self.buttonB = @"Damien Wayne";
+    self.buttonC = @"Tim Drake";
+    self.buttonD = @"Jason Todd";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question171
+{
+    self.question = @"What is the real name of the Spider-Man villain known as Rhino?";
+    self.buttonA = @"Sergei Kravinoff";
+    self.buttonB = @"Maxwell Dillon";
+    self.buttonC = @"Aleksei Sytsevich";
+    self.buttonD = @"Adrian Toomes";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question172
+{
+    self.question = @"In the 616 Marvel Comics Universe, Jarvis is Tony Stark’s ... ?";
+    self.buttonA = @"Bodyguard";
+    self.buttonB = @"Butler";
+    self.buttonC = @"A.I.";
+    self.buttonD = @"Government liaison";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question173
+{
+    self.question = @"What actor played Lex Luthor in \"Superman 2\"?";
+    self.buttonA = @"Gene Hackman";
+    self.buttonB = @"Michael Rosenbaum";
+    self.buttonC = @"Kevin Spacey";
+    self.buttonD = @"John Shea";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question174
+{
+    self.question = @"The secret identity of Marvel Comic’s original White Tiger is ... ?";
+    self.buttonA = @"Jaime Reyes";
+    self.buttonB = @"Francisco Ramon";
+    self.buttonC = @"Gregorio De La Vega";
+    self.buttonD = @"Hector Ayala";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question175
+{
+    self.question = @"Hal Jordan received his power ring from which Lantern Corps member?";
+    self.buttonA = @"Genis-Vell";
+    self.buttonB = @"En Sabah Nur";
+    self.buttonC = @"Abin Sur";
+    self.buttonD = @"Simon Baz";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question176
+{
+    self.question = @"Jason Voorhees receives his trademark hockey mask in which film of the original \"Friday the 13th\" franchise?";
+    self.buttonA = @"Friday the 13th Part 2";
+    self.buttonB = @"Friday the 13th Part III";
+    self.buttonC = @"Friday the 13th: The Final Chapter";
+    self.buttonD = @"Friday the 13th: A New Beginning";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question177
+{
+    self.question = @"This scream queen starred in \"The Fog\", \"Prom Night\", and \"Terror Train\".";
+    self.buttonA = @"Jamie Lee Curtis";
+    self.buttonB = @"Emma Roberts";
+    self.buttonC = @"Heather Langenkamp";
+    self.buttonD = @"Kate Beckinsale";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question178
+{
+    self.question = @"The 1987 film \"Robocop\" takes place in a dystopian version of what US city?";
+    self.buttonA = @"Los Angeles";
+    self.buttonB = @"Chicago";
+    self.buttonC = @"Detroit";
+    self.buttonD = @"New York";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question179
+{
+    self.question = @"What business controls the police force in the original \"Robocop\" film franchise?";
+    self.buttonA = @"Tyrell Corporation";
+    self.buttonB = @"Umbrella Corporation";
+    self.buttonC = @"Multi-National United";
+    self.buttonD = @"Omni Consumer Products";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question180
+{
+    self.question = @"What is the name of the police officer that becomes \"Robocop\" in the original movie?";
+    self.buttonA = @"Victor Stone";
+    self.buttonB = @"Alex Murphy";
+    self.buttonC = @"Rick Deckard";
+    self.buttonD = @"Max Headroom";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question181
+{
+    self.question = @"Who played \"Robocop\" in the 2014 reboot?";
+    self.buttonA = @"Joel Kinnaman";
+    self.buttonB = @"Peter Weller";
+    self.buttonC = @"Clarence Boddicker";
+    self.buttonD = @"Gary Oldman";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question182
+{
+    self.question = @"What actor played Dr. Loomis in \"Halloween 5: The Revenge of Michael Myers\"?";
+    self.buttonA = @"Lance Henriksen";
+    self.buttonB = @"Malcolm McDowell";
+    self.buttonC = @"Donald Pleasence";
+    self.buttonD = @"Dan O'Herlihy";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question183
+{
+    self.question = @"Who played James Bond villain Ernst Stavro Blofeld in \"On Her Majesty’s Secret Service\"?";
+    self.buttonA = @"Max von Sydow";
+    self.buttonB = @"Donald Pleasence";
+    self.buttonC = @"Christoph Waltz";
+    self.buttonD = @"Telly Savalas";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question184
+{
+    self.question = @"Who directed \"Pacific Rim\"?";
+    self.buttonA = @"Michael Bay";
+    self.buttonB = @"Guillermo del Toro";
+    self.buttonC = @"Zack Snyder";
+    self.buttonD = @"Gareth Edwards";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question185
+{
+    self.question = @"What do the world governments create to battle the Kaijus in the sci-fi film \"Pacific Rim\"?";
+    self.buttonA = @"Jaegers";
+    self.buttonB = @"Voltron";
+    self.buttonC = @"Terminators";
+    self.buttonD = @"Transformers";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question186
+{
+    self.question = @"Guillermo del Toro directed this movie based on a comic book character created by Mike Mignola.";
+    self.buttonA = @"300";
+    self.buttonB = @"Pacific Rim";
+    self.buttonC = @"Hellboy";
+    self.buttonD = @"The Spirit";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question187
+{
+    self.question = @"Selma Blair returns as Liz Sherman in what sequel?";
+    self.buttonA = @"Terminator 3: Rise of the Machines";
+    self.buttonB = @"Mission: Impossible II";
+    self.buttonC = @"Transformers: Revenge of the Fallen";
+    self.buttonD = @"Hellboy II: The Golden Army";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question188
+{
+    self.question = @"In the M. Night Shyamalan movie \"Signs\", what common substance can kill the aliens?";
+    self.buttonA = @"Oxygen";
+    self.buttonB = @"Water";
+    self.buttonC = @"Lead";
+    self.buttonD = @"Salt";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question189
+{
+    self.question = @"The epic fantasy film \"300\" was a fictionalized retelling of what historic fight?";
+    self.buttonA = @"Battle of Thermopylae";
+    self.buttonB = @"Battle of Salamis";
+    self.buttonC = @"Battle of Artemisium";
+    self.buttonD = @"Battle of Plataea";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question190
+{
+    self.question = @"Who directed the box-office hit \"300\"?";
+    self.buttonA = @"Michael Bay";
+    self.buttonB = @"Frank Miller";
+    self.buttonC = @"Zack Snyder";
+    self.buttonD = @"Tarsem Singh";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question191
+{
+    self.question = @"In 2010, what comic book went from print to television?";
+    self.buttonA = @"The Walking Dead";
+    self.buttonB = @"Arrow";
+    self.buttonC = @"Buffy the Vampire Slayer";
+    self.buttonD = @"Constantine";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question192
+{
+    self.question = @"Ralph Hanley was a school teacher with super powers in what TV show?";
+    self.buttonA = @"Automan";
+    self.buttonB = @"Smallville";
+    self.buttonC = @"Greatest American Hero";
+    self.buttonD = @"Manimal";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question193
+{
+    self.question = @"Where does \"Everybody know your name\"?";
+    self.buttonA = @"Bellefleur's Bar and Grill";
+    self.buttonB = @"Archie Bunker's Place";
+    self.buttonC = @"The Bamboo Lounge";
+    self.buttonD = @"Cheers";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question194
+{
+    self.question = @"According to \"The Fresh Prince of Bel-Air\" opening song, where was Will Smith born and raised?";
+    self.buttonA = @"East LA";
+    self.buttonB = @"West Philadelphia";
+    self.buttonC = @"East Bronx";
+    self.buttonD = @"West Hollywood";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question195
+{
+    self.question = @"Before he was James Bond, Pierce Brosnan was a con man turned detective on which series?";
+    self.buttonA = @"Remington Steele";
+    self.buttonB = @"Moonlighting";
+    self.buttonC = @"The Mentalist";
+    self.buttonD = @"Jake and the Fatman";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question196
+{
+    self.question = @"The British sitcom \"Are You Being Served?\" originally took place in which setting?";
+    self.buttonA = @"Pub";
+    self.buttonB = @"Junk yard";
+    self.buttonC = @"Department store";
+    self.buttonD = @"Doctor's office";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question197
+{
+    self.question = @"What is Sheldon Cooper’s catchphrase on \"The Big Bang Theory\"?";
+    self.buttonA = @"Blammo!";
+    self.buttonB = @"Bam!";
+    self.buttonC = @"Boppity-boop!";
+    self.buttonD = @"Bazinga!";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question198
+{
+    self.question = @"Which of the following is NOT a \"Law & Order\" spin-off?";
+    self.buttonA = @"Special Victims Unit";
+    self.buttonB = @"Trial By Jury";
+    self.buttonC = @"Life On The Street" ;
+    self.buttonD = @"Criminal Intent";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question199
+{
+    self.question = @"What is Captain Kirk’s middle name?";
+    self.buttonA = @"Tyrone";
+    self.buttonB = @"Theodore";
+    self.buttonC = @"Titan";
+    self.buttonD = @"Tiberius";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question200
+{
+    self.question = @"Fry, Bender, and Leela are the main characters from which animated TV show?";
+    self.buttonA = @"Bob's Burgers";
+    self.buttonB = @"Futurama";
+    self.buttonC = @"American Dad";
+    self.buttonD = @"The PJ's";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question201
+{
+    self.question = @"The 311 inhabitants on Moonbase Alpha were sent hurtling through space in what TV series?";
+    self.buttonA = @"Dark Skies";
+    self.buttonB = @"Space: 1999";
+    self.buttonC = @"The Martian Chronicles";
+    self.buttonD = @"Sliders";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question202
+{
+    self.question = @"In the 1978 \"Battlestar Galactica\" series, Lieutenant Starbuck was played by ... ?";
+    self.buttonA = @"Dirk Benedict";
+    self.buttonB = @"Lorne Greene";
+    self.buttonC = @"Richard Hatch";
+    self.buttonD = @"John Colicos";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question203
+{
+    self.question = @"Who was the original host of the \"Twilight Zone\"?";
+    self.buttonA = @"Rod Steiger";
+    self.buttonB = @"Rod Taylor";
+    self.buttonC = @"Rod Serling";
+    self.buttonD = @"Rod Stewart";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question204
+{
+    self.question = @"Who starred as the Scarlet Speedster in \"The Flash\" 1990 television series?";
+    self.buttonA = @"Jeffrey Combs";
+    self.buttonB = @"David Lyons";
+    self.buttonC = @"Carl Lumbly";
+    self.buttonD = @"John Wesley Shipp";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question205
+{
+    self.question = @"The Winchester brothers fight demons in what television series?";
+    self.buttonA = @"No Ordinary Family";
+    self.buttonB = @"Supernatural";
+    self.buttonC = @"Warehouse 13";
+    self.buttonD = @"Penny Dreadful";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question206
+{
+    self.question = @"Konami introduced this rhythmic video game to North American and European arcades in 1999.";
+    self.buttonA = @"Just Dance";
+    self.buttonB = @"Dance Dance Revolution";
+    self.buttonC = @"Dance Central";
+    self.buttonD = @"In the Groove";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question207
+{
+    self.question = @"Guitar Hero was created in 2005 by which video game developer?";
+    self.buttonA = @"Harmonix";
+    self.buttonB = @"Turtle Beach";
+    self.buttonC = @"Neversoft";
+    self.buttonD = @"Activision";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question208
+{
+    self.question = @"Which \"Super Mario Bros 2\" playable character can jump the farthest?";
+    self.buttonA = @"Toad";
+    self.buttonB = @"Luigi";
+    self.buttonC = @"Princess Toadstool";
+    self.buttonD = @"Mario";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question209
+{
+    self.question = @"Nintendo introduced Wario in which game title?";
+    self.buttonA = @"Wario's Woods";
+    self.buttonB = @"Mario Kart 64";
+    self.buttonC = @"Wario Land: Super Mario Land 3";
+    self.buttonD = @"Super Mario Land 2: 6 Golden Coins";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question210
+{
+    self.question = @"Video game hero Mario was created by ... ?";
+    self.buttonA = @"Tōru Iwatani";
+    self.buttonB = @"Shigeru Miyamoto";
+    self.buttonC = @"Hironobu Sakaguchi";
+    self.buttonD = @"Satoshi Tajiri";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question211
+{
+    self.question = @"Which character is not from the \"Mario\" franchise?";
+    self.buttonA = @"Ashley";
+    self.buttonB = @"Yoshi";
+    self.buttonC = @"Birdo";
+    self.buttonD = @"Pauline";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question212
+{
+    self.question = @"Microsoft’s Xbox console was released in what year?";
+    self.buttonA = @"1999";
+    self.buttonB = @"2000";
+    self.buttonC = @"2001";
+    self.buttonD = @"2002";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question213
+{
+    self.question = @"Which game of the \"Call of Duty\" franchise is not set in World War II?";
+    self.buttonA = @"Call of Duty";
+    self.buttonB = @"Call of Duty 2";
+    self.buttonC = @"Call of Duty 3";
+    self.buttonD = @"Call of Duty 4: Modern Warfare";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question214
+{
+    self.question = @"The original Playstation console was released in what year?";
+    self.buttonA = @"1993";
+    self.buttonB = @"1994";
+    self.buttonC = @"1995";
+    self.buttonD = @"1996";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question215
+{
+    self.question = @"The Sega Dreamcast home video game console had its North American and European releases in what year?";
+    self.buttonA = @"1999";
+    self.buttonB = @"2000";
+    self.buttonC = @"2001";
+    self.buttonD = @"2002";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question216
+{
+    self.question = @"The Playstation 2 home console was released by Sony in what year?";
+    self.buttonA = @"1998";
+    self.buttonB = @"1999";
+    self.buttonC = @"2000";
+    self.buttonD = @"2001";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question217
+{
+    self.question = @"What was Nintendo’s first home video game console?";
+    self.buttonA = @"Wii";
+    self.buttonB = @"GameCube";
+    self.buttonC = @"Nintendo 64";
+    self.buttonD = @"NES";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question218
+{
+    self.question = @"Nintendo’s GameCube was introduced to North American markets in what year?";
+    self.buttonA = @"2000";
+    self.buttonB = @"2001";
+    self.buttonC = @"2002";
+    self.buttonD = @"2003";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question219
+{
+    self.question = @"What was Nintendo’s first handled game device?";
+    self.buttonA = @"Game & Watch";
+    self.buttonB = @"Game Boy";
+    self.buttonC = @"Nintendo DS";
+    self.buttonD = @"TurboExpress";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question0220
+{
+    self.question = @"Microsoft’s Xbox 360 was released in what year?";
+    self.buttonA = @"2003";
+    self.buttonB = @"2004";
+    self.buttonC = @"2005";
+    self.buttonD = @"2006";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question221
+{
+    self.question = @"The super-heroine Black Canary was introduced in ... ?";
+    self.buttonA = @"Green Lantern #87";
+    self.buttonB = @"Superman #44";
+    self.buttonC = @"Flash Comics #86";
+    self.buttonD = @"Detective Comics #75";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question222
+{
+    self.question = @"Juggernaut is Professor X’s ... ?";
+    self.buttonA = @"Nephew";
+    self.buttonB = @"Step-brother";
+    self.buttonC = @"Uncle";
+    self.buttonD = @"Son";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question223
+{
+    self.question = @"Kara Zor-El is the cousin of which DC Comic character?";
+    self.buttonA = @"Kal-El";
+    self.buttonB = @"Zod";
+    self.buttonC = @"Shalla-Bal";
+    self.buttonD = @"Jor-El";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question224
+{
+    self.question = @"The Earth-2 Huntress is the daughter of Bruce Wayne and ... ?";
+    self.buttonA = @"Harleen Quinzel";
+    self.buttonB = @"Diana Prince";
+    self.buttonC = @"Pamela Isley";
+    self.buttonD = @"Selina Kyle";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question225
+{
+    self.question = @"In the post-Crisis retcon, Huntress’ civilian identity was ... ?";
+    self.buttonA = @"Lyta Trevor";
+    self.buttonB = @"Cassandra Cain";
+    self.buttonC = @"Helena Bertinelli";
+    self.buttonD = @"Stephanie Brown";
+    self.correctAnswer = @"C";
+    
+}
+
+
+-(void)question226
+{
+    self.question = @"In the Top Cow Productions’ comic book, mafia hitman Jackie Estacado wields the power of ... ?";
+    self.buttonA = @"Nephew";
+    self.buttonB = @"The Darkness";
+    self.buttonC = @"The Witchblade";
+    self.buttonD = @"Cyttorak";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question227
+{
+    self.question = @"This group of superheroes literally died before obtaining powers of water, earth, fire, and air.";
+    self.buttonA = @"The Elementals";
+    self.buttonB = @"The New Gods";
+    self.buttonC = @"The Inhumans";
+    self.buttonD = @"The Tomorrow People";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question228
+{
+    self.question = @"What is the Tick’s battlecry?";
+    self.buttonA = @"It's Clobbering Time!";
+    self.buttonB = @"Tick Tock!";
+    self.buttonC = @"Bazinga!";
+    self.buttonD = @"Spoon!";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question229
+{
+    self.question = @"Chairface Chippendale, Man-Eating Cow, and Barry Hubris were all characters of what comic book series?";
+    self.buttonA = @"Super Chicken";
+    self.buttonB = @"The Justice Friends";
+    self.buttonC = @"The Tick";
+    self.buttonD = @"Megaton Man";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question230
+{
+    self.question = @"The original Grendel’s main nemesis was a Native American man-wolf known by what name?";
+    self.buttonA = @"Proudstar";
+    self.buttonB = @"Argent";
+    self.buttonC = @"Kemosabe";
+    self.buttonD = @"Talbot";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question231
+{
+    self.question = @"Thomas Elliot is a genius, world-class surgeon that has tried to kill the Dark Knight several times under what codename?";
+    self.buttonA = @"Hush";
+    self.buttonB = @"Dollmaker";
+    self.buttonC = @"Professor Pyg";
+    self.buttonD = @"Flamingo";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question232
+{
+    self.question = @"DC Comics’ first Spectre was a murdered policeman named ... ?";
+    self.buttonA = @"Harvey Bullock";
+    self.buttonB = @"Crispus Allen";
+    self.buttonC = @"Hal Jordan";
+    self.buttonD = @"Jim Corrigan";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question233
+{
+    self.question = @"Who was NOT an original member of Justice Society of America?";
+    self.buttonA = @"Sandman";
+    self.buttonB = @"Atom";
+    self.buttonC = @"Superman";
+    self.buttonD = @"Flash";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question234
+{
+    self.question = @"What was the name of the first African-American comic book hero to headline his own series?";
+    self.buttonA = @"Cheetah";
+    self.buttonB = @"Lobo";
+    self.buttonC = @"Drake";
+    self.buttonD = @"Power Man";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question0235
+{
+    self.question = @"What is the name of DC Comics’ cigar-smoking, interstellar bounty hunter?";
+    self.buttonA = @"Lobo";
+    self.buttonB = @"Wolverine";
+    self.buttonC = @"Nick Fury";
+    self.buttonD = @"Adam Strange";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question236
+{
+    self.question = @"Who played Catwoman in the 1966 \"Batman: The Movie\"?";
+    self.buttonA = @"Eartha Kitt";
+    self.buttonB = @"Lynda Carter";
+    self.buttonC = @"Lee Merriwether" ;
+    self.buttonD = @"Julie Newmar";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question237
+{
+    self.question = @"What was Rosebud in Citizen Kane?";
+    self.buttonA = @"Estate name";
+    self.buttonB = @"Dog";
+    self.buttonC = @"Sled";
+    self.buttonD = @"Vodka brand";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question238
+{
+    self.question = @"Who played Dorothy in The Wizard of Oz?";
+    self.buttonA = @"Shirley Temple";
+    self.buttonB = @"Marilyn Momnroe";
+    self.buttonC = @"Norma Desmond";
+    self.buttonD = @"Judy Garland";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question239
+{
+    self.question = @"Which movie did NOT star Tom Cuise?";
+    self.buttonA = @"Mission Impossible";
+    self.buttonB = @"Next";
+    self.buttonC = @"Jack Reacher";
+    self.buttonD = @"Risky Business";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question240
+{
+    self.question = @"As of 2011, the Final Destination franchise had how many films?";
+    self.buttonA = @"5";
+    self.buttonB = @"3";
+    self.buttonC = @"6";
+    self.buttonD = @"4";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question241
+{
+    self.question = @"In Alfred Hitchcock’s Psycho, Norman Bates killed people dressed as … ?";
+    self.buttonA = @"A policeman";
+    self.buttonB = @"A wolf";
+    self.buttonC = @"His mother";
+    self.buttonD = @"A priest";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question242
+{
+    self.question = @"The 1991 action-thriller Point Break what was the name of the FBI Agent played by Keanu Reeves?";
+    self.buttonA = @"Bunker Weiss";
+    self.buttonB = @"Ben Harp";
+    self.buttonC = @"Angelo Pappas";
+    self.buttonD = @"Johnny Utah";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question243
+{
+    self.question = @"Which movie was NOT directed by Ridley Scott?";
+    self.buttonA = @"Alien";
+    self.buttonB = @"Platoon";
+    self.buttonC = @"Black Rain" ;
+    self.buttonD = @"Prometheus";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question244
+{
+    self.question = @"In Duck Soup, Groucho Marx played which character?";
+    self.buttonA = @"Roscoe P. Coltrane";
+    self.buttonB = @"George R. R. Martin";
+    self.buttonC = @"Edward E. Nigma";
+    self.buttonD = @"Rufus T. Firefly";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question245
+{
+    self.question = @"Who directed 2002’s Spider-Man?";
+    self.buttonA = @"Michael Bay";
+    self.buttonB = @"Sam Raimi";
+    self.buttonC = @"Zack Snyder";
+    self.buttonD = @"Ed Wood";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question246
+{
+    self.question = @"Which character underwent cybernetic surgery to have a data storage implanted in his brain?";
+    self.buttonA = @"Kevin Lomax";
+    self.buttonB = @"John Wick";
+    self.buttonC = @"Johnny Mnemonic";
+    self.buttonD = @"Bob Arctor";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question247
+{
+    self.question = @"Bill & Ted’s time machine looked like a ... ?";
+    self.buttonA = @"Hottub";
+    self.buttonB = @"Wrist watch";
+    self.buttonC = @"Race car";
+    self.buttonD = @"Telephone booth";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question248
+{
+    self.question = @"\"Star Wars: Episode IV\" was released in which year?";
+    self.buttonA = @"1976";
+    self.buttonB = @"1977";
+    self.buttonC = @"1978";
+    self.buttonD = @"1979";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question249
+{
+    self.question = @"Before the script was finalized, Luke Skywalker’s original last name was ... ?";
+    self.buttonA = @"Starkiller";
+    self.buttonB = @"Skydancer";
+    self.buttonC = @"Lightwalker";
+    self.buttonD = @"Organa";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question250
+{
+    self.question = @"David Bowie played the Goblin King in what fantasy film?";
+    self.buttonA = @"The Neverending Story";
+    self.buttonB = @"Legend";
+    self.buttonC = @"Labyrinth";
+    self.buttonD = @"Enchanted";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question251
+{
+    self.question = @"Who voiced Robin in the animated series \"Super Friends\"?";
+    self.buttonA = @"Dick Clark";
+    self.buttonB = @"Casey Kasem";
+    self.buttonC = @"Burt Ward";
+    self.buttonD = @"Billy West";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question252
+{
+    self.question = @"What was the last name of Shaggy from \"Scooby Doo\"?";
+    self.buttonA = @"Rogers";
+    self.buttonB = @"Haire";
+    self.buttonC = @"Dinkly";
+    self.buttonD = @"Doo";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question0253
+{
+    self.question = @"The animated series \"King of the Hill\" took place primarily in what U.S. state?";
+    self.buttonA = @"Montana";
+    self.buttonB = @"Pennsylvania";
+    self.buttonC = @"Texas";
+    self.buttonD = @"Florida";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question254
+{
+    self.question = @"Freema Agyeman was the \"Doctor Who\" companion named ... ?";
+    self.buttonA = @"Rose Tyler";
+    self.buttonB = @"Donna Noble";
+    self.buttonC = @"Amelia Pond";
+    self.buttonD = @"Martha Jones";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question255
+{
+    self.question = @"The series \"Glee\" took place primarily in what U.S. state?";
+    self.buttonA = @"Kansas";
+    self.buttonB = @"Ohio";
+    self.buttonC = @"Texas";
+    self.buttonD = @"California";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question256
+{
+    self.question = @"The original \"Star Trek\" series first aired in what year?";
+    self.buttonA = @"1966";
+    self.buttonB = @"1967";
+    self.buttonC = @"1968";
+    self.buttonD = @"1969";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question257
+{
+    self.question = @"When \"Doctor Who\" returned in 2005, who played the title character?";
+    self.buttonA = @"Mat Smith";
+    self.buttonB = @"Tom Baker";
+    self.buttonC = @"Christopher Eccleston";
+    self.buttonD = @"David Tenet";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question258
+{
+    self.question = @"Surviving passengers of Oceanic Airline's Flight 815 were the focus of what TV show?";
+    self.buttonA = @"The Last Ship";
+    self.buttonB = @"Gilligan's Island";
+    self.buttonC = @"Fringe";
+    self.buttonD = @"Lost";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question259
+{
+    self.question = @"School teacher Andrea Thomas found a necklace that bestowed upon her the powers of ... ?";
+    self.buttonA = @"Wonder Woman";
+    self.buttonB = @"Isis";
+    self.buttonC = @"Electro Woman";
+    self.buttonD = @"Ms. Marvel";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question260
+{
+    self.question = @"The live-action Japanese Spider-Man series gave the hero a spaceship that could transform into a robot called ... ?";
+    self.buttonA = @"Leopardon";
+    self.buttonB = @"Voltron";
+    self.buttonC = @"Spider-Slayer";
+    self.buttonD = @"Marveller";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question261
+{
+    self.question = @"Captain Janeway was the commander of which Starfleet vessel?";
+    self.buttonA = @"USS Enterprise";
+    self.buttonB = @"USS Botany Bay";
+    self.buttonC = @"USS Voyager";
+    self.buttonD = @"USS Marquis";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question262
+{
+    self.question = @"Ichabod Crane fight the forces of evil in what TV series?";
+    self.buttonA = @"Gotham";
+    self.buttonB = @"The Vampire Diaries";
+    self.buttonC = @"Supernatural";
+    self.buttonD = @"Sleepy Hollow";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question263
+{
+    self.question = @"Grant Gustin plays which live-action television superhero?";
+    self.buttonA = @"Nightman";
+    self.buttonB = @"Flash";
+    self.buttonC = @"Arrow";
+    self.buttonD = @"Atom";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question264
+{
+    self.question = @"This TV series, based on the young-adult book trilogy, takes place 97 years after nuclear war wiped out all life on Earth.";
+    self.buttonA = @"The 100";
+    self.buttonB = @"The Tomorrow People";
+    self.buttonC = @"Expanse";
+    self.buttonD = @"Continuum";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question265
+{
+    self.question = @"Sunnydale’s protector against evil is known as ... ?";
+    self.buttonA = @"Hellboy";
+    self.buttonB = @"The Punisher";
+    self.buttonC = @"The Slayer";
+    self.buttonD = @"Dark Angel";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question266
+{
+    self.question = @"Bartender Desmond Miles is used by Abstergo Industries to find the location of several artifacts in what console game franchise?";
+    self.buttonA = @"Assassin's Creed";
+    self.buttonB = @"Hitman";
+    self.buttonC = @"Resident Evil";
+    self.buttonD = @"Portal";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question267
+{
+    self.question = @"In Halo, Master Chief’s smart AI is known by what name?";
+    self.buttonA = @"Red Queen";
+    self.buttonB = @"Siri";
+    self.buttonC = @"Cortana";
+    self.buttonD = @"Hal";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question268
+{
+    self.question = @"Which game came out first?";
+    self.buttonA = @"Pac-Man";
+    self.buttonB = @"Centipede";
+    self.buttonC = @"Pong";
+    self.buttonD = @"Space Invaders";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question269
+{
+    self.question = @"Princess Peach was introduced in which game?";
+    self.buttonA = @"Super Mario Bros.";
+    self.buttonB = @"Donkey Kong";
+    self.buttonC = @"The Legend of Zelda";
+    self.buttonD = @"Gauntlet";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question270
+{
+    self.question = @"The King of All Cosmos orders The Prince to do tasks using what object?";
+    self.buttonA = @"Katamari";
+    self.buttonB = @"Skull sword";
+    self.buttonC = @"Flailgun";
+    self.buttonD = @"Metal Chocobo";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question271
+{
+    self.question = @"How many unlock able characters are there in Super Smash Bros.?";
+    self.buttonA = @"5";
+    self.buttonB = @"3";
+    self.buttonC = @"4";
+    self.buttonD = @"6";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question272
+{
+    self.question = @"Which is NOT a card in the original Uno card deck?";
+    self.buttonA = @"Skip";
+    self.buttonB = @"Draw Two";
+    self.buttonC = @"Reverse";
+    self.buttonD = @"Wild Draw Three";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question273
+{
+    self.question = @"How many squares are on a chess board?";
+    self.buttonA = @"32";
+    self.buttonB = @"64";
+    self.buttonC = @"48";
+    self.buttonD = @"56";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question274
+{
+    self.question = @"What was the original name of the Mr. Monopoly character from the board game Monopoly?";
+    self.buttonA = @"Max A. Million";
+    self.buttonB = @"Monte Moneybags";
+    self.buttonC = @"The Tax Man";
+    self.buttonD = @"Rich Uncle Pennybags";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question275
+{
+    self.question = @"How many tradable properties are on the Monopoly board?";
+    self.buttonA = @"50";
+    self.buttonB = @"28";
+    self.buttonC = @"32";
+    self.buttonD = @"44";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question276
+{
+    self.question = @"A Pinochle deck has how many cards?";
+    self.buttonA = @"48";
+    self.buttonB = @"52";
+    self.buttonC = @"108";
+    self.buttonD = @"64";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question277
+{
+    self.question = @"This popular franchise was introduced to arcades in 1992.";
+    self.buttonA = @"Pac-Man";
+    self.buttonB = @"Street Fighter";
+    self.buttonC = @"Mortal Kombat";
+    self.buttonD = @"Tetris";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question278
+{
+    self.question = @"Which band is not featured in \"Guitar Hero III: Legends of Rock\"?";
+    self.buttonA = @"Slayer";
+    self.buttonB = @"Kiss";
+    self.buttonC = @"Metallica";
+    self.buttonD = @"Lynyrd Skynyrd";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question279
+{
+    self.question = @"What was the first arcade game released by Nintendo?";
+    self.buttonA = @"Pong";
+    self.buttonB = @"Computer Othello";
+    self.buttonC = @"Donkey Kong";
+    self.buttonD = @"Super Mario";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question280
+{
+    self.question = @"Dhaslim is a character from which franchise?";
+    self.buttonA = @"Street Fighter";
+    self.buttonB = @"Mortal Kombat";
+    self.buttonC = @"Tekken";
+    self.buttonD = @"Grand Theft Auto";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question281
+{
+    self.question = @"This game of physical skill involves colored dots and a spinner.";
+    self.buttonA = @"Twister";
+    self.buttonB = @"Baggo";
+    self.buttonC = @"Toss Across";
+    self.buttonD = @"Hopscotch";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question282
+{
+    self.question = @"What is the only chess piece that can leap over other pieces?";
+    self.buttonA = @"Bishop";
+    self.buttonB = @"Queen";
+    self.buttonC = @"Knight";
+    self.buttonD = @"Rook";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question283
+{
+    self.question = @"Draw, Strip, and Omaha are a few variations of which card game?";
+    self.buttonA = @"Crazy 8's";
+    self.buttonB = @"Uno";
+    self.buttonC = @"Pinochle";
+    self.buttonD = @"Poker";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question284
+{
+    self.question = @"Which chess piece(s) can be promoted or exchanged when it reaches the eighth rank?";
+    self.buttonA = @"Rook";
+    self.buttonB = @"Pawn";
+    self.buttonC = @"Bishop";
+    self.buttonD = @"Knight";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question285
+{
+    self.question = @"In Blackjack, which card can be either 1 or 11?";
+    self.buttonA = @"Ace";
+    self.buttonB = @"Jack";
+    self.buttonC = @"Joker";
+    self.buttonD = @"King";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question286
+{
+    self.question = @"What was the first handheld game console that used interchangeable cartridges?";
+    self.buttonA = @"TurboExpress";
+    self.buttonB = @"Game Boy";
+    self.buttonC = @"MicroVision";
+    self.buttonD = @"Bitcorp Gamate";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question287
+{
+    self.question = @"This board game is believed to have originated nearly 5,000 years ago.";
+    self.buttonA = @"Halma";
+    self.buttonB = @"Chess";
+    self.buttonC = @"Mancala";
+    self.buttonD = @"Backgammon";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question288
+{
+    self.question = @"Chinese Checkers was invented in what country?";
+    self.buttonA = @"Japan";
+    self.buttonB = @"Germany";
+    self.buttonC = @"China";
+    self.buttonD = @"England";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question289
+{
+    self.question = @"In standard poker, what does NOT rank higher than a \"flush\"?";
+    self.buttonA = @"Straight";
+    self.buttonB = @"Full House";
+    self.buttonC = @"Four of a Kind";
+    self.buttonD = @"Royal Flush";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question290
+{
+    self.question = @"An official Scrabble board has how many squares?";
+    self.buttonA = @"128";
+    self.buttonB = @"300";
+    self.buttonC = @"225";
+    self.buttonD = @"64";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question291
+{
+    self.question = @"As the Sorcerer Supreme, Stephen Strange wears what powerful mystical item?";
+    self.buttonA = @"Amulet of Anubis";
+    self.buttonB = @"Eye of Agamotto";
+    self.buttonC = @"Evil Eye of Avalon";
+    self.buttonD = @"Cloak of Destiny";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question292
+{
+    self.question = @"What is the name of Doctor Strange’s personal servant?";
+    self.buttonA = @"Wong";
+    self.buttonB = @"Shang-Chi";
+    self.buttonC = @"Jarvis";
+    self.buttonD = @"Fang";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question293
+{
+    self.question = @"What Marvel Comics villain was ruler of the Dark Dimension?";
+    self.buttonA = @"Lord Nekron";
+    self.buttonB = @"Satannish";
+    self.buttonC = @"Daimon Hellstrom";
+    self.buttonD = @"Dormammu";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question294
+{
+    self.question = @"Who is Marvel Comics’ \"Master of Kung Fu\"?";
+    self.buttonA = @"Bronze Tiger";
+    self.buttonB = @"Danny Rand";
+    self.buttonC = @"Shang-Chi";
+    self.buttonD = @"Richard Dragon";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question295
+{
+    self.question = @"Iron Fist gains his training and powers while living in what mystical city?";
+    self.buttonA = @"Azarath";
+    self.buttonB = @"K'un-L'un";
+    self.buttonC = @"Utopia";
+    self.buttonD = @"Zenn-La";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question296
+{
+    self.question = @"Power Man and Iron Fist were partners in what business?";
+    self.buttonA = @"Heroes for Hire";
+    self.buttonB = @"Damage Control";
+    self.buttonC = @"Dial \"H\" for Hero";
+    self.buttonD = @"X-Factor Investigations";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)question297
+{
+    self.question = @"Misty Knight and Colleen Wing were the original duo to be called ... ?";
+    self.buttonA = @"Fire and Ice";
+    self.buttonB = @"Hawk And Dove";
+    self.buttonC = @"Duo Damsel";
+    self.buttonD = @"Daughters of the Dragon";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)question298
+{
+    self.question = @"DC Comics’ Hawk and Dove were originally which family members?";
+    self.buttonA = @"Bruce and Damian Wayne";
+    self.buttonB = @"Holly and Dawn Granger";
+    self.buttonC = @"Hank and Don Hall";
+    self.buttonD = @"Alex and Katie Power";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)question299
+{
+    self.question = @"Wonder Woman’s first appearance was in ... ?";
+    self.buttonA = @"More Fun Comics #103";
+    self.buttonB = @"All Star Comics #8";
+    self.buttonC = @"Justice League of America #1";
+    self.buttonD = @"Amazing Fantasy #15";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)question300
+{
+    self.question = @"Who was originally chosen as Hal Jordan’s back-up as Green Lantern?";
+    self.buttonA = @"Guy Gardner";
+    self.buttonB = @"John Stewart";
+    self.buttonC = @"Kyle Rayner";
+    self.buttonD = @"Alan Scott";
+    self.correctAnswer = @"A";
+    
+}
+
 
 
 
