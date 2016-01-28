@@ -148,7 +148,7 @@
     self.question = @"Who was the original host of the \"Twilight Zone\"?";
     self.buttonA = @"Rod Steiger";
     self.buttonB = @"Rod Taylor";
-    self.buttonC = @"Rod Sterling";
+    self.buttonC = @"Rod Serling";
     self.buttonD = @"Rod Stewart";
     self.correctAnswer = @"C";
     
@@ -338,6 +338,336 @@
     self.buttonC = @"The Slayer";
     self.buttonD = @"Dark Angel";
     self.correctAnswer = @"C";
+    
+}
+
+-(void)tv031
+{
+    self.question = @"The theme song to \"Charmed\" titled \"How Soon Is Now?\" was performed by what group?";
+    self.buttonA = @"Pearl Jam";
+    self.buttonB = @"The Smiths";
+    self.buttonC = @"The Smashing Pumpkins";
+    self.buttonD = @"Love Spit Love";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)tv032
+{
+    self.question = @"The 2002 revival of \"The Twilight Zone\" was hosted by what famous actor?";
+    self.buttonA = @"Patrick Stewart";
+    self.buttonB = @"Forest Whitaker";
+    self.buttonC = @"Rod Serling";
+    self.buttonD = @"LeVar Burton";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)tv033
+{
+    self.question = @"Three sisters from Asgard with magical powers are the focus of what TV series?";
+    self.buttonA = @"Witches of East End";
+    self.buttonB = @"The Tomorrow People";
+    self.buttonC = @"Charmed";
+    self.buttonD = @"Tucker's Witch";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)tv034
+{
+    self.question = @"Prue, Piper, and Phoebe make up the \"Power of Three\" in what long-running television show?";
+    self.buttonA = @"Buffy the Vampire Slayer";
+    self.buttonB = @"Witches of East End";
+    self.buttonC = @"Charmed";
+    self.buttonD = @"Dark Angel";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)tv035
+{
+    self.question = @"Rose McGowan joined \"Charmed\" to replace which actress?";
+    self.buttonA = @"Alyssa Milano";
+    self.buttonB = @"Holly Marie Combs";
+    self.buttonC = @"Kaley Cuoco";
+    self.buttonD = @"Shannon Doherty";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)tv036
+{
+    self.question = @"This actor starred as Clark Kent in the hit series \"Smallville\".";
+    self.buttonA = @"Henry Cavill";
+    self.buttonB = @"Tom Welling";
+    self.buttonC = @"Dean Cain";
+    self.buttonD = @"Kirk Alyn";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)tv037
+{
+    self.question = @"Michael Rosenbaum played what iconic character on the series \"Smallville\"?";
+    self.buttonA = @"Lex Luthor";
+    self.buttonB = @"Clark Kent";
+    self.buttonC = @"Oliver Queen";
+    self.buttonD = @"Arthur Curry";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)tv038
+{
+    self.question = @"Before he played Jonathan Kent in \"Smallville\", John Schneider played cousin Bo in what television series?";
+    self.buttonA = @"Happy Days";
+    self.buttonB = @"Mork and Mindy";
+    self.buttonC = @"The Dukes of Hazzard";
+    self.buttonD = @"Supernatural";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)tv039
+{
+    self.question = @"What actress was cast as Lois Lane in \"Smallville\"?";
+    self.buttonA = @"Laura Vandervoort";
+    self.buttonB = @"Allison Mack";
+    self.buttonC = @"Kristin Kreuk";
+    self.buttonD = @"Erica Durance";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)tv040
+{
+    self.question = @"What actress played intrepid reporter Lois Lane in \"Lois & Clark: The New Adventures of Superman\"?";
+    self.buttonA = @"Annette O'Toole";
+    self.buttonB = @"Teri Hatcher";
+    self.buttonC = @"Erica Durance";
+    self.buttonD = @"Kristin Kreuk";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)tv041
+{
+    self.question = @"Which actor has NOT played Superman in a TV series?";
+    self.buttonA = @"Brandon Routh";
+    self.buttonB = @"Dean Cain";
+    self.buttonC = @"George Reeves";
+    self.buttonD = @"Tom Welling";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)tv042
+{
+    self.question = @"What was the first live-action television series to feature Superman?";
+    self.buttonA = @"Smallville";
+    self.buttonB = @"Legion of Super Heroes";
+    self.buttonC = @"Adventures of Superman";
+    self.buttonD = @"The Batman-Superman Hour";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)tv043
+{
+    self.question = @"Who played the Man of Steel in \"Adventures of Superman\"?";
+    self.buttonA = @"Christopher Reeve";
+    self.buttonB = @"Kirk Alyn";
+    self.buttonC = @"Brandon Routh";
+    self.buttonD = @"George Reeves";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)tv044
+{
+    self.question = @"The live-action \"Superboy\" starred what actor as the title character in Season 1?";
+    self.buttonA = @"Dean Cain";
+    self.buttonB = @"John Haymes Newton";
+    self.buttonC = @"Tom Welling";
+    self.buttonD = @"Gerard Christopher";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)tv045
+{
+    self.question = @"This long-running sires popularized the saying, \"I Want To Believe\".";
+    self.buttonA = @"The X-Files";
+    self.buttonB = @"Supernatural";
+    self.buttonC = @"Buffy the Vampire Slayer";
+    self.buttonD = @"Battlestar Galactica";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)tv046
+{
+    self.question = @"\"The X-Files\" FBI agents Mulder and Skully had what first names?";
+    self.buttonA = @"Clark and Lois";
+    self.buttonB = @"Amos and Andy";
+    self.buttonC = @"Fox and Dana";
+    self.buttonD = @"Archie and Edith";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)tv047
+{
+    self.question = @"Byers, Frohike, and Langly were better known as ... ?";
+    self.buttonA = @"The Three Stooges";
+    self.buttonB = @"V.E.N.O.M.";
+    self.buttonC = @"Nirvana";
+    self.buttonD = @"The Lone Gunmen";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)tv048
+{
+    self.question = @"The iconic Smoking Man from \"The X-Files\" was played by what actor?";
+    self.buttonA = @"Robert Patrick";
+    self.buttonB = @"William B. Davis";
+    self.buttonC = @"David Duchovny";
+    self.buttonD = @"Mitch Pileggi";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)tv049
+{
+    self.question = @"In Season 8 of \"The X-Files\", David Duchovny was replaced by which actor?";
+    self.buttonA = @"Robert Patrick";
+    self.buttonB = @"William B. Davis";
+    self.buttonC = @"Chris Carter";
+    self.buttonD = @"Mitch Pileggi";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)tv050
+{
+    self.question = @"Edward and Alphonse Elric make an ill-fated attempt to create the Philosopher’s Stone in what television anime?";
+    self.buttonA = @"One Piece";
+    self.buttonB = @"Hunter X Hunter";
+    self.buttonC = @"Fullmetal Alchemist";
+    self.buttonD = @"Sword Art Online";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)tv051
+{
+    self.question = @"New Jersey mafia figure Tony Soprano was played by who?";
+    self.buttonA = @"Michael Chiklis";
+    self.buttonB = @"Joe Pesci";
+    self.buttonC = @"Zach Galifianakis";
+    self.buttonD = @"James Gandolfini";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)tv052
+{
+    self.question = @"High school chemistry teacher turns to drug dealer in what television crime drama?";
+    self.buttonA = @"Sons of Anarchy";
+    self.buttonB = @"Breaking Bad";
+    self.buttonC = @"The Shield";
+    self.buttonD = @"Freaks and Geeks";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)tv053
+{
+    self.question = @"Walter White rose in the drug trade under what alias on \"Breaking Bad\"?";
+    self.buttonA = @"Heisenberg";
+    self.buttonB = @"Salamanca";
+    self.buttonC = @"Tesla";
+    self.buttonD = @"Pinkman";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)tv054
+{
+    self.question = @"Sharing its title with the UK original, this US comedy features an eccentric boss and his equally absurd colleagues.";
+    self.buttonA = @"Barney Miller";
+    self.buttonB = @"Absolutely Fabulous";
+    self.buttonC = @"The Office";
+    self.buttonD = @"Black Books";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)tv055
+{
+    self.question = @"Before Michael Chiklis played the Thing in 2005’s \"Fantastic Four\" movie, he was a corrupt cop in this show.";
+    self.buttonA = @"Law & Order";
+    self.buttonB = @"Homeland";
+    self.buttonC = @"The Wire";
+    self.buttonD = @"The Shield";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)tv056
+{
+    self.question = @"Tina Fey created this 3 time Primetime Emmy winner that takes place behind the scenes of a fictional sketch comedy show.";
+    self.buttonA = @"Entourage";
+    self.buttonB = @"30 Rock";
+    self.buttonC = @"BoJack Horseman";
+    self.buttonD = @"3rd Rock from the Sun";
+    self.correctAnswer = @"B";
+    
+}
+
+-(void)tv057
+{
+    self.question = @"Kristen Bell was a high school student with a penchant for solving crime in this TV series.";
+    self.buttonA = @"Veronica Mars";
+    self.buttonB = @"Dark Angel";
+    self.buttonC = @"Buffy the Vampire Slayer";
+    self.buttonD = @"One Tree Hill";
+    self.correctAnswer = @"A";
+    
+}
+
+-(void)tv058
+{
+    self.question = @"This short-lived fan-favorite from Joss Whedon starred Nathan Fillion.";
+    self.buttonA = @"Angel";
+    self.buttonB = @"Dollhouse";
+    self.buttonC = @"Firefly";
+    self.buttonD = @"Castle";
+    self.correctAnswer = @"C";
+    
+}
+
+-(void)tv059
+{
+    self.question = @"This sci-fi space-western featured characters named Jayne Cobb and Inara Serra.";
+    self.buttonA = @"Odyssey 5";
+    self.buttonB = @"The Expanse";
+    self.buttonC = @"Battlestar Galactica";
+    self.buttonD = @"Firefly";
+    self.correctAnswer = @"D";
+    
+}
+
+-(void)tv060
+{
+    self.question = @"Xander, Willow, and Giles helped kill monsters in what TV show?";
+    self.buttonA = @"Veronica Mars";
+    self.buttonB = @"Buffy the Vampire Slayer";
+    self.buttonC = @"Supernatural";
+    self.buttonD = @"Dark Angel";
+    self.correctAnswer = @"B";
     
 }
 
