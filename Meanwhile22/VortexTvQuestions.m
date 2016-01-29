@@ -497,7 +497,7 @@
 
 -(void)tv045
 {
-    self.question = @"This long-running sires popularized the saying, \"I Want To Believe\".";
+    self.question = @"This long-running series popularized the saying, \"I Want To Believe\".";
     self.buttonA = @"The X-Files";
     self.buttonB = @"Supernatural";
     self.buttonC = @"Buffy the Vampire Slayer";

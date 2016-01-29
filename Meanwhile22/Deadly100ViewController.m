@@ -44,10 +44,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper A"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper A lite"];
     self.bannerImage.image = [UIImage imageNamed:@"deadly 100 banner"];
     self.overlayImage.image = [UIImage imageNamed:@"warrior large"];
     self.gameImage.image = [UIImage imageNamed:@"deadly start"];
+    self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     
     self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.ambienceContainer.layer.borderWidth = 2.0;
@@ -60,7 +61,6 @@
     self.noShowButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.noShowButton.layer.borderWidth = 1.0;
     
-    self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     self.overlayContainer.backgroundColor = [UIColor whiteColor];
     
     self.noShowButton.layer.cornerRadius = 8.0;

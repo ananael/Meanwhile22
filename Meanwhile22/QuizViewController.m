@@ -41,18 +41,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper A"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper A lite"];
     self.bannerImage.image = [UIImage imageNamed:@"quiz smasher banner"];
-    
-    self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
-    self.ambienceContainer.layer.borderWidth = 2.0;
-    self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
-    
     self.bannerImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.bannerImage.layer.borderWidth = 2.0;
     
-    self.middleContainer.layer.borderColor = [UIColor blackColor].CGColor;
-    self.middleContainer.layer.borderWidth = 2.0;
+    [self createViewBorderWidth:2.0 forArray:[self viewArray]];
+    self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     
     [self.timeVortexButton setBackgroundImage:[UIImage imageNamed:@"time vortex"] forState:UIControlStateNormal];
     [self.deadly100Button setBackgroundImage:[UIImage imageNamed:@"deadly 100 button"] forState:UIControlStateNormal];
@@ -66,9 +61,7 @@
     self.instructionLabel.text = [NSString stringWithFormat:@"%@\n%@\n\n%@\n\n%@", one, two, three, four];
     
     self.scrollView.showsVerticalScrollIndicator = NO;
-    
-    
-    
+   
     
 }
 
@@ -81,10 +74,24 @@
 {
     for (UIButton *button in array)
     {
-        button.layer.borderWidth = 2.0;
+        button.layer.borderWidth = width;
         button.layer.borderColor = [UIColor blackColor].CGColor;
-        
     }
+}
+
+-(void)createViewBorderWidth:(NSInteger)width forArray:(NSArray *)array
+{
+    for (UIView *view in array)
+    {
+        view.layer.borderWidth = width;
+        view.layer.borderColor = [UIColor blackColor].CGColor;
+    }
+}
+
+-(NSArray *)viewArray
+{
+    NSArray *buttons = @[self.ambienceContainer, self.middleContainer];
+    return buttons;
     
 }
 
@@ -113,24 +120,6 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

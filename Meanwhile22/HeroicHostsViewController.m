@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper C"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper C lite"];
     self.bannerImage.image = [UIImage imageNamed:@"heroic banner"];
     self.comingSoon.image = [UIImage imageNamed:@"coming soon"];
     

@@ -71,7 +71,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper A"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper C lite"];
     [self.pauseButton setBackgroundImage:[UIImage imageNamed:@"pause button"] forState:UIControlStateNormal];
     [self.playButton setBackgroundImage:[UIImage imageNamed:@"play button"] forState:UIControlStateNormal];
     [self.stopButton setBackgroundImage:[UIImage imageNamed:@"stop button@2X"] forState:UIControlStateNormal];
@@ -177,7 +177,6 @@
     
     NSString *currentTime = [self formattedTime:dur];
     self.elapsedTimeLabel.text = currentTime;
-    
 }
 
 // *** Shown in durationLabel ***
@@ -197,13 +196,11 @@
     self.timer = nil;
     
     [self.player seekToTime:kCMTimeZero];
-    
-    NSLog(@"End of Audio Detected");
 }
 
 - (NSString *)formattedTime:(NSInteger)duration
 {
-    //Asks recorder for current time
+    //Asks player for current time
     //The number returned is actually a double, but this stores it as an NSUinteger
     
     NSInteger time = duration;
@@ -228,12 +225,12 @@
     
 }
 
+#pragma mark - Player Controls
+
 - (IBAction)pauseTapped:(id)sender
 {
     [self.player pause];
     [self.avImage stopAnimating];
-    NSLog(@"Pause!");
-    
 }
 
 - (IBAction)playTapped:(id)sender
@@ -241,9 +238,6 @@
     
     [self.player play];
     [self.avImage startAnimating];
-    
-    NSLog(@"Play!: %@", self.episode.podcastURL);
-    
 }
 
 - (IBAction)stopTapped:(id)sender
@@ -252,9 +246,6 @@
     
     [self.player seekToTime:kCMTimeZero];
     [self.avImage stopAnimating];
-    
-    NSLog(@"STOP!");
-    
 }
 
 - (IBAction)backward30Tapped:(id)sender
@@ -267,8 +258,6 @@
     
     [self.player seekToTime:backTime];
     [self.player play];
-    NSLog(@"BACK 30!");
-    
 }
 
 - (IBAction)forward30Tapped:(id)sender
@@ -281,10 +270,9 @@
     
     [self.player seekToTime:backTime];
     [self.player play];
-    NSLog(@"AHEAD 30!");
-    
 }
 
+#pragma mark - Additional Data
 
 -(void)showMissingSummaries
 {

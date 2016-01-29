@@ -55,7 +55,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper A"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper B lite"];
+    self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     
     [self createViewBorderWidth:2.0 forArray:[self containerArray]];
     [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
@@ -76,7 +77,6 @@
     self.noShowButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.noShowButton.layer.borderWidth = 1.0;
     
-    self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     self.overlayContainer.backgroundColor = [UIColor whiteColor];
     
     self.noShowButton.layer.cornerRadius = 8.0;
@@ -105,12 +105,6 @@
     {
         self.overlayContainer.hidden = NO;
     }
-    
-    
-    
-    
-    
-    
     
 }
 
@@ -195,23 +189,6 @@
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"doNotShowVortex"];
     [[NSUserDefaults standardUserDefaults]synchronize];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

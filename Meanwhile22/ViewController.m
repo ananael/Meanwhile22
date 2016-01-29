@@ -35,7 +35,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper B"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper B lite"];
     
     self.logoImage.image = [UIImage imageNamed:@"M22 Logo 2016"];
     self.logoImage.layer.borderColor = [UIColor blackColor].CGColor;

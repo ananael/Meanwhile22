@@ -52,7 +52,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 200.0;
     
-    self.backgroundImage.image = [UIImage imageNamed:@"paper A"];
+    self.backgroundImage.image = [UIImage imageNamed:@"paper A lite"];
     self.bannerImage.image = [UIImage imageNamed:@"vault banner"];
     
     //The border aorund the banner and tableView

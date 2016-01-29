@@ -90,20 +90,7 @@
     
     self.middleContainer.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
     
-    //Creates top border for self.middleContainer
-    CGFloat borderWidth = 2;
-    UIView *topBorder = [UIView new];
-    topBorder.backgroundColor = [UIColor yellowColor];
-    [topBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin];
-    topBorder.frame = CGRectMake(0, 0, self.middleContainer.frame.size.width, borderWidth);
-    [self.middleContainer addSubview:topBorder];
-    
-    //Creates bottom border for self.middleContainer
-    UIView *bottomBorder = [UIView new];
-    bottomBorder.backgroundColor = [UIColor yellowColor];
-    [bottomBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
-    bottomBorder.frame = CGRectMake(0, self.middleContainer.frame.size.height, self.middleContainer.frame.size.width, borderWidth);
-    [self.middleContainer addSubview:bottomBorder];
+    [self questionBorders];
     
     [self buttonBackgroundColor:[self buttonArray]];
     [self createButtonBorderWidth:1.0 forArray:[self buttonArray]];
@@ -152,9 +139,7 @@
     //CategorySaved represents the category button pressed in the TimeVortexVC
     self.categoryLoaded = [[NSUserDefaults standardUserDefaults]integerForKey:@"CategorySaved"];
     
-    NSLog(@"CATEGORY SELECTED: %li", (long)self.categoryLoaded);
-    
-    
+    //NSLog(@"CATEGORY SELECTED: %li", (long)self.categoryLoaded);
     
 }
 
@@ -163,25 +148,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 -(void)buttonBackgroundColor:(NSArray *)array
 {
     for (UIButton *button in array)
     {
-        //button.backgroundColor = [UIColor clearColor];
         button.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
-        
     }
-    
 }
 
 -(void)createButtonBorderWidth:(NSInteger)width forArray:(NSArray *)array
@@ -190,9 +162,7 @@
     {
         button.layer.borderWidth = width;
         button.layer.borderColor = [UIColor yellowColor].CGColor;
-        
     }
-    
 }
 
 -(void)buttonCornerRadius:(NSInteger)number forArray:(NSArray *)array
@@ -200,9 +170,7 @@
     for (UIButton *button in array)
     {
         button.layer.cornerRadius = number;
-        
     }
-    
 }
 
 -(void)centerButtonText:(NSArray *)array
@@ -211,7 +179,24 @@
     {
         button.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
+}
+
+-(void)questionBorders
+{
+    //Creates top border for self.middleContainer
+    CGFloat borderWidth = 2;
+    UIView *topBorder = [UIView new];
+    topBorder.backgroundColor = [UIColor yellowColor];
+    [topBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin];
+    topBorder.frame = CGRectMake(0, 0, self.middleContainer.frame.size.width, borderWidth);
+    [self.middleContainer addSubview:topBorder];
     
+    //Creates bottom border for self.middleContainer
+    UIView *bottomBorder = [UIView new];
+    bottomBorder.backgroundColor = [UIColor yellowColor];
+    [bottomBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
+    bottomBorder.frame = CGRectMake(0, self.middleContainer.frame.size.height, self.middleContainer.frame.size.width, borderWidth);
+    [self.middleContainer addSubview:bottomBorder];
 }
 
 -(NSArray *)animationArray
@@ -343,7 +328,6 @@
     
     self.timerLabel.text = [NSString stringWithFormat:@"%li", (long)self.gameSeconds];
     
-    
     if (self.gameSeconds == 30)
     {
         self.timerLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:215.0/255.0 blue:0.0 alpha:1.0];
@@ -371,7 +355,7 @@
         
         //Intentionally restated the text to prevent "-1" from showing in the label.
         self.timerLabel.text = @"TIME'S UP!";
-        NSLog(@"DONE!!");
+        
         [self gameOver];
     }
     
@@ -431,45 +415,6 @@
     
 }
 
-/*
-//For some reason, when using this method, the info does not refresh after array1 is repopulated by array2
--(void)randomQuestion:(NSMutableArray *)array1 disposedTo:(NSMutableArray *)array2
-{
-    //If array1 has more than "zero" items, a random index number is selected
-    //The random object is placed in array2 and REMOVED from array1
-    
-    if ([array1 count] > 0)
-    {
-        self.randomIndex = arc4random() %[array1 count];
-        
-        NSLog(@"Random Index: %li", (long)self.randomIndex);
-        NSLog(@"Initial Count: %li", [array1 count]);
-        
-        SEL selector = [[array1 objectAtIndex:self.randomIndex] pointerValue];
-        IMP imp = [self methodForSelector:selector];
-        void (*func)(id, SEL) = (void *)imp;
-        func(self, selector);
-        
-        [array2 addObject:[array1 objectAtIndex:self.randomIndex]];
-        [array1 removeObjectAtIndex:self.randomIndex];
-        
-        //NSLog(@"Array Now Contains: %@", array1);
-        
-        //If array1 has "zero" items, it is repopulated by the itmes in array2
-        if ([array1 count] == 0)
-        {
-            //The array1 is populated with the items in array2
-            array1 = [NSMutableArray arrayWithArray:array2];
-            
-            //Then array2 is cleaned out and ready to be repopulated by array1
-            [array2 removeAllObjects];
-        }
-        NSLog(@"New Count: %li", [array1 count]);
-    }
-    
-}
-*/
-
 -(void)randomComicQuestion
 {
     //If self.questionArray has more than "zero" items, a random item is selected
@@ -481,8 +426,8 @@
     {
         self.randomIndex = arc4random() %[self.comicsArray count];
         
-        NSLog(@"Random Index: %li", (long)self.randomIndex);
-        NSLog(@"Initial Count: %li", (unsigned long)[self.comicsArray count]);
+        //NSLog(@"Index Chosen: %li", (long)self.randomIndex);
+        //NSLog(@"Available Array Count: %li", (unsigned long)[self.comicsArray count]);
         
         SEL selector = NSSelectorFromString([self.comicsArray objectAtIndex:self.randomIndex]);
         IMP imp = [question methodForSelector:selector];
@@ -525,7 +470,7 @@
             //Then self.usedLetterArray is cleaned out and ready to be repopulated by self.letterArray
             [self.usedComicsArray removeAllObjects];
         }
-        NSLog(@"New Count: %li", (unsigned long)[self.comicsArray count]);
+        //NSLog(@"Current Array Count: %li", (unsigned long)[self.comicsArray count]);
     }
     
 }
@@ -540,9 +485,6 @@
     if ([self.moviesArray count] > 0)
     {
         self.randomIndex = arc4random() %[self.moviesArray count];
-        
-        NSLog(@"Random Index: %li", (long)self.randomIndex);
-        NSLog(@"Initial Count: %li", (unsigned long)[self.moviesArray count]);
         
         SEL selector = NSSelectorFromString([self.moviesArray objectAtIndex:self.randomIndex]);
         IMP imp = [question methodForSelector:selector];
@@ -585,7 +527,7 @@
             //Then self.usedLetterArray is cleaned out and ready to be repopulated by self.letterArray
             [self.usedMoviesArray removeAllObjects];
         }
-        NSLog(@"New Count: %li", (unsigned long)[self.moviesArray count]);
+        
     }
     
 }
@@ -598,9 +540,6 @@
     if ([self.tvArray count] > 0)
     {
         self.randomIndex = arc4random() %[self.tvArray count];
-        
-        NSLog(@"Random Index: %li", (long)self.randomIndex);
-        NSLog(@"Initial Count: %li", (unsigned long)[self.tvArray count]);
         
         SEL selector = NSSelectorFromString([self.tvArray objectAtIndex:self.randomIndex]);
         IMP imp = [question methodForSelector:selector];
@@ -640,7 +579,7 @@
 
             [self.usedTVArray removeAllObjects];
         }
-        NSLog(@"New Count: %li", (unsigned long)[self.tvArray count]);
+        
     }
     
 }
@@ -652,9 +591,6 @@
     if ([self.gamesArray count] > 0)
     {
         self.randomIndex = arc4random() %[self.gamesArray count];
-        
-        NSLog(@"Random Index: %li", (long)self.randomIndex);
-        NSLog(@"Initial Count: %li", (unsigned long)[self.gamesArray count]);
         
         SEL selector = NSSelectorFromString([self.gamesArray objectAtIndex:self.randomIndex]);
         IMP imp = [question methodForSelector:selector];
@@ -694,7 +630,7 @@
             
             [self.usedGamesArray removeAllObjects];
         }
-        NSLog(@"New Count: %li", (unsigned long)[self.gamesArray count]);
+        
     }
     
 }

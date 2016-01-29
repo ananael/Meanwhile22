@@ -159,20 +159,7 @@
         [self.scoreLabel setFont:[UIFont fontWithName:@"AvenirNext-Medium" size:25.0]];
     }
     
-    //Creates top border for self.middleContainer
-    CGFloat borderWidth = 2;
-    UIView *topBorder = [UIView new];
-    topBorder.backgroundColor = [UIColor whiteColor];
-    [topBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin];
-    topBorder.frame = CGRectMake(0, 0, self.middleContainer.frame.size.width, borderWidth);
-    [self.middleContainer addSubview:topBorder];
-    
-    //Creates bottom border for self.middleContainer
-    UIView *bottomBorder = [UIView new];
-    bottomBorder.backgroundColor = [UIColor whiteColor];
-    [bottomBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
-    bottomBorder.frame = CGRectMake(0, self.middleContainer.frame.size.height, self.middleContainer.frame.size.width, borderWidth);
-    [self.middleContainer addSubview:bottomBorder];
+    [self questionBorders];
     
     //[self createImageViewBorderWidth:1.0 forArray:[self imageViewArray]];
     [self buttonBackgroundColor:[self buttonArray]];
@@ -200,11 +187,6 @@
     self.Answer4Correct = NO;
     
     [self roundTimer];
-    
-    
-    
-    
-    
     
     
 }
@@ -278,6 +260,24 @@
 {
     NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button, self.fightAgainButton, self.fallBackButton];
     return buttons;
+}
+
+-(void)questionBorders
+{
+    //Creates top border for self.middleContainer
+    CGFloat borderWidth = 2;
+    UIView *topBorder = [UIView new];
+    topBorder.backgroundColor = [UIColor whiteColor];
+    [topBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin];
+    topBorder.frame = CGRectMake(0, 0, self.middleContainer.frame.size.width, borderWidth);
+    [self.middleContainer addSubview:topBorder];
+    
+    //Creates bottom border for self.middleContainer
+    UIView *bottomBorder = [UIView new];
+    bottomBorder.backgroundColor = [UIColor whiteColor];
+    [bottomBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
+    bottomBorder.frame = CGRectMake(0, self.middleContainer.frame.size.height, self.middleContainer.frame.size.width, borderWidth);
+    [self.middleContainer addSubview:bottomBorder];
 }
 
 -(void)roundTimer
@@ -380,8 +380,8 @@
     {
         self.randomIndex = arc4random() %[self.questionArray count];
         
-        NSLog(@"Random Index: %li", (long)self.randomIndex);
-        NSLog(@"Initial Count: %li", (unsigned long)[self.questionArray count]);
+        //NSLog(@"Index Chosen: %li", (long)self.randomIndex);
+        //NSLog(@"Available Array Count: %li", (unsigned long)[self.questionArray count]);
         
         SEL selector = NSSelectorFromString([self.questionArray objectAtIndex:self.randomIndex]);
         IMP imp = [question methodForSelector:selector];
@@ -425,7 +425,7 @@
             //Then self.usedQuestionArray is cleaned out and ready to be repopulated by self.questionArray
             [self.usedQuestionArray removeAllObjects];
         }
-        NSLog(@"New Count: %li", (unsigned long)[self.questionArray count]);
+        //NSLog(@"Current Array Count: %li", (unsigned long)[self.questionArray count]);
     }
     
 }
@@ -481,7 +481,7 @@
 
     [self answerBoolsReset];
     
-    if (self.scoreNumber == 20)
+    if (self.scoreNumber == 100)
     {
         self.overlayImage.hidden = YES;
         self.gameLostImage.hidden = YES;
@@ -721,7 +721,6 @@
     
     [self saveAlert];
     
-    
 }
 
 - (IBAction)quitTapped:(id)sender
@@ -752,19 +751,6 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
