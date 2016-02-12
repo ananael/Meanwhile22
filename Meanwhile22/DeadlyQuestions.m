@@ -245,10 +245,10 @@
 -(void)question022
 {
     self.question = @"Kevin Smith played a computer hacker with the codename Warlock in what film franchise?";
-    self.buttonA = @"Patton Oswald";
-    self.buttonB = @"Ashton Kutcher";
-    self.buttonC = @"Kevin Smith";
-    self.buttonD = @"Tom Olyphant";
+    self.buttonA = @"Guardians of the Galaxy";
+    self.buttonB = @"Tron";
+    self.buttonC = @"Die Hard";
+    self.buttonD = @"Terminator";
     self.correctAnswer = @"C";
     
 }
@@ -519,7 +519,7 @@
 
 -(void)question047
 {
-    self.question = @"Detective Sara Spezzini wielded what supernatural, sentient artifact?";
+    self.question = @"Detective Sara Pezzini wielded what supernatural, sentient artifact?";
     self.buttonA = @"The Orb of Agamotto";
     self.buttonB = @"The Witchblade";
     self.buttonC = @"The Serpent Crown" ;
