@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f3M-th-tI3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f3M-th-tI3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -1993,11 +1993,37 @@
                                                     <constraint firstItem="2Kh-jp-gW7" firstAttribute="leading" secondItem="ME0-Pu-rBt" secondAttribute="leading" constant="5" id="pWI-es-gqk"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xiz-6w-fNW" userLabel="sliderContainer">
+                                                <rect key="frame" x="0.0" y="126" width="550" height="84"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Phm-NX-RWt">
+                                                        <rect key="frame" x="0.0" y="27" width="550" height="31"/>
+                                                        <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="sliderActivated:" destination="EQf-dw-cei" eventType="valueChanged" id="WJC-ye-UFf"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Phm-NX-RWt" secondAttribute="bottom" constant="27" id="IgX-ux-ufq"/>
+                                                    <constraint firstItem="Phm-NX-RWt" firstAttribute="leading" secondItem="Xiz-6w-fNW" secondAttribute="leading" constant="2" id="Ke6-0P-2IT"/>
+                                                    <constraint firstItem="Phm-NX-RWt" firstAttribute="centerY" secondItem="Xiz-6w-fNW" secondAttribute="centerY" id="bm6-fZ-Svg"/>
+                                                    <constraint firstItem="Phm-NX-RWt" firstAttribute="top" secondItem="Xiz-6w-fNW" secondAttribute="top" constant="27" id="t1F-tS-VP3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Phm-NX-RWt" secondAttribute="trailing" constant="2" id="tfi-JH-860"/>
+                                                    <constraint firstItem="Phm-NX-RWt" firstAttribute="centerX" secondItem="Xiz-6w-fNW" secondAttribute="centerX" id="y4m-Rq-ivy"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="Xiz-6w-fNW" firstAttribute="centerX" secondItem="xlH-0S-PrG" secondAttribute="centerX" id="02W-Mk-ahr"/>
                                             <constraint firstItem="83N-1p-Raa" firstAttribute="height" secondItem="ME0-Pu-rBt" secondAttribute="height" multiplier="4.13223" id="1BQ-6W-kxR"/>
                                             <constraint firstAttribute="bottom" secondItem="ME0-Pu-rBt" secondAttribute="bottom" id="1nE-48-hka"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xiz-6w-fNW" secondAttribute="trailing" id="6Ju-fe-PCM"/>
                                             <constraint firstItem="ME0-Pu-rBt" firstAttribute="leading" secondItem="xlH-0S-PrG" secondAttribute="leading" id="INK-EZ-hEe"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xiz-6w-fNW" secondAttribute="bottom" id="Izi-8m-WYi"/>
+                                            <constraint firstItem="Xiz-6w-fNW" firstAttribute="width" secondItem="83N-1p-Raa" secondAttribute="width" id="KDX-Qo-hvj"/>
+                                            <constraint firstItem="Xiz-6w-fNW" firstAttribute="height" secondItem="83N-1p-Raa" secondAttribute="height" multiplier="0.5091" id="OmM-tt-hCo"/>
                                             <constraint firstItem="83N-1p-Raa" firstAttribute="centerX" secondItem="xlH-0S-PrG" secondAttribute="centerX" id="QGM-yI-VaM"/>
                                             <constraint firstItem="qlO-Go-snb" firstAttribute="top" secondItem="xlH-0S-PrG" secondAttribute="top" id="Ryl-qg-YaU"/>
                                             <constraint firstAttribute="trailing" secondItem="83N-1p-Raa" secondAttribute="trailing" id="WId-cB-zOM"/>
@@ -2011,6 +2037,7 @@
                                             <constraint firstItem="ME0-Pu-rBt" firstAttribute="top" secondItem="83N-1p-Raa" secondAttribute="bottom" constant="5" id="nEQ-P1-Won"/>
                                             <constraint firstItem="83N-1p-Raa" firstAttribute="top" secondItem="xlH-0S-PrG" secondAttribute="top" id="nyW-zG-Mkv"/>
                                             <constraint firstAttribute="trailing" secondItem="qlO-Go-snb" secondAttribute="trailing" id="tTX-WN-7l7"/>
+                                            <constraint firstItem="Xiz-6w-fNW" firstAttribute="leading" secondItem="xlH-0S-PrG" secondAttribute="leading" id="ub0-U0-NTT"/>
                                             <constraint firstAttribute="trailing" secondItem="ME0-Pu-rBt" secondAttribute="trailing" id="xKd-C3-vQ9"/>
                                         </constraints>
                                     </view>
@@ -2266,6 +2293,7 @@
                         <outlet property="previousButton" destination="GSB-31-wH4" id="1lj-op-dhF"/>
                         <outlet property="scrollContainer" destination="MK9-By-rKm" id="oV3-Es-bjS"/>
                         <outlet property="scrollView" destination="EPR-Zh-m7H" id="mED-l1-2NT"/>
+                        <outlet property="slider" destination="Phm-NX-RWt" id="VrP-Pg-VIk"/>
                         <outlet property="soFarLabel" destination="tTk-3y-Ul7" id="L80-jl-l70"/>
                         <outlet property="stopButton" destination="Axf-PP-KHa" id="7Rs-5d-5T5"/>
                         <outlet property="summaryLabel" destination="Eec-3E-v6j" id="d0x-Q5-JqU"/>

@@ -13,6 +13,8 @@
 		D215BEE31C5AD23A000DE3DA /* paper A lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D215BEE01C5AD23A000DE3DA /* paper A lite@2x.png */; };
 		D215BEE41C5AD23A000DE3DA /* paper C lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D215BEE11C5AD23A000DE3DA /* paper C lite@2x.png */; };
 		D22621771C1DF7090065D4F5 /* Deadly100GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */; };
+		D22CC2391C6DBB93004544CE /* rocket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D22CC2381C6DBB93004544CE /* rocket@2x.png */; };
+		D22CC23B1C6DBD6E004544CE /* big rocket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D22CC23A1C6DBD6E004544CE /* big rocket@2x.png */; };
 		D25305681C000FA7004ADB0F /* MissingEpisodeSummaries.m in Sources */ = {isa = PBXBuildFile; fileRef = D25305671C000FA7004ADB0F /* MissingEpisodeSummaries.m */; };
 		D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */; };
 		D2568DE21C28DF9800DA237F /* quiz smasher button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */; };
@@ -174,6 +176,8 @@
 		D215BEE11C5AD23A000DE3DA /* paper C lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper C lite@2x.png"; sourceTree = "<group>"; };
 		D22621751C1DF7090065D4F5 /* Deadly100GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deadly100GameViewController.h; sourceTree = "<group>"; };
 		D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deadly100GameViewController.m; sourceTree = "<group>"; };
+		D22CC2381C6DBB93004544CE /* rocket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rocket@2x.png"; sourceTree = "<group>"; };
+		D22CC23A1C6DBD6E004544CE /* big rocket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "big rocket@2x.png"; sourceTree = "<group>"; };
 		D25305661C000FA7004ADB0F /* MissingEpisodeSummaries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingEpisodeSummaries.h; sourceTree = "<group>"; };
 		D25305671C000FA7004ADB0F /* MissingEpisodeSummaries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissingEpisodeSummaries.m; sourceTree = "<group>"; };
 		D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
@@ -450,8 +454,10 @@
 			isa = PBXGroup;
 			children = (
 				D2D0BAF51C3B39EE0022A01B /* M22 Logo 2016@2x.png */,
+				D22CC23A1C6DBD6E004544CE /* big rocket@2x.png */,
 				D2AF71391C514BAE001E3AB1 /* coming soon.png */,
 				D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */,
+				D22CC2381C6DBB93004544CE /* rocket@2x.png */,
 				D2EA64D31C4C90AD00A27478 /* science nerd@2x.png */,
 				D26175971C33468300E772E3 /* shield small.png */,
 				D26175A51C336A0200E772E3 /* warrior large.png */,
@@ -876,6 +882,7 @@
 				D2EA652A1C4CBE4200A27478 /* swirl 12@2x.png in Resources */,
 				D2EA65251C4CBE4200A27478 /* swirl 7@2x.png in Resources */,
 				D2EA64F91C4CB8DC00A27478 /* banner swirl 10@2x.png in Resources */,
+				D22CC23B1C6DBD6E004544CE /* big rocket@2x.png in Resources */,
 				D2EA65291C4CBE4200A27478 /* swirl 11@2x.png in Resources */,
 				D2BF3EC41C04C41D00388747 /* Icon-60.png in Resources */,
 				D215BEE21C5AD23A000DE3DA /* paper B lite@2x.png in Resources */,
@@ -916,6 +923,7 @@
 				D2EA652B1C4CBE4200A27478 /* swirl 13@2x.png in Resources */,
 				D2EA64631C4319AF00A27478 /* sword swipe.mp3 in Resources */,
 				D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */,
+				D22CC2391C6DBB93004544CE /* rocket@2x.png in Resources */,
 				D26175981C33468300E772E3 /* shield small.png in Resources */,
 				D2EA64F41C4CB8DC00A27478 /* banner swirl 05@2x.png in Resources */,
 				D2EA64691C438C4900A27478 /* male pain scream.mp3 in Resources */,

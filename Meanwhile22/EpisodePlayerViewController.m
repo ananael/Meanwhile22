@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *elapsedTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *timerImage;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
 @property (weak, nonatomic) IBOutlet UIView *middleContainer;
 @property (weak, nonatomic) IBOutlet UIButton *pauseButton;
@@ -47,9 +48,13 @@
 @property AVPlayerItem *playerItem;
 @property AVPlayer *player;
 
-@property NSTimer *timer;
-@property NSTimer *timeRemaining;
+@property BOOL isScrubbing;
 
+@property NSTimer *elapsedTimer;
+@property NSTimer *remainingTimer;
+@property NSTimer *sliderTimer;
+
+- (IBAction)sliderActivated:(id)sender;
 - (IBAction)previousTapped:(id)sender;
 - (IBAction)pauseTapped:(id)sender;
 - (IBAction)playTapped:(id)sender;
@@ -104,7 +109,6 @@
     self.titleLabel.text = self.episodeTitle;
     self.summaryLabel.text = [NSString stringWithFormat:@"\n%@", self.episode.itunesSummary];
     
-    
     NSURL *episodeURL = [NSURL URLWithString:self.episode.podcastURL];
     self.playerItem = [[AVPlayerItem alloc]initWithURL:episodeURL];
     self.player = [[AVPlayer alloc]initWithPlayerItem:self.playerItem];
@@ -117,18 +121,27 @@
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
                                                object:[self.player currentItem]];
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01
+    self.elapsedTimer = [NSTimer scheduledTimerWithTimeInterval:0.01
                                                   target:self
-                                                selector:@selector(displayCurrentTime:)
+                                                selector:@selector(displayTimeElapsed)
                                                 userInfo:nil
                                                  repeats:YES];
     
-    self.timeRemaining = [NSTimer scheduledTimerWithTimeInterval:0.01
+    self.remainingTimer = [NSTimer scheduledTimerWithTimeInterval:0.01
                                                           target:self
                                                         selector:@selector(displayTimeRemaining)
                                                         userInfo:nil
                                                          repeats:YES];
     
+    [self.slider setThumbImage:[UIImage imageNamed:@"big rocket"] forState:UIControlStateNormal];
+    
+    //Sets slider max value to audio duration
+    self.slider.maximumValue = self.episode.itunesDuration;
+    self.sliderTimer = [NSTimer scheduledTimerWithTimeInterval:0.01
+                                                        target:self
+                                                      selector:@selector(updateSlider)
+                                                      userInfo:nil
+                                                       repeats:YES];
     
     
     
@@ -171,7 +184,7 @@
 }
 
 // *** Shown in elapsedTimeLabel ***
-- (void)displayCurrentTime:(NSTimer *)timer
+- (void)displayTimeElapsed
 {
     NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
     
@@ -192,8 +205,8 @@
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification
 {
-    [self.timer invalidate];
-    self.timer = nil;
+    [self.elapsedTimer invalidate];
+    self.elapsedTimer = nil;
     
     [self.player seekToTime:kCMTimeZero];
 }
@@ -222,10 +235,29 @@
     self.player = nil;
     [self.avImage stopAnimating];
     [self.navigationController popViewControllerAnimated:YES];
-    
 }
 
 #pragma mark - Player Controls
+
+-(void)updateSlider
+{
+    NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
+    self.slider.value = dur;
+}
+
+- (IBAction)sliderActivated:(id)sender
+{
+    [self.player pause];
+    CMTime newTime = CMTimeMakeWithSeconds(self.slider.value, 1);
+    [self.player seekToTime:newTime];
+    
+    //Ths code smooths the slider action by delaying play action until the streaming is ready
+    [self.player prerollAtRate:1.0 completionHandler:^(BOOL finished) {
+        if (finished) {
+            [self.player play];
+        }
+    }];
+}
 
 - (IBAction)pauseTapped:(id)sender
 {
