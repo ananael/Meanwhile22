@@ -109,11 +109,52 @@
     self.titleLabel.text = self.episodeTitle;
     self.summaryLabel.text = [NSString stringWithFormat:@"\n%@", self.episode.itunesSummary];
     
-    NSURL *episodeURL = [NSURL URLWithString:self.episode.podcastURL];
-    self.playerItem = [[AVPlayerItem alloc]initWithURL:episodeURL];
-    self.player = [[AVPlayer alloc]initWithPlayerItem:self.playerItem];
+    //This code is needed when the app is run for the first time (or re-installed)
+    //Because it handles the situation when there is no savedProgress
+    if (![[NSUserDefaults standardUserDefaults]boolForKey:@"savedProgress"])
+    {
+        //NSLog(@"Brand new Launch !!");
+        
+        NSURL *episodeURL = [NSURL URLWithString:self.episode.podcastURL];
+        self.playerItem = [[AVPlayerItem alloc]initWithURL:episodeURL];
+        self.player = [[AVPlayer alloc]initWithPlayerItem:self.playerItem];
+        
+        [self.player play];
+    }
     
-    [self.player play];
+    //If there is savedProgress (and the same podcast url is choen), the audio begins where it left off
+    if ([[NSUserDefaults standardUserDefaults]boolForKey:@"savedProgress"])
+    {
+        NSString *savedUrl = [[NSUserDefaults standardUserDefaults]objectForKey:@"savedPodcast"];
+        NSInteger savedSeconds = [[NSUserDefaults standardUserDefaults] integerForKey:@"savedTime"];
+        CMTime storedTime = CMTimeMake(savedSeconds, 1);
+        
+        //NSLog(@"Stored Time: %ld", (long)savedSeconds);
+        
+        if ([savedUrl isEqualToString:self.episode.podcastURL])
+        {
+            //NSLog(@"PODCAST MATCH !!");
+            
+            NSURL *episodeURL = [NSURL URLWithString:savedUrl];
+            self.playerItem = [[AVPlayerItem alloc]initWithURL:episodeURL];
+            self.player = [[AVPlayer alloc]initWithPlayerItem:self.playerItem];
+            
+            [self.player seekToTime:storedTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+            
+            [self.player play];
+            
+        } else
+        {
+            //NSLog(@"NOPE. DIFFERENT PODCASTS!");
+            
+            //This routine starts if the player has been previously used but a different podcast is chosen
+            NSURL *episodeURL = [NSURL URLWithString:self.episode.podcastURL];
+            self.playerItem = [[AVPlayerItem alloc]initWithURL:episodeURL];
+            self.player = [[AVPlayer alloc]initWithPlayerItem:self.playerItem];
+            
+            [self.player play];
+        }
+    };
     
     //relates to the time labels
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -231,6 +272,15 @@
 - (IBAction)previousTapped:(id)sender
 {
     [self.player pause];
+    
+    //Saves progress in case user leaves playerVC but returns and clicks on same podcast episode
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger seconds = CMTimeGetSeconds([self.player currentTime]);
+    [defaults setBool:YES forKey:@"savedProgress"];
+    [defaults setObject:self.episode.podcastURL forKey:@"savedPodcast"];
+    [defaults setInteger:seconds forKey:@"savedTime"];
+    //NSLog(@"Show the current SAVED time: %f", CMTimeGetSeconds([self.player currentTime]));
+    
     [self.player seekToTime:kCMTimeZero];
     self.player = nil;
     [self.avImage stopAnimating];
@@ -263,6 +313,14 @@
 {
     [self.player pause];
     [self.avImage stopAnimating];
+    
+    //Extra "savedProgress" location, in case user pauses then closes app without engaging "previous" button
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger seconds = CMTimeGetSeconds([self.player currentTime]);
+    [defaults setBool:YES forKey:@"savedProgress"];
+    [defaults setObject:self.episode.podcastURL forKey:@"savedPodcast"];
+    [defaults setInteger:seconds forKey:@"savedTime"];
+    //NSLog(@"Show the current PAUSE time: %f", CMTimeGetSeconds([self.player currentTime]));
 }
 
 - (IBAction)playTapped:(id)sender
