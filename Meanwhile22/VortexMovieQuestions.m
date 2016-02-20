@@ -37,7 +37,7 @@
 {
     self.question = @"Who played Dorothy in The Wizard of Oz?";
     self.buttonA = @"Shirley Temple";
-    self.buttonB = @"Marilyn Momnroe";
+    self.buttonB = @"Marilyn Monroe";
     self.buttonC = @"Norma Desmond";
     self.buttonD = @"Judy Garland";
     self.correctAnswer = @"D";

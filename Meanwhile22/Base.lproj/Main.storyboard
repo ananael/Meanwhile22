@@ -857,7 +857,6 @@
                                     <constraint firstAttribute="trailing" secondItem="cLv-l4-Uui" secondAttribute="trailing" constant="10" id="FrK-zV-ixW"/>
                                     <constraint firstItem="cLv-l4-Uui" firstAttribute="centerX" secondItem="L9I-2v-SEJ" secondAttribute="centerX" id="XqB-mx-8W0"/>
                                     <constraint firstItem="9fB-tO-xfS" firstAttribute="width" secondItem="L9I-2v-SEJ" secondAttribute="width" multiplier="0.1071" id="Ylv-j4-A70"/>
-                                    <constraint firstItem="9fB-tO-xfS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="L9I-2v-SEJ" secondAttribute="leading" constant="500" id="d7J-Re-rSe"/>
                                     <constraint firstItem="9fB-tO-xfS" firstAttribute="height" secondItem="L9I-2v-SEJ" secondAttribute="height" multiplier="0.375" id="ysw-Se-BX3"/>
                                 </constraints>
                             </view>
@@ -1241,15 +1240,13 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.32156863810000003" green="0.43921571970000001" blue="0.67450982329999998" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
-                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nfo-cv-e6T" secondAttribute="leading" constant="25" id="4Or-iE-IKv"/>
                                             <constraint firstItem="kWl-T8-vYz" firstAttribute="centerY" secondItem="nfo-cv-e6T" secondAttribute="centerY" id="DrV-Vt-SMH"/>
-                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="centerX" secondItem="nfo-cv-e6T" secondAttribute="centerX" id="EDr-eP-5Mm"/>
-                                            <constraint firstAttribute="bottom" secondItem="vO0-PP-1Mf" secondAttribute="bottom" constant="20" id="Kkd-kp-Jgs"/>
+                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="centerX" secondItem="kWl-T8-vYz" secondAttribute="centerX" id="IQX-ih-Eiy"/>
+                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="height" secondItem="nfo-cv-e6T" secondAttribute="height" multiplier="0.1892" id="N4R-jI-VFI"/>
+                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="leading" secondItem="nfo-cv-e6T" secondAttribute="leading" constant="25" id="Pwf-gZ-ElR"/>
+                                            <constraint firstAttribute="bottom" secondItem="vO0-PP-1Mf" secondAttribute="bottom" constant="20" id="RAg-a4-JoQ"/>
                                             <constraint firstItem="kWl-T8-vYz" firstAttribute="centerX" secondItem="nfo-cv-e6T" secondAttribute="centerX" id="dQz-WO-g3Q"/>
                                             <constraint firstItem="kWl-T8-vYz" firstAttribute="top" secondItem="nfo-cv-e6T" secondAttribute="top" id="eGd-E6-Lcw"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="vO0-PP-1Mf" secondAttribute="trailing" constant="25" id="kbC-ld-83B"/>
-                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="width" secondItem="nfo-cv-e6T" secondAttribute="width" multiplier="0.9091" id="kt2-HC-fg6"/>
-                                            <constraint firstItem="vO0-PP-1Mf" firstAttribute="height" secondItem="nfo-cv-e6T" secondAttribute="height" multiplier="0.1892" id="mOr-Mi-Sy1"/>
                                             <constraint firstItem="kWl-T8-vYz" firstAttribute="leading" secondItem="nfo-cv-e6T" secondAttribute="leading" id="myg-GN-iau"/>
                                         </constraints>
                                     </view>
