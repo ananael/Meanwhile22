@@ -1261,7 +1261,7 @@
                                                 <rect key="frame" x="255" y="5" width="290" height="290"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OA-Uz-kWU" userLabel="infoLabel">
-                                                        <rect key="frame" x="0.0" y="5" width="290" height="20"/>
+                                                        <rect key="frame" x="0.0" y="5" width="290" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1329,17 +1329,19 @@
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="UhD-Jd-o56" firstAttribute="leading" secondItem="tK2-ws-kjV" secondAttribute="trailing" constant="5" id="01U-hG-Iap"/>
-                                            <constraint firstItem="tK2-ws-kjV" firstAttribute="height" secondItem="UhD-Jd-o56" secondAttribute="height" multiplier="1.241" id="2kB-mp-UDZ"/>
+                                            <constraint firstItem="tK2-ws-kjV" firstAttribute="height" secondItem="nLB-la-9Yw" secondAttribute="height" multiplier="0.973" id="8RG-MV-SzX"/>
                                             <constraint firstItem="UhD-Jd-o56" firstAttribute="top" secondItem="nLB-la-9Yw" secondAttribute="top" constant="5" id="C7Q-e2-aws"/>
-                                            <constraint firstItem="tK2-ws-kjV" firstAttribute="width" secondItem="e4c-Pc-nEj" secondAttribute="width" multiplier="0.845" id="DBH-6h-cwo"/>
+                                            <constraint firstItem="UhD-Jd-o56" firstAttribute="width" secondItem="nLB-la-9Yw" secondAttribute="width" multiplier="0.5273" id="GDj-Ct-Ifb"/>
+                                            <constraint firstItem="tK2-ws-kjV" firstAttribute="width" secondItem="nLB-la-9Yw" secondAttribute="width" multiplier="0.445455" id="GMx-0U-rVM"/>
                                             <constraint firstItem="e4c-Pc-nEj" firstAttribute="leading" secondItem="tK2-ws-kjV" secondAttribute="trailing" constant="5" id="HXA-21-CGI"/>
-                                            <constraint firstItem="tK2-ws-kjV" firstAttribute="height" secondItem="e4c-Pc-nEj" secondAttribute="height" multiplier="5.538" id="KIU-sg-bAK"/>
+                                            <constraint firstItem="e4c-Pc-nEj" firstAttribute="width" secondItem="nLB-la-9Yw" secondAttribute="width" multiplier="0.5273" id="L6M-2b-ark"/>
+                                            <constraint firstItem="UhD-Jd-o56" firstAttribute="height" secondItem="nLB-la-9Yw" secondAttribute="height" multiplier="0.7838" id="Lmu-ZM-hqT"/>
                                             <constraint firstAttribute="bottom" secondItem="tK2-ws-kjV" secondAttribute="bottom" constant="5" id="SIP-qe-Fap"/>
                                             <constraint firstAttribute="trailing" secondItem="e4c-Pc-nEj" secondAttribute="trailing" constant="5" id="d1L-vZ-sdU"/>
                                             <constraint firstAttribute="trailing" secondItem="UhD-Jd-o56" secondAttribute="trailing" constant="5" id="fJ1-tY-AKL"/>
                                             <constraint firstAttribute="bottom" secondItem="e4c-Pc-nEj" secondAttribute="bottom" constant="5" id="hSr-ya-RUE"/>
+                                            <constraint firstItem="e4c-Pc-nEj" firstAttribute="height" secondItem="nLB-la-9Yw" secondAttribute="height" multiplier="0.1757" id="lmt-9r-faj"/>
                                             <constraint firstItem="tK2-ws-kjV" firstAttribute="leading" secondItem="nLB-la-9Yw" secondAttribute="leading" constant="5" id="pKN-FR-Pku"/>
-                                            <constraint firstItem="tK2-ws-kjV" firstAttribute="width" secondItem="UhD-Jd-o56" secondAttribute="width" multiplier="0.845" id="rxy-wv-Uy4"/>
                                             <constraint firstItem="tK2-ws-kjV" firstAttribute="top" secondItem="nLB-la-9Yw" secondAttribute="top" constant="5" id="tmA-Rf-j9C"/>
                                             <constraint firstItem="UhD-Jd-o56" firstAttribute="leading" secondItem="tK2-ws-kjV" secondAttribute="trailing" constant="5" id="u5s-oJ-g2L"/>
                                             <constraint firstItem="e4c-Pc-nEj" firstAttribute="top" secondItem="UhD-Jd-o56" secondAttribute="bottom" constant="5" id="zkN-QC-oj5"/>
