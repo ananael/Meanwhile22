@@ -47,6 +47,7 @@
 @property NSInteger gameSeconds;
 
 @property NSInteger scoreNumber;
+@property (weak, nonatomic) IBOutlet UIButton *quitButton;
 
 //The "Answer" BOOLs work by setting the correct anser to "Yes"
 //And the others will default to "No", once enabled as "No" in ViewDidLoad
@@ -69,6 +70,7 @@
 @property NSInteger randomIndex;
 @property NSInteger categoryLoaded;
 
+- (IBAction)quitTapped:(id)sender;
 - (IBAction)answer1Tapped:(id)sender;
 - (IBAction)answer2Tapped:(id)sender;
 - (IBAction)answer3Tapped:(id)sender;
@@ -96,6 +98,11 @@
     [self createButtonBorderWidth:1.0 forArray:[self buttonArray]];
     [self buttonCornerRadius:8.0 forArray:[self buttonArray]];
     [self centerButtonText:[self buttonArray]];
+    
+    self.quitButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.6];
+    self.quitButton.layer.borderColor = [UIColor redColor].CGColor;
+    self.quitButton.layer.borderWidth = 1.0;
+    self.quitButton.layer.cornerRadius = 2.0;
     
     self.scoreLabel.hidden = YES;
     self.correctLabel.hidden = YES;
@@ -344,6 +351,7 @@
         self.answer2Button.enabled = NO;
         self.answer3Button.enabled = NO;
         self.answer4Button.enabled = NO;
+        self.quitButton.hidden = YES;
         self.timerLabel.adjustsFontSizeToFitWidth = YES;
         self.timerLabel.text = @"TIME'S UP!";
     }
@@ -635,6 +643,11 @@
     
 }
 
+
+- (IBAction)quitTapped:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (IBAction)answer1Tapped:(id)sender
 {

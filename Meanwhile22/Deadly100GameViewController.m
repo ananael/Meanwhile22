@@ -152,11 +152,14 @@
     
     self.middleContainer.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
     self.scoreLabel.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
+    self.scoreLabel.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.scoreLabel.layer.borderWidth = 1;
+    self.scoreLabel.layer.cornerRadius = 8;
     
     //Fixes self.scoreLabel font problem on iPhone 4s.
     if (self.view.frame.size.width == 320)
     {
-        [self.scoreLabel setFont:[UIFont fontWithName:@"AvenirNext-Medium" size:25.0]];
+        [self.scoreLabel setFont:[UIFont fontWithName:@"AvenirNext-Medium" size:20.0]];
     }
     
     [self questionBorders];

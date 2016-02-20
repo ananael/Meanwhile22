@@ -2586,7 +2586,7 @@
     
 }
 
--(void)question0235
+-(void)question235
 {
     self.question = @"What is the name of DC Comics’ cigar-smoking, interstellar bounty hunter?";
     self.buttonA = @"Lobo";
@@ -2784,7 +2784,7 @@
     
 }
 
--(void)question0253
+-(void)question253
 {
     self.question = @"The animated series \"King of the Hill\" took place primarily in what U.S. state?";
     self.buttonA = @"Montana";
