@@ -857,6 +857,7 @@
                                     <constraint firstAttribute="trailing" secondItem="cLv-l4-Uui" secondAttribute="trailing" constant="10" id="FrK-zV-ixW"/>
                                     <constraint firstItem="cLv-l4-Uui" firstAttribute="centerX" secondItem="L9I-2v-SEJ" secondAttribute="centerX" id="XqB-mx-8W0"/>
                                     <constraint firstItem="9fB-tO-xfS" firstAttribute="width" secondItem="L9I-2v-SEJ" secondAttribute="width" multiplier="0.1071" id="Ylv-j4-A70"/>
+                                    <constraint firstItem="9fB-tO-xfS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="L9I-2v-SEJ" secondAttribute="leading" constant="500" id="d7J-Re-rSe"/>
                                     <constraint firstItem="9fB-tO-xfS" firstAttribute="height" secondItem="L9I-2v-SEJ" secondAttribute="height" multiplier="0.375" id="ysw-Se-BX3"/>
                                 </constraints>
                             </view>
@@ -986,15 +987,23 @@
                                         <rect key="frame" x="20" y="0.0" width="560" height="200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORRECT!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aa-TY-aCN" userLabel="correctLabel">
-                                                <rect key="frame" x="210" y="150" width="140" height="50"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                                <rect key="frame" x="210" y="120" width="140" height="40"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
                                                 <color key="textColor" red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <size key="shadowOffset" width="2" height="1"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WRONG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tux-OB-fzO" userLabel="wrongLabel">
+                                                <rect key="frame" x="210" y="160" width="140" height="40"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="shadowOffset" width="2" height="1"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP2-aS-09b" userLabel="scoreLabel">
-                                                <rect key="frame" x="210" y="0.0" width="140" height="150"/>
+                                                <rect key="frame" x="210" y="0.0" width="140" height="120"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="90"/>
                                                 <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1003,15 +1012,21 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="0aa-TY-aCN" secondAttribute="bottom" id="2Dy-hC-CVz"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="oP2-aS-09b" secondAttribute="trailing" constant="210" id="8L7-yr-ok4"/>
+                                            <constraint firstItem="tux-OB-fzO" firstAttribute="width" secondItem="0aa-TY-aCN" secondAttribute="width" id="LVc-kc-K9f"/>
+                                            <constraint firstItem="tux-OB-fzO" firstAttribute="height" secondItem="0aa-TY-aCN" secondAttribute="height" id="Mrc-Jr-Vdb"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="tux-OB-fzO" secondAttribute="trailing" constant="210" id="NCx-H1-Yva"/>
+                                            <constraint firstItem="tux-OB-fzO" firstAttribute="top" secondItem="0aa-TY-aCN" secondAttribute="bottom" id="PDi-ZT-fVW"/>
                                             <constraint firstItem="0aa-TY-aCN" firstAttribute="top" secondItem="oP2-aS-09b" secondAttribute="bottom" id="Vci-2o-zhV"/>
                                             <constraint firstItem="oP2-aS-09b" firstAttribute="centerX" secondItem="rrm-Yx-m6N" secondAttribute="centerX" id="WMx-jz-Y4a"/>
+                                            <constraint firstItem="tux-OB-fzO" firstAttribute="centerX" secondItem="rrm-Yx-m6N" secondAttribute="centerX" id="Wsi-iN-JeQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="tux-OB-fzO" secondAttribute="bottom" id="XbS-Ba-ilo"/>
                                             <constraint firstItem="oP2-aS-09b" firstAttribute="width" secondItem="0aa-TY-aCN" secondAttribute="width" id="YYN-Hv-VJ6"/>
                                             <constraint firstItem="0aa-TY-aCN" firstAttribute="height" secondItem="oP2-aS-09b" secondAttribute="height" multiplier="0.335683" id="aYO-a6-8Gc"/>
                                             <constraint firstItem="oP2-aS-09b" firstAttribute="top" secondItem="rrm-Yx-m6N" secondAttribute="top" id="bpR-cR-poS"/>
                                             <constraint firstItem="0aa-TY-aCN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="rrm-Yx-m6N" secondAttribute="leading" constant="210" id="gDa-Al-th3"/>
                                             <constraint firstItem="0aa-TY-aCN" firstAttribute="centerX" secondItem="rrm-Yx-m6N" secondAttribute="centerX" id="hWP-bo-eB6"/>
+                                            <constraint firstItem="tux-OB-fzO" firstAttribute="leading" relation="lessThanOrEqual" secondItem="rrm-Yx-m6N" secondAttribute="leading" constant="210" id="iPm-f7-Zi9"/>
                                             <constraint firstItem="oP2-aS-09b" firstAttribute="leading" relation="lessThanOrEqual" secondItem="rrm-Yx-m6N" secondAttribute="leading" constant="210" id="p4d-yj-6Gb"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0aa-TY-aCN" secondAttribute="trailing" constant="210" id="zuC-Jo-RDd"/>
                                         </constraints>
@@ -1165,6 +1180,7 @@
                         <outlet property="startLabel" destination="RtW-am-E5E" id="Bww-v8-ln9"/>
                         <outlet property="timerLabel" destination="cLv-l4-Uui" id="aHx-Z8-7dJ"/>
                         <outlet property="topContainer" destination="L9I-2v-SEJ" id="nGj-3E-3SS"/>
+                        <outlet property="wrongLabel" destination="tux-OB-fzO" id="OZw-bD-Zv4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHI-qc-5wf" userLabel="First Responder" sceneMemberID="firstResponder"/>

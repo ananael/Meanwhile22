@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIView *resultContainer;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *correctLabel;
+@property (weak, nonatomic) IBOutlet UILabel *wrongLabel;
 @property (weak, nonatomic) IBOutlet UIView *startContainer;
 @property (weak, nonatomic) IBOutlet UILabel *startLabel;
 @property (weak, nonatomic) IBOutlet UIView *overlayButtonContainer;
@@ -30,6 +31,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *topContainer;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (weak, nonatomic) IBOutlet UIButton *quitButton;
 
 @property (weak, nonatomic) IBOutlet UIView *middleContainer;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
@@ -47,7 +49,7 @@
 @property NSInteger gameSeconds;
 
 @property NSInteger scoreNumber;
-@property (weak, nonatomic) IBOutlet UIButton *quitButton;
+@property NSInteger wrongNumber;
 
 //The "Answer" BOOLs work by setting the correct anser to "Yes"
 //And the others will default to "No", once enabled as "No" in ViewDidLoad
@@ -106,6 +108,7 @@
     
     self.scoreLabel.hidden = YES;
     self.correctLabel.hidden = YES;
+    self.wrongLabel.hidden = YES;
     self.playAgainButton.hidden = YES;
     self.nextCategoryButton.hidden = YES;
     [self.playAgainButton setTitle:@"PLAY\nAGAIN" forState:UIControlStateNormal];
@@ -124,6 +127,7 @@
     self.Answer4Correct = NO;
     
     self.scoreNumber = 0;
+    self.wrongNumber = 0;
     self.startLabel.adjustsFontSizeToFitWidth = YES;
     self.startLabel.text = @"START!";
     
@@ -386,6 +390,7 @@
     self.overlayFinalImage.image = [UIImage imageNamed:@"vortex gray background"];
     self.overlayImage.hidden = YES;
     self.scoreLabel.text = [NSString stringWithFormat:@"%li", (long)self.scoreNumber];
+    self.wrongLabel.text = [NSString stringWithFormat:@"%li  WRONG", (long)self.wrongNumber];
     self.startLabel.adjustsFontSizeToFitWidth = YES;
     self.startLabel.text = @"GAME OVER!";
     self.startLabel.alpha = 1.0;
@@ -393,6 +398,7 @@
     self.timerLabel.text = @"60"; //Make sure this matches the self.gameSeconds
     self.scoreLabel.hidden = NO;
     self.correctLabel.hidden = NO;
+    self.wrongLabel.hidden = NO;
     self.startLabel.hidden = NO;
     self.playAgainButton.hidden = NO;
     self.nextCategoryButton.hidden = NO;
@@ -414,6 +420,8 @@
 
 -(void)wrongAnswer
 {
+    self.wrongNumber = self.wrongNumber + 1;
+    
     //The BOOLs need to be reset after each question.
     //If not, when a correct answer is pressed, that button stays as "YES".
     self.Answer1Correct = NO;
@@ -780,9 +788,12 @@
     [self.overlayImage startAnimating];
     self.timerLabel.textColor = [UIColor colorWithRed:0.0/255.0 green:128.0/255.0 blue:0.0/255.0 alpha:1.0];
     [self launchScreenTimer];
+    self.quitButton.hidden = NO;
     self.scoreNumber = 0;
+    self.wrongNumber = 0;
     self.scoreLabel.hidden = YES;
     self.correctLabel.hidden = YES;
+    self.wrongLabel.hidden = YES;
     self.startLabel.text = @"START!";
     self.playAgainButton.hidden = YES;
     self.nextCategoryButton.hidden = YES;
