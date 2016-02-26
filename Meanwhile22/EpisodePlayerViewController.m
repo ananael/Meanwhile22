@@ -174,7 +174,7 @@
                                                         userInfo:nil
                                                          repeats:YES];
     
-    [self.slider setThumbImage:[UIImage imageNamed:@"big rocket"] forState:UIControlStateNormal];
+    [self.slider setThumbImage:[UIImage imageNamed:@"blue rocket"] forState:UIControlStateNormal];
     
     //Sets slider max value to audio duration
     self.slider.maximumValue = self.episode.itunesDuration;
