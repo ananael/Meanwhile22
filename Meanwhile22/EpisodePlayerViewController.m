@@ -102,7 +102,7 @@
     [self createImageBorderWidth:2.0 forArray:[self imageViewArray]];
     [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     
-    [self showMissingSummaries];
+    //[self showMissingSummaries];
     
     self.scrollView.showsVerticalScrollIndicator = NO;
     
@@ -177,7 +177,7 @@
     [self.slider setThumbImage:[UIImage imageNamed:@"blue rocket"] forState:UIControlStateNormal];
     
     //Sets slider max value to audio duration
-    self.slider.maximumValue = self.episode.itunesDuration;
+    self.slider.maximumValue = [self formattedTimeFromString:self.episode.itunesDuration];
     self.sliderTimer = [NSTimer scheduledTimerWithTimeInterval:0.01
                                                         target:self
                                                       selector:@selector(updateSlider)
@@ -237,7 +237,8 @@
 -(void)displayTimeRemaining
 {
     NSInteger dur = CMTimeGetSeconds([self.player currentTime]);
-    NSInteger remaining = (self.episode.itunesDuration - dur);
+    //NSInteger remaining = (self.episode.itunesDuration - dur);
+    NSInteger remaining = ([self formattedTimeFromString:self.episode.itunesDuration] - dur);
     
     NSString *remainingTime = [self formattedTime:remaining];
     self.durationLabel.text = remainingTime;
@@ -252,6 +253,7 @@
     [self.player seekToTime:kCMTimeZero];
 }
 
+//Use if the parsed duration is in seconds
 - (NSString *)formattedTime:(NSInteger)duration
 {
     //Asks player for current time
@@ -267,6 +269,27 @@
     
     return [NSString stringWithFormat:format, hours, minutes, seconds];
 }
+
+//Use if the parsed duration is in hours/minutes/seconds
+- (NSInteger)formattedTimeFromString:(NSString *)duration
+{
+    
+    NSString *timeString = duration;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"hh:mm:ss";
+    NSDate *timeDate = [formatter dateFromString:timeString];
+    
+    formatter.dateFormat = @"hh";
+    NSInteger hours = [[formatter stringFromDate:timeDate] intValue];
+    formatter.dateFormat = @"mm";
+    NSInteger minutes = [[formatter stringFromDate:timeDate] intValue];
+    formatter.dateFormat = @"ss";
+    NSInteger seconds = [[formatter stringFromDate:timeDate] intValue];
+    
+    NSInteger timeInSeconds = seconds + minutes * 60 + hours * 3600;
+    return timeInSeconds;
+}
+
 
 
 - (IBAction)previousTapped:(id)sender
@@ -348,6 +371,7 @@
     
     [self.player seekToTime:backTime];
     [self.player play];
+    [self.avImage startAnimating];
 }
 
 - (IBAction)forward30Tapped:(id)sender
@@ -360,6 +384,7 @@
     
     [self.player seekToTime:backTime];
     [self.player play];
+    [self.avImage startAnimating];
 }
 
 #pragma mark - Additional Data

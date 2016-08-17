@@ -12,7 +12,7 @@
 
 - (instancetype)initWithTitle:(NSString *)title
                       Summary:(NSString *)itunesSummary
-                         Time:(NSInteger)itunesDuration
+                         Time:(NSString *)itunesDuration
                           URL:(NSString *)podcastURL
 {
     self = [super init];

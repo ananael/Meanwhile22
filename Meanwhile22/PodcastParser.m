@@ -16,7 +16,8 @@
 //Podcast properties
 @property NSString *currentTitle;
 @property NSString *currentItunesSummary;
-@property NSInteger currentItunesDuration;
+//@property NSInteger currentItunesDuration;
+@property NSString *currentItunesDuration;
 @property NSString *currentPodcastURL;
 
 @end
@@ -35,7 +36,7 @@
 -(void)parseXMLFile
 {
     //Use the code below if the xml file is available via web page
-    NSURL *xmlPath = [[NSURL alloc]initWithString:@"https://feeds.audiometric.io/1574314397"];
+    NSURL *xmlPath = [[NSURL alloc]initWithString:@"http://feeds.soundcloud.com/users/soundcloud:users:53875678/sounds.rss"];
     
     self.parser = [[NSXMLParser alloc]initWithContentsOfURL:xmlPath];
     
@@ -57,6 +58,12 @@ qualifiedName:(NSString *)qName
 {
     self.element = elementName;
     
+    if ([self.element isEqualToString:@"enclosure"])
+    {
+        NSLog(@"URL String = %@", [attributeDict objectForKey:@"url"]);
+        self.currentPodcastURL = [attributeDict objectForKey:@"url"];
+    }
+    
 }
 
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
@@ -71,12 +78,15 @@ qualifiedName:(NSString *)qName
     }
     else if ([self.element isEqualToString:@"itunes:duration"])
     {
-        self.currentItunesDuration = string.integerValue;
+        //The duration type was changed from NSInteger to NSString due to SoundCloud's xml data format.
+        //self.currentItunesDuration = string.integerValue;
+        self.currentItunesDuration = string;
     }
-    else if ([self.element isEqualToString:@"guid"])
-    {
-        self.currentPodcastURL = string;
-    }
+    //The "guid" reference was commented out because it did not have the same url info as Audiometric
+//    else if ([self.element isEqualToString:@"guid"])
+//    {
+//        self.currentPodcastURL = string;
+//    }
     
 }
 
