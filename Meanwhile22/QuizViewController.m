@@ -7,6 +7,7 @@
 //
 
 #import "QuizViewController.h"
+#import "MethodsCache.h"
 
 @interface QuizViewController ()
 
@@ -43,16 +44,15 @@
     
     self.backgroundImage.image = [UIImage imageNamed:@"paper A lite"];
     self.bannerImage.image = [UIImage imageNamed:@"quiz smasher banner"];
-    self.bannerImage.layer.borderColor = [UIColor blackColor].CGColor;
-    self.bannerImage.layer.borderWidth = 2.0;
     
-    [self createViewBorderWidth:2.0 forArray:[self viewArray]];
+    MethodsCache *methods = [MethodsCache new];
+    [methods createButtonBorderWidth:2.0 color:[UIColor blackColor] forArray:[self buttonArray]];
+    [methods createImageBorderWidth:2.0 color:[UIColor blackColor] forArray:[self imageArray]];
+    [methods createViewBorderWidth:2.0 color:[UIColor blackColor] forArray:[self containerArray]];
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     
     [self.timeVortexButton setBackgroundImage:[UIImage imageNamed:@"time vortex"] forState:UIControlStateNormal];
     [self.deadly100Button setBackgroundImage:[UIImage imageNamed:@"deadly 100 button"] forState:UIControlStateNormal];
-    
-    [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     
     NSString *one = @"Think you know more than the hosts of Meanwhile 22 Pages Later?";
     NSString *two = @"Are you the Ultimate Know-It-All?";
@@ -70,31 +70,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)createButtonBorderWidth:(NSInteger)width forArray:(NSArray *)array
-{
-    for (UIButton *button in array)
-    {
-        button.layer.borderWidth = width;
-        button.layer.borderColor = [UIColor blackColor].CGColor;
-    }
-}
-
--(void)createViewBorderWidth:(NSInteger)width forArray:(NSArray *)array
-{
-    for (UIView *view in array)
-    {
-        view.layer.borderWidth = width;
-        view.layer.borderColor = [UIColor blackColor].CGColor;
-    }
-}
-
--(NSArray *)viewArray
-{
-    NSArray *buttons = @[self.ambienceContainer, self.middleContainer];
-    return buttons;
-    
-}
-
 -(NSArray *)buttonArray
 {
     NSArray *buttons = @[self.previousButton, self.timeVortexButton, self.deadly100Button];
@@ -102,6 +77,19 @@
     
 }
 
+-(NSArray *)containerArray
+{
+    NSArray *buttons = @[self.ambienceContainer, self.middleContainer];
+    return buttons;
+    
+}
+
+-(NSArray *)imageArray
+{
+    NSArray *images = @[self.bannerImage];
+    return images;
+    
+}
 
 - (IBAction)timeVortexTapped:(id)sender
 {

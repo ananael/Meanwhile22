@@ -8,6 +8,7 @@
 
 #import "TimeVortexViewController.h"
 #import "VortexBannerAnimationView.h"
+#import "MethodsCache.h"
 
 @interface TimeVortexViewController ()
 
@@ -59,19 +60,16 @@
     self.backgroundImage.image = [UIImage imageNamed:@"paper B lite"];
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     
-    [self createViewBorderWidth:2.0 forArray:[self containerArray]];
-    [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
+    MethodsCache *methods = [MethodsCache new];
+    [methods createButtonBorderWidth:2.0 color:[UIColor blackColor] forArray:[self buttonArray]];
+    [methods createViewBorderWidth:2.0 color:[UIColor blackColor] forArray:[self containerArray]];
+    [methods createImageBorderWidth:2.0 color:[UIColor blackColor] forArray:[self imageArray]];
+    [methods createButtonBorderWidth:1.0 color:[UIColor blackColor] forArray:[self otherButtonArray]];
     
-    self.bannerAnimation.backgroundColor = [self colorWithHexString:@"FFF2AA" alpha:1.0];
+    self.bannerAnimation.backgroundColor = [methods colorWithHexString:@"FFF2AA" alpha:1.0];
     [self.bannerAnimation addVortexBannerAnimation];
     
     self.overlayImage.image = [UIImage imageNamed:@"science nerd"];
-    
-    self.overlayImage.layer.borderColor = [UIColor blackColor].CGColor;
-    self.overlayImage.layer.borderWidth = 2.0;
-    
-    self.noShowButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.noShowButton.layer.borderWidth = 1.0;
     
     self.overlayContainer.backgroundColor = [UIColor whiteColor];
     
@@ -109,60 +107,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(UIColor*)colorWithHexString:(NSString*)hex alpha:(CGFloat)alpha
-{
-    NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
-    
-    // String should be 6 or 8 characters
-    if ([cString length] < 6) return [UIColor grayColor];
-    
-    // strip 0X if it appears
-    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
-    
-    if ([cString length] != 6) return  [UIColor grayColor];
-    
-    // Separate into r, g, b substrings
-    NSRange range;
-    range.location = 0;
-    range.length = 2;
-    NSString *rString = [cString substringWithRange:range];
-    
-    range.location = 2;
-    NSString *gString = [cString substringWithRange:range];
-    
-    range.location = 4;
-    NSString *bString = [cString substringWithRange:range];
-    
-    // Scan values
-    unsigned int r, g, b;
-    [[NSScanner scannerWithString:rString] scanHexInt:&r];
-    [[NSScanner scannerWithString:gString] scanHexInt:&g];
-    [[NSScanner scannerWithString:bString] scanHexInt:&b];
-    
-    return [UIColor colorWithRed:((float) r / 255.0f)
-                           green:((float) g / 255.0f)
-                            blue:((float) b / 255.0f)
-                           alpha:alpha];
-}
-
--(void)createButtonBorderWidth:(NSInteger)width forArray:(NSArray *)array
-{
-    for (UIButton *button in array)
-    {
-        button.layer.borderWidth = 2.0;
-        button.layer.borderColor = [UIColor blackColor].CGColor;
-    }
-}
-
--(void)createViewBorderWidth:(NSInteger)width forArray:(NSArray *)array
-{
-    for (UIView *view in array)
-    {
-        view.layer.borderWidth = 2.0;
-        view.layer.borderColor = [UIColor blackColor].CGColor;
-    }
-}
-
 -(NSArray *)buttonArray
 {
     NSArray *buttons = @[self.previousButton, self.comicButton, self.movieButton, self.tvButton, self.gameButton];
@@ -173,6 +117,18 @@
 {
     NSArray *containers = @[self.ambienceContainer, self.middleContainer, self.overlayContainer, self.infoContainer, self.bannerAnimation];
     return containers;
+}
+
+-(NSArray *)imageArray
+{
+    NSArray *images = @[self.overlayImage];
+    return images;
+}
+
+-(NSArray *)otherButtonArray
+{
+    NSArray *buttons = @[self.noShowButton];
+    return buttons;
 }
 
 - (IBAction)previousTapped:(id)sender

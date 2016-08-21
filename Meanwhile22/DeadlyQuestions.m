@@ -2831,7 +2831,7 @@
 -(void)question257
 {
     self.question = @"When \"Doctor Who\" returned in 2005, who played the title character?";
-    self.buttonA = @"Mat Smith";
+    self.buttonA = @"Matt Smith";
     self.buttonB = @"Tom Baker";
     self.buttonC = @"Christopher Eccleston";
     self.buttonD = @"David Tenet";

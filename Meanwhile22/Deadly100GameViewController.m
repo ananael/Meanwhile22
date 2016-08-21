@@ -9,6 +9,7 @@
 #import "Deadly100GameViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "DeadlyQuestions.h"
+#import "MethodsCache.h"
 
 @interface Deadly100GameViewController ()
 
@@ -164,21 +165,18 @@
     
     [self questionBorders];
     
-    //[self createImageViewBorderWidth:1.0 forArray:[self imageViewArray]];
+    MethodsCache *methods = [MethodsCache new];
+    [methods createButtonBorderWidth:1.0 color:[UIColor whiteColor] forArray:[self buttonArray]];
+    [methods createButtonBorderWidth:1.0 color:[UIColor blackColor] forArray:[self otherButtonArray]];
+    
     [self buttonBackgroundColor:[self buttonArray]];
-    [self createButtonBorderWidth:1.0 forArray:[self buttonArray]];
     [self buttonCornerRadius:8.0 forArray:[self buttonArray]];
     [self centerButtonText:[self buttonArray]];
     
-    self.saveButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.saveButton.layer.borderWidth = 1;
-    //3 lines below: Text fits in button space for different phone sizes
+    //Use 3 lines below: Text fits in button space for different phone sizes
     self.saveButton.titleLabel.numberOfLines = 1;
     self.saveButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.saveButton.titleLabel.lineBreakMode = NSLineBreakByClipping;
-    
-    self.quitButton.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.quitButton.layer.borderWidth = 1;
     
     self.saveButton.layer.cornerRadius = 10;
     self.quitButton.layer.cornerRadius = 10;
@@ -242,26 +240,15 @@
     }
 }
 
--(void)createImageViewBorderWidth:(NSInteger)width forArray:(NSArray *)array
-{
-    for (UIImageView *view in array)
-    {
-        view.layer.borderWidth = width;
-        view.layer.borderColor = [UIColor blackColor].CGColor;
-    }
-    
-}
-
--(NSArray *)imageViewArray
-{
-    NSArray *lives = @[self.life1, self.life2, self.life3, self.life4, self.life5, self.life6];
-    return lives;
-    
-}
-
 -(NSArray *)buttonArray
 {
-    NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button, self.fightAgainButton, self.fallBackButton];
+    NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button, self.quitButton, self.fightAgainButton, self.fallBackButton];
+    return buttons;
+}
+
+-(NSArray *)otherButtonArray
+{
+    NSArray *buttons = @[self.saveButton];
     return buttons;
 }
 

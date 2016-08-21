@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MethodsCache.h"
 
 @interface ViewController ()
 
@@ -41,11 +42,12 @@
     self.logoImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.logoImage.layer.borderWidth = 2.0;
     
+    MethodsCache *methods = [MethodsCache new];
+    [methods createButtonBorderWidth:2.0 color:[UIColor blackColor] forArray:[self buttonArray]];
     
     [self.episodeButton setBackgroundImage:[UIImage imageNamed:@"vault of episodes"] forState:UIControlStateNormal];
     [self.quizButton setBackgroundImage:[UIImage imageNamed:@"quiz smasher button"] forState:UIControlStateNormal];
     [self.hostButton setBackgroundImage:[UIImage imageNamed:@"heroic hosts button"] forState:UIControlStateNormal];
-    [self createButtonBorder:2.0 forArray:[self buttonArray]];
     
     [[self.twitterButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     [[self.facebookButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
@@ -57,16 +59,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)createButtonBorder:(NSInteger)width forArray:(NSArray *)array
-{
-    for (UIButton *button in array)
-    {
-        button.layer.borderWidth = 2.0;
-        button.layer.borderColor = [UIColor blackColor].CGColor;
-    }
-    
 }
 
 -(NSArray *)buttonArray

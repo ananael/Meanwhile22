@@ -10,6 +10,7 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "PodcastParser.h"
+#import "MethodsCache.h"
 
 @interface EpisodePlayerViewController ()
 
@@ -88,18 +89,14 @@
     self.avImage.animationRepeatCount = 0;
     [self.avImage startAnimating];
     
-    self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
-    self.ambienceContainer.layer.borderWidth = 2.0;
+    MethodsCache *methods = [MethodsCache new];
+    [methods createButtonBorderWidth:2.0 color:[UIColor blackColor] forArray:[self buttonArray]];
+    [methods createViewBorderWidth:2.0 color:[UIColor blackColor] forArray:[self containerArray]];
+    [methods createImageBorderWidth:2.0 color:[UIColor blackColor] forArray:[self imageArray]];
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
-    
-    self.bottomContainer.layer.borderColor = [UIColor blackColor].CGColor;
-    self.bottomContainer.layer.borderWidth = 2.0;
     
     self.soFarLabel.layer.borderColor = [UIColor blackColor].CGColor;
     self.soFarLabel.layer.borderWidth = 2.0;
-    
-    [self createImageBorderWidth:2.0 forArray:[self imageViewArray]];
-    [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     
     self.scrollView.showsVerticalScrollIndicator = NO;
     
@@ -190,31 +187,19 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)createButtonBorderWidth:(NSInteger)width forArray:(NSArray *)array
-{
-    for (UIButton *button in array)
-    {
-        button.layer.borderWidth = 2.0;
-        button.layer.borderColor = [UIColor blackColor].CGColor;
-    }
-}
-
--(void)createImageBorderWidth:(NSInteger)width forArray:(NSArray *)array
-{
-    for (UIImageView *image in array)
-    {
-        image.layer.borderWidth = 2.0;
-        image.layer.borderColor = [UIColor blackColor].CGColor;
-    }
-}
-
 -(NSArray *)buttonArray
 {
     NSArray *buttons = @[self.previousButton, self.pauseButton, self.playButton, self.stopButton, self.backward30, self.forward30];
     return buttons;
 }
 
--(NSArray *)imageViewArray
+-(NSArray *)containerArray
+{
+    NSArray *views = @[self.ambienceContainer, self.bottomContainer];
+    return views;
+}
+
+-(NSArray *)imageArray
 {
     NSArray *images = @[self.bannerImage, self.avImage, self.timerImage];
     return images;

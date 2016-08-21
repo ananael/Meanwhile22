@@ -13,6 +13,7 @@
 #import "PodcastParser.h"
 #import "EpisodeListTableViewCell.h"
 #import "EpisodePlayerViewController.h"
+#import "MethodsCache.h"
 
 @interface EpisodeListViewController ()
 
@@ -55,14 +56,10 @@
     self.backgroundImage.image = [UIImage imageNamed:@"paper A lite"];
     self.bannerImage.image = [UIImage imageNamed:@"vault banner"];
     
-    //The border aorund the banner and tableView
-    self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
-    self.ambienceContainer.layer.borderWidth = 2.0;
+    MethodsCache *methods = [MethodsCache new];
+    [methods createViewBorderWidth:2.0 color:[UIColor blackColor] forArray:[self containerArray]];
+    [methods createButtonBorderWidth:2.0 color:[UIColor blackColor] forArray:[self buttonArray]];
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
-    
-    self.previousButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.previousButton.layer.borderWidth = 2.0;
-    
     
     //Initializing data arrays
     self.podcastArray = [NSMutableArray new];
@@ -111,6 +108,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSArray *)buttonArray
+{
+    NSArray *buttons = @[self.previousButton];
+    return buttons;
+}
+
+-(NSArray *)containerArray
+{
+    NSArray *views = @[self.ambienceContainer];
+    return views;
 }
 
 -(void)networkCheck

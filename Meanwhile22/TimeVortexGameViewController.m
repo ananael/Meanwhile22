@@ -12,6 +12,7 @@
 #import "VortexMovieQuestions.h"
 #import "VortexTvQuestions.h"
 #import "VortexGameQuestions.h"
+#import "MethodsCache.h"
 
 @interface TimeVortexGameViewController ()
 
@@ -97,14 +98,14 @@
     
     [self questionBorders];
     
+    MethodsCache *methods = [MethodsCache new];
+    [methods createButtonBorderWidth:1.0 color:[UIColor yellowColor] forArray:[self buttonArray]];
+    [methods createButtonBorderWidth:1.0 color:[UIColor redColor] forArray:[self otherButtonArray]];
     [self buttonBackgroundColor:[self buttonArray]];
-    [self createButtonBorderWidth:1.0 forArray:[self buttonArray]];
     [self buttonCornerRadius:8.0 forArray:[self buttonArray]];
     [self centerButtonText:[self buttonArray]];
     
     self.quitButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.6];
-    self.quitButton.layer.borderColor = [UIColor redColor].CGColor;
-    self.quitButton.layer.borderWidth = 1.0;
     self.quitButton.layer.cornerRadius = 2.0;
     
     self.scoreLabel.hidden = YES;
@@ -115,7 +116,7 @@
     [self.playAgainButton setTitle:@"PLAY\nAGAIN" forState:UIControlStateNormal];
     [self.nextCategoryButton setTitle:@"NEW\nCATEGORY" forState:UIControlStateNormal];
     
-    self.pageAnimation.backgroundColor = [self colorWithHexString:@"FFF2AA" alpha:1.0];
+    self.pageAnimation.backgroundColor = [methods colorWithHexString:@"FFF2AA" alpha:1.0];
     [self.pageAnimation addVortexPageAnimation];
     
     //Set these BOOLs to "NO" so that you only have to change the correct answer BOOL in the Category methods.
@@ -157,56 +158,11 @@
     // Dispose of any resources that can be recreated.
 }
 
--(UIColor*)colorWithHexString:(NSString*)hex alpha:(CGFloat)alpha
-{
-    NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
-    
-    // String should be 6 or 8 characters
-    if ([cString length] < 6) return [UIColor grayColor];
-    
-    // strip 0X if it appears
-    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
-    
-    if ([cString length] != 6) return  [UIColor grayColor];
-    
-    // Separate into r, g, b substrings
-    NSRange range;
-    range.location = 0;
-    range.length = 2;
-    NSString *rString = [cString substringWithRange:range];
-    
-    range.location = 2;
-    NSString *gString = [cString substringWithRange:range];
-    
-    range.location = 4;
-    NSString *bString = [cString substringWithRange:range];
-    
-    // Scan values
-    unsigned int r, g, b;
-    [[NSScanner scannerWithString:rString] scanHexInt:&r];
-    [[NSScanner scannerWithString:gString] scanHexInt:&g];
-    [[NSScanner scannerWithString:bString] scanHexInt:&b];
-    
-    return [UIColor colorWithRed:((float) r / 255.0f)
-                           green:((float) g / 255.0f)
-                            blue:((float) b / 255.0f)
-                           alpha:alpha];
-}
-
 -(void)buttonBackgroundColor:(NSArray *)array
 {
     for (UIButton *button in array)
     {
         button.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
-    }
-}
-
--(void)createButtonBorderWidth:(NSInteger)width forArray:(NSArray *)array
-{
-    for (UIButton *button in array)
-    {
-        button.layer.borderWidth = width;
-        button.layer.borderColor = [UIColor yellowColor].CGColor;
     }
 }
 
@@ -247,6 +203,13 @@
 -(NSArray *)buttonArray
 {
     NSArray *buttons = @[self.answer1Button, self.answer2Button, self.answer3Button, self.answer4Button, self.playAgainButton, self.nextCategoryButton];
+    return buttons;
+    
+}
+
+-(NSArray *)otherButtonArray
+{
+    NSArray *buttons = @[self.quitButton];
     return buttons;
     
 }
@@ -332,7 +295,6 @@
     {
         
         [self.openingTimer invalidate];
-        //[self.overlayImage stopAnimating];
         self.overlayContainer.hidden = YES;
         
         [self gameTime];

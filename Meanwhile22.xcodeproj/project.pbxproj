@@ -17,6 +17,7 @@
 		D20D47C81D6A17BA00C58830 /* VortexPageAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D47C71D6A17BA00C58830 /* VortexPageAnimationView.m */; };
 		D20D47CB1D6A17D700C58830 /* vortex spin page.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47C91D6A17D700C58830 /* vortex spin page.png */; };
 		D20D47CC1D6A17D700C58830 /* vortex spin page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47CA1D6A17D700C58830 /* vortex spin page@2x.png */; };
+		D20D47D01D6A1EA200C58830 /* MethodsCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D47CF1D6A1EA200C58830 /* MethodsCache.m */; };
 		D215BEE21C5AD23A000DE3DA /* paper B lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D215BEDF1C5AD23A000DE3DA /* paper B lite@2x.png */; };
 		D215BEE31C5AD23A000DE3DA /* paper A lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D215BEE01C5AD23A000DE3DA /* paper A lite@2x.png */; };
 		D215BEE41C5AD23A000DE3DA /* paper C lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D215BEE11C5AD23A000DE3DA /* paper C lite@2x.png */; };
@@ -124,6 +125,8 @@
 		D20D47C71D6A17BA00C58830 /* VortexPageAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VortexPageAnimationView.m; sourceTree = "<group>"; };
 		D20D47C91D6A17D700C58830 /* vortex spin page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex spin page.png"; sourceTree = "<group>"; };
 		D20D47CA1D6A17D700C58830 /* vortex spin page@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex spin page@2x.png"; sourceTree = "<group>"; };
+		D20D47CE1D6A1EA200C58830 /* MethodsCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodsCache.h; sourceTree = "<group>"; };
+		D20D47CF1D6A1EA200C58830 /* MethodsCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodsCache.m; sourceTree = "<group>"; };
 		D215BEDF1C5AD23A000DE3DA /* paper B lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper B lite@2x.png"; sourceTree = "<group>"; };
 		D215BEE01C5AD23A000DE3DA /* paper A lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper A lite@2x.png"; sourceTree = "<group>"; };
 		D215BEE11C5AD23A000DE3DA /* paper C lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper C lite@2x.png"; sourceTree = "<group>"; };
@@ -491,6 +494,8 @@
 			children = (
 				D2FEEA961BD2BF4C00FADE89 /* AppDelegate.h */,
 				D2FEEA971BD2BF4C00FADE89 /* AppDelegate.m */,
+				D20D47CE1D6A1EA200C58830 /* MethodsCache.h */,
+				D20D47CF1D6A1EA200C58830 /* MethodsCache.m */,
 				D215BEE71C5AE207000DE3DA /* Podcast */,
 				D295C3031D68DCB300A6E647 /* Animations */,
 				D215BEE81C5AE274000DE3DA /* TableView Cells */,
@@ -739,6 +744,7 @@
 				D22621771C1DF7090065D4F5 /* Deadly100GameViewController.m in Sources */,
 				D2EA658C1C50453200A27478 /* VortexGameQuestions.m in Sources */,
 				D2AF71351C5134CF001E3AB1 /* HeroicHostsViewController.m in Sources */,
+				D20D47D01D6A1EA200C58830 /* MethodsCache.m in Sources */,
 				D2FEEACE1BD2C3AD00FADE89 /* PodcastParser.m in Sources */,
 				D20D47C81D6A17BA00C58830 /* VortexPageAnimationView.m in Sources */,
 				D2FEEA9B1BD2BF4C00FADE89 /* ViewController.m in Sources */,

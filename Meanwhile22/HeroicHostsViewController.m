@@ -7,6 +7,7 @@
 //
 
 #import "HeroicHostsViewController.h"
+#import "MethodsCache.h"
 
 @interface HeroicHostsViewController ()
 
@@ -33,12 +34,9 @@
     self.bannerImage.image = [UIImage imageNamed:@"heroic banner"];
     self.comingSoon.image = [UIImage imageNamed:@"coming soon"];
     
-    [self createViewBorderWidth:2.0 forArray:[self containerArray]];
-    
-    self.previousButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.previousButton.layer.borderWidth = 2.0;
-    
-    [self createViewBorderWidth:2.0 forArray:[self containerArray]];
+    MethodsCache *methods = [MethodsCache new];
+    [methods createButtonBorderWidth:2.0 color:[UIColor blackColor] forArray:[self buttonArray]];
+    [methods createViewBorderWidth:2.0 color:[UIColor blackColor] forArray:[self containerArray]];
     
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     
@@ -53,16 +51,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-
--(void)createViewBorderWidth:(NSInteger)width forArray:(NSArray *)array
+-(NSArray *)buttonArray
 {
-    for (UIView *view in array)
-    {
-        view.layer.borderWidth = width;
-        view.layer.borderColor = [UIColor blackColor].CGColor;
-        
-    }
-    
+    NSArray *buttons = @[self.previousButton];
+    return buttons;
 }
 
 -(NSArray *)containerArray

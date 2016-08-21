@@ -7,6 +7,7 @@
 //
 
 #import "Deadly100ViewController.h"
+#import "MethodsCache.h"
 
 @interface Deadly100ViewController ()
 
@@ -50,24 +51,16 @@
     self.gameImage.image = [UIImage imageNamed:@"deadly start"];
     self.ambienceContainer.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     
-    self.ambienceContainer.layer.borderColor = [UIColor blackColor].CGColor;
-    self.ambienceContainer.layer.borderWidth = 2.0;
-    
-    self.previousButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.previousButton.layer.borderWidth = 2.0;
-    
-    [self createViewBorderWidth:2.0 forArray:[self containerArray]];
-    
-    self.noShowButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.noShowButton.layer.borderWidth = 1.0;
+    MethodsCache *methods = [MethodsCache new];
+    [methods createViewBorderWidth:2.0 color:[UIColor blackColor] forArray:[self containerArray]];
+    [methods createButtonBorderWidth:2.0 color:[UIColor blackColor] forArray:[self buttonArray1]];
+    [methods createButtonBorderWidth:1.0 color:[UIColor blackColor] forArray:[self buttonArray2]];
+    [methods createButtonBorderWidth:2.0 color:[methods colorWithHexString:@"6E0000" alpha:1.0] forArray:[self buttonArray3]];
     
     self.overlayContainer.backgroundColor = [UIColor whiteColor];
     
     self.noShowButton.layer.cornerRadius = 8.0;
     self.closeButton.layer.cornerRadius = 8.0;
-    
-    self.gameButton.layer.borderColor = [UIColor colorWithRed:110.0/255.0 green:0.0 blue:0.0 alpha:1.0].CGColor;
-    self.gameButton.layer.borderWidth = 2.0;
     self.gameButton.layer.cornerRadius = 8.0;
     
     NSString *one = @"The Apostles of the Sphinx are attacking!";
@@ -100,26 +93,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-
-
--(void)createViewBorderWidth:(NSInteger)width forArray:(NSArray *)array
+-(NSArray *)buttonArray1
 {
-    for (UIView *view in array)
-    {
-        view.layer.borderWidth = 2.0;
-        view.layer.borderColor = [UIColor blackColor].CGColor;
-        
-    }
+    NSArray *buttons = @[self.previousButton];
+    return buttons;
+    
+}
+
+-(NSArray *)buttonArray2
+{
+    NSArray *buttons = @[self.noShowButton];
+    return buttons;
+    
+}
+
+-(NSArray *)buttonArray3
+{
+    NSArray *buttons = @[self.gameButton];
+    return buttons;
     
 }
 
