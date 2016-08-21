@@ -7,17 +7,18 @@
 //
 
 #import "TimeVortexViewController.h"
+#import "VortexBannerAnimationView.h"
 
 @interface TimeVortexViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *backButtonContainer;
 @property (weak, nonatomic) IBOutlet UIButton *previousButton;
 
+
+@property (weak, nonatomic) IBOutlet VortexBannerAnimationView *bannerAnimation;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UIView *ambienceContainer;
 
-@property (weak, nonatomic) IBOutlet UIView *topContainer;
-@property (weak, nonatomic) IBOutlet UIImageView *bannerImage;
 
 @property (weak, nonatomic) IBOutlet UIView *middleContainer;
 @property (weak, nonatomic) IBOutlet UILabel *chooseLabel;
@@ -61,13 +62,8 @@
     [self createViewBorderWidth:2.0 forArray:[self containerArray]];
     [self createButtonBorderWidth:2.0 forArray:[self buttonArray]];
     
-    self.bannerImage.animationImages = [self animationArray];
-    self.bannerImage.animationDuration = 1.5;
-    self.bannerImage.animationRepeatCount = 0;
-    [self.bannerImage startAnimating];
-    
-    self.bannerImage.layer.borderColor = [UIColor blackColor].CGColor;
-    self.bannerImage.layer.borderWidth = 2.0;
+    self.bannerAnimation.backgroundColor = [self colorWithHexString:@"FFF2AA" alpha:1.0];
+    [self.bannerAnimation addVortexBannerAnimation];
     
     self.overlayImage.image = [UIImage imageNamed:@"science nerd"];
     
@@ -113,6 +109,41 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(UIColor*)colorWithHexString:(NSString*)hex alpha:(CGFloat)alpha
+{
+    NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    
+    // String should be 6 or 8 characters
+    if ([cString length] < 6) return [UIColor grayColor];
+    
+    // strip 0X if it appears
+    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
+    
+    if ([cString length] != 6) return  [UIColor grayColor];
+    
+    // Separate into r, g, b substrings
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    NSString *rString = [cString substringWithRange:range];
+    
+    range.location = 2;
+    NSString *gString = [cString substringWithRange:range];
+    
+    range.location = 4;
+    NSString *bString = [cString substringWithRange:range];
+    
+    // Scan values
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rString] scanHexInt:&r];
+    [[NSScanner scannerWithString:gString] scanHexInt:&g];
+    [[NSScanner scannerWithString:bString] scanHexInt:&b];
+    
+    return [UIColor colorWithRed:((float) r / 255.0f)
+                           green:((float) g / 255.0f)
+                            blue:((float) b / 255.0f)
+                           alpha:alpha];
+}
 
 -(void)createButtonBorderWidth:(NSInteger)width forArray:(NSArray *)array
 {
@@ -132,13 +163,6 @@
     }
 }
 
--(NSArray *)animationArray
-{
-    NSArray *images = @[[UIImage imageNamed:@"banner swirl 01"], [UIImage imageNamed:@"banner swirl 02"], [UIImage imageNamed:@"banner swirl 03"], [UIImage imageNamed:@"banner swirl 04"], [UIImage imageNamed:@"banner swirl 05"], [UIImage imageNamed:@"banner swirl 06"], [UIImage imageNamed:@"banner swirl 07"], [UIImage imageNamed:@"banner swirl 08"], [UIImage imageNamed:@"banner swirl 09"], [UIImage imageNamed:@"banner swirl 10"], [UIImage imageNamed:@"banner swirl 11"], [UIImage imageNamed:@"banner swirl 12"], [UIImage imageNamed:@"banner swirl 13"], [UIImage imageNamed:@"banner swirl 14"], [UIImage imageNamed:@"banner swirl 15"], [UIImage imageNamed:@"banner swirl 16"], [UIImage imageNamed:@"banner swirl 17"], [UIImage imageNamed:@"banner swirl 18"], [UIImage imageNamed:@"banner swirl 19"], [UIImage imageNamed:@"banner swirl 20"], [UIImage imageNamed:@"banner swirl 21"], [UIImage imageNamed:@"banner swirl 22"],[UIImage imageNamed:@"banner swirl 23"], [UIImage imageNamed:@"banner swirl 24"]];
-    return images;
-    
-}
-
 -(NSArray *)buttonArray
 {
     NSArray *buttons = @[self.previousButton, self.comicButton, self.movieButton, self.tvButton, self.gameButton];
@@ -147,7 +171,7 @@
 
 -(NSArray *)containerArray
 {
-    NSArray *containers = @[self.ambienceContainer, self.middleContainer, self.overlayContainer, self.infoContainer];
+    NSArray *containers = @[self.ambienceContainer, self.middleContainer, self.overlayContainer, self.infoContainer, self.bannerAnimation];
     return containers;
 }
 

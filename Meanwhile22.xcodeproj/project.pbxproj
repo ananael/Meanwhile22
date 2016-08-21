@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		D20C0B1B1C2A315C00F6C5D1 /* deadly 100 button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */; };
 		D20C0B1D1C2A385400F6C5D1 /* deadly 100 banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */; };
+		D20D47BD1D68EBD300C58830 /* vortex spin banner.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47B91D68EBD300C58830 /* vortex spin banner.png */; };
+		D20D47BE1D68EBD300C58830 /* vortex spin banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47BA1D68EBD300C58830 /* vortex spin banner@2x.png */; };
+		D20D47BF1D68EBD300C58830 /* vortex words banner.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47BB1D68EBD300C58830 /* vortex words banner.png */; };
+		D20D47C01D68EBD300C58830 /* vortex words banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47BC1D68EBD300C58830 /* vortex words banner@2x.png */; };
+		D20D47C31D6955C900C58830 /* VortexBannerAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D47C21D6955C900C58830 /* VortexBannerAnimationView.m */; };
+		D20D47C81D6A17BA00C58830 /* VortexPageAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D47C71D6A17BA00C58830 /* VortexPageAnimationView.m */; };
+		D20D47CB1D6A17D700C58830 /* vortex spin page.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47C91D6A17D700C58830 /* vortex spin page.png */; };
+		D20D47CC1D6A17D700C58830 /* vortex spin page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47CA1D6A17D700C58830 /* vortex spin page@2x.png */; };
 		D215BEE21C5AD23A000DE3DA /* paper B lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D215BEDF1C5AD23A000DE3DA /* paper B lite@2x.png */; };
 		D215BEE31C5AD23A000DE3DA /* paper A lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D215BEE01C5AD23A000DE3DA /* paper A lite@2x.png */; };
 		D215BEE41C5AD23A000DE3DA /* paper C lite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D215BEE11C5AD23A000DE3DA /* paper C lite@2x.png */; };
 		D22621771C1DF7090065D4F5 /* Deadly100GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */; };
 		D22CC23B1C6DBD6E004544CE /* big rocket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D22CC23A1C6DBD6E004544CE /* big rocket@2x.png */; };
-		D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */; };
 		D2568DE21C28DF9800DA237F /* quiz smasher button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */; };
 		D25B8A4A1BF05F7500D77331 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25B8A491BF05F7500D77331 /* AVKit.framework */; };
 		D26175941C33382500E772E3 /* deadly background.png in Resources */ = {isa = PBXBuildFile; fileRef = D26175931C33382500E772E3 /* deadly background.png */; };
@@ -32,22 +39,6 @@
 		D2AF71471C5150C5001E3AB1 /* heroic banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2AF71461C5150C5001E3AB1 /* heroic banner@2x.png */; };
 		D2BAD0851C23DBE700668E13 /* time vortex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BAD0841C23DBE700668E13 /* time vortex@2x.png */; };
 		D2BAD0871C23DFE500668E13 /* quiz smasher banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */; };
-		D2BAD0891C23E37A00668E13 /* time vortex banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */; };
-		D2BF3EC41C04C41D00388747 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EB51C04C41D00388747 /* Icon-60.png */; };
-		D2BF3EC51C04C41D00388747 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EB61C04C41D00388747 /* Icon-60@2x.png */; };
-		D2BF3EC61C04C41D00388747 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EB71C04C41D00388747 /* Icon-60@3x.png */; };
-		D2BF3EC71C04C41D00388747 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EB81C04C41D00388747 /* Icon-76.png */; };
-		D2BF3EC81C04C41D00388747 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EB91C04C41D00388747 /* Icon-76@2x.png */; };
-		D2BF3EC91C04C41D00388747 /* Icon-76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EBA1C04C41D00388747 /* Icon-76@3x.png */; };
-		D2BF3ECA1C04C41D00388747 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EBB1C04C41D00388747 /* Icon-Small.png */; };
-		D2BF3ECB1C04C41D00388747 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EBC1C04C41D00388747 /* Icon-Small@2x.png */; };
-		D2BF3ECC1C04C41D00388747 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EBD1C04C41D00388747 /* Icon-Small@3x.png */; };
-		D2BF3ECD1C04C41D00388747 /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EBE1C04C41D00388747 /* Icon-Spotlight-40.png */; };
-		D2BF3ECE1C04C41D00388747 /* Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EBF1C04C41D00388747 /* Icon-Spotlight-40@2x.png */; };
-		D2BF3ECF1C04C41D00388747 /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EC01C04C41D00388747 /* Icon-Spotlight-40@3x.png */; };
-		D2BF3ED01C04C41D00388747 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EC11C04C41D00388747 /* iTunesArtwork */; };
-		D2BF3ED11C04C41D00388747 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EC21C04C41D00388747 /* iTunesArtwork@2x */; };
-		D2BF3ED21C04C41D00388747 /* M22 Logo template.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF3EC31C04C41D00388747 /* M22 Logo template.png */; };
 		D2BF3F641C0952DA00388747 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3F631C0952DA00388747 /* QuizViewController.m */; };
 		D2BF3F671C097E9400388747 /* TimeVortexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3F661C097E9400388747 /* TimeVortexViewController.m */; };
 		D2BF3F6A1C097EA500388747 /* Deadly100ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3F691C097EA500388747 /* Deadly100ViewController.m */; };
@@ -80,53 +71,6 @@
 		D2EA64931C487BB300A27478 /* movies button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64921C487BB300A27478 /* movies button@2x.png */; };
 		D2EA64951C4883D200A27478 /* tv button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64941C4883D200A27478 /* tv button@2x.png */; };
 		D2EA64D41C4C90AD00A27478 /* science nerd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64D31C4C90AD00A27478 /* science nerd@2x.png */; };
-		D2EA64F01C4CB8DC00A27478 /* banner swirl 01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64D81C4CB8DC00A27478 /* banner swirl 01@2x.png */; };
-		D2EA64F11C4CB8DC00A27478 /* banner swirl 02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64D91C4CB8DC00A27478 /* banner swirl 02@2x.png */; };
-		D2EA64F21C4CB8DC00A27478 /* banner swirl 03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64DA1C4CB8DC00A27478 /* banner swirl 03@2x.png */; };
-		D2EA64F31C4CB8DC00A27478 /* banner swirl 04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64DB1C4CB8DC00A27478 /* banner swirl 04@2x.png */; };
-		D2EA64F41C4CB8DC00A27478 /* banner swirl 05@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64DC1C4CB8DC00A27478 /* banner swirl 05@2x.png */; };
-		D2EA64F51C4CB8DC00A27478 /* banner swirl 06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64DD1C4CB8DC00A27478 /* banner swirl 06@2x.png */; };
-		D2EA64F61C4CB8DC00A27478 /* banner swirl 07@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64DE1C4CB8DC00A27478 /* banner swirl 07@2x.png */; };
-		D2EA64F71C4CB8DC00A27478 /* banner swirl 08@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64DF1C4CB8DC00A27478 /* banner swirl 08@2x.png */; };
-		D2EA64F81C4CB8DC00A27478 /* banner swirl 09@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E01C4CB8DC00A27478 /* banner swirl 09@2x.png */; };
-		D2EA64F91C4CB8DC00A27478 /* banner swirl 10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E11C4CB8DC00A27478 /* banner swirl 10@2x.png */; };
-		D2EA64FA1C4CB8DC00A27478 /* banner swirl 11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E21C4CB8DC00A27478 /* banner swirl 11@2x.png */; };
-		D2EA64FB1C4CB8DC00A27478 /* banner swirl 12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E31C4CB8DC00A27478 /* banner swirl 12@2x.png */; };
-		D2EA64FC1C4CB8DC00A27478 /* banner swirl 13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E41C4CB8DC00A27478 /* banner swirl 13@2x.png */; };
-		D2EA64FD1C4CB8DC00A27478 /* banner swirl 14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E51C4CB8DC00A27478 /* banner swirl 14@2x.png */; };
-		D2EA64FE1C4CB8DC00A27478 /* banner swirl 15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E61C4CB8DC00A27478 /* banner swirl 15@2x.png */; };
-		D2EA64FF1C4CB8DC00A27478 /* banner swirl 16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E71C4CB8DC00A27478 /* banner swirl 16@2x.png */; };
-		D2EA65001C4CB8DC00A27478 /* banner swirl 17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E81C4CB8DC00A27478 /* banner swirl 17@2x.png */; };
-		D2EA65011C4CB8DC00A27478 /* banner swirl 18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64E91C4CB8DC00A27478 /* banner swirl 18@2x.png */; };
-		D2EA65021C4CB8DC00A27478 /* banner swirl 19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64EA1C4CB8DC00A27478 /* banner swirl 19@2x.png */; };
-		D2EA65031C4CB8DC00A27478 /* banner swirl 20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64EB1C4CB8DC00A27478 /* banner swirl 20@2x.png */; };
-		D2EA65041C4CB8DC00A27478 /* banner swirl 21@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64EC1C4CB8DC00A27478 /* banner swirl 21@2x.png */; };
-		D2EA65051C4CB8DC00A27478 /* banner swirl 22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64ED1C4CB8DC00A27478 /* banner swirl 22@2x.png */; };
-		D2EA65061C4CB8DC00A27478 /* banner swirl 23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64EE1C4CB8DC00A27478 /* banner swirl 23@2x.png */; };
-		D2EA65071C4CB8DC00A27478 /* banner swirl 24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA64EF1C4CB8DC00A27478 /* banner swirl 24@2x.png */; };
-		D2EA651F1C4CBE4200A27478 /* swirl 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65081C4CBE4200A27478 /* swirl 1@2x.png */; };
-		D2EA65201C4CBE4200A27478 /* swirl 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65091C4CBE4200A27478 /* swirl 2@2x.png */; };
-		D2EA65211C4CBE4200A27478 /* swirl 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA650A1C4CBE4200A27478 /* swirl 3@2x.png */; };
-		D2EA65221C4CBE4200A27478 /* swirl 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA650B1C4CBE4200A27478 /* swirl 4@2x.png */; };
-		D2EA65231C4CBE4200A27478 /* swirl 5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA650C1C4CBE4200A27478 /* swirl 5@2x.png */; };
-		D2EA65241C4CBE4200A27478 /* swirl 6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA650D1C4CBE4200A27478 /* swirl 6@2x.png */; };
-		D2EA65251C4CBE4200A27478 /* swirl 7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA650E1C4CBE4200A27478 /* swirl 7@2x.png */; };
-		D2EA65261C4CBE4200A27478 /* swirl 8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA650F1C4CBE4200A27478 /* swirl 8@2x.png */; };
-		D2EA65271C4CBE4200A27478 /* swirl 9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65101C4CBE4200A27478 /* swirl 9@2x.png */; };
-		D2EA65281C4CBE4200A27478 /* swirl 10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65111C4CBE4200A27478 /* swirl 10@2x.png */; };
-		D2EA65291C4CBE4200A27478 /* swirl 11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65121C4CBE4200A27478 /* swirl 11@2x.png */; };
-		D2EA652A1C4CBE4200A27478 /* swirl 12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65131C4CBE4200A27478 /* swirl 12@2x.png */; };
-		D2EA652B1C4CBE4200A27478 /* swirl 13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65141C4CBE4200A27478 /* swirl 13@2x.png */; };
-		D2EA652C1C4CBE4200A27478 /* swirl 14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65151C4CBE4200A27478 /* swirl 14@2x.png */; };
-		D2EA652D1C4CBE4200A27478 /* swirl 15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65161C4CBE4200A27478 /* swirl 15@2x.png */; };
-		D2EA652E1C4CBE4200A27478 /* swirl 16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65171C4CBE4200A27478 /* swirl 16@2x.png */; };
-		D2EA652F1C4CBE4200A27478 /* swirl 17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65181C4CBE4200A27478 /* swirl 17@2x.png */; };
-		D2EA65301C4CBE4200A27478 /* swirl 18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65191C4CBE4200A27478 /* swirl 18@2x.png */; };
-		D2EA65311C4CBE4200A27478 /* swirl 19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA651A1C4CBE4200A27478 /* swirl 19@2x.png */; };
-		D2EA65321C4CBE4200A27478 /* swirl 20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA651B1C4CBE4200A27478 /* swirl 20@2x.png */; };
-		D2EA65331C4CBE4200A27478 /* swirl 21@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA651C1C4CBE4200A27478 /* swirl 21@2x.png */; };
-		D2EA65341C4CBE4200A27478 /* swirl 22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA651D1C4CBE4200A27478 /* swirl 22@2x.png */; };
-		D2EA65351C4CBE4200A27478 /* swirl 23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA651E1C4CBE4200A27478 /* swirl 23@2x.png */; };
 		D2EA65371C4D65CE00A27478 /* vortex background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65361C4D65CE00A27478 /* vortex background@2x.png */; };
 		D2EA65391C4D6E3400A27478 /* vortex gray background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA65381C4D6E3400A27478 /* vortex gray background@2x.png */; };
 		D2EA653B1C4EC3AB00A27478 /* deadly start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */; };
@@ -170,13 +114,22 @@
 /* Begin PBXFileReference section */
 		D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly 100 button@2x.png"; sourceTree = "<group>"; };
 		D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly 100 banner@2x.png"; sourceTree = "<group>"; };
+		D20D47B91D68EBD300C58830 /* vortex spin banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex spin banner.png"; sourceTree = "<group>"; };
+		D20D47BA1D68EBD300C58830 /* vortex spin banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex spin banner@2x.png"; sourceTree = "<group>"; };
+		D20D47BB1D68EBD300C58830 /* vortex words banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex words banner.png"; sourceTree = "<group>"; };
+		D20D47BC1D68EBD300C58830 /* vortex words banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex words banner@2x.png"; sourceTree = "<group>"; };
+		D20D47C11D6955C900C58830 /* VortexBannerAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VortexBannerAnimationView.h; sourceTree = "<group>"; };
+		D20D47C21D6955C900C58830 /* VortexBannerAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VortexBannerAnimationView.m; sourceTree = "<group>"; };
+		D20D47C61D6A17BA00C58830 /* VortexPageAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VortexPageAnimationView.h; sourceTree = "<group>"; };
+		D20D47C71D6A17BA00C58830 /* VortexPageAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VortexPageAnimationView.m; sourceTree = "<group>"; };
+		D20D47C91D6A17D700C58830 /* vortex spin page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex spin page.png"; sourceTree = "<group>"; };
+		D20D47CA1D6A17D700C58830 /* vortex spin page@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex spin page@2x.png"; sourceTree = "<group>"; };
 		D215BEDF1C5AD23A000DE3DA /* paper B lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper B lite@2x.png"; sourceTree = "<group>"; };
 		D215BEE01C5AD23A000DE3DA /* paper A lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper A lite@2x.png"; sourceTree = "<group>"; };
 		D215BEE11C5AD23A000DE3DA /* paper C lite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper C lite@2x.png"; sourceTree = "<group>"; };
 		D22621751C1DF7090065D4F5 /* Deadly100GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deadly100GameViewController.h; sourceTree = "<group>"; };
 		D22621761C1DF7090065D4F5 /* Deadly100GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deadly100GameViewController.m; sourceTree = "<group>"; };
 		D22CC23A1C6DBD6E004544CE /* big rocket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "big rocket@2x.png"; sourceTree = "<group>"; };
-		D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
 		D2568DE11C28DF9800DA237F /* quiz smasher button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quiz smasher button@2x.png"; sourceTree = "<group>"; };
 		D25B8A491BF05F7500D77331 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		D26175931C33382500E772E3 /* deadly background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly background.png"; sourceTree = "<group>"; };
@@ -198,22 +151,6 @@
 		D2AF71461C5150C5001E3AB1 /* heroic banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heroic banner@2x.png"; sourceTree = "<group>"; };
 		D2BAD0841C23DBE700668E13 /* time vortex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time vortex@2x.png"; sourceTree = "<group>"; };
 		D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quiz smasher banner@2x.png"; sourceTree = "<group>"; };
-		D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time vortex banner@2x.png"; sourceTree = "<group>"; };
-		D2BF3EB51C04C41D00388747 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
-		D2BF3EB61C04C41D00388747 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
-		D2BF3EB71C04C41D00388747 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
-		D2BF3EB81C04C41D00388747 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
-		D2BF3EB91C04C41D00388747 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
-		D2BF3EBA1C04C41D00388747 /* Icon-76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@3x.png"; sourceTree = "<group>"; };
-		D2BF3EBB1C04C41D00388747 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		D2BF3EBC1C04C41D00388747 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		D2BF3EBD1C04C41D00388747 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
-		D2BF3EBE1C04C41D00388747 /* Icon-Spotlight-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40.png"; sourceTree = "<group>"; };
-		D2BF3EBF1C04C41D00388747 /* Icon-Spotlight-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@2x.png"; sourceTree = "<group>"; };
-		D2BF3EC01C04C41D00388747 /* Icon-Spotlight-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@3x.png"; sourceTree = "<group>"; };
-		D2BF3EC11C04C41D00388747 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		D2BF3EC21C04C41D00388747 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
-		D2BF3EC31C04C41D00388747 /* M22 Logo template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M22 Logo template.png"; sourceTree = "<group>"; };
 		D2BF3F621C0952DA00388747 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
 		D2BF3F631C0952DA00388747 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		D2BF3F651C097E9400388747 /* TimeVortexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeVortexViewController.h; sourceTree = "<group>"; };
@@ -250,53 +187,6 @@
 		D2EA64921C487BB300A27478 /* movies button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "movies button@2x.png"; sourceTree = "<group>"; };
 		D2EA64941C4883D200A27478 /* tv button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tv button@2x.png"; sourceTree = "<group>"; };
 		D2EA64D31C4C90AD00A27478 /* science nerd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "science nerd@2x.png"; sourceTree = "<group>"; };
-		D2EA64D81C4CB8DC00A27478 /* banner swirl 01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 01@2x.png"; sourceTree = "<group>"; };
-		D2EA64D91C4CB8DC00A27478 /* banner swirl 02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 02@2x.png"; sourceTree = "<group>"; };
-		D2EA64DA1C4CB8DC00A27478 /* banner swirl 03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 03@2x.png"; sourceTree = "<group>"; };
-		D2EA64DB1C4CB8DC00A27478 /* banner swirl 04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 04@2x.png"; sourceTree = "<group>"; };
-		D2EA64DC1C4CB8DC00A27478 /* banner swirl 05@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 05@2x.png"; sourceTree = "<group>"; };
-		D2EA64DD1C4CB8DC00A27478 /* banner swirl 06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 06@2x.png"; sourceTree = "<group>"; };
-		D2EA64DE1C4CB8DC00A27478 /* banner swirl 07@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 07@2x.png"; sourceTree = "<group>"; };
-		D2EA64DF1C4CB8DC00A27478 /* banner swirl 08@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 08@2x.png"; sourceTree = "<group>"; };
-		D2EA64E01C4CB8DC00A27478 /* banner swirl 09@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 09@2x.png"; sourceTree = "<group>"; };
-		D2EA64E11C4CB8DC00A27478 /* banner swirl 10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 10@2x.png"; sourceTree = "<group>"; };
-		D2EA64E21C4CB8DC00A27478 /* banner swirl 11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 11@2x.png"; sourceTree = "<group>"; };
-		D2EA64E31C4CB8DC00A27478 /* banner swirl 12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 12@2x.png"; sourceTree = "<group>"; };
-		D2EA64E41C4CB8DC00A27478 /* banner swirl 13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 13@2x.png"; sourceTree = "<group>"; };
-		D2EA64E51C4CB8DC00A27478 /* banner swirl 14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 14@2x.png"; sourceTree = "<group>"; };
-		D2EA64E61C4CB8DC00A27478 /* banner swirl 15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 15@2x.png"; sourceTree = "<group>"; };
-		D2EA64E71C4CB8DC00A27478 /* banner swirl 16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 16@2x.png"; sourceTree = "<group>"; };
-		D2EA64E81C4CB8DC00A27478 /* banner swirl 17@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 17@2x.png"; sourceTree = "<group>"; };
-		D2EA64E91C4CB8DC00A27478 /* banner swirl 18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 18@2x.png"; sourceTree = "<group>"; };
-		D2EA64EA1C4CB8DC00A27478 /* banner swirl 19@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 19@2x.png"; sourceTree = "<group>"; };
-		D2EA64EB1C4CB8DC00A27478 /* banner swirl 20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 20@2x.png"; sourceTree = "<group>"; };
-		D2EA64EC1C4CB8DC00A27478 /* banner swirl 21@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 21@2x.png"; sourceTree = "<group>"; };
-		D2EA64ED1C4CB8DC00A27478 /* banner swirl 22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 22@2x.png"; sourceTree = "<group>"; };
-		D2EA64EE1C4CB8DC00A27478 /* banner swirl 23@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 23@2x.png"; sourceTree = "<group>"; };
-		D2EA64EF1C4CB8DC00A27478 /* banner swirl 24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner swirl 24@2x.png"; sourceTree = "<group>"; };
-		D2EA65081C4CBE4200A27478 /* swirl 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 1@2x.png"; sourceTree = "<group>"; };
-		D2EA65091C4CBE4200A27478 /* swirl 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 2@2x.png"; sourceTree = "<group>"; };
-		D2EA650A1C4CBE4200A27478 /* swirl 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 3@2x.png"; sourceTree = "<group>"; };
-		D2EA650B1C4CBE4200A27478 /* swirl 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 4@2x.png"; sourceTree = "<group>"; };
-		D2EA650C1C4CBE4200A27478 /* swirl 5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 5@2x.png"; sourceTree = "<group>"; };
-		D2EA650D1C4CBE4200A27478 /* swirl 6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 6@2x.png"; sourceTree = "<group>"; };
-		D2EA650E1C4CBE4200A27478 /* swirl 7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 7@2x.png"; sourceTree = "<group>"; };
-		D2EA650F1C4CBE4200A27478 /* swirl 8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 8@2x.png"; sourceTree = "<group>"; };
-		D2EA65101C4CBE4200A27478 /* swirl 9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 9@2x.png"; sourceTree = "<group>"; };
-		D2EA65111C4CBE4200A27478 /* swirl 10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 10@2x.png"; sourceTree = "<group>"; };
-		D2EA65121C4CBE4200A27478 /* swirl 11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 11@2x.png"; sourceTree = "<group>"; };
-		D2EA65131C4CBE4200A27478 /* swirl 12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 12@2x.png"; sourceTree = "<group>"; };
-		D2EA65141C4CBE4200A27478 /* swirl 13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 13@2x.png"; sourceTree = "<group>"; };
-		D2EA65151C4CBE4200A27478 /* swirl 14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 14@2x.png"; sourceTree = "<group>"; };
-		D2EA65161C4CBE4200A27478 /* swirl 15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 15@2x.png"; sourceTree = "<group>"; };
-		D2EA65171C4CBE4200A27478 /* swirl 16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 16@2x.png"; sourceTree = "<group>"; };
-		D2EA65181C4CBE4200A27478 /* swirl 17@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 17@2x.png"; sourceTree = "<group>"; };
-		D2EA65191C4CBE4200A27478 /* swirl 18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 18@2x.png"; sourceTree = "<group>"; };
-		D2EA651A1C4CBE4200A27478 /* swirl 19@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 19@2x.png"; sourceTree = "<group>"; };
-		D2EA651B1C4CBE4200A27478 /* swirl 20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 20@2x.png"; sourceTree = "<group>"; };
-		D2EA651C1C4CBE4200A27478 /* swirl 21@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 21@2x.png"; sourceTree = "<group>"; };
-		D2EA651D1C4CBE4200A27478 /* swirl 22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 22@2x.png"; sourceTree = "<group>"; };
-		D2EA651E1C4CBE4200A27478 /* swirl 23@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swirl 23@2x.png"; sourceTree = "<group>"; };
 		D2EA65361C4D65CE00A27478 /* vortex background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex background@2x.png"; sourceTree = "<group>"; };
 		D2EA65381C4D6E3400A27478 /* vortex gray background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex gray background@2x.png"; sourceTree = "<group>"; };
 		D2EA653A1C4EC3AB00A27478 /* deadly start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly start@2x.png"; sourceTree = "<group>"; };
@@ -362,6 +252,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20D47C41D69569000C58830 /* banner animation images */ = {
+			isa = PBXGroup;
+			children = (
+				D20D47B91D68EBD300C58830 /* vortex spin banner.png */,
+				D20D47BA1D68EBD300C58830 /* vortex spin banner@2x.png */,
+				D20D47BB1D68EBD300C58830 /* vortex words banner.png */,
+				D20D47BC1D68EBD300C58830 /* vortex words banner@2x.png */,
+			);
+			name = "banner animation images";
+			sourceTree = "<group>";
+		};
+		D20D47C51D69570D00C58830 /* animation images */ = {
+			isa = PBXGroup;
+			children = (
+				D20D47CD1D6A17E100C58830 /* page animation images */,
+				D20D47C41D69569000C58830 /* banner animation images */,
+			);
+			name = "animation images";
+			sourceTree = "<group>";
+		};
+		D20D47CD1D6A17E100C58830 /* page animation images */ = {
+			isa = PBXGroup;
+			children = (
+				D20D47C91D6A17D700C58830 /* vortex spin page.png */,
+				D20D47CA1D6A17D700C58830 /* vortex spin page@2x.png */,
+			);
+			name = "page animation images";
+			sourceTree = "<group>";
+		};
 		D215BEE51C5AE1BA000DE3DA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +353,17 @@
 			path = Meanwhile22;
 			sourceTree = "<group>";
 		};
+		D295C3031D68DCB300A6E647 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D20D47C11D6955C900C58830 /* VortexBannerAnimationView.h */,
+				D20D47C21D6955C900C58830 /* VortexBannerAnimationView.m */,
+				D20D47C61D6A17BA00C58830 /* VortexPageAnimationView.h */,
+				D20D47C71D6A17BA00C58830 /* VortexPageAnimationView.m */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
 		D2AF71361C513F4B001E3AB1 /* vortex game buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,29 +388,6 @@
 				D26175A51C336A0200E772E3 /* warrior large.png */,
 			);
 			name = "other images";
-			sourceTree = "<group>";
-		};
-		D2BF3EB41C04C40000388747 /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				D2BF3EB51C04C41D00388747 /* Icon-60.png */,
-				D2BF3EB61C04C41D00388747 /* Icon-60@2x.png */,
-				D2BF3EB71C04C41D00388747 /* Icon-60@3x.png */,
-				D2BF3EB81C04C41D00388747 /* Icon-76.png */,
-				D2BF3EB91C04C41D00388747 /* Icon-76@2x.png */,
-				D2BF3EBA1C04C41D00388747 /* Icon-76@3x.png */,
-				D2BF3EBB1C04C41D00388747 /* Icon-Small.png */,
-				D2BF3EBC1C04C41D00388747 /* Icon-Small@2x.png */,
-				D2BF3EBD1C04C41D00388747 /* Icon-Small@3x.png */,
-				D2BF3EBE1C04C41D00388747 /* Icon-Spotlight-40.png */,
-				D2BF3EBF1C04C41D00388747 /* Icon-Spotlight-40@2x.png */,
-				D2BF3EC01C04C41D00388747 /* Icon-Spotlight-40@3x.png */,
-				D2568DDF1C28DDEB00DA237F /* Icon-83.5@2x.png */,
-				D2BF3EC11C04C41D00388747 /* iTunesArtwork */,
-				D2BF3EC21C04C41D00388747 /* iTunesArtwork@2x */,
-				D2BF3EC31C04C41D00388747 /* M22 Logo template.png */,
-			);
-			name = icons;
 			sourceTree = "<group>";
 		};
 		D2D0BAF21C3B38680022A01B /* buttons */ = {
@@ -510,9 +417,7 @@
 				D2AF71461C5150C5001E3AB1 /* heroic banner@2x.png */,
 				D2BAD0861C23DFE500668E13 /* quiz smasher banner@2x.png */,
 				D2EA64771C48576600A27478 /* robot banner@2x.png */,
-				D2BAD0881C23E37A00668E13 /* time vortex banner@2x.png */,
 				D2D0BAF71C3B3CE00022A01B /* vault banner@2x.png */,
-				D2EA64D71C4CB8C100A27478 /* vortex banner swirls */,
 				D2EA64891C485F0C00A27478 /* wave pattens */,
 			);
 			name = banners;
@@ -529,7 +434,6 @@
 				D215BEE11C5AD23A000DE3DA /* paper C lite@2x.png */,
 				D2EA65361C4D65CE00A27478 /* vortex background@2x.png */,
 				D2EA65381C4D6E3400A27478 /* vortex gray background@2x.png */,
-				D2EA64C41C4895DF00A27478 /* vortex swirls */,
 				D2EA641B1C40E4A600A27478 /* weapons one@2x.png */,
 			);
 			name = backgrounds;
@@ -561,67 +465,6 @@
 			name = "wave pattens";
 			sourceTree = "<group>";
 		};
-		D2EA64C41C4895DF00A27478 /* vortex swirls */ = {
-			isa = PBXGroup;
-			children = (
-				D2EA65081C4CBE4200A27478 /* swirl 1@2x.png */,
-				D2EA65091C4CBE4200A27478 /* swirl 2@2x.png */,
-				D2EA650A1C4CBE4200A27478 /* swirl 3@2x.png */,
-				D2EA650B1C4CBE4200A27478 /* swirl 4@2x.png */,
-				D2EA650C1C4CBE4200A27478 /* swirl 5@2x.png */,
-				D2EA650D1C4CBE4200A27478 /* swirl 6@2x.png */,
-				D2EA650E1C4CBE4200A27478 /* swirl 7@2x.png */,
-				D2EA650F1C4CBE4200A27478 /* swirl 8@2x.png */,
-				D2EA65101C4CBE4200A27478 /* swirl 9@2x.png */,
-				D2EA65111C4CBE4200A27478 /* swirl 10@2x.png */,
-				D2EA65121C4CBE4200A27478 /* swirl 11@2x.png */,
-				D2EA65131C4CBE4200A27478 /* swirl 12@2x.png */,
-				D2EA65141C4CBE4200A27478 /* swirl 13@2x.png */,
-				D2EA65151C4CBE4200A27478 /* swirl 14@2x.png */,
-				D2EA65161C4CBE4200A27478 /* swirl 15@2x.png */,
-				D2EA65171C4CBE4200A27478 /* swirl 16@2x.png */,
-				D2EA65181C4CBE4200A27478 /* swirl 17@2x.png */,
-				D2EA65191C4CBE4200A27478 /* swirl 18@2x.png */,
-				D2EA651A1C4CBE4200A27478 /* swirl 19@2x.png */,
-				D2EA651B1C4CBE4200A27478 /* swirl 20@2x.png */,
-				D2EA651C1C4CBE4200A27478 /* swirl 21@2x.png */,
-				D2EA651D1C4CBE4200A27478 /* swirl 22@2x.png */,
-				D2EA651E1C4CBE4200A27478 /* swirl 23@2x.png */,
-			);
-			name = "vortex swirls";
-			sourceTree = "<group>";
-		};
-		D2EA64D71C4CB8C100A27478 /* vortex banner swirls */ = {
-			isa = PBXGroup;
-			children = (
-				D2EA64D81C4CB8DC00A27478 /* banner swirl 01@2x.png */,
-				D2EA64D91C4CB8DC00A27478 /* banner swirl 02@2x.png */,
-				D2EA64DA1C4CB8DC00A27478 /* banner swirl 03@2x.png */,
-				D2EA64DB1C4CB8DC00A27478 /* banner swirl 04@2x.png */,
-				D2EA64DC1C4CB8DC00A27478 /* banner swirl 05@2x.png */,
-				D2EA64DD1C4CB8DC00A27478 /* banner swirl 06@2x.png */,
-				D2EA64DE1C4CB8DC00A27478 /* banner swirl 07@2x.png */,
-				D2EA64DF1C4CB8DC00A27478 /* banner swirl 08@2x.png */,
-				D2EA64E01C4CB8DC00A27478 /* banner swirl 09@2x.png */,
-				D2EA64E11C4CB8DC00A27478 /* banner swirl 10@2x.png */,
-				D2EA64E21C4CB8DC00A27478 /* banner swirl 11@2x.png */,
-				D2EA64E31C4CB8DC00A27478 /* banner swirl 12@2x.png */,
-				D2EA64E41C4CB8DC00A27478 /* banner swirl 13@2x.png */,
-				D2EA64E51C4CB8DC00A27478 /* banner swirl 14@2x.png */,
-				D2EA64E61C4CB8DC00A27478 /* banner swirl 15@2x.png */,
-				D2EA64E71C4CB8DC00A27478 /* banner swirl 16@2x.png */,
-				D2EA64E81C4CB8DC00A27478 /* banner swirl 17@2x.png */,
-				D2EA64E91C4CB8DC00A27478 /* banner swirl 18@2x.png */,
-				D2EA64EA1C4CB8DC00A27478 /* banner swirl 19@2x.png */,
-				D2EA64EB1C4CB8DC00A27478 /* banner swirl 20@2x.png */,
-				D2EA64EC1C4CB8DC00A27478 /* banner swirl 21@2x.png */,
-				D2EA64ED1C4CB8DC00A27478 /* banner swirl 22@2x.png */,
-				D2EA64EE1C4CB8DC00A27478 /* banner swirl 23@2x.png */,
-				D2EA64EF1C4CB8DC00A27478 /* banner swirl 24@2x.png */,
-			);
-			name = "vortex banner swirls";
-			sourceTree = "<group>";
-		};
 		D2FEEA871BD2BF4C00FADE89 = {
 			isa = PBXGroup;
 			children = (
@@ -649,6 +492,7 @@
 				D2FEEA961BD2BF4C00FADE89 /* AppDelegate.h */,
 				D2FEEA971BD2BF4C00FADE89 /* AppDelegate.m */,
 				D215BEE71C5AE207000DE3DA /* Podcast */,
+				D295C3031D68DCB300A6E647 /* Animations */,
 				D215BEE81C5AE274000DE3DA /* TableView Cells */,
 				D215BEE61C5AE1D0000DE3DA /* Questions */,
 				D215BEE51C5AE1BA000DE3DA /* Controllers */,
@@ -692,10 +536,10 @@
 		D2FEEAD11BD359DB00FADE89 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D20D47C51D69570D00C58830 /* animation images */,
 				D2D0BAF41C3B38A50022A01B /* backgrounds */,
 				D2D0BAF31C3B388F0022A01B /* banners */,
 				D2D0BAF21C3B38680022A01B /* buttons */,
-				D2BF3EB41C04C40000388747 /* icons */,
 				D2AF71431C514F68001E3AB1 /* other images */,
 				D2EA646A1C4390F000A27478 /* sounds */,
 			);
@@ -806,121 +650,63 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2FEEAD41BD361C200FADE89 /* twitter logo@2x.png in Resources */,
-				D2BF3EC71C04C41D00388747 /* Icon-76.png in Resources */,
 				D2EA64881C48578000A27478 /* wave 5@2x.png in Resources */,
 				D2D0BADF1C3AEA060022A01B /* stop button@2X.png in Resources */,
-				D2BF3ED11C04C41D00388747 /* iTunesArtwork@2x in Resources */,
-				D2EA65211C4CBE4200A27478 /* swirl 3@2x.png in Resources */,
-				D2EA652C1C4CBE4200A27478 /* swirl 14@2x.png in Resources */,
 				D2EA64911C48754400A27478 /* games button@2x.png in Resources */,
-				D2EA64F11C4CB8DC00A27478 /* banner swirl 02@2x.png in Resources */,
-				D2EA65231C4CBE4200A27478 /* swirl 5@2x.png in Resources */,
-				D2EA65201C4CBE4200A27478 /* swirl 2@2x.png in Resources */,
 				D2D0BAE51C3AF4BB0022A01B /* play button@2x.png in Resources */,
-				D2EA652F1C4CBE4200A27478 /* swirl 17@2x.png in Resources */,
-				D2BF3ED01C04C41D00388747 /* iTunesArtwork in Resources */,
-				D2EA65041C4CB8DC00A27478 /* banner swirl 21@2x.png in Resources */,
-				D2EA65331C4CBE4200A27478 /* swirl 21@2x.png in Resources */,
-				D2EA64FC1C4CB8DC00A27478 /* banner swirl 13@2x.png in Resources */,
+				D20D47BF1D68EBD300C58830 /* vortex words banner.png in Resources */,
 				D2FEEAA61BD2BF4C00FADE89 /* LaunchScreen.storyboard in Resources */,
 				D2EA64D41C4C90AD00A27478 /* science nerd@2x.png in Resources */,
 				D261759A1C3355E300E772E3 /* gun shot.mp3 in Resources */,
-				D2EA65021C4CB8DC00A27478 /* banner swirl 19@2x.png in Resources */,
 				D2D0BAF81C3B3CE00022A01B /* vault banner@2x.png in Resources */,
-				D2BF3EC51C04C41D00388747 /* Icon-60@2x.png in Resources */,
 				D26175941C33382500E772E3 /* deadly background.png in Resources */,
-				D2BF3EC81C04C41D00388747 /* Icon-76@2x.png in Resources */,
 				D2EA64801C48577100A27478 /* wave 1@2x.png in Resources */,
-				D2EA64FE1C4CB8DC00A27478 /* banner swirl 15@2x.png in Resources */,
-				D2EA652E1C4CBE4200A27478 /* swirl 16@2x.png in Resources */,
 				D2EA64781C48576600A27478 /* robot banner@2x.png in Resources */,
 				D2BAD0851C23DBE700668E13 /* time vortex@2x.png in Resources */,
-				D2EA64F81C4CB8DC00A27478 /* banner swirl 09@2x.png in Resources */,
-				D2EA65241C4CBE4200A27478 /* swirl 6@2x.png in Resources */,
+				D20D47BE1D68EBD300C58830 /* vortex spin banner@2x.png in Resources */,
 				D2EA64871C48578000A27478 /* wave 6@2x.png in Resources */,
-				D2BF3EC61C04C41D00388747 /* Icon-60@3x.png in Resources */,
-				D2BF3ECD1C04C41D00388747 /* Icon-Spotlight-40.png in Resources */,
-				D2EA64FA1C4CB8DC00A27478 /* banner swirl 11@2x.png in Resources */,
-				D2EA65061C4CB8DC00A27478 /* banner swirl 23@2x.png in Resources */,
 				D26175A61C336A0200E772E3 /* warrior large.png in Resources */,
 				D2EA64861C48578000A27478 /* wave 7@2x.png in Resources */,
 				D2D0DF1C1C809ED600E0DF6C /* blue rocket@2x.png in Resources */,
-				D2EA65281C4CBE4200A27478 /* swirl 10@2x.png in Resources */,
-				D2EA64FD1C4CB8DC00A27478 /* banner swirl 14@2x.png in Resources */,
 				D2EA648F1C486B4E00A27478 /* comics button@2x.png in Resources */,
 				D2EA65391C4D6E3400A27478 /* vortex gray background@2x.png in Resources */,
 				D2EA64951C4883D200A27478 /* tv button@2x.png in Resources */,
 				D2FEEAA31BD2BF4C00FADE89 /* Assets.xcassets in Resources */,
 				D2BAD0871C23DFE500668E13 /* quiz smasher banner@2x.png in Resources */,
-				D2EA64F71C4CB8DC00A27478 /* banner swirl 08@2x.png in Resources */,
 				D2EA653B1C4EC3AB00A27478 /* deadly start@2x.png in Resources */,
 				D2EA64671C438A9800A27478 /* crowd cheering.mp3 in Resources */,
-				D2EA65031C4CB8DC00A27478 /* banner swirl 20@2x.png in Resources */,
-				D2BF3ECA1C04C41D00388747 /* Icon-Small.png in Resources */,
 				D2D0BAF61C3B39EE0022A01B /* M22 Logo 2016@2x.png in Resources */,
-				D2EA64F51C4CB8DC00A27478 /* banner swirl 06@2x.png in Resources */,
-				D2EA64FB1C4CB8DC00A27478 /* banner swirl 12@2x.png in Resources */,
 				D2AF713A1C514BAE001E3AB1 /* coming soon.png in Resources */,
-				D2EA651F1C4CBE4200A27478 /* swirl 1@2x.png in Resources */,
 				D2AF71321C50C58A001E3AB1 /* heroic hosts button@2x.png in Resources */,
 				D2EA647D1C48577100A27478 /* wave 4@2x.png in Resources */,
-				D2BF3ECE1C04C41D00388747 /* Icon-Spotlight-40@2x.png in Resources */,
 				D2EA64851C48578000A27478 /* wave 8@2x.png in Resources */,
-				D2EA65321C4CBE4200A27478 /* swirl 20@2x.png in Resources */,
-				D2EA65271C4CBE4200A27478 /* swirl 9@2x.png in Resources */,
-				D2BF3ECC1C04C41D00388747 /* Icon-Small@3x.png in Resources */,
-				D2BF3EC91C04C41D00388747 /* Icon-76@3x.png in Resources */,
 				D20C0B1D1C2A385400F6C5D1 /* deadly 100 banner@2x.png in Resources */,
 				D2D0BAF11C3B35620022A01B /* time forward button@2x.png in Resources */,
-				D2BF3ECB1C04C41D00388747 /* Icon-Small@2x.png in Resources */,
-				D2EA65051C4CB8DC00A27478 /* banner swirl 22@2x.png in Resources */,
-				D2EA64F01C4CB8DC00A27478 /* banner swirl 01@2x.png in Resources */,
-				D2EA652A1C4CBE4200A27478 /* swirl 12@2x.png in Resources */,
-				D2EA65251C4CBE4200A27478 /* swirl 7@2x.png in Resources */,
-				D2EA64F91C4CB8DC00A27478 /* banner swirl 10@2x.png in Resources */,
 				D22CC23B1C6DBD6E004544CE /* big rocket@2x.png in Resources */,
-				D2EA65291C4CBE4200A27478 /* swirl 11@2x.png in Resources */,
-				D2BF3EC41C04C41D00388747 /* Icon-60.png in Resources */,
 				D215BEE21C5AD23A000DE3DA /* paper B lite@2x.png in Resources */,
 				D2EA64611C42F9D700A27478 /* battle lost@2x.png in Resources */,
 				D20C0B1B1C2A315C00F6C5D1 /* deadly 100 button@2x.png in Resources */,
 				D2FEEAD51BD361C200FADE89 /* facebook logo@2x.png in Resources */,
 				D2EA647E1C48577100A27478 /* wave 3@2x.png in Resources */,
-				D2EA65001C4CB8DC00A27478 /* banner swirl 17@2x.png in Resources */,
-				D2EA65011C4CB8DC00A27478 /* banner swirl 18@2x.png in Resources */,
 				D2D0BAF01C3B35620022A01B /* time back button@2x.png in Resources */,
+				D20D47CB1D6A17D700C58830 /* vortex spin page.png in Resources */,
 				D2EA64651C4385E200A27478 /* game won@2x.png in Resources */,
-				D2EA65311C4CBE4200A27478 /* swirl 19@2x.png in Resources */,
 				D2EA64931C487BB300A27478 /* movies button@2x.png in Resources */,
 				D215BEE31C5AD23A000DE3DA /* paper A lite@2x.png in Resources */,
 				D2568DE21C28DF9800DA237F /* quiz smasher button@2x.png in Resources */,
 				D2EA641C1C40E4A600A27478 /* weapons one@2x.png in Resources */,
 				D2AF71471C5150C5001E3AB1 /* heroic banner@2x.png in Resources */,
 				D2EA647F1C48577100A27478 /* wave 2@2x.png in Resources */,
-				D2EA652D1C4CBE4200A27478 /* swirl 15@2x.png in Resources */,
-				D2EA64FF1C4CB8DC00A27478 /* banner swirl 16@2x.png in Resources */,
-				D2BF3ECF1C04C41D00388747 /* Icon-Spotlight-40@3x.png in Resources */,
-				D2EA65071C4CB8DC00A27478 /* banner swirl 24@2x.png in Resources */,
-				D2EA64F31C4CB8DC00A27478 /* banner swirl 04@2x.png in Resources */,
+				D20D47BD1D68EBD300C58830 /* vortex spin banner.png in Resources */,
 				D215BEE41C5AD23A000DE3DA /* paper C lite@2x.png in Resources */,
-				D2EA65341C4CBE4200A27478 /* swirl 22@2x.png in Resources */,
-				D2EA64F61C4CB8DC00A27478 /* banner swirl 07@2x.png in Resources */,
-				D2BF3ED21C04C41D00388747 /* M22 Logo template.png in Resources */,
 				D2FEEA9E1BD2BF4C00FADE89 /* Main.storyboard in Resources */,
+				D20D47CC1D6A17D700C58830 /* vortex spin page@2x.png in Resources */,
+				D20D47C01D68EBD300C58830 /* vortex words banner@2x.png in Resources */,
 				D28855191BFBD1F500151BE4 /* vault of episodes@2x.png in Resources */,
-				D2BAD0891C23E37A00668E13 /* time vortex banner@2x.png in Resources */,
-				D2EA65301C4CBE4200A27478 /* swirl 18@2x.png in Resources */,
-				D2EA65261C4CBE4200A27478 /* swirl 8@2x.png in Resources */,
-				D2EA64F21C4CB8DC00A27478 /* banner swirl 03@2x.png in Resources */,
-				D2EA65351C4CBE4200A27478 /* swirl 23@2x.png in Resources */,
-				D2EA65221C4CBE4200A27478 /* swirl 4@2x.png in Resources */,
 				D2EA65371C4D65CE00A27478 /* vortex background@2x.png in Resources */,
 				D2D0BAFA1C3B44F40022A01B /* pause button@2x.png in Resources */,
-				D2EA652B1C4CBE4200A27478 /* swirl 13@2x.png in Resources */,
 				D2EA64631C4319AF00A27478 /* sword swipe.mp3 in Resources */,
-				D2568DE01C28DDEB00DA237F /* Icon-83.5@2x.png in Resources */,
 				D26175981C33468300E772E3 /* shield small.png in Resources */,
-				D2EA64F41C4CB8DC00A27478 /* banner swirl 05@2x.png in Resources */,
 				D2EA64691C438C4900A27478 /* male pain scream.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -954,6 +740,7 @@
 				D2EA658C1C50453200A27478 /* VortexGameQuestions.m in Sources */,
 				D2AF71351C5134CF001E3AB1 /* HeroicHostsViewController.m in Sources */,
 				D2FEEACE1BD2C3AD00FADE89 /* PodcastParser.m in Sources */,
+				D20D47C81D6A17BA00C58830 /* VortexPageAnimationView.m in Sources */,
 				D2FEEA9B1BD2BF4C00FADE89 /* ViewController.m in Sources */,
 				D28855221BFBF65700151BE4 /* EpisodeListViewController.m in Sources */,
 				D2FEEA981BD2BF4C00FADE89 /* AppDelegate.m in Sources */,
@@ -961,6 +748,7 @@
 				D2EA65891C50450900A27478 /* VortexTvQuestions.m in Sources */,
 				D2BF3F641C0952DA00388747 /* QuizViewController.m in Sources */,
 				D2EA65831C50445600A27478 /* VortexComicQuestions.m in Sources */,
+				D20D47C31D6955C900C58830 /* VortexBannerAnimationView.m in Sources */,
 				D2EA65801C5039AD00A27478 /* DeadlyQuestions.m in Sources */,
 				D2BF3F671C097E9400388747 /* TimeVortexViewController.m in Sources */,
 				D2FEEAA11BD2BF4C00FADE89 /* Meanwhile22.xcdatamodeld in Sources */,

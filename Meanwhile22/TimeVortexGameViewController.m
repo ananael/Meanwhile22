@@ -7,6 +7,7 @@
 //
 
 #import "TimeVortexGameViewController.h"
+#import "VortexPageAnimationView.h"
 #import "VortexComicQuestions.h"
 #import "VortexMovieQuestions.h"
 #import "VortexTvQuestions.h"
@@ -18,7 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *overlayContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *overlayFinalImage;
-@property (weak, nonatomic) IBOutlet UIImageView *overlayImage;
+@property (weak, nonatomic) IBOutlet VortexPageAnimationView *pageAnimation;
 @property (weak, nonatomic) IBOutlet UIView *resultContainer;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *correctLabel;
@@ -114,11 +115,8 @@
     [self.playAgainButton setTitle:@"PLAY\nAGAIN" forState:UIControlStateNormal];
     [self.nextCategoryButton setTitle:@"NEW\nCATEGORY" forState:UIControlStateNormal];
     
-    self.overlayImage.animationImages = [self animationArray];
-    self.overlayImage.animationDuration = 1.5;
-    self.overlayImage.animationRepeatCount = 0;
-    [self.overlayImage startAnimating];
-    
+    self.pageAnimation.backgroundColor = [self colorWithHexString:@"FFF2AA" alpha:1.0];
+    [self.pageAnimation addVortexPageAnimation];
     
     //Set these BOOLs to "NO" so that you only have to change the correct answer BOOL in the Category methods.
     self.Answer1Correct = NO;
@@ -157,6 +155,42 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(UIColor*)colorWithHexString:(NSString*)hex alpha:(CGFloat)alpha
+{
+    NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    
+    // String should be 6 or 8 characters
+    if ([cString length] < 6) return [UIColor grayColor];
+    
+    // strip 0X if it appears
+    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
+    
+    if ([cString length] != 6) return  [UIColor grayColor];
+    
+    // Separate into r, g, b substrings
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    NSString *rString = [cString substringWithRange:range];
+    
+    range.location = 2;
+    NSString *gString = [cString substringWithRange:range];
+    
+    range.location = 4;
+    NSString *bString = [cString substringWithRange:range];
+    
+    // Scan values
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rString] scanHexInt:&r];
+    [[NSScanner scannerWithString:gString] scanHexInt:&g];
+    [[NSScanner scannerWithString:bString] scanHexInt:&b];
+    
+    return [UIColor colorWithRed:((float) r / 255.0f)
+                           green:((float) g / 255.0f)
+                            blue:((float) b / 255.0f)
+                           alpha:alpha];
 }
 
 -(void)buttonBackgroundColor:(NSArray *)array
@@ -208,13 +242,6 @@
     [bottomBorder setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
     bottomBorder.frame = CGRectMake(0, self.middleContainer.frame.size.height, self.middleContainer.frame.size.width, borderWidth);
     [self.middleContainer addSubview:bottomBorder];
-}
-
--(NSArray *)animationArray
-{
-    NSArray *images = @[[UIImage imageNamed:@"swirl 1"], [UIImage imageNamed:@"swirl 2"], [UIImage imageNamed:@"swirl 3"], [UIImage imageNamed:@"swirl 4"], [UIImage imageNamed:@"swirl 5"], [UIImage imageNamed:@"swirl 6"], [UIImage imageNamed:@"swirl 7"], [UIImage imageNamed:@"swirl 8"], [UIImage imageNamed:@"swirl 9"], [UIImage imageNamed:@"swirl 10"], [UIImage imageNamed:@"swirl 11"], [UIImage imageNamed:@"swirl 12"], [UIImage imageNamed:@"swirl 13"], [UIImage imageNamed:@"swirl 14"], [UIImage imageNamed:@"swirl 15"], [UIImage imageNamed:@"swirl 16"], [UIImage imageNamed:@"swirl 17"], [UIImage imageNamed:@"swirl 18"], [UIImage imageNamed:@"swirl 19"], [UIImage imageNamed:@"swirl 20"], [UIImage imageNamed:@"swirl 21"], [UIImage imageNamed:@"swirl 22"], [UIImage imageNamed:@"swirl 23"]];
-    return  images;
-    
 }
 
 -(NSArray *)buttonArray
@@ -305,7 +332,7 @@
     {
         
         [self.openingTimer invalidate];
-        [self.overlayImage stopAnimating];
+        //[self.overlayImage stopAnimating];
         self.overlayContainer.hidden = YES;
         
         [self gameTime];
@@ -388,7 +415,7 @@
 -(void)gameOver
 {
     self.overlayFinalImage.image = [UIImage imageNamed:@"vortex gray background"];
-    self.overlayImage.hidden = YES;
+    self.pageAnimation.hidden = YES;
     self.scoreLabel.text = [NSString stringWithFormat:@"%li", (long)self.scoreNumber];
     self.wrongLabel.text = [NSString stringWithFormat:@"%li  WRONG", (long)self.wrongNumber];
     self.startLabel.adjustsFontSizeToFitWidth = YES;
@@ -784,8 +811,7 @@
 
 - (IBAction)playAgainTapped:(id)sender
 {
-    self.overlayImage.hidden = NO;
-    [self.overlayImage startAnimating];
+    self.pageAnimation.hidden = NO;
     self.timerLabel.textColor = [UIColor colorWithRed:0.0/255.0 green:128.0/255.0 blue:0.0/255.0 alpha:1.0];
     [self launchScreenTimer];
     self.quitButton.hidden = NO;

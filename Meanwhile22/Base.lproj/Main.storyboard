@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f3M-th-tI3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f3M-th-tI3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -515,20 +515,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3j-EM-NpB" userLabel="ambienceContainer">
                                 <rect key="frame" x="20" y="30" width="560" height="550"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnY-zn-9GD" userLabel="topContainer">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnY-zn-9GD" userLabel="bannerAnimation" customClass="VortexBannerAnimationView">
                                         <rect key="frame" x="5" y="5" width="550" height="165"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L8r-rP-XJT" userLabel="bannerImage">
-                                                <rect key="frame" x="0.0" y="0.0" width="550" height="165"/>
-                                                <color key="backgroundColor" red="0.840717626" green="0.94262043350000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="L8r-rP-XJT" firstAttribute="centerY" secondItem="RnY-zn-9GD" secondAttribute="centerY" id="7Qx-Od-uXZ"/>
-                                            <constraint firstItem="L8r-rP-XJT" firstAttribute="leading" secondItem="RnY-zn-9GD" secondAttribute="leading" id="AxN-Hp-LiV"/>
-                                            <constraint firstItem="L8r-rP-XJT" firstAttribute="top" secondItem="RnY-zn-9GD" secondAttribute="top" id="ODj-u6-mbj"/>
-                                            <constraint firstItem="L8r-rP-XJT" firstAttribute="centerX" secondItem="RnY-zn-9GD" secondAttribute="centerX" id="mor-Di-d3z"/>
-                                        </constraints>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMd-qR-w0e" userLabel="middleContainer">
                                         <rect key="frame" x="5" y="175" width="550" height="40"/>
@@ -778,7 +767,7 @@
                         <outlet property="ambienceContainer" destination="F3j-EM-NpB" id="KHL-tE-jSR"/>
                         <outlet property="backButtonContainer" destination="0OL-W8-A3O" id="6cZ-L8-oQY"/>
                         <outlet property="backgroundImage" destination="iXj-vc-Zze" id="gRm-g4-DLS"/>
-                        <outlet property="bannerImage" destination="L8r-rP-XJT" id="kFu-2C-Dy1"/>
+                        <outlet property="bannerAnimation" destination="RnY-zn-9GD" id="asQ-Ji-xeV"/>
                         <outlet property="bottomContainer" destination="H3e-AH-6hz" id="DIZ-0Q-eH3"/>
                         <outlet property="chooseLabel" destination="bxG-LZ-ka2" id="Oyy-13-dRv"/>
                         <outlet property="closeButton" destination="Ehh-MQ-4fa" id="Cim-wc-ju1"/>
@@ -793,7 +782,6 @@
                         <outlet property="overlayContainer" destination="70I-40-mnq" id="Lgu-C4-HRb"/>
                         <outlet property="overlayImage" destination="8QI-xL-eIu" id="HsX-Hx-fvS"/>
                         <outlet property="previousButton" destination="Tk9-tN-Izg" id="SIX-g2-h3l"/>
-                        <outlet property="topContainer" destination="RnY-zn-9GD" id="shh-BM-yMD"/>
                         <outlet property="tvButton" destination="rdZ-6f-lua" id="Upz-yS-czh"/>
                     </connections>
                 </viewController>
@@ -978,10 +966,9 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JEg-xq-PtT" userLabel="overlayFinalImage">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9M-qz-Ewg">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egF-Dd-8n9" customClass="VortexPageAnimationView">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <color key="backgroundColor" red="0.23921568630000001" green="0.28627450980000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrm-Yx-m6N" userLabel="resultContainer">
                                         <rect key="frame" x="20" y="0.0" width="560" height="200"/>
                                         <subviews>
@@ -1101,28 +1088,28 @@
                                 <constraints>
                                     <constraint firstItem="rrm-Yx-m6N" firstAttribute="height" secondItem="m8q-1Y-dsP" secondAttribute="height" id="1U7-oR-nPV"/>
                                     <constraint firstItem="TFd-4A-Qtt" firstAttribute="centerX" secondItem="xYP-Th-YpE" secondAttribute="centerX" id="46Z-A8-vRQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="egF-Dd-8n9" secondAttribute="bottom" id="6zJ-Sg-U6H"/>
                                     <constraint firstAttribute="bottom" secondItem="m8q-1Y-dsP" secondAttribute="bottom" id="8Kq-OT-RSX"/>
                                     <constraint firstItem="m8q-1Y-dsP" firstAttribute="centerX" secondItem="xYP-Th-YpE" secondAttribute="centerX" id="95v-HY-XbK"/>
                                     <constraint firstItem="JEg-xq-PtT" firstAttribute="top" secondItem="xYP-Th-YpE" secondAttribute="top" id="A6q-fs-w7u"/>
-                                    <constraint firstItem="q9M-qz-Ewg" firstAttribute="top" secondItem="xYP-Th-YpE" secondAttribute="top" id="CvN-HH-twT"/>
                                     <constraint firstItem="m8q-1Y-dsP" firstAttribute="top" secondItem="TFd-4A-Qtt" secondAttribute="bottom" id="Dht-hH-p61"/>
                                     <constraint firstAttribute="trailing" secondItem="rrm-Yx-m6N" secondAttribute="trailing" constant="20" id="ES5-6b-dpR"/>
-                                    <constraint firstItem="q9M-qz-Ewg" firstAttribute="leading" secondItem="xYP-Th-YpE" secondAttribute="leading" id="Idi-jO-n13"/>
+                                    <constraint firstItem="egF-Dd-8n9" firstAttribute="leading" secondItem="xYP-Th-YpE" secondAttribute="leading" id="Hvx-TS-LhK"/>
                                     <constraint firstItem="rrm-Yx-m6N" firstAttribute="top" secondItem="xYP-Th-YpE" secondAttribute="top" id="LlU-9L-M3v"/>
+                                    <constraint firstAttribute="trailing" secondItem="egF-Dd-8n9" secondAttribute="trailing" id="SFa-mV-lWn"/>
                                     <constraint firstItem="TFd-4A-Qtt" firstAttribute="top" secondItem="rrm-Yx-m6N" secondAttribute="bottom" id="Ucb-76-7W6"/>
                                     <constraint firstItem="rrm-Yx-m6N" firstAttribute="height" secondItem="TFd-4A-Qtt" secondAttribute="height" id="VNd-ZS-2OO"/>
                                     <constraint firstAttribute="trailing" secondItem="JEg-xq-PtT" secondAttribute="trailing" id="WIH-Q4-ym7"/>
+                                    <constraint firstItem="egF-Dd-8n9" firstAttribute="top" secondItem="xYP-Th-YpE" secondAttribute="top" id="ZiB-28-v81"/>
                                     <constraint firstAttribute="bottom" secondItem="JEg-xq-PtT" secondAttribute="bottom" id="bh6-DJ-KHn"/>
                                     <constraint firstItem="JEg-xq-PtT" firstAttribute="leading" secondItem="xYP-Th-YpE" secondAttribute="leading" id="dlO-tw-ubX"/>
                                     <constraint firstItem="TFd-4A-Qtt" firstAttribute="leading" secondItem="xYP-Th-YpE" secondAttribute="leading" constant="20" id="eaT-mR-TRc"/>
                                     <constraint firstItem="rrm-Yx-m6N" firstAttribute="leading" secondItem="xYP-Th-YpE" secondAttribute="leading" constant="20" id="ew0-PH-gMJ"/>
                                     <constraint firstAttribute="trailing" secondItem="m8q-1Y-dsP" secondAttribute="trailing" constant="20" id="f7w-gn-Qoe"/>
-                                    <constraint firstAttribute="trailing" secondItem="q9M-qz-Ewg" secondAttribute="trailing" id="iav-uX-hMh"/>
                                     <constraint firstAttribute="trailing" secondItem="TFd-4A-Qtt" secondAttribute="trailing" constant="20" id="lbL-7g-QC7"/>
                                     <constraint firstItem="rrm-Yx-m6N" firstAttribute="width" secondItem="TFd-4A-Qtt" secondAttribute="width" id="lzw-3h-3zx"/>
                                     <constraint firstItem="rrm-Yx-m6N" firstAttribute="width" secondItem="m8q-1Y-dsP" secondAttribute="width" id="o5c-S1-zMr"/>
                                     <constraint firstItem="rrm-Yx-m6N" firstAttribute="centerX" secondItem="xYP-Th-YpE" secondAttribute="centerX" id="tya-jT-kyH"/>
-                                    <constraint firstAttribute="bottom" secondItem="q9M-qz-Ewg" secondAttribute="bottom" id="uce-4p-VkR"/>
                                     <constraint firstItem="m8q-1Y-dsP" firstAttribute="leading" secondItem="xYP-Th-YpE" secondAttribute="leading" constant="20" id="w3T-VH-Hkf"/>
                                 </constraints>
                             </view>
@@ -1169,7 +1156,7 @@
                         <outlet property="overlayButtonContainer" destination="m8q-1Y-dsP" id="FD3-wD-kOg"/>
                         <outlet property="overlayContainer" destination="xYP-Th-YpE" id="Mgc-wi-uxh"/>
                         <outlet property="overlayFinalImage" destination="JEg-xq-PtT" id="Xmi-6A-ELj"/>
-                        <outlet property="overlayImage" destination="q9M-qz-Ewg" id="loQ-9b-zDa"/>
+                        <outlet property="pageAnimation" destination="egF-Dd-8n9" id="T3w-1U-Uyr"/>
                         <outlet property="playAgainButton" destination="uIF-aX-8gV" id="qrD-N7-uVg"/>
                         <outlet property="questionLabel" destination="fZm-xg-t11" id="9KJ-Ve-Kod"/>
                         <outlet property="quitButton" destination="9fB-tO-xfS" id="bPn-KW-jiQ"/>
