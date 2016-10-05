@@ -262,13 +262,21 @@
     NSDate *timeDate = [formatter dateFromString:timeString];
     
     formatter.dateFormat = @"hh";
-    NSInteger hours = [[formatter stringFromDate:timeDate] intValue];
+    NSInteger hours;
+    //Resolves the issue of "hh" value of "00" converting to 12 hours
+    if ([[formatter stringFromDate:timeDate] intValue] == 12)
+    {
+        hours = 0;
+    } else
+    {
+        hours = [[formatter stringFromDate:timeDate] intValue];
+    }
     formatter.dateFormat = @"mm";
     NSInteger minutes = [[formatter stringFromDate:timeDate] intValue];
     formatter.dateFormat = @"ss";
     NSInteger seconds = [[formatter stringFromDate:timeDate] intValue];
     
-    NSInteger timeInSeconds = seconds + minutes * 60 + hours * 3600;
+    NSInteger timeInSeconds = seconds + (minutes * 60) + (hours * 3600);
     return timeInSeconds;
 }
 
