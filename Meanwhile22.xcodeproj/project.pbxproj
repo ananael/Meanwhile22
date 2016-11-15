@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D20C0B1B1C2A315C00F6C5D1 /* deadly 100 button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */; };
 		D20C0B1D1C2A385400F6C5D1 /* deadly 100 banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */; };
+		D20C90EF1DA615740015E9E0 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20C90EE1DA615740015E9E0 /* CoreFoundation.framework */; };
 		D20D47BD1D68EBD300C58830 /* vortex spin banner.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47B91D68EBD300C58830 /* vortex spin banner.png */; };
 		D20D47BE1D68EBD300C58830 /* vortex spin banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47BA1D68EBD300C58830 /* vortex spin banner@2x.png */; };
 		D20D47BF1D68EBD300C58830 /* vortex words banner.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D47BB1D68EBD300C58830 /* vortex words banner.png */; };
@@ -115,6 +116,7 @@
 /* Begin PBXFileReference section */
 		D20C0B1A1C2A315C00F6C5D1 /* deadly 100 button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly 100 button@2x.png"; sourceTree = "<group>"; };
 		D20C0B1C1C2A385400F6C5D1 /* deadly 100 banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deadly 100 banner@2x.png"; sourceTree = "<group>"; };
+		D20C90EE1DA615740015E9E0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		D20D47B91D68EBD300C58830 /* vortex spin banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex spin banner.png"; sourceTree = "<group>"; };
 		D20D47BA1D68EBD300C58830 /* vortex spin banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex spin banner@2x.png"; sourceTree = "<group>"; };
 		D20D47BB1D68EBD300C58830 /* vortex words banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vortex words banner.png"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20C90EF1DA615740015E9E0 /* CoreFoundation.framework in Frameworks */,
 				D2ADEDC81C026B660035CC3C /* AVFoundation.framework in Frameworks */,
 				D25B8A4A1BF05F7500D77331 /* AVKit.framework in Frameworks */,
 			);
@@ -349,6 +352,7 @@
 		D25B8A481BF05F3800D77331 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D20C90EE1DA615740015E9E0 /* CoreFoundation.framework */,
 				D2ADEDC71C026B660035CC3C /* AVFoundation.framework */,
 				D25B8A491BF05F7500D77331 /* AVKit.framework */,
 			);
@@ -618,6 +622,7 @@
 				TargetAttributes = {
 					D2FEEA8F1BD2BF4C00FADE89 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 8S82WEEMHM;
 					};
 					D2FEEAAB1BD2BF4C00FADE89 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -900,6 +905,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8S82WEEMHM;
 				INFOPLIST_FILE = Meanwhile22/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.self.edu.Meanwhile22;
@@ -913,6 +919,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8S82WEEMHM;
 				INFOPLIST_FILE = Meanwhile22/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.self.edu.Meanwhile22;
